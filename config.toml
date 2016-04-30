@@ -1,0 +1,8 @@
+baseurl = "http://replace-this-with-your-hugo-site.com/"
+languageCode = "en-us"
+title = "Guowei Lv"
+theme = "base16"
+pygmentsuseclasses = true
+
+[Params]
+  Author = "Guowei Lv"

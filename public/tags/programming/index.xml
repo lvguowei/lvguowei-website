@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programming on Guowei Lv</title>
+    <link>http://replace-this-with-your-hugo-site.com/tags/programming/</link>
+    <description>Recent content in Programming on Guowei Lv</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 30 Apr 2016 10:07:07 +0300</lastBuildDate>
+    <atom:link href="http://replace-this-with-your-hugo-site.com/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>C&#43;&#43; Primer Answers</title>
+      <link>http://replace-this-with-your-hugo-site.com/post/C&#43;&#43;-Primer-Answers/</link>
+      <pubDate>Sat, 30 Apr 2016 10:07:07 +0300</pubDate>
+      
+      <guid>http://replace-this-with-your-hugo-site.com/post/C&#43;&#43;-Primer-Answers/</guid>
+      <description>
+
+&lt;div id=&#34;table-of-contents&#34;&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;div id=&#34;text-table-of-contents&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#orgheadline13&#34;&gt;1. C++ Primer Exercises Answers&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#orgheadline4&#34;&gt;1.1. Section 2.3.1&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#orgheadline1&#34;&gt;1.1.1. Exercise 2.15&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#orgheadline2&#34;&gt;1.1.2. Exercise 2.16&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#orgheadline3&#34;&gt;1.1.3. Exercise 2.17&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#orgheadline8&#34;&gt;1.2. Section 2.3.2&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#orgheadline5&#34;&gt;1.2.1. Exercise 2.18&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#orgheadline6&#34;&gt;1.2.2. Exercise 2.20&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#orgheadline7&#34;&gt;1.2.3. Exercise 2.21&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#orgheadline10&#34;&gt;1.3. Section 2.4.2&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#orgheadline9&#34;&gt;1.3.1. Exercise 2.27&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#orgheadline12&#34;&gt;1.4. Section 2.4.3&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#orgheadline11&#34;&gt;1.4.1. Exercise 2.30&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&#34;c-primer-exercises-answers-a-id-orgheadline13-a:cd3a3f120a2b59e540de04ca96c62534&#34;&gt;C++ Primer Exercises Answers&lt;a id=&#34;orgheadline13&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;section-2-3-1-a-id-orgheadline4-a:cd3a3f120a2b59e540de04ca96c62534&#34;&gt;Section 2.3.1&lt;a id=&#34;orgheadline4&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h3 id=&#34;exercise-2-15-a-id-orgheadline1-a:cd3a3f120a2b59e540de04ca96c62534&#34;&gt;Exercise 2.15&lt;a id=&#34;orgheadline1&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;int ival = 1.01; // correct
+int &amp;amp;rval1 = 1.01; // wrong, type error
+int &amp;amp;rval2 = ival; // correct
+int &amp;amp;rval3; // not initialized
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;exercise-2-16-a-id-orgheadline2-a:cd3a3f120a2b59e540de04ca96c62534&#34;&gt;Exercise 2.16&lt;a id=&#34;orgheadline2&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;int i = 0, &amp;amp;r1 = i; 
+double d = 0, &amp;amp;r2 = d;
+
+r2 = 3.14159; // correct
+r2 = r1; // correct
+i = r2; // correct
+r1 = d; // correct
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;exercise-2-17-a-id-orgheadline3-a:cd3a3f120a2b59e540de04ca96c62534&#34;&gt;Exercise 2.17&lt;a id=&#34;orgheadline3&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;int i, &amp;amp;ri = i;
+i = 5;
+ri = 10;
+std::cout &amp;lt;&amp;lt; i &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; ri &amp;lt;&amp;lt; std::endl;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;section-2-3-2-a-id-orgheadline8-a:cd3a3f120a2b59e540de04ca96c62534&#34;&gt;Section 2.3.2&lt;a id=&#34;orgheadline8&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h3 id=&#34;exercise-2-18-a-id-orgheadline5-a:cd3a3f120a2b59e540de04ca96c62534&#34;&gt;Exercise 2.18&lt;a id=&#34;orgheadline5&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;int a = 1;
+int b = 2;
+int *p = &amp;amp;a;
+p = &amp;amp;b;
+*p = 3;
+std::cout &amp;lt;&amp;lt; *p;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;exercise-2-20-a-id-orgheadline6-a:cd3a3f120a2b59e540de04ca96c62534&#34;&gt;Exercise 2.20&lt;a id=&#34;orgheadline6&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;int i = 42;
+int *p1 = &amp;amp;i;
+*p1 = *p1 * *p1;
+std::cout &amp;lt;&amp;lt; i;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;exercise-2-21-a-id-orgheadline7-a:cd3a3f120a2b59e540de04ca96c62534&#34;&gt;Exercise 2.21&lt;a id=&#34;orgheadline7&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;int i = 0;
+double *dp = &amp;amp;i; // error
+int *ip = i; // error
+int *p = &amp;amp;i; // correct
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;section-2-4-2-a-id-orgheadline10-a:cd3a3f120a2b59e540de04ca96c62534&#34;&gt;Section 2.4.2&lt;a id=&#34;orgheadline10&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h3 id=&#34;exercise-2-27-a-id-orgheadline9-a:cd3a3f120a2b59e540de04ca96c62534&#34;&gt;Exercise 2.27&lt;a id=&#34;orgheadline9&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;int a = -1, &amp;amp;b = 0; // wrong, reference to a constant 0
+int c = 9, *const d = &amp;amp;c; // correct
+const int e = -1, &amp;amp;f = 0; // correct
+const int *const g = &amp;amp;a; // correct
+const int *h = &amp;amp;a; // correct
+const int &amp;amp;const i; // wrong
+const int z = a, &amp;amp;y = a; // correct
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;section-2-4-3-a-id-orgheadline12-a:cd3a3f120a2b59e540de04ca96c62534&#34;&gt;Section 2.4.3&lt;a id=&#34;orgheadline12&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h3 id=&#34;exercise-2-30-a-id-orgheadline11-a:cd3a3f120a2b59e540de04ca96c62534&#34;&gt;Exercise 2.30&lt;a id=&#34;orgheadline11&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;int i = 9;
+const int v2 = 0;
+int v1 = v2;
+int *p1 = &amp;amp;v1, &amp;amp;r1 = v1;
+const int *p2 = &amp;amp;v2, *const p3 = &amp;amp;i, &amp;amp;r2 = v2;
+
+r1 = v2; // correct
+p1 = p2; // wrong
+p2 = p1; // correct
+p1 = p3; // wrong
+p2 = p3; // correct
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>welcome</title>
+      <link>http://replace-this-with-your-hugo-site.com/post/welcome/</link>
+      <pubDate>Fri, 29 Apr 2016 22:15:01 +0300</pubDate>
+      
+      <guid>http://replace-this-with-your-hugo-site.com/post/welcome/</guid>
+      <description>
+
+&lt;h1 id=&#34;nitro:2cc7dc244eed4480e8b46c91e911e96b&#34;&gt;Nitro&lt;/h1&gt;
+
+&lt;p&gt;Quick and easy performance analyzer library for &lt;a href=&#34;http://golang.org/&#34;&gt;Go&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;overview:2cc7dc244eed4480e8b46c91e911e96b&#34;&gt;Overview&lt;/h2&gt;
+
+&lt;p&gt;Nitro is a quick and easy performance analyzer library for Go.
+It is useful for comparing A/B against different drafts of functions
+or different functions.&lt;/p&gt;
+
+&lt;h2 id=&#34;implementing-nitro:2cc7dc244eed4480e8b46c91e911e96b&#34;&gt;Implementing Nitro&lt;/h2&gt;
+
+&lt;p&gt;Using Nitro is simple. First, use &lt;code&gt;go get&lt;/code&gt; to install the latest version
+of the library.&lt;/p&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;cartoon&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Next, include nitro in your application.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
