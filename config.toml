@@ -1,8 +1,11 @@
-baseurl = "http://lvguowei.github.io/"
+baseurl = "http://lvguowei.me/"
 languageCode = "en-us"
 title = "Guowei Lv"
 theme = "base16"
 pygmentsuseclasses = true
 canonifyurls = true
+DisqusShortname = "lvguoweime"
+googleAnalytics = "UA-71831707-2"
+
 [Params]
   Author = "Guowei Lv"
