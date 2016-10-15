@@ -9,8 +9,8 @@ It is very common in relational database that we have the following structure:
 A customer table has columns: customer-id, name. 
 And an order table has columns: order-id, customer-id, order-date.
 
-So see that there is a customer-id in the order table, so that we can get orders belongs to
-a certain customer by user it. But there is no knowledge about the orders in customer table.
+See that there is a customer-id in the order table, so that we can use it to get orders belongs to
+a certain customer. But there is no knowledge about the orders in customer table.
 
 This is fine with database, but if we try to map this directly to java classes, we may end up with something like this:
 
