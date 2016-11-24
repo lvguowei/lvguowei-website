@@ -33,3 +33,7 @@ Let's use these as a reference and create some empty classes and interfaces.
 Since the center of the program is the game engine, let's implement enough `GameEngine` so that we can pass the test `gotItOnFirstGuess`.
 
 [source code version 1](https://github.com/lvguowei/MasterMindTDD/commit/d72116eb3c870484c138e211cd7d0d0f6cee6d3f)
+
+And it's not very hard to pass the test of `gotItOnSecondGuess`.
+
+[source code version 2](https://github.com/lvguowei/MasterMindTDD/commit/82fca579aab74908c16cd578499351e2d281cc7f)
