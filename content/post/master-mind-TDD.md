@@ -37,3 +37,7 @@ Since the center of the program is the game engine, let's implement enough `Game
 And it's not very hard to pass the test of `gotItOnSecondGuess`.
 
 [source code version 2](https://github.com/lvguowei/MasterMindTDD/commit/82fca579aab74908c16cd578499351e2d281cc7f)
+
+Then the test of `neverGetIt`.
+
+[source code version 3](https://github.com/lvguowei/MasterMindTDD/commit/89a50b4965f83fcaf1132096d3164344695234c4)
