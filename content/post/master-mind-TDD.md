@@ -58,3 +58,6 @@ Next, test how the `Guesser` generate guesses.
 Tests for the `Scorer`.
 
 [source code version 7](https://github.com/lvguowei/MasterMindTDD/commit/4ef948e41c6d8e996435c72cd4aa3e795138cc77)
+
+Finally, tests for `RememberingGuessChecker`.
+[source code version 8](https://github.com/lvguowei/MasterMindTDD/commit/5e52719cb3324b0a10371dd52dfa522433a04780)
