@@ -41,3 +41,8 @@ And it's not very hard to pass the test of `gotItOnSecondGuess`.
 Then the test of `neverGetIt`.
 
 [source code version 3](https://github.com/lvguowei/MasterMindTDD/commit/89a50b4965f83fcaf1132096d3164344695234c4)
+
+Now, let's write tests for the `Guesser`.
+If all the guesses are invalid, the `nextGuess` should return null.
+
+[source code version 4](https://github.com/lvguowei/MasterMindTDD/commit/bebf02418fe686953f09c1bf650284106e579871)
