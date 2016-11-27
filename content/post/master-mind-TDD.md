@@ -54,3 +54,7 @@ If there is only one guess is valid, `nextGuess` should return that one and no m
 Next, test how the `Guesser` generate guesses.
 
 [source code version 6](https://github.com/lvguowei/MasterMindTDD/commit/f8f7ce8a6e76be745ca135f0e5e087498e561fe6)
+
+Tests for the `Scorer`.
+
+[source code version 7](https://github.com/lvguowei/MasterMindTDD/commit/4ef948e41c6d8e996435c72cd4aa3e795138cc77)
