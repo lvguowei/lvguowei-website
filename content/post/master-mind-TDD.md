@@ -50,3 +50,7 @@ If all the guesses are invalid, the `nextGuess` should return null.
 If there is only one guess is valid, `nextGuess` should return that one and no more.
 
 [source code version 5](https://github.com/lvguowei/MasterMindTDD/commit/8d0f621ad9acfa0bd05dab2fabd3b03d25a7ed2b)
+
+Next, test how the `Guesser` generate guesses.
+
+[source code version 6](https://github.com/lvguowei/MasterMindTDD/commit/f8f7ce8a6e76be745ca135f0e5e087498e561fe6)
