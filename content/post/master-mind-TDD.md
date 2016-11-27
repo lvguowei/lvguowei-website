@@ -46,3 +46,7 @@ Now, let's write tests for the `Guesser`.
 If all the guesses are invalid, the `nextGuess` should return null.
 
 [source code version 4](https://github.com/lvguowei/MasterMindTDD/commit/bebf02418fe686953f09c1bf650284106e579871)
+
+If there is only one guess is valid, `nextGuess` should return that one and no more.
+
+[source code version 5](https://github.com/lvguowei/MasterMindTDD/commit/8d0f621ad9acfa0bd05dab2fabd3b03d25a7ed2b)
