@@ -11,4 +11,4 @@ This coding adventure comes from [Advend Of Code Day 1](http://adventofcode.com/
 
 # Solution
 
-[Github](https://github.com/lvguowei/advent-of-code/blob/master/day_1_no_time_for_a_taxi_cab.clj)
+[Github](https://github.com/lvguowei/advent-of-code/tree/master/day1)
