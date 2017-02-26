@@ -13,6 +13,7 @@ Implement `take-nth`.
 
 # Solution 1
 
+
 {{< highlight clojure >}}
 
 (defn my-take-nth [n col]
