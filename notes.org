@@ -1,3 +1,5 @@
 * Ideas of blog posts
 ** Drag and Drop in recycler view
    https://caster.io/lessons/recyclerview-drag-drop-and-swipe-to-dismiss-using-itemtouchhelper/
+** Circular android view
+   https://hemantvc.blogspot.fi/2015/01/circular-layout.html
