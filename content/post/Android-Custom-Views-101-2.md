@@ -124,3 +124,5 @@ In this case, the parent is still **300dp x 300dp**, but the TimerView is now bo
 In this case something interesting happened. The height of the parent is set to be **wrap_content**, and the TimerView's height is set to be **match_parent**. Which sounds like it's a dependency cycle. And the result is not good, we don't even see the TimerView, which means it gets an 0 height in the end.
 
 Now we have seen the problems we will run into if we don't implement `onMeasure()` carefully. In next installment, we will address that.
+
+[Source code](https://github.com/lvguowei/TimerView/tree/8ff6ee3933ad89799cef8f37b1ed57ce07bfba40) here.
