@@ -129,3 +129,7 @@ public void shouldBeAbleToLaunchMainScreen() {
 There are 3 parts for every espresso test: `onView`, `perform` and `check`. `onView` makes sure that the view is on the screen before we proceed with the test. `perform` allows simulating some user input on the view, and `check` is checking the final state the view is in.
 
 There is a [cheat sheet](https://google.github.io/android-testing-support-library/docs/espresso/cheatsheet/) that is quite useful.
+
+## Using uiautomatorviewer
+
+Notice that in the previous test, we find the view by making a text match, this has several problems. The text can change quite often and what if the app is internationalized? All these makes the test to be fragile. We can eliminate these shortcomings by using the view's id. But finding the view's id can be cumbersome. Here is what uiautomatorviewer can help. Using it, we can very quickly access the view's information including its id. Launch it (in ANDROID-SDK-PATH/Sdk/tools/bin/) and should be easy to figure out how to use it.
