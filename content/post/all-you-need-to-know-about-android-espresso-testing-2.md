@@ -60,5 +60,7 @@ public void shouldBeAbleToAddTasksAndHaveThemVisible() {
 
 All are pretty clear, notice that after entering some text, the softkeyboard may be blocking other views on the screen, so have to close it explicitly in the test.
 
+Find the source code [here](https://github.com/lvguowei/EspressoExample/tree/f23df5c4f6bb783797f42cbcaca274cec45407c1).
+
 ~To be continued~
 
