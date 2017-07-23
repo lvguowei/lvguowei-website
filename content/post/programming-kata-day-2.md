@@ -2,7 +2,7 @@
 date = "2017-02-07T19:34:17+02:00"
 title = "Programming Kata Day 2"
 tags = ["clojure", "programming kata"]
-categories = ["programming"]
+categories = ["Programming Kata"]
 +++
 
 Problem: Write a function to calculate fibonacci number in constant space complexity.

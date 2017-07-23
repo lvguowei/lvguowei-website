@@ -2,7 +2,7 @@
 date = "2016-10-15T19:38:57+03:00"
 title = "Replace Nested Conditional With Guard Clauses"
 tags = ["refactoring"]
-categories = ["programming"]
+categories = ["Refactoring"]
 +++
 
 I couldn't remember who said that one of his favorite refactoring techniques is *Replace Nested Conditional with Guard Clauses*. When I looked into it, it did put a smile on my face despite its simplicity.

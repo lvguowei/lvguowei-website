@@ -2,7 +2,7 @@
 date = "2017-01-01T13:51:26+02:00"
 title = "Why component dependency cycle is bad"
 tags = ["component", "clojure"]
-categories = ["programming"]
+categories = ["Object Oriented Design"]
 +++
 
 I have been working on some Clojure project at work for several months now, one little thing bothers me now and then is that it doesn't allow dependency cycle in project. For example if `a.clj` requires `b.clj`, `b.clj` requires `c.clj`, then `c.clj` cannot require `a.clj`, in other words, `c.clj` cannot use anything inside `a.clj`.

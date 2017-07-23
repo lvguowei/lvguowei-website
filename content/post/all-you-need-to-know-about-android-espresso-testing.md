@@ -2,7 +2,7 @@
 title: "All You Need To Know About Android Espresso Testing (Part I)"
 date: 2017-07-13T13:03:12+03:00
 tags: ["Android", "Espresso", "Testing"]
-categories: ["programming"]
+categories: ["Android Development"]
 ---
 The Espresso testing framework really makes it easy to write UI tests for Android. In this first installment, I will go through how to set it up and write our first test case.
 

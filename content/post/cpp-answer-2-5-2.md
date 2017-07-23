@@ -2,7 +2,7 @@
 date = "2016-05-08T19:59:59+03:00"
 title = "C++ Primer Exercise Answer (Section 2.5.2)"
 tags = ["c++ primer", "c++"]
-categories = ["programming"]
+categories = ["C++ Primer"]
 +++
 
 {{< highlight cpp >}}

@@ -2,7 +2,7 @@
 date = "2016-10-09T21:23:38+03:00"
 title = "Choco Musk by Al Rehab"
 tags = [ "Al Rehab", "Choco Musk", "attar", "ittar", "arabic", "perfume oil"]
-categories = ["Fragrance"]
+categories = ["Perfume"]
 +++
 
 {{< figure src="/img/choco-musk.jpg" >}}

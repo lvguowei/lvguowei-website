@@ -2,7 +2,7 @@
 date = "2016-10-15T09:40:46+03:00"
 title = "Unidirectional to Bidirectional"
 tags = ["refactoring"]
-categories = ["programming"]
+categories = ["Refactoring"]
 +++
 
 It is very common in relational database that we have the following structure:

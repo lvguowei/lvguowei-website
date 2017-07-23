@@ -2,7 +2,7 @@
 date = "2016-12-26T10:23:15+02:00"
 title = "My Second Android Library"
 tags = ["Android", "library", "open source"]
-categories = ["programming"]
+categories = ["Android Library"]
 +++
 
 I published my second android library project, a date and time picker dialog that mimic the one in Google Map app.

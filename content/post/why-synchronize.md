@@ -2,7 +2,7 @@
 title: "Why Synchronize?"
 date: 2017-07-01T14:16:31+03:00
 tags: ["concurrent programming", "java"]
-categories: ["programming"]
+categories: ["Concurrent Programming"]
 ---
 
 We are going to write a program, a bit program, lots of stuff happening here and there, ok, big program. Now, lots of threads of course, loads and loads of them, we have to synchronize, yes we do, I think so, yeah, synchronize very important stuff, good idea, but, why?

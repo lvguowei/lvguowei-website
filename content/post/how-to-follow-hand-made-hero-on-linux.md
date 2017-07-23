@@ -2,7 +2,7 @@
 title: "How To Follow Hand Made Hero On Linux"
 date: 2017-07-20T09:06:31+03:00
 tags: ["Hand Made Hero", "Linux"]
-categories: ["programming"]
+categories: ["Hand Made Hero"]
 ---
 
 If you are a Linux person and you want to follow the awesome [Hand Made Hero](https://handmadehero.org/), here are how I am doing it(on Arch Linux).

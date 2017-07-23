@@ -2,7 +2,7 @@
 title: "All You Need To Know About Android Espresso Testing (Part II)"
 date: 2017-07-21T11:48:08+03:00
 tags: ["Android", "Espresso", "Testing"]
-categories: ["programming"]
+categories: ["Android Development"]
 ---
 
 In Part I we talked about how to setup Espresso testing framework, what is the activity testing rule and how to use uiautomatorviewer to help us find id of the view quickly.

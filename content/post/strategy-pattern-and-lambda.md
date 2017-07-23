@@ -2,7 +2,7 @@
 title: "Strategy Pattern And Lambda"
 date: 2017-07-03T12:01:35+03:00
 tags: ["design pattern", "lambda", "functional programming"]
-categories: ["programming"]
+categories: ["Object Oriented Design"]
 ---
 
 While reading *Effective Java* Item 21: **Use function objects to represent strategies**, something hit my mind and now I'm writing it down.

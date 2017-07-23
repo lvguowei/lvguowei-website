@@ -2,7 +2,7 @@
 date = "2017-02-12T11:08:14+02:00"
 title = "Programming Kata Day 4"
 tags = ["clojure", "programming kata"]
-categories = ["programming"]
+categories = ["Programming Kata"]
 +++
 
 # Problem

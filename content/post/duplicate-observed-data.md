@@ -2,7 +2,7 @@
 date = "2016-10-15T05:35:31+03:00"
 title = "Duplicate Observed Data"
 tags = ["refactoring", "Android"]
-categories = ["programming"]
+categories = ["Refactoring"]
 +++
 
 This is from the famous Refactoring book by Martin Fowler. When I was reading it, it feels very similar to the very popular MVP or MVVM.

@@ -2,7 +2,7 @@
 title: "The Pleasure Of Hand Made Programs"
 date: 2017-07-05T21:42:18+03:00
 tags: ["ranting"]
-categories: ["programming"]
+categories: ["Ranting"]
 ---
 
 Some time ago I read [this article](http://www.posteriorscience.net/?p=206) about Why Mit Stopped Teaching SICP. Gerry Sussman said that nowadays people do not often need to build something from scratch again, there exists massive and huge library code for nearly everything. So today's programming work is more like poking around other people's code until it works.

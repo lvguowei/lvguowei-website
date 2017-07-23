@@ -2,7 +2,7 @@
 date = "2016-12-18T09:54:57+02:00"
 title = "Coffee Maker - An OOD case study"
 tags = [ "OOD", "uncle bob" ]
-categories = ["programming"]
+categories = ["Object Oriented Design"]
 +++
 
 This case study is to show case how to design classes that interact with each other to form a component.

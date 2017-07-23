@@ -2,7 +2,7 @@
 date = "2016-12-06T12:16:53+02:00"
 title = "Expense Report Case Study"
 tags = [ "Design Pattern", "SOLID Principle", "uncle bob", "refactoring" ]
-categories = ["programming"]
+categories = ["Object Oriented Design"]
 +++
 
 One day, I was watching another Uncle Bob's video (yes, they are addictive), when I see one example he gave when talking about open closed principle, it ringed a bell in my head. This looked familiar! The `type` in some data classes, some `switch`s or `if`s, some `&&`s and `||`s all dancing around in the class. I can almost hear them teasing: "Come and catch me! Come and catch me!".

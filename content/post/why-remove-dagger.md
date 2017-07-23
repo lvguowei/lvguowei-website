@@ -2,7 +2,7 @@
 title: "Why we stopped using dagger and some thoughts"
 date: 2017-06-27T20:40:41+03:00
 tags: ["Android", "Dagger2"]
-categories: ["programming"]
+categories: ["Android Development"]
 ---
 
 I decided to stop using Dagger2 in our company's android project. Why?

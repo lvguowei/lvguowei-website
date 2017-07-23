@@ -2,7 +2,7 @@
 title: "All You Need To Know About Android Espresso Testing (Part III)"
 date: 2017-07-21T16:44:41+03:00
 tags: ["Android", "Espresso", "Testing"]
-categories: ["programming"]
+categories: ["Android Development"]
 ---
 
 In part II, we wrote a test case to verify that the app can create a task and the task will be seen on the screen. In this part III, we will demonstrate one technique on writing tests that involves a `RecyclerView`.

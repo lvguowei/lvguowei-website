@@ -2,7 +2,7 @@
 title = "Are Stubs and Mocks Harmful?"
 date = "2016-12-18T19:53:45+02:00"
 tags = [ "TDD", "mocks", "stubs" ]
-categories = ["programming"]
+categories = ["Test Driven Development"]
 +++
 
 I stumbled upon this [video](https://www.youtube.com/watch?v=EaxDl5NPuCA), and boy it is so amazing! (if you ignore the annoying audience asking non-stop some annoying questions). This is clearly one of the most inspiring videos I have ever watched. So I must take some notes down and spread the idea as well.

@@ -2,7 +2,7 @@
 date = "2016-10-08T14:17:40+03:00"
 title = "Do you have a good taste of what you are doing?"
 tags = ["mumble"]
-categories = ["programming"]
+categories = ["Ranting"]
 +++
 
 There is this stereotype impression about technology industry, that it is a cruel game only

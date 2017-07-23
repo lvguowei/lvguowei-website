@@ -2,7 +2,7 @@
 date = "2016-05-05T15:33:59+03:00"
 title = "Simple example of recursion"
 tags = ["recursion", "scheme", "SICP", "functional programming"]
-categories = ["programming"]
+categories = ["SICP"]
 +++
 
 今天读到SICP里的一个介绍recursion的例子，用牛顿猜想来计算平方根。

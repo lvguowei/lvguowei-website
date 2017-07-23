@@ -2,7 +2,7 @@
 date = "2016-04-30T10:07:07+03:00"
 title = "C++ Primer Answers"
 tags = [ "cpp", "Cpp Primer" ]
-categories = ["programming"]
+categories = ["C++ Primer"]
 +++
 
 <p align="center">

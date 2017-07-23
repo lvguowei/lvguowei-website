@@ -2,7 +2,7 @@
 title = "Understand Clojure Transducers 1"
 date = "2017-04-02T08:35:01+03:00"
 tags = ["clojure", "transducer"]
-categories = ["programming"]
+categories = ["Clojure"]
 +++
 In this post, we will define what is a *transducer*.
 

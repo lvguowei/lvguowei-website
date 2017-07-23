@@ -2,7 +2,7 @@
 date = "2016-05-15T20:46:45+03:00"
 title = "Old and New For Loop in C++"
 tags = [ "cpp", "Cpp Primer" ]
-categories = ["programming"]
+categories = ["C++ Primer"]
 +++
 
 The difference between the subscription based for loop and the newly introduced range based loop may be a bit confusing.

@@ -2,7 +2,7 @@
 title = "Android Kata View Property Animator"
 date = "2017-03-28T20:49:08+03:00"
 tags = ["programming kata", "android"]
-categories = ["programming"]
+categories = ["Android Development"]
 +++
 
 Since I have been doing programming kata, why not adopt the same kata concept in Android programming?

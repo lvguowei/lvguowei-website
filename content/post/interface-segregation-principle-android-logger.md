@@ -2,7 +2,7 @@
 title = "Use Interface Segregation Principle to Implement an Android Logger"
 date = "2016-12-08T21:34:15+02:00"
 tags = [ "Design Pattern", "SOLID Principle", "uncle bob", "refactoring", "Android" ]
-categories = ["programming"]
+categories = ["Object Oriented Design"]
 +++
 
 Recently at work we has been talking about implementing some kind of Analytic interface for all the analytic libraries we are using, like Localytics and Firebase and so on.

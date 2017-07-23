@@ -2,7 +2,7 @@
 date = "2017-02-27T20:15:18+02:00"
 title = "Clojure Tail Recursion"
 tags = ["clojure", "recursion"]
-categories = ["programming"]
+categories = ["Clojure"]
 +++
 
 What this `recur` and `tail calls optimization` is all about in Clojure? This blog post is trying to give a short yet easy to remember explanation.

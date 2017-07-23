@@ -2,7 +2,7 @@
 date = "2016-05-29T21:32:14+03:00"
 title = "Time and Space of Recursion"
 tags = ["recursion", "scheme", "SICP", "functional programming"]
-categories = ["programming"]
+categories = ["SICP"]
 +++
 
 今天通过一个例子，来谈一谈第归的时间和空间效应。

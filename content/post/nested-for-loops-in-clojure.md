@@ -2,7 +2,7 @@
 date = "2017-02-03T20:36:18+02:00"
 title = "Nested For Loops in Clojure"
 tags = ["clojure"]
-categories = ["programming"]
+categories = ["Clojure"]
 +++
 
 One awkwardness I haven't really get rid of when using Clojure is for loops. Especially nested for loops that modifies some global variables. I find some solutions online where people use nested recursion or atoms, but can we just use one level of recursion? Let's try out with a coding kata.

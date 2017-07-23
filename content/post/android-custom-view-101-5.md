@@ -2,7 +2,7 @@
 title: "Android Custom View 101 (Part V)"
 date: 2017-07-09T19:26:15+03:00
 tags: ["Android"]
-categories: ["programming"]
+categories: ["Android Development"]
 ---
 
 In this post, we will discuss how to implement a custom view group by extending an existing one, like a `FrameLayout`.

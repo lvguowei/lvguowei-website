@@ -1,6 +1,7 @@
 +++
 date = "2016-07-09T19:22:34+03:00"
 title = "Percy Jackson Series"
+categories = ["Books"]
 
 +++
 

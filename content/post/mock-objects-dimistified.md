@@ -2,7 +2,7 @@
 date = "2017-03-20T20:27:39+02:00"
 title = "Mock Objects Demystified"
 tags = ["TDD"]
-categories = ["programming"]
+categories = ["Test Driven Development"]
 +++
 
 If you have ever tried writing any non trivial tests, mocks should not be a stranger to you. But what about some other "mock" like objects like stubs, spies and such? How are they different from each other? In this blog post, I will explain it as simple and easy to remember as possible.

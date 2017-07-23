@@ -2,7 +2,7 @@
 date = "2016-11-21T21:29:52+02:00"
 title = "Master Mind in TDD"
 tags = [ "TDD", "MasterMind", "uncle bob", "java" ]
-categories = ["programming"]
+categories = ["Object Oriented Design"]
 +++
 
 In one of Uncle Bob's video, he talked about this game called "Master Mind" when he was teaching Single Responsibility Principle(SRP).
