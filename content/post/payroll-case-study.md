@@ -2,7 +2,7 @@
 title = "Payroll Case Study"
 date = "2016-11-20T14:51:39+02:00"
 tags = [ "uncle bob", "architecture", "java", "payroll", "agile"]
-categories = ["object Oriented Design"]
+categories = ["Object Oriented Design"]
 +++
 
 I was watching some Uncle Bob video some day which talked about how to design the architecture of a system. In that video, he gave a case study of a payroll system, I found the souce code and it is actually implemented in C++, so I ported a Java version.
