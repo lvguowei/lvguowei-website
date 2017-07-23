@@ -70,7 +70,7 @@ paginate = 5
 # You can use identifier to prepend a font awesome icon to your text
 [[menu.main]]
     name = "Blog"
-    url = "/blog"
+    url = "/post"
     identifier = "fa fa-newspaper-o"
     weight = 1
 
