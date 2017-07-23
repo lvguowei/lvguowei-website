@@ -1,8 +1,7 @@
 +++
 date = "2017-02-06T20:42:29+02:00"
-title = "Programming Kata"
-tags = ["clojure", "programming kata"]
-categories = ["Programming kata"]
+title = "Programming Kata Day 1"
+categories = ["programming kata"]
 +++
 
 From today, I will practice one programming kata per day and post the content here.
