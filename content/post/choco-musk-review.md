@@ -1,11 +1,18 @@
-+++
-date = "2016-10-09T21:23:38+03:00"
-title = "Choco Musk by Al Rehab"
-tags = [ "Al Rehab", "Choco Musk", "attar", "ittar", "arabic", "perfume oil"]
-categories = ["Perfume"]
-+++
+---
+date: "2016-10-09T21:23:38+03:00"
+title: "Choco Musk by Al Rehab"
+tags: [ "Al Rehab", "Choco Musk", "attar", "ittar", "arabic", "perfume oil"]
+keywords:
+  - Al Rehab
+  - perfume oil
+  - choco musk
+  - attar
+  - arabic
+categories: ["Perfume"]
+description: An arabic attar review
+---
 
-{{< figure src="/img/choco-musk.jpg" >}}
+{{< img-post "/img" "choco-musk.jpg" "Choco Musck" "left" >}}
 
 This is my first perfume oil/attar, I have to say I am quite impressed by it.
 
