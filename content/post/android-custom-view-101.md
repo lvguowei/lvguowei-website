@@ -3,6 +3,13 @@ title: "Android Custom Views 101 (Part I)"
 date: 2017-07-05T15:20:25+03:00
 tags: ["Android"]
 categories: ["Android Development"]
+keywords:
+  - Android
+  - Custom View
+description: Learn about Androd Custom View and ViewGroup
+featured: "featured-android-custom-view.png"
+featuredalt: "Android custom view"
+featuredpath: "/img"
 ---
 
 Creating your own custom android views can be useful and daunting at the same time. For a long time there is nobody really talks about it in a approachable way, until this lady [Huyen Tue Dao](https://www.youtube.com/watch?v=dLl0ovmta6A). Let's try to follow her approach and create some custom view!

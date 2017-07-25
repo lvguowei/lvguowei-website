@@ -3,6 +3,13 @@ title: "Android Custom Views 101 (Part II)"
 date: 2017-07-08T09:55:03+03:00
 tags: ["Android"]
 categories: ["Android Development"]
+keywords:
+  - Android
+  - Custom View
+description: Learn about Androd Custom View and ViewGroup
+featured: "featured-android-custom-view.png"
+featuredalt: "Android custom view"
+featuredpath: "/img"
 ---
 
 In Part I, we talked about how to create a simple custom view. But we don't really implement the `onMeasure()`. In this post, we will analyze what problems we will have if we omit the `onMeasure()`.

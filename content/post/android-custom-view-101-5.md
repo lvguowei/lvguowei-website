@@ -3,6 +3,13 @@ title: "Android Custom View 101 (Part V)"
 date: 2017-07-09T19:26:15+03:00
 tags: ["Android"]
 categories: ["Android Development"]
+keywords:
+  - Android
+  - Custom View
+description: Learn about Androd Custom View and ViewGroup
+featured: "featured-android-custom-view.png"
+featuredalt: "Android custom view"
+featuredpath: "/img"
 ---
 
 In this post, we will discuss how to implement a custom view group by extending an existing one, like a `FrameLayout`.

@@ -3,6 +3,13 @@ title: "Android Custom Views 101 (Part IV)"
 date: 2017-07-09T16:41:23+03:00
 tags: ["Android"]
 categories: ["Android Development"]
+keywords:
+  - Android
+  - Custom View
+description: Learn about Androd Custom View and ViewGroup
+featured: "featured-android-custom-view.png"
+featuredalt: "Android custom view"
+featuredpath: "/img"
 ---
 
 In this installment, we talk about how to implement custom view group.
