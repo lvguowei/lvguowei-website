@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Coding challenge on Guowei Lv</title>
+    <link>https://www.lvguowei.me/tags/coding-challenge/</link>
+    <description>Recent content in Coding challenge on Guowei Lv</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 06 Oct 2016 19:46:09 +0300</lastBuildDate>
+    
+	<atom:link href="https://www.lvguowei.me/tags/coding-challenge/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>matrix concentric shift</title>
+      <link>https://www.lvguowei.me/post/matrix-concentric-shift/</link>
+      <pubDate>Thu, 06 Oct 2016 19:46:09 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/matrix-concentric-shift/</guid>
+      <description>Table of Contents  1. Problem 2. Analysis 3. Source Code 4. Build script 5. How to run    I suck at algorithms, even though I have a Machine Learning and Algorithms master degree. It makes me frown everytime in coding interviews. So I decided to practice more often, hope that I can get better at it. At least not afraid of it. Now this is the first one.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C&#43;&#43; Primer on Guowei Lv</title>
+    <link>https://www.lvguowei.me/categories/c&#43;&#43;-primer/</link>
+    <description>Recent content in C&#43;&#43; Primer on Guowei Lv</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 15 May 2016 20:46:45 +0300</lastBuildDate>
+    
+	<atom:link href="https://www.lvguowei.me/categories/c++-primer/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Old and New For Loop in C&#43;&#43;</title>
+      <link>https://www.lvguowei.me/post/new-and-old-for-loop/</link>
+      <pubDate>Sun, 15 May 2016 20:46:45 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/new-and-old-for-loop/</guid>
+      <description>The difference between the subscription based for loop and the newly introduced range based loop may be a bit confusing. Let&amp;rsquo;s clear things up.
+Here are some sample code:
+void testFor() { cout &amp;lt;&amp;lt; &amp;quot;--- For loop ---&amp;quot; &amp;lt;&amp;lt; endl; string s(&amp;quot;hello&amp;quot;); // subscription can modify for (string::size_type i = 0; i &amp;lt; s.size (); i++) { s[i] = toupper (s[i]); } cout &amp;lt;&amp;lt; s &amp;lt;&amp;lt; endl; vector&amp;lt;int&amp;gt; v {1, 2, 3}; // subscription can modify for (vector&amp;lt;int&amp;gt;::size_type i = 0; i &amp;lt; v.</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; Primer Exercise Answer (Section 2.5.2)</title>
+      <link>https://www.lvguowei.me/post/cpp-answer-2-5-2/</link>
+      <pubDate>Sun, 08 May 2016 19:59:59 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/cpp-answer-2-5-2/</guid>
+      <description>#include &amp;lt;iostream&amp;gt; using namespace std; int main(int argc, char *argv[]) { int i = 0, &amp;amp;r = i; auto a = r; const int ci = i, &amp;amp;cr = ci; auto b = ci; auto c = cr; auto d = &amp;amp;i; auto e = &amp;amp;ci; const auto f = ci; auto &amp;amp;g = ci; //auto &amp;amp;h = 42; const auto &amp;amp;j = 42; a = 42; // ok b = 42; // ok c = 42; // ok d = 42; // no, d is a pointer e = 42; // no, e is a pointer g = 42; // no, g is a reference cannot rebind return 0; }  </description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; Primer Answers</title>
+      <link>https://www.lvguowei.me/post/c&#43;&#43;-primer-answers/</link>
+      <pubDate>Sat, 30 Apr 2016 10:07:07 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/c&#43;&#43;-primer-answers/</guid>
+      <description>Table of Contents  1. C++ Primer Exercises Answers  1.1. Section 2.3.1  1.1.1. Exercise 2.15 1.1.2. Exercise 2.16 1.1.3. Exercise 2.17   1.2. Section 2.3.2  1.2.1. Exercise 2.18 1.2.2. Exercise 2.20 1.2.3. Exercise 2.21   1.3. Section 2.4.2  1.3.1. Exercise 2.27   1.4. Section 2.4.3  1.4.1. Exercise 2.30        C++ Primer Exercises Answers Section 2.3.1 Exercise 2.</description>
+    </item>
+    
+  </channel>
+</rss>

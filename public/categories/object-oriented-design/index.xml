@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Object Oriented Design on Guowei Lv</title>
+    <link>https://www.lvguowei.me/categories/object-oriented-design/</link>
+    <description>Recent content in Object Oriented Design on Guowei Lv</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 03 Jul 2017 12:01:35 +0300</lastBuildDate>
+    
+	<atom:link href="https://www.lvguowei.me/categories/object-oriented-design/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Strategy Pattern And Lambda</title>
+      <link>https://www.lvguowei.me/post/strategy-pattern-and-lambda/</link>
+      <pubDate>Mon, 03 Jul 2017 12:01:35 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/strategy-pattern-and-lambda/</guid>
+      <description>While reading Effective Java Item 21: Use function objects to represent strategies, something hit my mind and now I&amp;rsquo;m writing it down.
+All these new lambda thing is really what is called the Strategy pattern in the OOP world, or would it be more appropriate to say that the Strategy Pattern in Design patterns is really what lambda is.
+The essence of all these, can be boiled down to one simple idea, pass functionalities around.</description>
+    </item>
+    
+    <item>
+      <title>Why component dependency cycle is bad</title>
+      <link>https://www.lvguowei.me/post/why-component-dependency-cycle-is-bad/</link>
+      <pubDate>Sun, 01 Jan 2017 13:51:26 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/why-component-dependency-cycle-is-bad/</guid>
+      <description>I have been working on some Clojure project at work for several months now, one little thing bothers me now and then is that it doesn&amp;rsquo;t allow dependency cycle in project. For example if a.clj requires b.clj, b.clj requires c.clj, then c.clj cannot require a.clj, in other words, c.clj cannot use anything inside a.clj.
+At first, I thought this is a bit odd, java doesn&amp;rsquo;t have that. And once in a while we have to solve such problems by creating a new namespace and move the common function into it.</description>
+    </item>
+    
+    <item>
+      <title>Coffee Maker - An OOD case study</title>
+      <link>https://www.lvguowei.me/post/coffee-maker/</link>
+      <pubDate>Sun, 18 Dec 2016 09:54:57 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/coffee-maker/</guid>
+      <description>This case study is to show case how to design classes that interact with each other to form a component.
+The problem is to implement a software component that controls a coffee maker.
+Requirement  The Mark IV Special makes up to 12 cups of coffee at a time. The user places a filter in the filter holder, fills the filter with coffee grounds, and slides the filter holder into its receptacle.</description>
+    </item>
+    
+    <item>
+      <title>Use Interface Segregation Principle to Implement an Android Logger</title>
+      <link>https://www.lvguowei.me/post/interface-segregation-principle-android-logger/</link>
+      <pubDate>Thu, 08 Dec 2016 21:34:15 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/interface-segregation-principle-android-logger/</guid>
+      <description>Recently at work we has been talking about implementing some kind of Analytic interface for all the analytic libraries we are using, like Localytics and Firebase and so on. Basically it is just a fat interface with a long list of event logging functions, like logSignIn(), logSignOut(), logSellProduct(), logOpenMap() and so on. There are about 40 such methods in that interface. So this is how we implemented it in the first place.</description>
+    </item>
+    
+    <item>
+      <title>Expense Report Case Study</title>
+      <link>https://www.lvguowei.me/post/expense-report-case-study/</link>
+      <pubDate>Tue, 06 Dec 2016 12:16:53 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/expense-report-case-study/</guid>
+      <description>One day, I was watching another Uncle Bob&amp;rsquo;s video (yes, they are addictive), when I see one example he gave when talking about open closed principle, it ringed a bell in my head. This looked familiar! The type in some data classes, some switchs or ifs, some &amp;amp;&amp;amp;s and ||s all dancing around in the class. I can almost hear them teasing: &amp;ldquo;Come and catch me! Come and catch me!&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Master Mind in TDD</title>
+      <link>https://www.lvguowei.me/post/master-mind-tdd/</link>
+      <pubDate>Mon, 21 Nov 2016 21:29:52 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/master-mind-tdd/</guid>
+      <description>In one of Uncle Bob&amp;rsquo;s video, he talked about this game called &amp;ldquo;Master Mind&amp;rdquo; when he was teaching Single Responsibility Principle(SRP). After googled the game, turns out that it is actually a quite famous board game. For more information about the game, please look here -&amp;gt; wiki.
+The game can be played by two people. One comes up with a code, the other one tries to guess. The one who comes up with the code has to score the guesser&amp;rsquo;s guess based on some rules.</description>
+    </item>
+    
+    <item>
+      <title>Payroll Case Study</title>
+      <link>https://www.lvguowei.me/post/payroll-case-study/</link>
+      <pubDate>Sun, 20 Nov 2016 14:51:39 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/payroll-case-study/</guid>
+      <description>I was watching some Uncle Bob video some day which talked about how to design the architecture of a system. In that video, he gave a case study of a payroll system, I found the souce code and it is actually implemented in C++, so I ported a Java version.
+This is a very good example because it feels more realistic than most dummy demos out there. It also shows how to use POJO classes to layout the foundation without going too much into peripheral details like database.</description>
+    </item>
+    
+  </channel>
+</rss>

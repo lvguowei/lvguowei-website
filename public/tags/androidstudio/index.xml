@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AndroidStudio on Guowei Lv</title>
+    <link>https://www.lvguowei.me/tags/androidstudio/</link>
+    <description>Recent content in AndroidStudio on Guowei Lv</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 12 Jul 2017 14:13:07 +0300</lastBuildDate>
+    
+	<atom:link href="https://www.lvguowei.me/tags/androidstudio/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Android Emulator Problem In Arch Linux</title>
+      <link>https://www.lvguowei.me/post/android-emulator-problem-in-arch-linux/</link>
+      <pubDate>Wed, 12 Jul 2017 14:13:07 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/android-emulator-problem-in-arch-linux/</guid>
+      <description>I don&amp;rsquo;t remember since when, but now whenever I upgrade Android Studio from pacman, I cannot open my emulator, with some libGL error: unable to load driver: i965_dri.so error.
+I tried to follow the solution online but found none of them is working out of the box, because Android Sdk changed some paths. Here is what actualy works now:
+ cd ANDROID_SDK_PATH/emulator/lib64/libstdc++/ mv libstdc++.so.6 libstdc++.so.6.bak ln -s /usr/lib64/libstdc++.so.6 libstdc++.so.6  </description>
+    </item>
+    
+  </channel>
+</rss>

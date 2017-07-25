@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Testing on Guowei Lv</title>
+    <link>https://www.lvguowei.me/tags/testing/</link>
+    <description>Recent content in Testing on Guowei Lv</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 21 Jul 2017 18:19:35 +0300</lastBuildDate>
+    
+	<atom:link href="https://www.lvguowei.me/tags/testing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>All You Need To Know About Android Espresso Testing (Part IV)</title>
+      <link>https://www.lvguowei.me/post/all-you-need-to-know-about-android-espresso-testing-4/</link>
+      <pubDate>Fri, 21 Jul 2017 18:19:35 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/all-you-need-to-know-about-android-espresso-testing-4/</guid>
+      <description>In previous article, we talked about how to scroll to a certain position in RecyclerView in the test. In this article, we further discuss how to write a custom matcher and use it to scroll the RecyclerView.
+Let&amp;rsquo;s say that we want to scroll to certain item in RecyclerView, but we don&amp;rsquo;t know the position. We can then create a custom Matcher, and use the matcher to determine which item to scroll to.</description>
+    </item>
+    
+    <item>
+      <title>All You Need To Know About Android Espresso Testing (Part III)</title>
+      <link>https://www.lvguowei.me/post/all-you-need-to-know-about-android-espresso-testing-3/</link>
+      <pubDate>Fri, 21 Jul 2017 16:44:41 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/all-you-need-to-know-about-android-espresso-testing-3/</guid>
+      <description>In part II, we wrote a test case to verify that the app can create a task and the task will be seen on the screen. In this part III, we will demonstrate one technique on writing tests that involves a RecyclerView.
+First we repeatly add some tasks, and then we verify that the last added task is on display. Note that since we are using a RecyclerView, the last item might not be seen, so we need to scroll the RecyclerView before checking.</description>
+    </item>
+    
+    <item>
+      <title>All You Need To Know About Android Espresso Testing (Part II)</title>
+      <link>https://www.lvguowei.me/post/all-you-need-to-know-about-android-espresso-testing-2/</link>
+      <pubDate>Fri, 21 Jul 2017 11:48:08 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/all-you-need-to-know-about-android-espresso-testing-2/</guid>
+      <description>In Part I we talked about how to setup Espresso testing framework, what is the activity testing rule and how to use uiautomatorviewer to help us find id of the view quickly.
+In this Part II, we will write some tests against a simple TODO list application. Lets get started.
+About the App under test This is a very simple app with basically 2 screens. One to display a list of tasks:</description>
+    </item>
+    
+    <item>
+      <title>All You Need To Know About Android Espresso Testing (Part I)</title>
+      <link>https://www.lvguowei.me/post/all-you-need-to-know-about-android-espresso-testing/</link>
+      <pubDate>Thu, 13 Jul 2017 13:03:12 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/all-you-need-to-know-about-android-espresso-testing/</guid>
+      <description>The Espresso testing framework really makes it easy to write UI tests for Android. In this first installment, I will go through how to set it up and write our first test case.
+Let&amp;rsquo;s get started.
+Set up Espresso Add the following dependencies to your gradle build file.
+dependencies { // Other dependencies ... androidTestCompile &amp;#39;com.android.support.test.espresso:espresso-core:2.2.2&amp;#39; }  Understand the Rules in JUnit Why do they exist? We all know that in JUnit there is a setup method(annotated as @Before) and a teardown method(annotated as @After).</description>
+    </item>
+    
+  </channel>
+</rss>

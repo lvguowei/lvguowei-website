@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Clojure on Guowei Lv</title>
+    <link>https://www.lvguowei.me/tags/clojure/</link>
+    <description>Recent content in Clojure on Guowei Lv</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 02 Apr 2017 08:35:01 +0300</lastBuildDate>
+    
+	<atom:link href="https://www.lvguowei.me/tags/clojure/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Understand Clojure Transducers 1</title>
+      <link>https://www.lvguowei.me/post/understand-clojure-transducers/</link>
+      <pubDate>Sun, 02 Apr 2017 08:35:01 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/understand-clojure-transducers/</guid>
+      <description>In this post, we will define what is a transducer.
+First, let&amp;rsquo;s take a closer look at map.
+(map inc [1 2 3])  A straightforward way to explain what has happened is this: Increment each item by one in a list.
+At first thought, this sounds like one step operation.
+Now let&amp;rsquo;s change the requirement a bit. We want to increment each element by one and then sum them together.</description>
+    </item>
+    
+    <item>
+      <title>Clojure Tail Recursion</title>
+      <link>https://www.lvguowei.me/post/clojure-tail-recursion/</link>
+      <pubDate>Mon, 27 Feb 2017 20:15:18 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/clojure-tail-recursion/</guid>
+      <description>What this recur and tail calls optimization is all about in Clojure? This blog post is trying to give a short yet easy to remember explanation.
+Before explaining anything, let&amp;rsquo;s look at how we can implement + using recursion.
+This is actually an interesting task, implement our +, since most of the time + is a built-in function. So to make things a bit more clear, let&amp;rsquo;s assume that our computer is drunk and forgets about how to do +, but it still remembers how to increment and decrement by 1.</description>
+    </item>
+    
+    <item>
+      <title>Named Arguments In Clojure</title>
+      <link>https://www.lvguowei.me/post/named-arguments-in-clojure/</link>
+      <pubDate>Fri, 24 Feb 2017 22:24:05 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/named-arguments-in-clojure/</guid>
+      <description>Sometimes I miss the named arguments feature in Python, for example:
+def slope(p1=(0,0), p2=(1,1)) return (float(p2[1] - p1[1])) / (p2[0] - p1[0]) =&amp;gt; slope((1,2), (4,5)) =&amp;gt; slope(p2=(2, 1))  The equivalent in clojure can be done using destructuring:
+(defn slope [&amp;amp; {:keys [p1 p2] :or {p1 [0 0] p2 [1 1]}}] (float (/ (- p2 1) (p1 1)) (- p2 0) (p1 0))) =&amp;gt; (slope :p1 [1 2] :p2 [3 4]) =&amp;gt; (slope :p2 [3 4]) =&amp;gt; (slope)  </description>
+    </item>
+    
+    <item>
+      <title>Perfume Shop Puzzle</title>
+      <link>https://www.lvguowei.me/post/perfume-shop-puzzle/</link>
+      <pubDate>Sun, 12 Feb 2017 16:06:17 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/perfume-shop-puzzle/</guid>
+      <description>Solving hard puzzle programming challenges with logic programming is real fun. I solved one puzzle called &amp;ldquo;Perfume Shop Puzzle&amp;rdquo; by using the core.logic in Clojure. Check it out here: github.</description>
+    </item>
+    
+    <item>
+      <title>Nested For Loops in Clojure</title>
+      <link>https://www.lvguowei.me/post/nested-for-loops-in-clojure/</link>
+      <pubDate>Fri, 03 Feb 2017 20:36:18 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/nested-for-loops-in-clojure/</guid>
+      <description>One awkwardness I haven&amp;rsquo;t really get rid of when using Clojure is for loops. Especially nested for loops that modifies some global variables. I find some solutions online where people use nested recursion or atoms, but can we just use one level of recursion? Let&amp;rsquo;s try out with a coding kata.
+Problem: Given an array of numbers, find the biggest sum of any two numbers. The same item in array cannot be used twice.</description>
+    </item>
+    
+    <item>
+      <title>Why component dependency cycle is bad</title>
+      <link>https://www.lvguowei.me/post/why-component-dependency-cycle-is-bad/</link>
+      <pubDate>Sun, 01 Jan 2017 13:51:26 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/why-component-dependency-cycle-is-bad/</guid>
+      <description>I have been working on some Clojure project at work for several months now, one little thing bothers me now and then is that it doesn&amp;rsquo;t allow dependency cycle in project. For example if a.clj requires b.clj, b.clj requires c.clj, then c.clj cannot require a.clj, in other words, c.clj cannot use anything inside a.clj.
+At first, I thought this is a bit odd, java doesn&amp;rsquo;t have that. And once in a while we have to solve such problems by creating a new namespace and move the common function into it.</description>
+    </item>
+    
+  </channel>
+</rss>

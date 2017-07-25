@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programming kata on Guowei Lv</title>
+    <link>https://www.lvguowei.me/categories/programming-kata/</link>
+    <description>Recent content in Programming kata on Guowei Lv</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 06 Mar 2017 21:02:55 +0200</lastBuildDate>
+    
+	<atom:link href="https://www.lvguowei.me/categories/programming-kata/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Programming Kata Day 13</title>
+      <link>https://www.lvguowei.me/post/programming-kata-day-13/</link>
+      <pubDate>Mon, 06 Mar 2017 21:02:55 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/programming-kata-day-13/</guid>
+      <description>Problem The elevator can be on first floor or second floor The elevator can be either openned or closed. The elevator can go up or down. But when it goes up or down, the door has to be closed. The door can open or close, but it cannot open when it is already openned or close when it is already closed.
+Write a function that takes a list of actions with :done indicating the end, and return if this sequence is legal or not.</description>
+    </item>
+    
+    <item>
+      <title>programming kata day 12</title>
+      <link>https://www.lvguowei.me/post/programming-kata-day-12/</link>
+      <pubDate>Sun, 26 Feb 2017 16:38:38 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/programming-kata-day-12/</guid>
+      <description> Problem Implement a unit converter that uses the given the following metric
+(def metric {:meter 1 :km 1000 :cm 1/100 :mm [1/10 :cm]})  The converter should anwser questions like:
+How many meters are there in 10 km and 20 cm?
+Solution (defn convert [context descriptor] (reduce (fn [result [mag unit]] (let [val (metric unit)] (if (vector? val) (+ result (* mag (convert context val))) (+ result (* mag val))))) 0 (partition 2 descriptor))) (convert metric [1 :meter]) (convert metric [3 :km 10 :meter])  </description>
+    </item>
+    
+    <item>
+      <title>programming kata day 11</title>
+      <link>https://www.lvguowei.me/post/programming-kata-day-11/</link>
+      <pubDate>Sat, 25 Feb 2017 21:30:56 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/programming-kata-day-11/</guid>
+      <description>Problem This coding adventure comes from Advend Of Code Day 2
+Solution Github</description>
+    </item>
+    
+    <item>
+      <title>programming kata day 10</title>
+      <link>https://www.lvguowei.me/post/programming-kata-day-10/</link>
+      <pubDate>Thu, 23 Feb 2017 20:36:33 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/programming-kata-day-10/</guid>
+      <description>Problem Here is a list of students&amp;rsquo; exam scores. Write a function to sort them based on given criteria. Like Math first, then Physics and then chemistry and then English.
+(def exam-scores [{:math 78 :physics 80 :english 97 :chemistry 65} {:math 78 :physics 80 :english 66 :chemistry 65} {:math 78 :physics 54 :english 97 :chemistry 65} {:math 78 :physics 80 :english 97 :chemistry 61} {:math 100 :physics 89 :english 47 :chemistry 85} {:math 98 :physics 80 :english 79 :chemistry 65}])  Solution (defn rank [scores &amp;amp; criteria] (reverse  (sort-by  (fn [score] (mapv score criteria)) scores)))  Note The sort-by in Clojure is very powerful, the idea is to reduce each row into one value that we know how to sort, like numbers, strings or lists.</description>
+    </item>
+    
+    <item>
+      <title>Programming Kata Day 9</title>
+      <link>https://www.lvguowei.me/post/programming-kata-day-9/</link>
+      <pubDate>Mon, 20 Feb 2017 20:05:17 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/programming-kata-day-9/</guid>
+      <description>Problem This coding adventure comes from Advend Of Code Day 1
+Solution Github</description>
+    </item>
+    
+    <item>
+      <title>Programming Kata Day 8</title>
+      <link>https://www.lvguowei.me/post/programming-kata-day-8/</link>
+      <pubDate>Sat, 18 Feb 2017 13:54:42 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/programming-kata-day-8/</guid>
+      <description>Problem Write a function steps, that takes a sequence and makes a deeply nested structure from it:
+(steps [1 2 3 4]) ;=&amp;gt; [1 [2 [3 [4 []]]]]  Solution 1 (defn steps [s] (if (seq s) [(first s) (steps (rest s))] []))  Solution 2 Lazy version:
+(defn lz-steps [s] (lazy-seq (if (seq s) [(first s) (lz-steps (rest s))] [])))  Note To see the difference, call the function like this:</description>
+    </item>
+    
+    <item>
+      <title>Programming Kata Day 7</title>
+      <link>https://www.lvguowei.me/post/programming-kata-day-7/</link>
+      <pubDate>Fri, 17 Feb 2017 20:32:20 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/programming-kata-day-7/</guid>
+      <description>Problem Suppose a binary tree structure looks like this:
+{:val value :L &amp;lt;left-node&amp;gt; :R &amp;lt;right-node&amp;gt;}  Write a function to balance insert node into the tree.
+Solution (defn insert [tree x] (cond (nil? tree) {:val x :L nil :R nil} (&amp;lt; x (:val tree)) (assoc tree :L (insert (:L tree) x)) :else (assoc tree :R (insert (:R tree) x))))  Note Here is the function to traverse the tree:</description>
+    </item>
+    
+    <item>
+      <title>Programming Kata Day 6</title>
+      <link>https://www.lvguowei.me/post/programming-kata-day-6/</link>
+      <pubDate>Wed, 15 Feb 2017 20:16:33 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/programming-kata-day-6/</guid>
+      <description>Problem Write a function to determine if a vector contains a set of items.
+Solution (defn containsv [v &amp;amp; items] (some (set items) v))  Note Using a set as the predicate supplied to some allows you to check whether any of the truthy values in the set are contained within the given sequence. This is a frequently used Clojure idiom for searching for containment within a sequence.</description>
+    </item>
+    
+    <item>
+      <title>programming kata day 5</title>
+      <link>https://www.lvguowei.me/post/programming-kata-day-5/</link>
+      <pubDate>Mon, 13 Feb 2017 21:34:13 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/programming-kata-day-5/</guid>
+      <description>Problem Write a function to determine if a number is a triangular number.
+Solutions Solution 1 (defn nth-triangle [n] (apply + (range (inc n)))) (defn is-triangle-number [n] (loop [i 0] (cond (&amp;gt; n (nth-triangle i)) (recur (inc i)) (= n (nth-triangle i)) true :else false)))  Solution 2 (defn is-triangle-number [n] (loop [tri 0 i 1] (cond (&amp;gt; n tri) (recur (+ tri i) (inc i)) (= n tri) true :else false)))  Note Solution 1 is the first that came to my mind, but it has a typical problem: redundant calculation.</description>
+    </item>
+    
+    <item>
+      <title>Perfume Shop Puzzle</title>
+      <link>https://www.lvguowei.me/post/perfume-shop-puzzle/</link>
+      <pubDate>Sun, 12 Feb 2017 16:06:17 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/perfume-shop-puzzle/</guid>
+      <description>Solving hard puzzle programming challenges with logic programming is real fun. I solved one puzzle called &amp;ldquo;Perfume Shop Puzzle&amp;rdquo; by using the core.logic in Clojure. Check it out here: github.</description>
+    </item>
+    
+    <item>
+      <title>Programming Kata Day 4</title>
+      <link>https://www.lvguowei.me/post/programming-kata-day-4/</link>
+      <pubDate>Sun, 12 Feb 2017 11:08:14 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/programming-kata-day-4/</guid>
+      <description> Problem Implement take-nth.
+Solutions Solution 1 (defn my-take-nth [n col] (loop [i 0 result []] (if (= i (count col)) result (if (= 0 (mod i n)) (recur (inc i) (conj result (nth col i))) (recur (inc i) result)))))  solution 2 (defn my-take-nth2 [n col] (-&amp;gt;&amp;gt; col (map-indexed (fn [i x] [i x])) (filter (fn [[i x]] (= 0 (mod i 2)))) (mapv (fn [[i x]] x))))  </description>
+    </item>
+    
+    <item>
+      <title>programming kata day 3</title>
+      <link>https://www.lvguowei.me/post/programming-kata-day-3/</link>
+      <pubDate>Fri, 10 Feb 2017 20:31:01 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/programming-kata-day-3/</guid>
+      <description> Problem Trolls are attacking your comment section!
+A common way to deal with this situation is to remove all of the vowels from the trolls&amp;rsquo; comments, neutralizing the threat.
+Your task is to write a function that takes a string and return a new string with all vowels removed.
+For example, the string &amp;ldquo;This website is for losers LOL!&amp;rdquo; would become &amp;ldquo;Ths wbst s fr lsrs LL!&amp;rdquo;.
+Solution Solution 1 (defn disemvowel [string] (reduce (fn [result next] (if (#{\A \E \I \O \U \a \e \i \o \u} next) result (str result next))) &amp;quot;&amp;quot; string))  Solution 2 (defn disemvowel [string] (apply str (remove (set &amp;quot;AEIOUaeiou&amp;quot;) string)))  </description>
+    </item>
+    
+    <item>
+      <title>Programming Kata Day 2</title>
+      <link>https://www.lvguowei.me/post/programming-kata-day-2/</link>
+      <pubDate>Tue, 07 Feb 2017 19:34:17 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/programming-kata-day-2/</guid>
+      <description>Problem: Write a function to calculate fibonacci number in constant space complexity.
+(defn fib [n] (loop [a 0 b 1 i n] (if (= 0 i) a (recur b (+ a b) (dec i)))))  </description>
+    </item>
+    
+    <item>
+      <title>Programming Kata Day 1</title>
+      <link>https://www.lvguowei.me/post/programming-kata-day-1/</link>
+      <pubDate>Mon, 06 Feb 2017 20:42:29 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/programming-kata-day-1/</guid>
+      <description>From today, I will practice one programming kata per day and post the content here.
+Here goes the first one:
+ My friend John likes to go to the cinema. He can choose between system A and system B.
+System A : buy a ticket (15 dollars) every time
+System B : buy a card (500 dollars) and every time buy a ticket the price of which is 0.90 times the price he paid for the previous one.</description>
+    </item>
+    
+    <item>
+      <title>matrix concentric shift</title>
+      <link>https://www.lvguowei.me/post/matrix-concentric-shift/</link>
+      <pubDate>Thu, 06 Oct 2016 19:46:09 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/matrix-concentric-shift/</guid>
+      <description>Table of Contents  1. Problem 2. Analysis 3. Source Code 4. Build script 5. How to run    I suck at algorithms, even though I have a Machine Learning and Algorithms master degree. It makes me frown everytime in coding interviews. So I decided to practice more often, hope that I can get better at it. At least not afraid of it. Now this is the first one.</description>
+    </item>
+    
+  </channel>
+</rss>
