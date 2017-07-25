@@ -37,8 +37,8 @@ paginate = 5
     # customJS             = ["default", "/path/to/file"]
 
     # Loading min files for exampleSite
-    customCSS            = ["default", "/css/main.min.css"]
-    customJS             = ["default", "/js/main.min.js"]
+    #customCSS            = ["default", "/css/main.min.css"]
+    #customJS             = ["default", "/js/main.min.js"]
 
 # parms.intro will appear on the sidebar
 # This is optional, but it's suggested to use
