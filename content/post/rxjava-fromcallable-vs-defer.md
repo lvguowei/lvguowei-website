@@ -2,7 +2,12 @@
 title: "Rxjava fromCallable() Vs defer()"
 date: 2017-07-11T17:13:32+03:00
 tags: ["Android", "RxJava"]
-categories: ["Android Programming"]
+keywords:
+  - Android
+  - RxJava
+  - Functional Programming
+categories: ["Android Development"]
+description: A RxJava Tutorial
 ---
 
 In this post we talk about how to use `Observable.fromCallable()` and `Observable.defer()` to convert exising functionality into the Rx.
