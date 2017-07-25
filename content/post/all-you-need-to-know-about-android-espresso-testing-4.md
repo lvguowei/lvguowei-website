@@ -3,6 +3,15 @@ title: "All You Need To Know About Android Espresso Testing (Part IV)"
 date: 2017-07-21T18:19:35+03:00
 tags: ["Android", "Espresso", "Testing"]
 categories: ["Android Development"]
+keywords:
+  - Android
+  - Espresso
+  - Testing
+  - JUnit
+description: Learn about Android Espresso Testing
+featured: "featured-espresso.png"
+featuredalt: "Android Espresso Testing"
+featuredpath: "/img"
 ---
 
 In previous article, we talked about how to scroll to a certain position in `RecyclerView` in the test. In this article, we further discuss how to write a custom matcher and use it to scroll the `RecyclerView`.

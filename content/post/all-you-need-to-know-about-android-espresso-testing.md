@@ -3,6 +3,15 @@ title: "All You Need To Know About Android Espresso Testing (Part I)"
 date: 2017-07-13T13:03:12+03:00
 tags: ["Android", "Espresso", "Testing"]
 categories: ["Android Development"]
+keywords:
+  - Android
+  - Espresso
+  - Testing
+  - JUnit
+description: Learn about Android Espresso Testing
+featured: "featured-espresso.png"
+featuredalt: "Android Espresso Testing"
+featuredpath: "/img"
 ---
 The Espresso testing framework really makes it easy to write UI tests for Android. In this first installment, I will go through how to set it up and write our first test case.
 
@@ -29,7 +38,7 @@ We all know that in JUnit there is a setup method(annotated as @Before) and a te
 
 1. They are two separate thing, it is very easy to do the setup work but forget to do the clean up work, what makes this worse is that if you forget to clean up, *this* test won't fail, *other* test may fail. So it becomes very hard to track things down when tests are failing.
 
-2. Let's imagine that there are some code for setting up and tearing down the database in database tests, and there are some other code for setting up and tearing down the file handle in the file system tests. Now, what if we want to write tests that involves both file system and the database? Since we are smart, of course we create a `FileSystemAndDatabaseBaseTests` that handles both. Well, what if we want to then write tests that involves both database and networking? Should we create another base class called `DatabaseAndNetworkingBaseTests`? This certainly doesn't scale, soon we will end up with piles upon piles of inheritance classes, because the setup and tear down works can not compose nicely. This is essentially a classic *prefer composing over inheritance* case.
+2. Let's imagine that there are somUntitled designe code for setting up and tearing down the database in database tests, and there are some other code for setting up and tearing down the file handle in the file system tests. Now, what if we want to write tests that involves both file system and the database? Since we are smart, of course we create a `FileSystemAndDatabaseBaseTests` that handles both. Well, what if we want to then write tests that involves both database and networking? Should we create another base class called `DatabaseAndNetworkingBaseTests`? This certainly doesn't scale, soon we will end up with piles upon piles of inheritance classes, because the setup and tear down works can not compose nicely. This is essentially a classic *prefer composing over inheritance* case.
 
 So a `Rule` is basically aiming to solve these problems.
 
