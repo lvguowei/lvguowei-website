@@ -1,9 +1,16 @@
-+++
-date = "2016-05-05T15:33:59+03:00"
-title = "Simple example of recursion"
-tags = ["recursion", "scheme", "SICP", "functional programming"]
-categories = ["SICP"]
-+++
+---
+date: "2016-05-05T15:33:59+03:00"
+title: "Simple example of recursion"
+tags: ["recursion", "scheme", "SICP", "functional programming"]
+categories: ["SICP"]
+keywords:
+  - sicp
+  - recursion
+description: Learn more about recursion
+featured: "featured-sicp.jpg"
+featuredalt: "recursion"
+featuredpath: "/img"
+---
 
 今天读到SICP里的一个介绍recursion的例子，用牛顿猜想来计算平方根。
 

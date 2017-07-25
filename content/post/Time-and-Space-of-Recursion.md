@@ -1,9 +1,16 @@
-+++
-date = "2016-05-29T21:32:14+03:00"
-title = "Time and Space of Recursion"
-tags = ["recursion", "scheme", "SICP", "functional programming"]
-categories = ["SICP"]
-+++
+---
+date: "2016-05-29T21:32:14+03:00"
+title: "Time and Space of Recursion"
+tags: ["recursion", "scheme", "SICP", "functional programming"]
+categories: ["SICP"]
+keywords:
+  - sicp
+  - recursion
+description: Learn more about recursion
+featured: "featured-sicp.jpg"
+featuredalt: "recursion"
+featuredpath: "/img"
+---
 
 今天通过一个例子，来谈一谈第归的时间和空间效应。
 
