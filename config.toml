@@ -83,7 +83,7 @@ paginate = 5
 [[menu.main]]
     name = "About"
     url = "/about"
-    identifier = "fa fa-address-card-o"
+    identifier = "fa fa-user"
     weight = 3
 
 # Insert your username and the icon will apear on the page as long as
