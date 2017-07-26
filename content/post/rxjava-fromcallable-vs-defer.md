@@ -8,6 +8,9 @@ keywords:
   - Functional Programming
 categories: ["Android Development"]
 description: A RxJava Tutorial
+featured: "featured-rx-android.png"
+featuredalt: "RxJava Android"
+featuredpath: "/img"
 ---
 
 In this post we talk about how to use `Observable.fromCallable()` and `Observable.defer()` to convert exising functionality into the Rx.
