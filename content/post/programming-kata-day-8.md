@@ -2,6 +2,9 @@
 date = "2017-02-18T13:54:42+02:00"
 title = "Programming Kata Day 8"
 categories = ["programming kata"]
+featured= "featured-code-kata.jpg"
+featuredalt= "Code kata"
+featuredpath= "/img"
 +++
 
 # Problem

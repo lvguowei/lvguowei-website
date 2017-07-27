@@ -2,6 +2,9 @@
 date = "2017-02-07T19:34:17+02:00"
 title = "Programming Kata Day 2"
 categories = ["programming kata"]
+featured= "featured-code-kata.jpg"
+featuredalt= "Code kata"
+featuredpath= "/img"
 +++
 
 Problem: Write a function to calculate fibonacci number in constant space complexity.
