@@ -2,7 +2,8 @@
 date = "2017-02-24T22:24:05+02:00"
 title = "Named Arguments In Clojure"
 tags = ["clojure"]
-cagegories = ["Clojure"]
+categories = ["Functional Programming"]
+keywords = ["clojure", "functional programming"]
 +++
 
 Sometimes I miss the named arguments feature in Python, for example:
