@@ -2,8 +2,10 @@
 title = "Understand Clojure Transducers 1"
 date = "2017-04-02T08:35:01+03:00"
 tags = ["clojure", "transducer"]
-categories = ["Clojure"]
+keywords = ["functional programming", "clojure", "transducer"]
+categories = ["Functional Programming"]
 +++
+
 In this post, we will define what is a *transducer*.
 
 First, let's take a closer look at *map*.
