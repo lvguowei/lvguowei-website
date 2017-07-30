@@ -1,7 +1,7 @@
 +++
 categories = ["Functional Programming"]
 description = "Two types of recursion"
-featured = ""
+featured = "featured-fib.png"
 featuredpath = "/img"
 featuredalt = ""
 title = "Tree Vs Iterative Fibbonacci Numbers"
