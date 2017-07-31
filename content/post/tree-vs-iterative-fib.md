@@ -24,7 +24,7 @@ Most likely the implementation of a function that calculate fib number is as fol
 
 This is just a direct translation from the Fibonacci number definition. Since it is straightforward and easy to understand, most textbooks use it as an typical example for illustrating recursive function. But, very few provide deeper discussions about it.
 
-Yes, this is a recursive implementation, but it is a so called *Tree Recursion*. What does it mean? Let's take a closer look together and go through the execusion path.
+Yes, this is a recursive implementation, but it is a so called *Tree Recursion*. What does it mean? Let's take a closer look together and go through the execution path.
 
 Let's first take the simplest case, `(fib-tree 0)` and `(fib-tree 1)`, the function directly returns 0 and 1 separately.
 
@@ -40,7 +40,7 @@ Not only there are a lot of duplicate calculations, but also each level of the t
 
 ## Iterative Recursion
 
-The anwser is yes. Turns out we only need 2 variables for calculating Fib number. One for the current fib number, one for storing the previous fib number in order to calculate the next one. The code looks like:
+The answer is yes. Turns out we only need 2 variables for calculating Fib number. One for the current fib number, one for storing the previous fib number in order to calculate the next one. The code looks like:
 
 {{< highlight clojure >}}
 
