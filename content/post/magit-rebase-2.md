@@ -9,7 +9,7 @@ keywords= ["Magit", "Git", "Emacs", "Rebase"]
 date= 2017-08-06T09:30:26+03:00
 +++
 
-In part I we went through how to use git rebase to to modify commit history, things like reword a commit, squash multiple commits, split commit. In this part, we will talk about another common use case of rebase: rebase before merging branches.
+In [part I](https://www.lvguowei.me/post/magit-rebase/) we went through how to use git rebase to modify commit history, things like reword a commit, squash multiple commits, split commit. In this part, we will talk about another common use case of rebase: rebase before merging branches.
 
 Let's first create a new repo and add one `file.txt` as the first commit.
 
