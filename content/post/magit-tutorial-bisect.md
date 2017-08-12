@@ -5,6 +5,7 @@ featured = "featured-bisect.png"
 featuredpath = "/img"
 featuredalt = "Git rebase with Magit"
 title= "Magit Tutorial - Bisect"
+keywords= ["Magit", "Git", "Emacs", "Bisect"]
 date= 2017-08-12T08:07:00+03:00
 +++
 
