@@ -1,11 +1,13 @@
 +++
 date = "2016-12-18T09:54:57+02:00"
 title = "Coffee Maker - An OOD case study"
-tags = [ "OOD", "uncle bob" ]
 categories = ["Object Oriented Design"]
+featured = "featured-coffee.png"
+keywords= ["OOD", "Uncle Bob", "Object Oriented"]
+featuredpath = "/img"
 +++
 
-This case study is to show case how to design classes that interact with each other to form a component.
+One of uncle bob's videos talks about how to design a coffee maker, I think he nailed it.
 
 The problem is to implement a software component that controls a coffee maker.
 
