@@ -2,7 +2,7 @@
 date = "2016-05-04T20:13:51+03:00"
 title = "keep it fun"
 tags = ["emacs", "lisp"]
-categories = ["Ranting"]
+categories = ["Thoughts"]
 +++
 
 最近因为工作的原因在学clojure，其实我一直都想学一个LISP语言，现在终于有人付钱让我学啦，呵呵。
