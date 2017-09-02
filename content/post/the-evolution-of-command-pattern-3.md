@@ -3,6 +3,7 @@ categories = ["Design and Architecture"]
 description = "The Command Pattern Revisited and its implementation in Android Service"
 featured = "featured-command.png"
 featuredpath = "/img"
+keywords = ["Command Pattern", "Command Revisited", "Design Pattern", "Android Service"]
 title = "The Evolution of Command Pattern (III)"
 date = 2017-09-02T11:10:27+03:00
 +++
