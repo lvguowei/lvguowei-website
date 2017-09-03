@@ -12,7 +12,7 @@ Here are the Youtube channels I subscribe and recommend. They are in no particul
 
 # [Computer History Museum](https://www.youtube.com/user/ComputerHistory)
 
-I'm a old school programmer and this fit my taste perfectly well. Especially check out the **Oral Histories** section where they have in-depth interview with the industry legends from top IT companies.
+I'm an old school programmer and this fits my taste perfectly well. Especially check out the **Oral Histories** section where they have in-depth interviews with the industry legends from top IT companies.
 
 # [Confreaks](https://www.youtube.com/user/Confreaks)
 
@@ -24,7 +24,7 @@ Another general purpose programming conference channel, the speakers there are q
 
 # [Douglas Schmidt](https://www.youtube.com/channel/UCt-Wvc_ojTzGLpjhruIXYSw)
 
-He's Android and Design Pattern courses are the best. Also if you want to learn C++, check out his course [Intermediate Software Design](https://www.youtube.com/watch?v=IkPyNpg4_x4&list=PLZ9NgFYEMxp4ZsvD10uXmClGnukcu3Uff).
+His Android and Design Pattern courses are the best. Also if you want to learn C++, check out his course [Intermediate Software Design](https://www.youtube.com/watch?v=IkPyNpg4_x4&list=PLZ9NgFYEMxp4ZsvD10uXmClGnukcu3Uff).
 
 # [Simple Programmer](https://www.youtube.com/channel/UCFxdcuY-S6yjZGq_2cjilHg)
 
@@ -38,7 +38,7 @@ Another good source of conference recordings. Created for developers, by develop
 
 This guy has a very impressive programming books collection, I mainly watched his book collection videos for fun.
 
-# [Computerfile](https://www.youtube.com/channel/UC9-y-6csu5WGm29I7JiwpnA)
+# [Computerphile](https://www.youtube.com/channel/UC9-y-6csu5WGm29I7JiwpnA)
 
 Explain complex computer science topics by experts in a fun way. Really to the point and also informative. Come on they have Prof **Brian Kernighan** for several episodes.
 
@@ -129,5 +129,23 @@ His voice is gold. People pay him to rant.
 
 The queen of Emacs!!!! Her Emacs Hangout videos are epic.
 
+# [Fun Fun Function](https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q)
+
+He teaches you programming in a fun way.
+
+# [Wes Bos](https://www.youtube.com/user/wesbos/featured)
+
+If you want to spend money on learning JavaScript, put them in his pocket.
+
+# [TheChernoProject](https://www.youtube.com/watch?v=Ks97R1knQDY)
+
+A channel for C++ learning. He has a series of C++ lessons going on which seem promising.
+
+# [8BitStero](https://www.youtube.com/user/Wiiguy309)
+
+8-bit music to listen to when programming. Brings back so much memory...
+
+
 
 I will keep growing this list, so stay tuned!
+
