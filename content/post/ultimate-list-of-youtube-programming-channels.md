@@ -208,13 +208,65 @@ If you want to spend money on learning JavaScript, put them in his pocket.
 
 A channel for C++ learning. He has a series of C++ lessons going on which seem promising.
 
+# [Christopher Okhravi](https://www.youtube.com/channel/UCbF-4yQQAWw-UnuCd2Azfzg)
+
+{{< img-post "/img" "youtube-design-pattern-guy.png" "Christopher Okhravi" "center" >}}
+
+This channel is like "Mr. Bean teaches you Design Patterns!" ~
+
+# [Bryan Lunduke](https://www.youtube.com/channel/UCkK9UDm_ZNrq_rIXCz3xCGA)
+
+{{< img-post "/img" "youtube-bl.png" "Bryan Lunduke" "center" >}}
+
+This is a Linux channel, but it talks how "Linux sucks". (Not really)
+
+# [Game from scratch](https://www.youtube.com/channel/UCr-5TdGkKszdbboXXsFZJTQ)
+
+{{< img-post "/img" "youtube-gfs.png" "Game from scratch" "center" >}}
+
+Very good channel to follow the latest news in the Game Dev world.
+
+# [Jason Turner](https://www.youtube.com/channel/UCxHAlbZQNFU2LgEtiqd2Maw)
+
+{{< img-post "/img" "youtube-jt.png" "Json Turner" "center" >}}
+
+Another active C++ channel.
+
+# [Build Fun Things](https://www.youtube.com/channel/UCsgl7n_Zj35ODRZ_a_K5R-A/featured)
+
+{{< img-post "/img" "youtube-bft.png" "Build fun things" "center" >}}
+
+Live coding sessions using Clojure.
+
 # [8BitStero](https://www.youtube.com/user/Wiiguy309)
 
 {{< img-post "/img" "youtube-8bit.png" "8BitStero" "center" >}}
 
 8-bit music to listen to when programming. Brings back so much memory...
 
+# [DevTips](https://www.youtube.com/channel/UCyIe-61Y8C4_o-zZCtO4ETQ)
+
+{{< img-post "/img" "youtube-dt.png" "devtips" "center" >}}
+
+Best place to learn UI/UX/Web design I have found so far.
+
+# [OSFirstTimer](https://www.youtube.com/channel/UCRjXNz9JNSuE8n-Oej4Rflw)
+
+{{< img-post "/img" "youtube-osft.png" "OSFirstTimer" "center" >}}
+
+How about making your Mom to try all the operating systems out there and then record them?
+
+# [Relaxation Okanokumo](https://www.youtube.com/channel/UC74lzexAhD3HhjjLXRVHvaQ)
+
+{{< img-post "/img" "youtube-relax.png" "Relaxation Okanokumo" "center" >}}
+
+Good relaxing music with good Japan scenery to relax your mind.
+
+# [Strange Loop](https://www.youtube.com/channel/UC_QIfHvN9auy2CoOdSfMWDw)
+
+{{< img-post "/img" "youtube-sl.png" "Strange Loop" "center" >}}
+
+Another good conference that focus on code instead of process.
 
 
 I will keep growing this list, so stay tuned!
-
