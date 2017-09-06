@@ -22,4 +22,3 @@ In my mind, **code** is not some holy thing that we should all run after. It's t
 I might be over reacting, if you think so just ignore me then.
 
 I write code, but I don't want to dress code.
-ff
