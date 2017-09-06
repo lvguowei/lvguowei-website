@@ -1,10 +1,10 @@
 +++
 categories = ["Thoughts"]
-description = "Is the new programmer sterotype better?"
+description = "Is the new programmer stereotype better?"
 featured = "featured-codemonkey.png"
-keywords = ["programmer sterotype"]
+keywords = ["programmer stereotype"]
 featuredpath = "/img"
-title = "The New Sterotype of Programmers"
+title = "The New Stereotype of Programmers"
 date = 2017-09-06T20:48:39+03:00
 +++
 
