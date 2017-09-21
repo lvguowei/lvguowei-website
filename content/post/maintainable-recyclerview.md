@@ -170,17 +170,10 @@ class MessageLeftViewHolder extends BaseViewHolder {
 
     OnClickListener listener;
 
-    MessageLeftViewHolder(View itemView, OnClickListener listener) {
+    MessageLeftViewHolder(View itemView, final OnClickListener listener) {
         super(itemView);
         messageTextView = itemView.findViewById(R.id.message_text);
         this.listener = listener;
-    }
-
-    @Override
-    void bindItem(MessageItem item) {
-        MessageLeftItem messageItem = (MessageLeftItem) item;
-
-        messageTextView.setText(messageItem.getMessage());
 
         messageTextView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -194,8 +187,13 @@ class MessageLeftViewHolder extends BaseViewHolder {
             }
         });
     }
-}
 
+    @Override
+    void bindItem(MessageItem item) {
+        MessageLeftItem messageItem = (MessageLeftItem) item;
+        messageTextView.setText(messageItem.getMessage());
+    }
+}
 {{< /highlight >}}
 
 Here we have to pay special attention to the click listener. In order to get the corresponding data from the adapter, we need to call `getAdapterPosition()` and check if it is `NO_POSITION`. If you don't do this, there will be random crashes, ask Google for the reason, I couldn't figure out it by myself and don't really care -_-b
@@ -205,24 +203,18 @@ Here we have to pay special attention to the click listener. In order to get the
 Similarly, for the right message:
 
 {{< highlight java >}}
+
 class MessageRightViewHolder extends BaseViewHolder {
 
     TextView messageTextView;
 
     OnClickListener listener;
 
-    MessageRightViewHolder(View itemView, OnClickListener listener) {
+    MessageRightViewHolder(View itemView, final OnClickListener listener) {
         super(itemView);
 
         messageTextView = itemView.findViewById(R.id.message_text);
         this.listener = listener;
-    }
-
-    @Override
-    void bindItem(MessageItem item) {
-        MessageRightItem messageItem = (MessageRightItem) item;
-
-        messageTextView.setText(messageItem.getMessage());
 
         messageTextView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -236,7 +228,12 @@ class MessageRightViewHolder extends BaseViewHolder {
             }
         });
     }
-}
+
+    @Override
+    void bindItem(MessageItem item) {
+        MessageRightItem messageItem = (MessageRightItem) item;
+        messageTextView.setText(messageItem.getMessage());
+    }
 
 {{< /highlight >}}
 
