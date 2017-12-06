@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java on Guowei Lv</title>
+    <link>https://www.lvguowei.me/categories/java/</link>
+    <description>Recent content in Java on Guowei Lv</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 10 Sep 2017 19:50:32 +0300</lastBuildDate>
+    
+	<atom:link href="https://www.lvguowei.me/categories/java/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Use Enumset to Replace Bit Flag</title>
+      <link>https://www.lvguowei.me/post/enumset-replace-bit-flag/</link>
+      <pubDate>Sun, 10 Sep 2017 19:50:32 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/enumset-replace-bit-flag/</guid>
+      <description>I was reorganizing my bookshelf today and found my Thinking in Java lying there so I decided to skim through it. I was quite surprised how much basic stuff in Java I overlooked or forgot. So I decided to re-read the book and write short blog posts of the things that I think are useful but not too many people are talking about nowadays. Here is the first one.</description>
+    </item>
+    
+  </channel>
+</rss>

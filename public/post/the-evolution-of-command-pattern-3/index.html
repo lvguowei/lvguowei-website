@@ -1,0 +1,1093 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        
+            
+                <title>The Evolution of Command Pattern (III)</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.31.1" />
+        
+
+
+
+
+
+
+<link rel="apple-touch-icon-precomposed"
+  href='https://www.lvguowei.me/favicon/apple-touch-icon-precomposed.png'>
+<link rel="icon" type="image/png" href="https://www.lvguowei.me/favicon/favicon-32x32.png" sizes="32x32">
+
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage"
+  content='/favicon/mstile.png'>
+
+
+
+        
+        
+            <meta name="description" content="The Command Pattern Revisited and its implementation in Android Service">
+        
+
+        <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="The Evolution of Command Pattern (III)"/>
+<meta name="twitter:description" content="The Command Pattern Revisited and its implementation in Android Service"/>
+
+        <meta property="og:title" content="The Evolution of Command Pattern (III)" />
+<meta property="og:description" content="The Command Pattern Revisited and its implementation in Android Service" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.lvguowei.me/post/the-evolution-of-command-pattern-3/" />
+
+
+
+<meta property="article:published_time" content="2017-09-02T11:10:27&#43;03:00"/>
+
+<meta property="article:modified_time" content="2017-09-02T11:10:27&#43;03:00"/>
+
+
+
+
+
+
+
+
+
+
+
+        
+<meta itemprop="name" content="The Evolution of Command Pattern (III)">
+<meta itemprop="description" content="The Command Pattern Revisited and its implementation in Android Service">
+
+
+<meta itemprop="datePublished" content="2017-09-02T11:10:27&#43;03:00" />
+<meta itemprop="dateModified" content="2017-09-02T11:10:27&#43;03:00" />
+<meta itemprop="wordCount" content="909">
+
+
+
+<meta itemprop="keywords" content="" />
+
+        
+
+        
+
+        
+        
+            
+        
+
+        
+        
+            <link rel="stylesheet" href="https://www.lvguowei.me/css/google-font.css" />
+            <link rel="stylesheet" href="https://www.lvguowei.me/css/font-awesome.min.css" />
+            <link rel="stylesheet" href="https://www.lvguowei.me/css/main.css" />
+            <link rel="stylesheet" href="https://www.lvguowei.me/css/add-on.css" />
+            <link rel="stylesheet" href="https://www.lvguowei.me/css/monokai-sublime.css">
+        
+
+        
+
+        
+        
+        
+            
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-71831707-2', 'auto');
+ga('send', 'pageview');
+</script>
+
+        
+    </head>
+    <body>
+
+        
+        <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+        <h2><a href="https://www.lvguowei.me/">Guowei Lv</i></a></h2>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="https://www.lvguowei.me/post">
+                        
+                            <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://www.lvguowei.me/categories">
+                        
+                            <i class="fa fa-folder-open-o">&nbsp;</i>Categories
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://www.lvguowei.me/about">
+                        
+                            <i class="fa fa-user">&nbsp;</i>About
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="search">
+                <a class="fa-search" href="#search">Search</a>
+                <form id="search" method="get" action="//google.com/search">
+                  <input type="text" name="q" placeholder="Search" />
+                  <input type="hidden" name="as_sitesearch" value="https://www.lvguowei.me/">
+                </form>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+    
+        <section>
+            <form class="search" method="get" action="//google.com/search">
+                <input type="text" name="q" placeholder="Search" />
+                <input type="hidden" name="q" value="site:https://www.lvguowei.me/">
+            </form>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="https://www.lvguowei.me/post">
+                            <h3>
+                                
+                                    <i class="fa fa-newspaper-o">&nbsp;</i>
+                                
+                                Blog
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://www.lvguowei.me/categories">
+                            <h3>
+                                
+                                    <i class="fa fa-folder-open-o">&nbsp;</i>
+                                
+                                Categories
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://www.lvguowei.me/about">
+                            <h3>
+                                
+                                    <i class="fa fa-user">&nbsp;</i>
+                                
+                                About
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+                    
+                
+
+                
+                    <li>
+                        <a href="https://www.lvguowei.me/post/is_college_education_required_for_game/"><p>Is a College Education Required for a Career in Game Design?</p></a>
+                    </li>
+                
+                    <li>
+                        <a href="https://www.lvguowei.me/post/sicp-quote/"><p>SICP Quote</p></a>
+                    </li>
+                
+                    <li>
+                        <a href="https://www.lvguowei.me/post/maintainable-recyclerview/"><p>How to write maintainable RecyclerView</p></a>
+                    </li>
+                
+                    <li>
+                        <a href="https://www.lvguowei.me/post/enumset-replace-bit-flag/"><p>Use Enumset to Replace Bit Flag</p></a>
+                    </li>
+                
+                    <li>
+                        <a href="https://www.lvguowei.me/post/the-new-programmer-sterotype/"><p>The New Stereotype of Programmers</p></a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+<li><a href="//twitter.com/share?url=https%3a%2f%2fwww.lvguowei.me%2fpost%2fthe-evolution-of-command-pattern-3%2f&text=The%20Evolution%20of%20Command%20Pattern%20%28III%29&via=" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+</a></li>
+
+
+<li><a href="//plus.google.com/share?url=https%3a%2f%2fwww.lvguowei.me%2fpost%2fthe-evolution-of-command-pattern-3%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+</a></li>
+
+
+<li><a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.lvguowei.me%2fpost%2fthe-evolution-of-command-pattern-3%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+</a></li>
+
+
+<li><a href="//reddit.com/submit?url=https%3a%2f%2fwww.lvguowei.me%2fpost%2fthe-evolution-of-command-pattern-3%2f&title=The%20Evolution%20of%20Command%20Pattern%20%28III%29" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+</a></li>
+
+
+<li><a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fwww.lvguowei.me%2fpost%2fthe-evolution-of-command-pattern-3%2f&title=The%20Evolution%20of%20Command%20Pattern%20%28III%29" target="_blank" class="share-btn linkedin">
+    <i class="fa fa-linkedin"></i>
+    <p>LinkedIn</p>
+</a></li>
+
+
+<li><a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fwww.lvguowei.me%2fpost%2fthe-evolution-of-command-pattern-3%2f&title=The%20Evolution%20of%20Command%20Pattern%20%28III%29" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+</a></li>
+
+
+<li><a href="mailto:?subject=Check out this post by &body=https%3a%2f%2fwww.lvguowei.me%2fpost%2fthe-evolution-of-command-pattern-3%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+</a></li>
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+    <header>
+    <div class="title">
+        
+            <h1><a href="https://www.lvguowei.me/post/the-evolution-of-command-pattern-3/">The Evolution of Command Pattern (III)</a></h1>
+            
+        
+        
+            <p>The Command Pattern Revisited and its implementation in Android Service</p>
+        
+    </div>
+    <div class="meta">
+        
+            
+        
+
+        <time class="published"
+            datetime='2017-09-02'>
+            September 2, 2017</time>
+        <span class="author"></span>
+        
+            <p>5 minute read</p>
+        
+        
+    </div>
+</header>
+
+
+    <section id="social-share">
+        <ul class="icons">
+            
+
+
+<li><a href="//twitter.com/share?url=https%3a%2f%2fwww.lvguowei.me%2fpost%2fthe-evolution-of-command-pattern-3%2f&text=The%20Evolution%20of%20Command%20Pattern%20%28III%29&via=" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+</a></li>
+
+
+<li><a href="//plus.google.com/share?url=https%3a%2f%2fwww.lvguowei.me%2fpost%2fthe-evolution-of-command-pattern-3%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+</a></li>
+
+
+<li><a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.lvguowei.me%2fpost%2fthe-evolution-of-command-pattern-3%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+</a></li>
+
+
+<li><a href="//reddit.com/submit?url=https%3a%2f%2fwww.lvguowei.me%2fpost%2fthe-evolution-of-command-pattern-3%2f&title=The%20Evolution%20of%20Command%20Pattern%20%28III%29" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+</a></li>
+
+
+<li><a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fwww.lvguowei.me%2fpost%2fthe-evolution-of-command-pattern-3%2f&title=The%20Evolution%20of%20Command%20Pattern%20%28III%29" target="_blank" class="share-btn linkedin">
+    <i class="fa fa-linkedin"></i>
+    <p>LinkedIn</p>
+</a></li>
+
+
+<li><a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fwww.lvguowei.me%2fpost%2fthe-evolution-of-command-pattern-3%2f&title=The%20Evolution%20of%20Command%20Pattern%20%28III%29" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+</a></li>
+
+
+<li><a href="mailto:?subject=Check out this post by &body=https%3a%2f%2fwww.lvguowei.me%2fpost%2fthe-evolution-of-command-pattern-3%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+</a></li>
+
+        </ul>
+    </section>
+    
+    
+
+    
+        
+        
+
+
+
+
+    
+
+
+        
+
+        <a href="https://www.lvguowei.me/post/the-evolution-of-command-pattern-3/" class="image featured">
+            <img src="https://www.lvguowei.me/img/featured-command.png" alt="" />
+        </a>
+    
+
+
+    <div id="content">
+        
+
+<p>In this final part of the <strong>Command Pattern</strong> series, we will talk about yet another improvement on top of the Command Processor Pattern. It is described in the paper <a href="https://www.lvguowei.me/file/command-revisited.pdf">Command Revisited</a>. From now on, we will just refer to it as the <strong>Command Revisited Pattern</strong>.</p>
+
+<p>The paper is short and sweet but you might not find it to be to the point after the first glimpse.</p>
+
+<p>The most beautiful part of the <strong>Command Revisited Pattern</strong> is that it provides a new perspective on the general Command Pattern.</p>
+
+<blockquote>
+<p>The Command Revisited pattern packages a piece of application functionality as well as its parameterization in an object in order to make it usable in another context, such as later in time or in a different thread.</p>
+
+<p>We think that Command is basically a way to emulate the concept of closures in object-oriented languages that don&rsquo;t natively have this feature.</p>
+</blockquote>
+
+<p>This is I think by far the best understanding of the Command Pattern.</p>
+
+<h3 id="what-is-closure">What is closure?</h3>
+
+<p>Closure is basically a way to encapsulate function with its execution context, in most cases, the context means a bunch of data. So in short, closure binds function with data. In Object Oriented languages, the Object serves such purpose. In other functional like languages like JavaScript, function serves such purpose. Learn more about how closure is playing a very important role in JavaScript <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Closures">here</a>.</p>
+
+<p>In order to better understand this pattern, let&rsquo;s go through an example.</p>
+
+<h1 id="how-android-uses-the-command-revisited-pattern-to-implement-the-service-component">How Android uses the Command Revisited Pattern to implement the Service component</h1>
+
+<h3 id="problem">problem</h3>
+
+<p>Synchronous method calls in an Activity can block client for extended periods. Android generates an &ldquo;Application Not Responding&rdquo; dialog if an app doesn&rsquo;t respond to user input within a short time. For example. calling a potentially long operation like downloading files or playing music.</p>
+
+<h3 id="solution">solution</h3>
+
+<p>Create a <strong>command processor</strong> that encapsulates a download request as an object that can be passed to a <strong>Service</strong> to execute the request. The process works as follows:</p>
+
+<ul>
+<li><p>Implement a <code>DownloadService</code> that inherits from Android&rsquo;s <code>IntentService</code>.</p></li>
+
+<li><p>Activity creates Intent command designating <code>DownloadService</code> as target. The intent should contain the URL and maybe a callback <code>Messenger</code> as <code>extras</code>.</p></li>
+
+<li><p>Activity calls <code>startService()</code> with Intent.</p></li>
+
+<li><p>Activity Manager Service starts IntentService, which spawns internal threads for the download work to run on.</p></li>
+</ul>
+
+<p>This is almost a perfect map to what is described in the pattern. The <code>Intent</code> that is used to start the service can be considered as the <code>Command</code>. The worker thread in the <code>DownloadService</code> can be seen as the <em>other time or thread</em> that the command will be executed in.</p>
+
+<h3 id="breakdown">breakdown</h3>
+
+<p>Now let&rsquo;s talk about step by step how the android code maps to the pattern.</p>
+
+<h4 id="define-an-abstract-class-for-command-execution-that-will-be-used-by-the-executor-you-will-typically-define-an-execute-function">Define an abstract class for command execution that will be used by the executor. You will typically define an <code>execute()</code> function.</h4>
+
+<p>This is done by the <code>Intent</code> class. Notice that here it doesn&rsquo;t follow the pattern exactly, instead of define a hierarchy of Command classes, it uses <code>extra</code> fields to define different types of commands.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Intent</span> <span class="kd">implements</span> <span class="n">Parcelable</span><span class="o">,</span> <span class="n">Cloneable</span> <span class="o">{</span> <span class="o">...</span> <span class="o">}</span></code></pre></div>
+
+<h4 id="add-the-state-which-the-concrete-commands-need-during-their-execution-to-the-execution-context-make-the-execution-context-available-to-the-concrete-command">Add the state which the concrete commands need during their execution to the execution context. Make the execution context available to the concrete command.</h4>
+
+<p>This is done by putting <code>Uri</code> or other types of data as <code>extra</code>s in the <code>Intent</code>. And later on can be extracted when needed.</p>
+
+<h4 id="define-and-implement-the-creator">Define and implement the creator.</h4>
+
+<p>This can be done in the activity. When a button is clicked for example, we can create the Intent and call <code>startService(intent)</code>.</p>
+
+<h4 id="define-the-execution-context">Define the execution context.</h4>
+
+<p>The execution context can be seen as the common environment where is kind of shared when the command is created and when it is executed. So we can treat the Android&rsquo;s <code>Context</code> as the <em>context</em> in the pattern, cause it is accessible both in the Activity and in the Service. E.g. if you want, you can use it to send broadcast in the Service when the work is done, and listening to broadcast in the activity to update the UI.</p>
+
+<h4 id="implement-your-specific-command-functionality-in-subclasses-of-the-abstract-command-class-defined-above-implementing-the-execute-operation-according-to-your-specific-requirements">Implement your specific command functionality in subclasses of the abstract command class defined above, implementing the <code>execute()</code> operation according to your specific requirements.</h4>
+
+<p>In Android, this means to handle different Intent in the Service in <code>onHandleIntent(Intent intent)</code> method.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DownloadService</span> <span class="kd">extends</span> <span class="n">IntentService</span> <span class="o">{</span>
+
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onHandleIntent</span><span class="o">(</span><span class="n">Intent</span> <span class="n">intent</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">isDownloadImageIntent</span><span class="o">(</span><span class="n">intent</span><span class="o">))</span> <span class="o">{</span>
+            <span class="n">downloadImage</span><span class="o">(</span><span class="n">intent</span><span class="o">);</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">isDownloadMusicIntent</span><span class="o">(</span><span class="n">intent</span><span class="o">))</span> <span class="o">{</span>
+            <span class="n">downloadMusic</span><span class="o">(</span><span class="n">intent</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="o">...</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></div>
+
+<h3 id="consequences">Consequences</h3>
+
+<p>As you can see, the implementation of Android Service component can be almost perfectly matched to the Command Revisited pattern, which provides some <strong>benefits</strong>:</p>
+
+<p>The <strong>creation</strong> of the task, the <strong>scheduling</strong> of the execution of the task, and the <strong>execution</strong> of the task are now completely separated. The task can be even run on a separate process and the client code doesn&rsquo;t need to know it.</p>
+
+<p>There are potential <strong>liabilities</strong> as well, such loose interface means that the implementation is based on contract. It has to be agreed on how to interpret different command on both client and service side. When the system becomes large, it tends to become unclear how to create a command and how to interpret a command.</p>
+
+<p>The pattern doesn&rsquo;t articulate how the callback mechanism works, so we have to put in some other component to handle the communication problem. For example, we can use Broadcast system in Android or some kind of event bus to pass result back from the Service.</p>
+
+<p>This wraps up the whole series of Command Pattern. Hope you enjoyed it. Happy coding.</p>
+
+    </div>
+
+    <footer>
+        <ul class="stats">
+    
+        
+
+        
+        
+  <li>
+    
+    
+    
+
+    
+
+    
+                        
+                        
+                            
+                        
+
+                    
+                        <i class="fa fa-folder-open-o">&nbsp;</i>
+                    
+
+                    
+                        Category
+                    
+                
+            </li>
+        
+    
+
+    
+    
+        <li><a href='https://www.lvguowei.me/categories/design-and-architecture'>Design and Architecture</a></li>
+    
+</ul>
+
+    </footer>
+</article>
+<ul class="actions pagination">
+    
+        <li><a href="https://www.lvguowei.me/post/the-evolution-of-command-pattern-2/"
+                class="button big previous">The Evolution of Command Pattern (II)</a></li>
+    
+
+    
+        <li><a href="https://www.lvguowei.me/post/ultimate-list-of-youtube-programming-channels/"
+                class="button big next">The Ultimate List of Youtube Programming Channels</a></li>
+    
+</ul>
+
+
+
+    
+        <article class="post">
+            <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "lvguoweime" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </article>
+    
+
+
+    </div>
+    
+<section id="sidebar">
+
+    
+        <section id="intro">
+            
+            
+                
+                    <a href="https://www.lvguowei.me/" class="logo"><img src="https://www.lvguowei.me/img/logo.jpg" alt="Guowei Lv" /></a>
+                
+            
+            
+                <header>
+                    <h2>Guowei Lv</h2>
+                    <p>Thinker · Writer · Coder · Painter</p>
+                </header>
+            
+            <ul class="icons">
+                
+                
+                    
+<li><a href="//github.com/lvguowei" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//lvguowei.deviantart.com/" target="_blank" title="DeviantArt" class="fa fa-deviantart"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/lvguowei" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="mailto:lvguowei1002@gmail.com" title="Email" class="fa fa-envelope"></a></li>
+
+
+                
+            </ul>
+        </section>
+
+    
+        <section id="recent-posts">
+            <ul class="posts">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+                    
+                
+
+                
+                    
+                
+
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="https://www.lvguowei.me/post/is_college_education_required_for_game/">Is a College Education Required for a Career in Game Design?</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2017-12-06'>
+                                    December 6, 2017</time>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="https://www.lvguowei.me/post/sicp-quote/">SICP Quote</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2017-10-06'>
+                                    October 6, 2017</time>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="https://www.lvguowei.me/post/maintainable-recyclerview/">How to write maintainable RecyclerView</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2017-09-17'>
+                                    September 17, 2017</time>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="https://www.lvguowei.me/post/enumset-replace-bit-flag/">Use Enumset to Replace Bit Flag</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2017-09-10'>
+                                    September 10, 2017</time>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="https://www.lvguowei.me/post/the-new-programmer-sterotype/">The New Stereotype of Programmers</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2017-09-06'>
+                                    September 6, 2017</time>
+                            </header>
+                        </article>
+                    </li>
+                
+
+                
+                    <li>
+                        <ul class="actions">
+                            <li><a href=
+                            
+                                "/post/"
+                            
+                            class="button">View more posts</a></li>
+                        </ul>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+    
+    
+    
+        <section id="categories">
+            <ul class="posts">
+                <header>
+                    <h3><a href="https://www.lvguowei.me/categories/">Categories</a></h3>
+                </header>
+
+                
+                    
+                
+
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/android-development/">Android Development</a>
+                                <span style="float:right;">15</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/programming-kata/">programming kata</a>
+                                <span style="float:right;">15</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/finnish-learning/">Finnish Learning</a>
+                                <span style="float:right;">10</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/object-oriented-design/">Object Oriented Design</a>
+                                <span style="float:right;">7</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/functional-programming/">Functional Programming</a>
+                                <span style="float:right;">6</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/design-and-architecture/">Design and Architecture</a>
+                                <span style="float:right;">4</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/thoughts/">Thoughts</a>
+                                <span style="float:right;">4</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/android-library/">Android Library</a>
+                                <span style="float:right;">3</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/emacs/">Emacs</a>
+                                <span style="float:right;">3</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/painting/">Painting</a>
+                                <span style="float:right;">3</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/refactoring/">Refactoring</a>
+                                <span style="float:right;">3</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/sicp/">SICP</a>
+                                <span style="float:right;">3</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/hand-made-hero/">Hand Made Hero</a>
+                                <span style="float:right;">2</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/test-driven-development/">Test Driven Development</a>
+                                <span style="float:right;">2</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/books/">Books</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/concurrent-programming/">Concurrent Programming</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/game/">Game</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/java/">Java</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/mech-keyboard/">Mech Keyboard</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/other/">Other</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/perfume/">Perfume</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+            </ul>
+        </section>
+    
+
+    
+        
+        <section class="blurb">
+            <h2>About</h2>
+            <p>Welcome to my personal website. In here, I talk about programming in general and other cool stuff. Stay tuned!</p>
+
+            <ul class="actions">
+                <li><a href="https://www.lvguowei.me/about/" class="button">Learn More</a></li>
+            </ul>
+        </section>
+        
+
+    
+        <section id="footer">
+            <ul class="icons">
+                
+                
+                    
+<li><a href="//github.com/lvguowei" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//lvguowei.deviantart.com/" target="_blank" title="DeviantArt" class="fa fa-deviantart"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/lvguowei" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="mailto:lvguowei1002@gmail.com" title="Email" class="fa fa-envelope"></a></li>
+
+
+                
+            </ul>
+
+            <p class="copyright">&copy; Guowei Lv. </p>
+        </section>
+
+</section>
+
+            </div>
+        <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+        
+
+        
+        
+            
+        
+
+        
+        
+            <script src="https://www.lvguowei.me/js/jquery.min.js"></script>
+            <script src="https://www.lvguowei.me/js/skel.min.js"></script>
+            <script src="https://www.lvguowei.me/js/util.js"></script>
+            <script src="https://www.lvguowei.me/js/main.js"></script>
+            <script src="https://www.lvguowei.me/js/backToTop.js"></script>
+            <script src="https://www.lvguowei.me/js/highlight.pack.js"></script>
+        
+
+        
+
+            
+            <script>hljs.initHighlightingOnLoad();</script>
+            
+    </body>
+</html>
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on Guowei Lv</title>
+    <link>https://www.lvguowei.me/tags/linux/</link>
+    <description>Recent content in Linux on Guowei Lv</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 20 Jul 2017 09:06:31 +0300</lastBuildDate>
+    
+	<atom:link href="https://www.lvguowei.me/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How To Follow Hand Made Hero On Linux</title>
+      <link>https://www.lvguowei.me/post/how-to-follow-hand-made-hero-on-linux/</link>
+      <pubDate>Thu, 20 Jul 2017 09:06:31 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/how-to-follow-hand-made-hero-on-linux/</guid>
+      <description>If you are a Linux person and you want to follow the awesome Hand Made Hero, here are how I am doing it(on Arch Linux).
+ Install VirtualBox. Create a Windows virtual machine(at least Win7 + SP1, you can download a ISO image from here), pay attention to the hard drive size, 25G is too small, increase it to like 50G at least. In order to make the full scren mode work, we have to install something called Guest Addition.</description>
+    </item>
+    
+  </channel>
+</rss>

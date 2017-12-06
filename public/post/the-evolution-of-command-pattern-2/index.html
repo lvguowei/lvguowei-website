@@ -1,0 +1,1155 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        
+            
+                <title>The Evolution of Command Pattern (II)</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.31.1" />
+        
+
+
+
+
+
+
+<link rel="apple-touch-icon-precomposed"
+  href='https://www.lvguowei.me/favicon/apple-touch-icon-precomposed.png'>
+<link rel="icon" type="image/png" href="https://www.lvguowei.me/favicon/favicon-32x32.png" sizes="32x32">
+
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage"
+  content='/favicon/mstile.png'>
+
+
+
+        
+        
+            <meta name="description" content="How Command Pattern has evolved overtime">
+        
+
+        <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="The Evolution of Command Pattern (II)"/>
+<meta name="twitter:description" content="How Command Pattern has evolved overtime"/>
+
+        <meta property="og:title" content="The Evolution of Command Pattern (II)" />
+<meta property="og:description" content="How Command Pattern has evolved overtime" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.lvguowei.me/post/the-evolution-of-command-pattern-2/" />
+
+
+
+<meta property="article:published_time" content="2017-08-27T10:41:19&#43;03:00"/>
+
+<meta property="article:modified_time" content="2017-08-27T10:41:19&#43;03:00"/>
+
+
+
+
+
+
+
+
+
+
+
+        
+<meta itemprop="name" content="The Evolution of Command Pattern (II)">
+<meta itemprop="description" content="How Command Pattern has evolved overtime">
+
+
+<meta itemprop="datePublished" content="2017-08-27T10:41:19&#43;03:00" />
+<meta itemprop="dateModified" content="2017-08-27T10:41:19&#43;03:00" />
+<meta itemprop="wordCount" content="532">
+
+
+
+<meta itemprop="keywords" content="" />
+
+        
+
+        
+
+        
+        
+            
+        
+
+        
+        
+            <link rel="stylesheet" href="https://www.lvguowei.me/css/google-font.css" />
+            <link rel="stylesheet" href="https://www.lvguowei.me/css/font-awesome.min.css" />
+            <link rel="stylesheet" href="https://www.lvguowei.me/css/main.css" />
+            <link rel="stylesheet" href="https://www.lvguowei.me/css/add-on.css" />
+            <link rel="stylesheet" href="https://www.lvguowei.me/css/monokai-sublime.css">
+        
+
+        
+
+        
+        
+        
+            
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-71831707-2', 'auto');
+ga('send', 'pageview');
+</script>
+
+        
+    </head>
+    <body>
+
+        
+        <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+        <h2><a href="https://www.lvguowei.me/">Guowei Lv</i></a></h2>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="https://www.lvguowei.me/post">
+                        
+                            <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://www.lvguowei.me/categories">
+                        
+                            <i class="fa fa-folder-open-o">&nbsp;</i>Categories
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://www.lvguowei.me/about">
+                        
+                            <i class="fa fa-user">&nbsp;</i>About
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="search">
+                <a class="fa-search" href="#search">Search</a>
+                <form id="search" method="get" action="//google.com/search">
+                  <input type="text" name="q" placeholder="Search" />
+                  <input type="hidden" name="as_sitesearch" value="https://www.lvguowei.me/">
+                </form>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+    
+        <section>
+            <form class="search" method="get" action="//google.com/search">
+                <input type="text" name="q" placeholder="Search" />
+                <input type="hidden" name="q" value="site:https://www.lvguowei.me/">
+            </form>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="https://www.lvguowei.me/post">
+                            <h3>
+                                
+                                    <i class="fa fa-newspaper-o">&nbsp;</i>
+                                
+                                Blog
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://www.lvguowei.me/categories">
+                            <h3>
+                                
+                                    <i class="fa fa-folder-open-o">&nbsp;</i>
+                                
+                                Categories
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://www.lvguowei.me/about">
+                            <h3>
+                                
+                                    <i class="fa fa-user">&nbsp;</i>
+                                
+                                About
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+                    
+                
+
+                
+                    <li>
+                        <a href="https://www.lvguowei.me/post/is_college_education_required_for_game/"><p>Is a College Education Required for a Career in Game Design?</p></a>
+                    </li>
+                
+                    <li>
+                        <a href="https://www.lvguowei.me/post/sicp-quote/"><p>SICP Quote</p></a>
+                    </li>
+                
+                    <li>
+                        <a href="https://www.lvguowei.me/post/maintainable-recyclerview/"><p>How to write maintainable RecyclerView</p></a>
+                    </li>
+                
+                    <li>
+                        <a href="https://www.lvguowei.me/post/enumset-replace-bit-flag/"><p>Use Enumset to Replace Bit Flag</p></a>
+                    </li>
+                
+                    <li>
+                        <a href="https://www.lvguowei.me/post/the-new-programmer-sterotype/"><p>The New Stereotype of Programmers</p></a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+<li><a href="//twitter.com/share?url=https%3a%2f%2fwww.lvguowei.me%2fpost%2fthe-evolution-of-command-pattern-2%2f&text=The%20Evolution%20of%20Command%20Pattern%20%28II%29&via=" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+</a></li>
+
+
+<li><a href="//plus.google.com/share?url=https%3a%2f%2fwww.lvguowei.me%2fpost%2fthe-evolution-of-command-pattern-2%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+</a></li>
+
+
+<li><a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.lvguowei.me%2fpost%2fthe-evolution-of-command-pattern-2%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+</a></li>
+
+
+<li><a href="//reddit.com/submit?url=https%3a%2f%2fwww.lvguowei.me%2fpost%2fthe-evolution-of-command-pattern-2%2f&title=The%20Evolution%20of%20Command%20Pattern%20%28II%29" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+</a></li>
+
+
+<li><a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fwww.lvguowei.me%2fpost%2fthe-evolution-of-command-pattern-2%2f&title=The%20Evolution%20of%20Command%20Pattern%20%28II%29" target="_blank" class="share-btn linkedin">
+    <i class="fa fa-linkedin"></i>
+    <p>LinkedIn</p>
+</a></li>
+
+
+<li><a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fwww.lvguowei.me%2fpost%2fthe-evolution-of-command-pattern-2%2f&title=The%20Evolution%20of%20Command%20Pattern%20%28II%29" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+</a></li>
+
+
+<li><a href="mailto:?subject=Check out this post by &body=https%3a%2f%2fwww.lvguowei.me%2fpost%2fthe-evolution-of-command-pattern-2%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+</a></li>
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+    <header>
+    <div class="title">
+        
+            <h1><a href="https://www.lvguowei.me/post/the-evolution-of-command-pattern-2/">The Evolution of Command Pattern (II)</a></h1>
+            
+        
+        
+            <p>How Command Pattern has evolved overtime</p>
+        
+    </div>
+    <div class="meta">
+        
+            
+        
+
+        <time class="published"
+            datetime='2017-08-27'>
+            August 27, 2017</time>
+        <span class="author"></span>
+        
+            <p>3 minute read</p>
+        
+        
+    </div>
+</header>
+
+
+    <section id="social-share">
+        <ul class="icons">
+            
+
+
+<li><a href="//twitter.com/share?url=https%3a%2f%2fwww.lvguowei.me%2fpost%2fthe-evolution-of-command-pattern-2%2f&text=The%20Evolution%20of%20Command%20Pattern%20%28II%29&via=" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+</a></li>
+
+
+<li><a href="//plus.google.com/share?url=https%3a%2f%2fwww.lvguowei.me%2fpost%2fthe-evolution-of-command-pattern-2%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+</a></li>
+
+
+<li><a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.lvguowei.me%2fpost%2fthe-evolution-of-command-pattern-2%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+</a></li>
+
+
+<li><a href="//reddit.com/submit?url=https%3a%2f%2fwww.lvguowei.me%2fpost%2fthe-evolution-of-command-pattern-2%2f&title=The%20Evolution%20of%20Command%20Pattern%20%28II%29" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+</a></li>
+
+
+<li><a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fwww.lvguowei.me%2fpost%2fthe-evolution-of-command-pattern-2%2f&title=The%20Evolution%20of%20Command%20Pattern%20%28II%29" target="_blank" class="share-btn linkedin">
+    <i class="fa fa-linkedin"></i>
+    <p>LinkedIn</p>
+</a></li>
+
+
+<li><a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fwww.lvguowei.me%2fpost%2fthe-evolution-of-command-pattern-2%2f&title=The%20Evolution%20of%20Command%20Pattern%20%28II%29" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+</a></li>
+
+
+<li><a href="mailto:?subject=Check out this post by &body=https%3a%2f%2fwww.lvguowei.me%2fpost%2fthe-evolution-of-command-pattern-2%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+</a></li>
+
+        </ul>
+    </section>
+    
+    
+
+    
+        
+        
+
+
+
+
+    
+
+
+        
+
+        <a href="https://www.lvguowei.me/post/the-evolution-of-command-pattern-2/" class="image featured">
+            <img src="https://www.lvguowei.me/img/featured-command.png" alt="" />
+        </a>
+    
+
+
+    <div id="content">
+        <p>In <a href="https://www.lvguowei.me/post/the-evolution-of-command-pattern/">Part I</a>, we discussed the original Command Pattern from the GoF Design Patterns book. In Part II, let&rsquo;s talk about the improved version from another less known book: <a href="https://www.amazon.com/Pattern-Oriented-Software-Architecture-System-Patterns/dp/0471958697/ref=sr_1_1?ie=UTF8&amp;qid=1503820061&amp;sr=8-1&amp;keywords=pattern+oriented+software+architecture">Pattern-Oriented Software Architecture Vol.1</a> (POSA in short).</p>
+
+
+
+
+    
+    
+        
+        
+        
+            
+        
+        
+            
+        
+    
+
+    
+    
+    
+
+    
+    
+
+
+
+
+    
+
+
+    
+
+    
+        <p><span class="image center-image">
+            <img src="https://www.lvguowei.me/img/posa1.jpg" alt="POSA" />
+        </span></p>
+    
+
+
+
+<p>In this book, there is a <strong>Command Processor</strong> pattern, which is based on the Command Pattern in GoF book. The most important difference is the newly introduced <code>CommandProcessor</code>.</p>
+
+<p>In the original Command Pattern, it defines how to create <code>Commands</code>, and each <code>Command</code> has an <code>execute</code> and <code>undo</code> methods. But it doesn&rsquo;t say anything about how to manage these Commands.</p>
+
+<p>The basic idea of this <code>CommandProcessor</code>, is to provide a single place where the commands can be executed and managed.</p>
+
+<p>Now let&rsquo;s add a <code>CommandProcessor</code> in the previous example.</p>
+
+<p>Let&rsquo;s say we want to add a universal <strong>Undo</strong> and <strong>Redo</strong> mechanism into the application. To implement this, we need to keep track of all the executed Commands somewhere, <code>CommandProcessor</code> seems to be the perfect choice.</p>
+
+<p>First, let&rsquo;s make the actions of <strong>Undo</strong> and <strong>Redo</strong> into Commands as well. Since we don&rsquo;t really want the Undo Command to be able undo itself, we divide all the Commands into two categories, <em>undoable</em> and <em>not undoable</em>.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">UndoCommand</span> <span class="kd">extends</span> <span class="n">Command</span> <span class="o">{</span>
+
+    <span class="nd">@Override</span>
+    <span class="kt">void</span> <span class="nf">execute</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">CommandProcessor</span><span class="o">.</span><span class="na">instance</span><span class="o">.</span><span class="na">undoLastCmd</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kt">void</span> <span class="nf">undo</span><span class="o">()</span> <span class="o">{</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kt">boolean</span> <span class="nf">undoable</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></div>
+
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">RedoCommand</span> <span class="kd">extends</span> <span class="n">Command</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kt">void</span> <span class="nf">execute</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">CommandProcessor</span><span class="o">.</span><span class="na">instance</span><span class="o">.</span><span class="na">redoLastUndone</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kt">void</span> <span class="nf">undo</span><span class="o">()</span> <span class="o">{</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kt">boolean</span> <span class="nf">undoable</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></div>
+
+<p>Now, let&rsquo;s implement the <code>CommandProcessor</code>. To be able to Undo and Redo, we need two stacks. One for storing the done Commands, and one for storing the undone Commands. When the user want to undo the last action, we pop the last Command from the <strong>done stack</strong>, undo it, and put it to the <strong>undone stack</strong>. When the user want to redo the undone command, we pop the last Command from the <strong>undone stack</strong>, and use the CommandProcessor to execute it again, so that it will end up in <strong>done stack</strong> after it is executed.</p>
+
+<p>Here is the code.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">CommandProcessor</span> <span class="o">{</span>
+
+    <span class="kd">static</span> <span class="kd">final</span> <span class="n">CommandProcessor</span> <span class="n">instance</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CommandProcessor</span><span class="o">();</span>
+
+    <span class="kd">private</span> <span class="n">Stack</span><span class="o">&lt;</span><span class="n">Command</span><span class="o">&gt;</span> <span class="n">doneStack</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="n">Stack</span><span class="o">&lt;</span><span class="n">Command</span><span class="o">&gt;</span> <span class="n">undoneStack</span><span class="o">;</span>
+
+    <span class="kd">private</span> <span class="nf">CommandProcessor</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">doneStack</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Stack</span><span class="o">&lt;&gt;();</span>
+        <span class="n">undoneStack</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Stack</span><span class="o">&lt;&gt;();</span>
+    <span class="o">}</span>
+
+    <span class="kt">void</span> <span class="nf">doCommand</span><span class="o">(</span><span class="n">Command</span> <span class="n">command</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">command</span><span class="o">.</span><span class="na">execute</span><span class="o">();</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">command</span><span class="o">.</span><span class="na">undoable</span><span class="o">())</span> <span class="o">{</span>
+            <span class="n">doneStack</span><span class="o">.</span><span class="na">push</span><span class="o">(</span><span class="n">command</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="kt">void</span> <span class="nf">undoLastCmd</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">doneStack</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span> <span class="k">return</span><span class="o">;</span>
+        <span class="n">Command</span> <span class="n">lastDoneCmd</span> <span class="o">=</span> <span class="n">doneStack</span><span class="o">.</span><span class="na">pop</span><span class="o">();</span>
+        <span class="n">lastDoneCmd</span><span class="o">.</span><span class="na">undo</span><span class="o">();</span>
+        <span class="n">undoneStack</span><span class="o">.</span><span class="na">push</span><span class="o">(</span><span class="n">lastDoneCmd</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kt">void</span> <span class="nf">redoLastUndone</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">undoneStack</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span> <span class="k">return</span><span class="o">;</span>
+        <span class="n">Command</span> <span class="n">lastUndone</span> <span class="o">=</span> <span class="n">undoneStack</span><span class="o">.</span><span class="na">pop</span><span class="o">();</span>
+        <span class="n">doCommand</span><span class="o">(</span><span class="n">lastUndone</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></div>
+
+<p>Now in <code>Main</code> we can test it out.</p>
+
+<p><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">Canvas</span> <span class="n">canvas</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Canvas</span><span class="o">();</span>
+        <span class="n">printCanvas</span><span class="o">(</span><span class="n">canvas</span><span class="o">);</span>
+
+        <span class="n">Command</span> <span class="n">drawCircle</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DrawCircle</span><span class="o">(</span><span class="n">canvas</span><span class="o">);</span>
+        <span class="n">Command</span> <span class="n">drawRec</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DrawRectangle</span><span class="o">(</span><span class="n">canvas</span><span class="o">);</span>
+
+        <span class="n">CommandProcessor</span><span class="o">.</span><span class="na">instance</span><span class="o">.</span><span class="na">doCommand</span><span class="o">(</span><span class="n">drawCircle</span><span class="o">);</span>
+        <span class="n">CommandProcessor</span><span class="o">.</span><span class="na">instance</span><span class="o">.</span><span class="na">doCommand</span><span class="o">(</span><span class="n">drawRec</span><span class="o">);</span>
+
+        <span class="n">printCanvas</span><span class="o">(</span><span class="n">canvas</span><span class="o">);</span>
+
+        <span class="n">Command</span> <span class="n">undoCmd</span> <span class="o">=</span> <span class="k">new</span> <span class="n">UndoCommand</span><span class="o">();</span>
+        <span class="n">CommandProcessor</span><span class="o">.</span><span class="na">instance</span><span class="o">.</span><span class="na">doCommand</span><span class="o">(</span><span class="n">undoCmd</span><span class="o">);</span>
+        <span class="n">printCanvas</span><span class="o">(</span><span class="n">canvas</span><span class="o">);</span>
+
+        <span class="n">Command</span> <span class="n">redoCmd</span> <span class="o">=</span> <span class="k">new</span> <span class="n">RedoCommand</span><span class="o">();</span>
+        <span class="n">CommandProcessor</span><span class="o">.</span><span class="na">instance</span><span class="o">.</span><span class="na">doCommand</span><span class="o">(</span><span class="n">redoCmd</span><span class="o">);</span>
+        <span class="n">printCanvas</span><span class="o">(</span><span class="n">canvas</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">printCanvas</span><span class="o">(</span><span class="n">Canvas</span> <span class="n">canvas</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">canvas</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></div></p>
+
+<p>We can do all sorts of things in the <code>CommandProcessor</code>, like logging Commands, or delay the execution of certain Commands, and even execute the Commands in another thread, etc.</p>
+
+<p>That wraps up the Part II, in Part III, we will talk about a more advance variant of this pattern, and how Android uses it to implement its Service component. Stay tuned!</p>
+
+    </div>
+
+    <footer>
+        <ul class="stats">
+    
+        
+
+        
+        
+  <li>
+    
+    
+    
+
+    
+
+    
+                        
+                        
+                            
+                        
+
+                    
+                        <i class="fa fa-folder-open-o">&nbsp;</i>
+                    
+
+                    
+                        Category
+                    
+                
+            </li>
+        
+    
+
+    
+    
+        <li><a href='https://www.lvguowei.me/categories/design-and-architecture'>Design and Architecture</a></li>
+    
+</ul>
+
+    </footer>
+</article>
+<ul class="actions pagination">
+    
+        <li><a href="https://www.lvguowei.me/post/the-evolution-of-command-pattern/"
+                class="button big previous">The Evolution of Command Pattern (I)</a></li>
+    
+
+    
+        <li><a href="https://www.lvguowei.me/post/the-evolution-of-command-pattern-3/"
+                class="button big next">The Evolution of Command Pattern (III)</a></li>
+    
+</ul>
+
+
+
+    
+        <article class="post">
+            <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "lvguoweime" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </article>
+    
+
+
+    </div>
+    
+<section id="sidebar">
+
+    
+        <section id="intro">
+            
+            
+                
+                    <a href="https://www.lvguowei.me/" class="logo"><img src="https://www.lvguowei.me/img/logo.jpg" alt="Guowei Lv" /></a>
+                
+            
+            
+                <header>
+                    <h2>Guowei Lv</h2>
+                    <p>Thinker · Writer · Coder · Painter</p>
+                </header>
+            
+            <ul class="icons">
+                
+                
+                    
+<li><a href="//github.com/lvguowei" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//lvguowei.deviantart.com/" target="_blank" title="DeviantArt" class="fa fa-deviantart"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/lvguowei" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="mailto:lvguowei1002@gmail.com" title="Email" class="fa fa-envelope"></a></li>
+
+
+                
+            </ul>
+        </section>
+
+    
+        <section id="recent-posts">
+            <ul class="posts">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+                    
+                
+
+                
+                    
+                
+
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="https://www.lvguowei.me/post/is_college_education_required_for_game/">Is a College Education Required for a Career in Game Design?</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2017-12-06'>
+                                    December 6, 2017</time>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="https://www.lvguowei.me/post/sicp-quote/">SICP Quote</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2017-10-06'>
+                                    October 6, 2017</time>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="https://www.lvguowei.me/post/maintainable-recyclerview/">How to write maintainable RecyclerView</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2017-09-17'>
+                                    September 17, 2017</time>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="https://www.lvguowei.me/post/enumset-replace-bit-flag/">Use Enumset to Replace Bit Flag</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2017-09-10'>
+                                    September 10, 2017</time>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="https://www.lvguowei.me/post/the-new-programmer-sterotype/">The New Stereotype of Programmers</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2017-09-06'>
+                                    September 6, 2017</time>
+                            </header>
+                        </article>
+                    </li>
+                
+
+                
+                    <li>
+                        <ul class="actions">
+                            <li><a href=
+                            
+                                "/post/"
+                            
+                            class="button">View more posts</a></li>
+                        </ul>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+    
+    
+    
+        <section id="categories">
+            <ul class="posts">
+                <header>
+                    <h3><a href="https://www.lvguowei.me/categories/">Categories</a></h3>
+                </header>
+
+                
+                    
+                
+
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/android-development/">Android Development</a>
+                                <span style="float:right;">15</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/programming-kata/">programming kata</a>
+                                <span style="float:right;">15</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/finnish-learning/">Finnish Learning</a>
+                                <span style="float:right;">10</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/object-oriented-design/">Object Oriented Design</a>
+                                <span style="float:right;">7</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/functional-programming/">Functional Programming</a>
+                                <span style="float:right;">6</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/design-and-architecture/">Design and Architecture</a>
+                                <span style="float:right;">4</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/thoughts/">Thoughts</a>
+                                <span style="float:right;">4</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/android-library/">Android Library</a>
+                                <span style="float:right;">3</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/emacs/">Emacs</a>
+                                <span style="float:right;">3</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/painting/">Painting</a>
+                                <span style="float:right;">3</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/refactoring/">Refactoring</a>
+                                <span style="float:right;">3</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/sicp/">SICP</a>
+                                <span style="float:right;">3</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/hand-made-hero/">Hand Made Hero</a>
+                                <span style="float:right;">2</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/test-driven-development/">Test Driven Development</a>
+                                <span style="float:right;">2</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/books/">Books</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/concurrent-programming/">Concurrent Programming</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/game/">Game</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/java/">Java</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/mech-keyboard/">Mech Keyboard</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/other/">Other</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/perfume/">Perfume</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+            </ul>
+        </section>
+    
+
+    
+        
+        <section class="blurb">
+            <h2>About</h2>
+            <p>Welcome to my personal website. In here, I talk about programming in general and other cool stuff. Stay tuned!</p>
+
+            <ul class="actions">
+                <li><a href="https://www.lvguowei.me/about/" class="button">Learn More</a></li>
+            </ul>
+        </section>
+        
+
+    
+        <section id="footer">
+            <ul class="icons">
+                
+                
+                    
+<li><a href="//github.com/lvguowei" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//lvguowei.deviantart.com/" target="_blank" title="DeviantArt" class="fa fa-deviantart"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/lvguowei" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="mailto:lvguowei1002@gmail.com" title="Email" class="fa fa-envelope"></a></li>
+
+
+                
+            </ul>
+
+            <p class="copyright">&copy; Guowei Lv. </p>
+        </section>
+
+</section>
+
+            </div>
+        <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+        
+
+        
+        
+            
+        
+
+        
+        
+            <script src="https://www.lvguowei.me/js/jquery.min.js"></script>
+            <script src="https://www.lvguowei.me/js/skel.min.js"></script>
+            <script src="https://www.lvguowei.me/js/util.js"></script>
+            <script src="https://www.lvguowei.me/js/main.js"></script>
+            <script src="https://www.lvguowei.me/js/backToTop.js"></script>
+            <script src="https://www.lvguowei.me/js/highlight.pack.js"></script>
+        
+
+        
+
+            
+            <script>hljs.initHighlightingOnLoad();</script>
+            
+    </body>
+</html>
+

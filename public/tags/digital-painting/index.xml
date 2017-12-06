@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Digital painting on Guowei Lv</title>
+    <link>https://www.lvguowei.me/tags/digital-painting/</link>
+    <description>Recent content in Digital painting on Guowei Lv</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 05 Dec 2016 18:50:50 +0200</lastBuildDate>
+    
+	<atom:link href="https://www.lvguowei.me/tags/digital-painting/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Moomin</title>
+      <link>https://www.lvguowei.me/post/painting-mumin/</link>
+      <pubDate>Mon, 05 Dec 2016 18:50:50 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/painting-mumin/</guid>
+      <description>Moomin ~
+ </description>
+    </item>
+    
+    <item>
+      <title>Xpp</title>
+      <link>https://www.lvguowei.me/post/painting-xpp/</link>
+      <pubDate>Mon, 05 Dec 2016 18:40:50 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/painting-xpp/</guid>
+      <description>My wife ~
+ </description>
+    </item>
+    
+    <item>
+      <title>Ayumi Hamasaki Portrait</title>
+      <link>https://www.lvguowei.me/post/painting-ayumi/</link>
+      <pubDate>Mon, 05 Dec 2016 18:30:50 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/painting-ayumi/</guid>
+      <description>Ayumi Hamasaki, painted by Krita ~
+ </description>
+    </item>
+    
+  </channel>
+</rss>

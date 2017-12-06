@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Design Pattern on Guowei Lv</title>
+    <link>https://www.lvguowei.me/tags/design-pattern/</link>
+    <description>Recent content in Design Pattern on Guowei Lv</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 08 Dec 2016 21:34:15 +0200</lastBuildDate>
+    
+	<atom:link href="https://www.lvguowei.me/tags/design-pattern/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Use Interface Segregation Principle to Implement an Android Logger</title>
+      <link>https://www.lvguowei.me/post/interface-segregation-principle-android-logger/</link>
+      <pubDate>Thu, 08 Dec 2016 21:34:15 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/interface-segregation-principle-android-logger/</guid>
+      <description>Recently at work we has been talking about implementing some kind of Analytic interface for all the analytic libraries we are using, like Localytics and Firebase and so on. Basically it is just a fat interface with a long list of event logging functions, like logSignIn(), logSignOut(), logSellProduct(), logOpenMap() and so on. There are about 40 such methods in that interface. So this is how we implemented it in the first place.</description>
+    </item>
+    
+    <item>
+      <title>Expense Report Case Study</title>
+      <link>https://www.lvguowei.me/post/expense-report-case-study/</link>
+      <pubDate>Tue, 06 Dec 2016 12:16:53 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/expense-report-case-study/</guid>
+      <description>One day, I was watching another Uncle Bob&amp;rsquo;s video (yes, they are addictive), when I see one example he gave when talking about open closed principle, it ringed a bell in my head. This looked familiar! The type in some data classes, some switchs or ifs, some &amp;amp;&amp;amp;s and ||s all dancing around in the class. I can almost hear them teasing: &amp;ldquo;Come and catch me! Come and catch me!&amp;rdquo;.</description>
+    </item>
+    
+  </channel>
+</rss>

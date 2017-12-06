@@ -1,0 +1,1258 @@
+
+
+
+    
+
+
+
+
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        
+            <title>Algorithms - Guowei Lv</title>
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.31.1" />
+        
+
+
+
+
+
+
+<link rel="apple-touch-icon-precomposed"
+  href='https://www.lvguowei.me/favicon/apple-touch-icon-precomposed.png'>
+<link rel="icon" type="image/png" href="https://www.lvguowei.me/favicon/favicon-32x32.png" sizes="32x32">
+
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage"
+  content='/favicon/mstile.png'>
+
+
+
+        
+        
+            
+                <meta name="description" content="Guowei Lv">
+            
+        
+
+        <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Algorithms"/>
+<meta name="twitter:description" content="Guowei Lv"/>
+
+        <meta property="og:title" content="Algorithms" />
+<meta property="og:description" content="Guowei Lv" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.lvguowei.me/tags/algorithms/" />
+
+
+
+<meta property="og:updated_time" content="2017-08-21T21:10:38&#43;03:00"/>
+
+
+
+
+
+
+
+
+
+
+        
+<meta itemprop="name" content="Algorithms">
+<meta itemprop="description" content="Guowei Lv">
+
+
+        
+
+        
+
+        
+        
+            
+        
+
+        
+        
+            <link rel="stylesheet" href="https://www.lvguowei.me/css/google-font.css" />
+            <link rel="stylesheet" href="https://www.lvguowei.me/css/font-awesome.min.css" />
+            <link rel="stylesheet" href="https://www.lvguowei.me/css/main.css" />
+            <link rel="stylesheet" href="https://www.lvguowei.me/css/add-on.css" />
+            <link rel="stylesheet" href="https://www.lvguowei.me/css/monokai-sublime.css">
+        
+
+        
+
+        
+        
+        
+            
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-71831707-2', 'auto');
+ga('send', 'pageview');
+</script>
+
+        
+    </head>
+    <body>
+
+        
+        <div id="wrapper">
+
+    
+<header id="header">
+    
+        <h2><a href="https://www.lvguowei.me/">Guowei Lv</i></a></h2>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="https://www.lvguowei.me/post">
+                        
+                            <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://www.lvguowei.me/categories">
+                        
+                            <i class="fa fa-folder-open-o">&nbsp;</i>Categories
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://www.lvguowei.me/about">
+                        
+                            <i class="fa fa-user">&nbsp;</i>About
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li class="search">
+                <a class="fa-search" href="#search">Search</a>
+                <form id="search" method="get" action="//google.com/search">
+                  <input type="text" name="q" placeholder="Search" />
+                  <input type="hidden" name="as_sitesearch" value="https://www.lvguowei.me/">
+                </form>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+    
+        <section>
+            <form class="search" method="get" action="//google.com/search">
+                <input type="text" name="q" placeholder="Search" />
+                <input type="hidden" name="q" value="site:https://www.lvguowei.me/">
+            </form>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="https://www.lvguowei.me/post">
+                            <h3>
+                                
+                                    <i class="fa fa-newspaper-o">&nbsp;</i>
+                                
+                                Blog
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://www.lvguowei.me/categories">
+                            <h3>
+                                
+                                    <i class="fa fa-folder-open-o">&nbsp;</i>
+                                
+                                Categories
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://www.lvguowei.me/about">
+                            <h3>
+                                
+                                    <i class="fa fa-user">&nbsp;</i>
+                                
+                                About
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+                    
+                
+
+                
+                    <li>
+                        <a href="https://www.lvguowei.me/post/is_college_education_required_for_game/"><p>Is a College Education Required for a Career in Game Design?</p></a>
+                    </li>
+                
+                    <li>
+                        <a href="https://www.lvguowei.me/post/sicp-quote/"><p>SICP Quote</p></a>
+                    </li>
+                
+                    <li>
+                        <a href="https://www.lvguowei.me/post/maintainable-recyclerview/"><p>How to write maintainable RecyclerView</p></a>
+                    </li>
+                
+                    <li>
+                        <a href="https://www.lvguowei.me/post/enumset-replace-bit-flag/"><p>Use Enumset to Replace Bit Flag</p></a>
+                    </li>
+                
+                    <li>
+                        <a href="https://www.lvguowei.me/post/the-new-programmer-sterotype/"><p>The New Stereotype of Programmers</p></a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        
+</section>
+
+    
+    <div id="main">
+        
+        
+            
+        
+
+        
+            <article class="post">
+    <header>
+    <div class="title">
+        
+            <h2><a href="https://www.lvguowei.me/post/keyboard-collection/">My Keyboard Collection</a></h2>
+        
+        
+            <p>My Mech Keyboard Collection</p>
+        
+    </div>
+    <div class="meta">
+        
+            
+        
+
+        <time class="published"
+            datetime='2017-08-21'>
+            August 21, 2017</time>
+        <span class="author"></span>
+        
+            <p>2 minute read</p>
+        
+        
+    </div>
+</header>
+
+    
+    
+
+    
+        
+        
+
+
+
+
+    
+
+
+        
+
+        <a href="https://www.lvguowei.me/post/keyboard-collection/" class="image featured">
+            <img src="https://www.lvguowei.me/img/featured-keeb.jpg" alt="" />
+        </a>
+    
+
+
+    <p>I have been collecting various keyboard over the years. Now I&rsquo;m quite proud of my small collection, so I think I will share it here.
+The One And Only True Keyboard  Yes, this is the famous IBM Model M. Typing on it is like playing piano, the sound and feel is so crisp.
+The IBM Model M2  I got this from a Finnish second hand website, it is much like a modern keyboard, except that the switches are still the same as original Model M.</p>
+
+    <footer>
+        <ul class="actions">
+            <li><a href="https://www.lvguowei.me/post/keyboard-collection/" class="button big">Continue Reading</a></li>
+        </ul>
+        <ul class="stats">
+    
+        
+
+        
+        
+  <li>
+    
+    
+    
+
+    
+
+    
+                        
+                        
+                            
+                        
+
+                    
+                        <i class="fa fa-folder-open-o">&nbsp;</i>
+                    
+
+                    
+                        Category
+                    
+                
+            </li>
+        
+    
+
+    
+    
+        <li><a href='https://www.lvguowei.me/categories/mech-keyboard'>Mech Keyboard</a></li>
+    
+</ul>
+
+    </footer>
+</article>
+
+        
+            <article class="post">
+    <header>
+    <div class="title">
+        
+            <h2><a href="https://www.lvguowei.me/post/the-most-beautiful-program-ever-written/">The Most Beautiful Program Ever Written</a></h2>
+        
+        
+            <p>A Lisp interpreter written in Lisp</p>
+        
+    </div>
+    <div class="meta">
+        
+            
+        
+
+        <time class="published"
+            datetime='2017-08-17'>
+            August 17, 2017</time>
+        <span class="author"></span>
+        
+            <p>6 minute read</p>
+        
+        
+    </div>
+</header>
+
+    
+    
+
+    
+        
+        
+
+
+
+
+    
+
+
+        
+
+        <a href="https://www.lvguowei.me/post/the-most-beautiful-program-ever-written/" class="image featured">
+            <img src="https://www.lvguowei.me/img/feature-beautiful.png" alt="" />
+        </a>
+    
+
+
+    <p>It&rsquo;s my 5th time trying to follow this video and things finally start to click in my head. So I think if I write down what is talked in the video, then I can just read my blog post for another 15 times instead of going through the video, that would be convenient.
+OK, here is a gist of it. This guy is writing an Scheme interpreter in Scheme.</p>
+
+    <footer>
+        <ul class="actions">
+            <li><a href="https://www.lvguowei.me/post/the-most-beautiful-program-ever-written/" class="button big">Continue Reading</a></li>
+        </ul>
+        <ul class="stats">
+    
+        
+
+        
+        
+  <li>
+    
+    
+    
+
+    
+
+    
+                        
+                        
+                            
+                        
+
+                    
+                        <i class="fa fa-folder-open-o">&nbsp;</i>
+                    
+
+                    
+                        Category
+                    
+                
+            </li>
+        
+    
+
+    
+    
+        <li><a href='https://www.lvguowei.me/categories/functional-programming'>Functional Programming</a></li>
+    
+</ul>
+
+    </footer>
+</article>
+
+        
+            <article class="post">
+    <header>
+    <div class="title">
+        
+            <h2><a href="https://www.lvguowei.me/post/magit-tutorial-bisect/">Magit Tutorial - Bisect</a></h2>
+        
+        
+            <p>How to use Magit in Emacs to do bisecting</p>
+        
+    </div>
+    <div class="meta">
+        
+            
+        
+
+        <time class="published"
+            datetime='2017-08-12'>
+            August 12, 2017</time>
+        <span class="author"></span>
+        
+            <p>3 minute read</p>
+        
+        
+    </div>
+</header>
+
+    
+    
+
+    
+        
+        
+
+
+
+
+    
+
+
+        
+
+        <a href="https://www.lvguowei.me/post/magit-tutorial-bisect/" class="image featured">
+            <img src="https://www.lvguowei.me/img/featured-bisect.png" alt="Git rebase with Magit" />
+        </a>
+    
+
+
+    <p>It&rsquo;s 5 o&rsquo;clock on a sunny Friday afternoon, you are thinking where to have dinner with friends and such. The only thing you have to finish before you can go is to pull your colleage&rsquo;s latest changes and make a demo build to customer. You pull, there are 20 commits all nicely structured, you are now giving yourself a pat on the back for teaching him to use rebase yesterday (by pointing him to these 2 wonderful articles 1 and 2).</p>
+
+    <footer>
+        <ul class="actions">
+            <li><a href="https://www.lvguowei.me/post/magit-tutorial-bisect/" class="button big">Continue Reading</a></li>
+        </ul>
+        <ul class="stats">
+    
+        
+
+        
+        
+  <li>
+    
+    
+    
+
+    
+
+    
+                        
+                        
+                            
+                        
+
+                    
+                        <i class="fa fa-folder-open-o">&nbsp;</i>
+                    
+
+                    
+                        Category
+                    
+                
+            </li>
+        
+    
+
+    
+    
+        <li><a href='https://www.lvguowei.me/categories/emacs'>Emacs</a></li>
+    
+</ul>
+
+    </footer>
+</article>
+
+        
+            <article class="post">
+    <header>
+    <div class="title">
+        
+            <h2><a href="https://www.lvguowei.me/post/magit-rebase-2/">Magit tutorial - Rebase (Part II)</a></h2>
+        
+        
+            <p>How to use Magit in Emacs to do rebase in Git</p>
+        
+    </div>
+    <div class="meta">
+        
+            
+        
+
+        <time class="published"
+            datetime='2017-08-06'>
+            August 6, 2017</time>
+        <span class="author"></span>
+        
+            <p>2 minute read</p>
+        
+        
+    </div>
+</header>
+
+    
+    
+
+    
+        
+        
+
+
+
+
+    
+
+
+        
+
+        <a href="https://www.lvguowei.me/post/magit-rebase-2/" class="image featured">
+            <img src="https://www.lvguowei.me/img/featured-rebase.png" alt="Git rebase with Magit" />
+        </a>
+    
+
+
+    <p>In part I we went through how to use git rebase to modify commit history, things like reword a commit, squash multiple commits, split commit. In this part, we will talk about another common use case of rebase: rebase before merging branches.
+Let&rsquo;s first create a new repo and add one file.txt as the first commit.
+apple pear peach cat dog snake Now we create a feature branch from master branch.</p>
+
+    <footer>
+        <ul class="actions">
+            <li><a href="https://www.lvguowei.me/post/magit-rebase-2/" class="button big">Continue Reading</a></li>
+        </ul>
+        <ul class="stats">
+    
+        
+
+        
+        
+  <li>
+    
+    
+    
+
+    
+
+    
+                        
+                        
+                            
+                        
+
+                    
+                        <i class="fa fa-folder-open-o">&nbsp;</i>
+                    
+
+                    
+                        Category
+                    
+                
+            </li>
+        
+    
+
+    
+    
+        <li><a href='https://www.lvguowei.me/categories/emacs'>Emacs</a></li>
+    
+</ul>
+
+    </footer>
+</article>
+
+        
+            <article class="post">
+    <header>
+    <div class="title">
+        
+            <h2><a href="https://www.lvguowei.me/post/magit-rebase/">Magit tutorial - Rebase (Part I)</a></h2>
+        
+        
+            <p>How to use Magit in Emacs to do rebase in Git</p>
+        
+    </div>
+    <div class="meta">
+        
+            
+        
+
+        <time class="published"
+            datetime='2017-08-05'>
+            August 5, 2017</time>
+        <span class="author"></span>
+        
+            <p>3 minute read</p>
+        
+        
+    </div>
+</header>
+
+    
+    
+
+    
+        
+        
+
+
+
+
+    
+
+
+        
+
+        <a href="https://www.lvguowei.me/post/magit-rebase/" class="image featured">
+            <img src="https://www.lvguowei.me/img/featured-rebase.png" alt="Git rebase with Magit" />
+        </a>
+    
+
+
+    <p>Magit is arguably the best Git tool out there and also my favorite. It is a package in Emacs, and it is text based. In this tutorial, we will explore how to use it to tackle one of the more elusive topics in Git: Rebase.
+In the beginning there was darkness Let&rsquo;s create an empty repository and add one empty file to it.
+git init touch file.txt git add .</p>
+
+    <footer>
+        <ul class="actions">
+            <li><a href="https://www.lvguowei.me/post/magit-rebase/" class="button big">Continue Reading</a></li>
+        </ul>
+        <ul class="stats">
+    
+        
+
+        
+        
+  <li>
+    
+    
+    
+
+    
+
+    
+                        
+                        
+                            
+                        
+
+                    
+                        <i class="fa fa-folder-open-o">&nbsp;</i>
+                    
+
+                    
+                        Category
+                    
+                
+            </li>
+        
+    
+
+    
+    
+        <li><a href='https://www.lvguowei.me/categories/emacs'>Emacs</a></li>
+    
+</ul>
+
+    </footer>
+</article>
+
+        
+
+        
+<ul class="actions pagination">
+    
+        <li><a href="https://www.lvguowei.me/tags/algorithms/page/2/"
+                class="button big previous">Previous Page</a></li>
+    
+
+    
+        <li><a href="https://www.lvguowei.me/tags/algorithms/page/4/"
+                class="button big next">Next Page</a></li>
+    
+</ul>
+
+    </div>
+    
+<section id="sidebar">
+
+    
+        <section id="intro">
+            
+            
+                
+                    <a href="https://www.lvguowei.me/" class="logo"><img src="https://www.lvguowei.me/img/logo.jpg" alt="Guowei Lv" /></a>
+                
+            
+            
+                <header>
+                    <h2>Guowei Lv</h2>
+                    <p>Thinker · Writer · Coder · Painter</p>
+                </header>
+            
+            <ul class="icons">
+                
+                    <li><a href="https://www.lvguowei.me/tags/algorithms/index.xml" type="application/rss+xml"
+                        target="_blank" title="RSS" class="fa fa-rss"></a></li>
+                
+                
+                    
+<li><a href="//github.com/lvguowei" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//lvguowei.deviantart.com/" target="_blank" title="DeviantArt" class="fa fa-deviantart"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/lvguowei" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="mailto:lvguowei1002@gmail.com" title="Email" class="fa fa-envelope"></a></li>
+
+
+                
+            </ul>
+        </section>
+
+    
+        <section id="recent-posts">
+            <ul class="posts">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+                    
+                
+
+                
+                    
+                
+
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="https://www.lvguowei.me/post/is_college_education_required_for_game/">Is a College Education Required for a Career in Game Design?</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2017-12-06'>
+                                    December 6, 2017</time>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="https://www.lvguowei.me/post/sicp-quote/">SICP Quote</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2017-10-06'>
+                                    October 6, 2017</time>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="https://www.lvguowei.me/post/maintainable-recyclerview/">How to write maintainable RecyclerView</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2017-09-17'>
+                                    September 17, 2017</time>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="https://www.lvguowei.me/post/enumset-replace-bit-flag/">Use Enumset to Replace Bit Flag</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2017-09-10'>
+                                    September 10, 2017</time>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="https://www.lvguowei.me/post/the-new-programmer-sterotype/">The New Stereotype of Programmers</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2017-09-06'>
+                                    September 6, 2017</time>
+                            </header>
+                        </article>
+                    </li>
+                
+
+                
+                    <li>
+                        <ul class="actions">
+                            <li><a href=
+                            
+                                "/post/"
+                            
+                            class="button">View more posts</a></li>
+                        </ul>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+    
+    
+    
+        <section id="categories">
+            <ul class="posts">
+                <header>
+                    <h3><a href="https://www.lvguowei.me/categories/">Categories</a></h3>
+                </header>
+
+                
+                    
+                
+
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/android-development/">Android Development</a>
+                                <span style="float:right;">15</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/programming-kata/">programming kata</a>
+                                <span style="float:right;">15</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/finnish-learning/">Finnish Learning</a>
+                                <span style="float:right;">10</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/object-oriented-design/">Object Oriented Design</a>
+                                <span style="float:right;">7</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/functional-programming/">Functional Programming</a>
+                                <span style="float:right;">6</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/design-and-architecture/">Design and Architecture</a>
+                                <span style="float:right;">4</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/thoughts/">Thoughts</a>
+                                <span style="float:right;">4</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/android-library/">Android Library</a>
+                                <span style="float:right;">3</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/emacs/">Emacs</a>
+                                <span style="float:right;">3</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/painting/">Painting</a>
+                                <span style="float:right;">3</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/refactoring/">Refactoring</a>
+                                <span style="float:right;">3</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/sicp/">SICP</a>
+                                <span style="float:right;">3</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/hand-made-hero/">Hand Made Hero</a>
+                                <span style="float:right;">2</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/test-driven-development/">Test Driven Development</a>
+                                <span style="float:right;">2</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/books/">Books</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/concurrent-programming/">Concurrent Programming</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/game/">Game</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/java/">Java</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/mech-keyboard/">Mech Keyboard</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/other/">Other</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/perfume/">Perfume</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+            </ul>
+        </section>
+    
+
+    
+        
+        <section class="blurb">
+            <h2>About</h2>
+            <p>Welcome to my personal website. In here, I talk about programming in general and other cool stuff. Stay tuned!</p>
+
+            <ul class="actions">
+                <li><a href="https://www.lvguowei.me/about/" class="button">Learn More</a></li>
+            </ul>
+        </section>
+        
+
+    
+        <section id="footer">
+            <ul class="icons">
+                
+                    <li><a href="https://www.lvguowei.me/tags/algorithms/index.xml" type="application/rss+xml"
+                        target="_blank" title="RSS" class="fa fa-rss"></a></li>
+                
+                
+                    
+<li><a href="//github.com/lvguowei" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//lvguowei.deviantart.com/" target="_blank" title="DeviantArt" class="fa fa-deviantart"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/lvguowei" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="mailto:lvguowei1002@gmail.com" title="Email" class="fa fa-envelope"></a></li>
+
+
+                
+            </ul>
+
+            <p class="copyright">&copy; Guowei Lv. </p>
+        </section>
+
+</section>
+
+            </div>
+        <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+        
+
+        
+        
+            
+        
+
+        
+        
+            <script src="https://www.lvguowei.me/js/jquery.min.js"></script>
+            <script src="https://www.lvguowei.me/js/skel.min.js"></script>
+            <script src="https://www.lvguowei.me/js/util.js"></script>
+            <script src="https://www.lvguowei.me/js/main.js"></script>
+            <script src="https://www.lvguowei.me/js/backToTop.js"></script>
+            <script src="https://www.lvguowei.me/js/highlight.pack.js"></script>
+        
+
+        
+
+            
+            <script>hljs.initHighlightingOnLoad();</script>
+            
+    </body>
+</html>
+

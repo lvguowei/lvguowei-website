@@ -1,0 +1,967 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Guowei Lv</title>
+    <link>https://www.lvguowei.me/post/</link>
+    <description>Recent content in Posts on Guowei Lv</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 06 Dec 2017 11:09:15 +0200</lastBuildDate>
+    
+	<atom:link href="https://www.lvguowei.me/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Is a College Education Required for a Career in Game Design?</title>
+      <link>https://www.lvguowei.me/post/is_college_education_required_for_game/</link>
+      <pubDate>Wed, 06 Dec 2017 11:09:15 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/is_college_education_required_for_game/</guid>
+      <description>Want to Be a Video Game Designer? You MUST Read This First Wouldn’t it be great to turn your lifelong love of video games into a career? That’s the dream of almost every gamer. Consequently, jobs are incredibly competitive. What qualifications do you need to get a leg up on the competition? Here is some information to get you started.
+What Is the Job and Salary Outlook? The average yearly salaries for workers in the video game industry ranged from $49K for quality assurance testers to $107K for executives according to stats from the United States Bureau of Labor Statistics.</description>
+    </item>
+    
+    <item>
+      <title>SICP Quote</title>
+      <link>https://www.lvguowei.me/post/sicp-quote/</link>
+      <pubDate>Fri, 06 Oct 2017 20:05:49 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/sicp-quote/</guid>
+      <description>Since I have to take a long bus trip to work everyday, I decided to use the time to read the SICP (Structure and Interpretation of Computer Programs). And blog along the way to mark the progress.
+I have read Chapter 1 and watched the video lectures. But I still feel I get planty new things from going through it again. The best part of this book I think is that it spends minimal time and effort in teaching the programming language, the main focus is the thinking and ideas about programming.</description>
+    </item>
+    
+    <item>
+      <title>How to write maintainable RecyclerView</title>
+      <link>https://www.lvguowei.me/post/maintainable-recyclerview/</link>
+      <pubDate>Sun, 17 Sep 2017 18:39:39 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/maintainable-recyclerview/</guid>
+      <description>Google is famous for making complicated things. RecyclerView is not an exception. It is more flexible than the previous ListView I understand, but that also means that us developers need to understand more and do more work. I have seen gigantic adapters that have very complicated logic especially when there are multiple types that the RecyclerView is trying to handle. I think I happen to know one way to organize things a bit better so one can easily find what he/she is looking for.</description>
+    </item>
+    
+    <item>
+      <title>Use Enumset to Replace Bit Flag</title>
+      <link>https://www.lvguowei.me/post/enumset-replace-bit-flag/</link>
+      <pubDate>Sun, 10 Sep 2017 19:50:32 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/enumset-replace-bit-flag/</guid>
+      <description>I was reorganizing my bookshelf today and found my Thinking in Java lying there so I decided to skim through it. I was quite surprised how much basic stuff in Java I overlooked or forgot. So I decided to re-read the book and write short blog posts of the things that I think are useful but not too many people are talking about nowadays. Here is the first one.</description>
+    </item>
+    
+    <item>
+      <title>The New Stereotype of Programmers</title>
+      <link>https://www.lvguowei.me/post/the-new-programmer-sterotype/</link>
+      <pubDate>Wed, 06 Sep 2017 20:48:39 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/the-new-programmer-sterotype/</guid>
+      <description>I was at a Sushi buffet today, and I saw someone who wears a company T-shirt which says &amp;ldquo;I dress code&amp;rdquo; on the back. I don&amp;rsquo;t think I like that slogan very much. I even feel a bit sad and angry. And I don&amp;rsquo;t know why. After given it some thoughts, I think the reason might be the following.
+I&amp;rsquo;ve never seen any other professionals who emphasize their career in such a funny way.</description>
+    </item>
+    
+    <item>
+      <title>The Ultimate List of Youtube Programming Channels</title>
+      <link>https://www.lvguowei.me/post/ultimate-list-of-youtube-programming-channels/</link>
+      <pubDate>Sat, 02 Sep 2017 20:20:06 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/ultimate-list-of-youtube-programming-channels/</guid>
+      <description>Here are the Youtube channels I subscribe and recommend. They are in no particular order.
+Computer History Museum 
+I&amp;rsquo;m an old school programmer and this fits my taste perfectly well. Especially check out the Oral Histories section where they have in-depth interviews with the industry legends from top IT companies.
+Confreaks 
+Mainly about Ruby conference videos recordings, even though I don&amp;rsquo;t know Ruby I still find some of their videos extremely helpful.</description>
+    </item>
+    
+    <item>
+      <title>The Evolution of Command Pattern (III)</title>
+      <link>https://www.lvguowei.me/post/the-evolution-of-command-pattern-3/</link>
+      <pubDate>Sat, 02 Sep 2017 11:10:27 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/the-evolution-of-command-pattern-3/</guid>
+      <description>In this final part of the Command Pattern series, we will talk about yet another improvement on top of the Command Processor Pattern. It is described in the paper Command Revisited. From now on, we will just refer to it as the Command Revisited Pattern.
+The paper is short and sweet but you might not find it to be to the point after the first glimpse.
+The most beautiful part of the Command Revisited Pattern is that it provides a new perspective on the general Command Pattern.</description>
+    </item>
+    
+    <item>
+      <title>The Evolution of Command Pattern (II)</title>
+      <link>https://www.lvguowei.me/post/the-evolution-of-command-pattern-2/</link>
+      <pubDate>Sun, 27 Aug 2017 10:41:19 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/the-evolution-of-command-pattern-2/</guid>
+      <description>In Part I, we discussed the original Command Pattern from the GoF Design Patterns book. In Part II, let&amp;rsquo;s talk about the improved version from another less known book: Pattern-Oriented Software Architecture Vol.1 (POSA in short).
+
+In this book, there is a Command Processor pattern, which is based on the Command Pattern in GoF book. The most important difference is the newly introduced CommandProcessor.
+In the original Command Pattern, it defines how to create Commands, and each Command has an execute and undo methods.</description>
+    </item>
+    
+    <item>
+      <title>The Evolution of Command Pattern (I)</title>
+      <link>https://www.lvguowei.me/post/the-evolution-of-command-pattern/</link>
+      <pubDate>Sat, 26 Aug 2017 09:52:18 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/the-evolution-of-command-pattern/</guid>
+      <description>The Command Pattern is one of my favourite design patterns. It is also a good example that design patterns do change over time. In part I, we talk about the original version from the Design Patterns book.
+This pattern first appears in the famous GoF book, described as follows:   Encapsulate a request as an object, thereby letting you parameterize clients with different requests, queue or log requests, and support undoable operations.</description>
+    </item>
+    
+    <item>
+      <title>Customize Android Seekbar Color</title>
+      <link>https://www.lvguowei.me/post/customize-android-seekbar-color/</link>
+      <pubDate>Wed, 23 Aug 2017 20:50:44 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/customize-android-seekbar-color/</guid>
+      <description>I was tasked to create a simple media player app for a shop demo, and I&amp;rsquo;m using the built-in SeekBar for the volume control. All goes well, until I want to change the color of it. The design has it like the thumb of the SeekBar is white, and first half is green and rest half is grey. It took me almost a whole day to find a satisfying anwser, come on Android!</description>
+    </item>
+    
+    <item>
+      <title>My Keyboard Collection</title>
+      <link>https://www.lvguowei.me/post/keyboard-collection/</link>
+      <pubDate>Mon, 21 Aug 2017 21:10:38 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/keyboard-collection/</guid>
+      <description>I have been collecting various keyboard over the years. Now I&amp;rsquo;m quite proud of my small collection, so I think I will share it here.
+The One And Only True Keyboard  Yes, this is the famous IBM Model M. Typing on it is like playing piano, the sound and feel is so crisp.
+The IBM Model M2  I got this from a Finnish second hand website, it is much like a modern keyboard, except that the switches are still the same as original Model M.</description>
+    </item>
+    
+    <item>
+      <title>The Most Beautiful Program Ever Written</title>
+      <link>https://www.lvguowei.me/post/the-most-beautiful-program-ever-written/</link>
+      <pubDate>Thu, 17 Aug 2017 21:42:47 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/the-most-beautiful-program-ever-written/</guid>
+      <description>It&amp;rsquo;s my 5th time trying to follow this video and things finally start to click in my head. So I think if I write down what is talked in the video, then I can just read my blog post for another 15 times instead of going through the video, that would be convenient.
+OK, here is a gist of it. This guy is writing an Scheme interpreter in Scheme.</description>
+    </item>
+    
+    <item>
+      <title>Magit Tutorial - Bisect</title>
+      <link>https://www.lvguowei.me/post/magit-tutorial-bisect/</link>
+      <pubDate>Sat, 12 Aug 2017 08:07:00 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/magit-tutorial-bisect/</guid>
+      <description>It&amp;rsquo;s 5 o&amp;rsquo;clock on a sunny Friday afternoon, you are thinking where to have dinner with friends and such. The only thing you have to finish before you can go is to pull your colleage&amp;rsquo;s latest changes and make a demo build to customer. You pull, there are 20 commits all nicely structured, you are now giving yourself a pat on the back for teaching him to use rebase yesterday (by pointing him to these 2 wonderful articles 1 and 2).</description>
+    </item>
+    
+    <item>
+      <title>Magit tutorial - Rebase (Part II)</title>
+      <link>https://www.lvguowei.me/post/magit-rebase-2/</link>
+      <pubDate>Sun, 06 Aug 2017 09:30:26 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/magit-rebase-2/</guid>
+      <description>In part I we went through how to use git rebase to modify commit history, things like reword a commit, squash multiple commits, split commit. In this part, we will talk about another common use case of rebase: rebase before merging branches.
+Let&amp;rsquo;s first create a new repo and add one file.txt as the first commit.
+apple pear peach cat dog snake Now we create a feature branch from master branch.</description>
+    </item>
+    
+    <item>
+      <title>Magit tutorial - Rebase (Part I)</title>
+      <link>https://www.lvguowei.me/post/magit-rebase/</link>
+      <pubDate>Sat, 05 Aug 2017 15:25:20 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/magit-rebase/</guid>
+      <description>Magit is arguably the best Git tool out there and also my favorite. It is a package in Emacs, and it is text based. In this tutorial, we will explore how to use it to tackle one of the more elusive topics in Git: Rebase.
+In the beginning there was darkness Let&amp;rsquo;s create an empty repository and add one empty file to it.
+git init touch file.txt git add .</description>
+    </item>
+    
+    <item>
+      <title>Tree Vs Iterative Fibbonacci Numbers</title>
+      <link>https://www.lvguowei.me/post/tree-vs-iterative-fib/</link>
+      <pubDate>Sun, 30 Jul 2017 20:46:36 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/tree-vs-iterative-fib/</guid>
+      <description>Being a programmer, you should be very familiar with Fibbonacci numbers. It is often being introduced when teaching recursion.
+Tree Recursion Most likely the implementation of a function that calculate fib number is as follows:
+(defn fib-tree [n] (cond (= n 0) 0 (= n 1) 1 :else (+ (fib-tree (- n 1)) (fib-tree (- n 2))))) This is just a direct translation from the Fibonacci number definition. Since it is straightforward and easy to understand, most textbooks use it as an typical example for illustrating recursive function.</description>
+    </item>
+    
+    <item>
+      <title>How (Not) To Store Password</title>
+      <link>https://www.lvguowei.me/post/how-not-to-store-password/</link>
+      <pubDate>Fri, 28 Jul 2017 21:07:55 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/how-not-to-store-password/</guid>
+      <description>If you are a programmer, especially backend programmer, sooner or later you will face the problem of storing users&amp;rsquo; passwords. Even though at first sight this seems like an entry level problem that we should hand over to an intern, it is really not.
+If you ask me how to do it. My first answer would be DON&amp;rsquo;T DO IT! I&amp;rsquo;m serious, try to avoid it as much as you can, just use Google or Facebook signin and your life goes on.</description>
+    </item>
+    
+    <item>
+      <title>All You Need To Know About Android Espresso Testing (Part IV)</title>
+      <link>https://www.lvguowei.me/post/all-you-need-to-know-about-android-espresso-testing-4/</link>
+      <pubDate>Fri, 21 Jul 2017 18:19:35 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/all-you-need-to-know-about-android-espresso-testing-4/</guid>
+      <description>In previous article, we talked about how to scroll to a certain position in RecyclerView in the test. In this article, we further discuss how to write a custom matcher and use it to scroll the RecyclerView.
+Let&amp;rsquo;s say that we want to scroll to certain item in RecyclerView, but we don&amp;rsquo;t know the position. We can then create a custom Matcher, and use the matcher to determine which item to scroll to.</description>
+    </item>
+    
+    <item>
+      <title>All You Need To Know About Android Espresso Testing (Part III)</title>
+      <link>https://www.lvguowei.me/post/all-you-need-to-know-about-android-espresso-testing-3/</link>
+      <pubDate>Fri, 21 Jul 2017 16:44:41 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/all-you-need-to-know-about-android-espresso-testing-3/</guid>
+      <description>In part II, we wrote a test case to verify that the app can create a task and the task will be seen on the screen. In this part III, we will demonstrate one technique on writing tests that involves a RecyclerView.
+First we repeatly add some tasks, and then we verify that the last added task is on display. Note that since we are using a RecyclerView, the last item might not be seen, so we need to scroll the RecyclerView before checking.</description>
+    </item>
+    
+    <item>
+      <title>All You Need To Know About Android Espresso Testing (Part II)</title>
+      <link>https://www.lvguowei.me/post/all-you-need-to-know-about-android-espresso-testing-2/</link>
+      <pubDate>Fri, 21 Jul 2017 11:48:08 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/all-you-need-to-know-about-android-espresso-testing-2/</guid>
+      <description>In Part I we talked about how to setup Espresso testing framework, what is the activity testing rule and how to use uiautomatorviewer to help us find id of the view quickly.
+In this Part II, we will write some tests against a simple TODO list application. Lets get started.
+About the App under test This is a very simple app with basically 2 screens. One to display a list of tasks:</description>
+    </item>
+    
+    <item>
+      <title>How To Follow Hand Made Hero On Linux</title>
+      <link>https://www.lvguowei.me/post/how-to-follow-hand-made-hero-on-linux/</link>
+      <pubDate>Thu, 20 Jul 2017 09:06:31 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/how-to-follow-hand-made-hero-on-linux/</guid>
+      <description>If you are a Linux person and you want to follow the awesome Hand Made Hero, here are how I am doing it(on Arch Linux).
+ Install VirtualBox. Create a Windows virtual machine(at least Win7 + SP1, you can download a ISO image from here), pay attention to the hard drive size, 25G is too small, increase it to like 50G at least. In order to make the full scren mode work, we have to install something called Guest Addition.</description>
+    </item>
+    
+    <item>
+      <title>All You Need To Know About Android Espresso Testing (Part I)</title>
+      <link>https://www.lvguowei.me/post/all-you-need-to-know-about-android-espresso-testing/</link>
+      <pubDate>Thu, 13 Jul 2017 13:03:12 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/all-you-need-to-know-about-android-espresso-testing/</guid>
+      <description>The Espresso testing framework really makes it easy to write UI tests for Android. In this first installment, I will go through how to set it up and write our first test case.
+Let&amp;rsquo;s get started.
+Set up Espresso Add the following dependencies to your gradle build file.
+dependencies { // Other dependencies ...  androidTestCompile &amp;#39;com.android.support.test.espresso:espresso-core:2.2.2&amp;#39; } Understand the Rules in JUnit Why do they exist? We all know that in JUnit there is a setup method(annotated as @Before) and a teardown method(annotated as @After).</description>
+    </item>
+    
+    <item>
+      <title>Android Emulator Problem In Arch Linux</title>
+      <link>https://www.lvguowei.me/post/android-emulator-problem-in-arch-linux/</link>
+      <pubDate>Wed, 12 Jul 2017 14:13:07 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/android-emulator-problem-in-arch-linux/</guid>
+      <description>I don&amp;rsquo;t remember since when, but now whenever I upgrade Android Studio from pacman, I cannot open my emulator, with some libGL error: unable to load driver: i965_dri.so error.
+I tried to follow the solution online but found none of them is working out of the box, because Android Sdk changed some paths. Here is what actualy works now:
+ cd ANDROID_SDK_PATH/emulator/lib64/libstdc++/ mv libstdc++.so.6 libstdc++.so.6.bak ln -s /usr/lib64/libstdc++.so.6 libstdc++.so.6  </description>
+    </item>
+    
+    <item>
+      <title>Rxjava fromCallable() Vs defer()</title>
+      <link>https://www.lvguowei.me/post/rxjava-fromcallable-vs-defer/</link>
+      <pubDate>Tue, 11 Jul 2017 17:13:32 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/rxjava-fromcallable-vs-defer/</guid>
+      <description>In this post we talk about how to use Observable.fromCallable() and Observable.defer() to convert exising functionality into the Rx.
+Imagine that you have a UserService class, in it there is a getUserFromDb() function. This function is developed before RxJava and cannot be changed. But somehow you need a function which returns a Observable&amp;lt;User&amp;gt;. What could you do?
+The UserService Example public class UserService { /** * Gets User from database, this should not be run in UI thread.</description>
+    </item>
+    
+    <item>
+      <title>Android Custom View 101 (Part V)</title>
+      <link>https://www.lvguowei.me/post/android-custom-view-101-5/</link>
+      <pubDate>Sun, 09 Jul 2017 19:26:15 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/android-custom-view-101-5/</guid>
+      <description>In this post, we will discuss how to implement a custom view group by extending an existing one, like a FrameLayout.
+Let&amp;rsquo;s assume that we are building a layout for displaying user&amp;rsquo;s avatar. The requirement is if a user has an avatar, show the avatar picture, if not, show their initials as text.
+So it would be good if we have some kind of AvatarView and Avatar data class (which contains name and avatar picture).</description>
+    </item>
+    
+    <item>
+      <title>Android Custom Views 101 (Part IV)</title>
+      <link>https://www.lvguowei.me/post/android-custom-view-101-4/</link>
+      <pubDate>Sun, 09 Jul 2017 16:41:23 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/android-custom-view-101-4/</guid>
+      <description>In this installment, we talk about how to implement custom view group.
+Custom View VS Custom ViewGroup When we think about a view, it is usually very simple and self contained. View represents, draws and handles interaction for a part of the screen.
+Whereas ViewGroup is more about a binding relationship between views. ViewGroup is a specialized View that contains other Views. It has children.
+As discussed before, in order for custom view to work correctly, it has to implement two methods: onDraw() and onMeasure(), and there is no need to implement onLayout() cause there is no children to layout.</description>
+    </item>
+    
+    <item>
+      <title>Android Custom Views 101 (Part III)</title>
+      <link>https://www.lvguowei.me/post/android-custom-views-101-3/</link>
+      <pubDate>Sat, 08 Jul 2017 14:47:36 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/android-custom-views-101-3/</guid>
+      <description>In this post, we finally gonna take a look at how to implement onMeasure() properly.
+When implementing a custom view, we should always consider its lower and upper size limit. In this case since the format of the time is fixed (hh:mm:ss). So we just need to get the width and height of it.
+Suppose we set the MAX_TIME = &amp;quot;00:00:00&amp;quot;, then to get its width in pixel we can do:</description>
+    </item>
+    
+    <item>
+      <title>Android Custom Views 101 (Part II)</title>
+      <link>https://www.lvguowei.me/post/android-custom-views-101-2/</link>
+      <pubDate>Sat, 08 Jul 2017 09:55:03 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/android-custom-views-101-2/</guid>
+      <description>In Part I, we talked about how to create a simple custom view. But we don&amp;rsquo;t really implement the onMeasure(). In this post, we will analyze what problems we will have if we omit the onMeasure().
+You can think of how the measurements are made as a conversation between the child and parent views.
+The child tells its parent how it wants to be laid out by using LayoutParams. This can either be set in xml file or programatically.</description>
+    </item>
+    
+    <item>
+      <title>The Pleasure Of Hand Made Programs</title>
+      <link>https://www.lvguowei.me/post/the-pleasure-of-hand-made-programs/</link>
+      <pubDate>Wed, 05 Jul 2017 21:42:18 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/the-pleasure-of-hand-made-programs/</guid>
+      <description>Some time ago I read this article about Why Mit Stopped Teaching SICP. Gerry Sussman said that nowadays people do not often need to build something from scratch again, there exists massive and huge library code for nearly everything. So today&amp;rsquo;s programming work is more like poking around other people&amp;rsquo;s code until it works.
+I&amp;rsquo;ve beening doing Android dev for some time now, and I have to say that I sadly agree with him.</description>
+    </item>
+    
+    <item>
+      <title>Android Custom Views 101 (Part I)</title>
+      <link>https://www.lvguowei.me/post/android-custom-view-101/</link>
+      <pubDate>Wed, 05 Jul 2017 15:20:25 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/android-custom-view-101/</guid>
+      <description>Creating your own custom android views can be useful and daunting at the same time. For a long time there is nobody really talks about it in a approachable way, until this lady Huyen Tue Dao. Let&amp;rsquo;s try to follow her approach and create some custom view!
+In this part, we will create a very simple timer view that takes up the whole screen and display the current time.
+ So let&amp;rsquo;s get started.</description>
+    </item>
+    
+    <item>
+      <title>Strategy Pattern And Lambda</title>
+      <link>https://www.lvguowei.me/post/strategy-pattern-and-lambda/</link>
+      <pubDate>Mon, 03 Jul 2017 12:01:35 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/strategy-pattern-and-lambda/</guid>
+      <description>While reading Effective Java Item 21: Use function objects to represent strategies, something hit my mind and now I&amp;rsquo;m writing it down.
+All these new lambda thing is really what is called the Strategy pattern in the OOP world, or would it be more appropriate to say that the Strategy Pattern in Design patterns is really what lambda is.
+The essence of all these, can be boiled down to one simple idea, pass functionalities around.</description>
+    </item>
+    
+    <item>
+      <title>Why Synchronize?</title>
+      <link>https://www.lvguowei.me/post/why-synchronize/</link>
+      <pubDate>Sat, 01 Jul 2017 14:16:31 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/why-synchronize/</guid>
+      <description>We are going to write a program, a bit program, lots of stuff happening here and there, ok, big program. Now, lots of threads of course, loads and loads of them, we have to synchronize, yes we do, I think so, yeah, synchronize very important stuff, good idea, but, why?
+Remember what we have been taught in school? That mutex thing? Mutual Exclusive? That 2 threads are trying to read and write some mutual value at the same time and create a big mess?</description>
+    </item>
+    
+    <item>
+      <title>Why we stopped using dagger</title>
+      <link>https://www.lvguowei.me/post/why-remove-dagger/</link>
+      <pubDate>Tue, 27 Jun 2017 20:40:41 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/why-remove-dagger/</guid>
+      <description>I decided to stop using Dagger2 in our company&amp;rsquo;s android project. Why?
+Don&amp;rsquo;t get me wrong, Dagger2 is still great. But though it is great, it is complex. Lots of concepts to wrap our heads around. What is a component, what is a module, what is the difference between subcomponent and dependency component, etc. In order to use it properly, we need to anwser all that questions, even you think you understand it, you still run into suprises now and then.</description>
+    </item>
+    
+    <item>
+      <title>Hand Made Hero is AWESOME!</title>
+      <link>https://www.lvguowei.me/post/hand-made-hero/</link>
+      <pubDate>Sun, 18 Jun 2017 18:02:02 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/hand-made-hero/</guid>
+      <description>I purchased the pre-order Hand Made Hero game. I think it&amp;rsquo;s great value for learning, there is this super awesome guy who has tons of experience talking to you at least 1 hour per day for over a year. And it cost only $15. I must have lost my mind if I missed this.
+Two interesting observations:
+ This guy is against OOP This guy prefers C to C++  This kind of &amp;ldquo;against C++ and OOP and all kind of complex nonsense shit&amp;rdquo; thing (this and this) hit me several times and I really like to know about their argument.</description>
+    </item>
+    
+    <item>
+      <title>An Android version of the iMessage voice note recorder</title>
+      <link>https://www.lvguowei.me/post/imessage-recorder-android-clone/</link>
+      <pubDate>Mon, 12 Jun 2017 12:22:15 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/imessage-recorder-android-clone/</guid>
+      <description>I created a copy of the voice recorder in the iMessage app for android and made a library out of it. Check it out here!
+ </description>
+    </item>
+    
+    <item>
+      <title>Understand Clojure Transducers 1</title>
+      <link>https://www.lvguowei.me/post/understand-clojure-transducers/</link>
+      <pubDate>Sun, 02 Apr 2017 08:35:01 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/understand-clojure-transducers/</guid>
+      <description>In this post, we will define what is a transducer.
+First, let&amp;rsquo;s take a closer look at map.
+(map inc [1 2 3]) A straightforward way to explain what has happened is this: Increment each item by one in a list.
+At first thought, this sounds like one step operation.
+Now let&amp;rsquo;s change the requirement a bit. We want to increment each element by one and then sum them together.</description>
+    </item>
+    
+    <item>
+      <title>Android Kata View Property Animator</title>
+      <link>https://www.lvguowei.me/post/android-kata-view-property-animator/</link>
+      <pubDate>Tue, 28 Mar 2017 20:49:08 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/android-kata-view-property-animator/</guid>
+      <description>Since I have been doing programming kata, why not adopt the same kata concept in Android programming?
+Over the years I have accumulated some useful tools / tricks that I can show in kata form.
+The goal is to keep it simple and easy to grasp and to the point.
+This is the first one, which shows how to use ViewPropertyAnimator to animate show and hide of the FAB button.</description>
+    </item>
+    
+    <item>
+      <title>Mock Objects Demystified</title>
+      <link>https://www.lvguowei.me/post/mock-objects-dimistified/</link>
+      <pubDate>Mon, 20 Mar 2017 20:27:39 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/mock-objects-dimistified/</guid>
+      <description>If you have ever tried writing any non trivial tests, mocks should not be a stranger to you. But what about some other &amp;ldquo;mock&amp;rdquo; like objects like stubs, spies and such? How are they different from each other? In this blog post, I will explain it as simple and easy to remember as possible.
+Everything is a test double. Test double is just a general name for all mock like objects.</description>
+    </item>
+    
+    <item>
+      <title>Programming Kata Day 13</title>
+      <link>https://www.lvguowei.me/post/programming-kata-day-13/</link>
+      <pubDate>Mon, 06 Mar 2017 21:02:55 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/programming-kata-day-13/</guid>
+      <description>Problem The elevator can be on first floor or second floor The elevator can be either openned or closed. The elevator can go up or down. But when it goes up or down, the door has to be closed. The door can open or close, but it cannot open when it is already openned or close when it is already closed.
+Write a function that takes a list of actions with :done indicating the end, and return if this sequence is legal or not.</description>
+    </item>
+    
+    <item>
+      <title>Clojure Tail Recursion By Example</title>
+      <link>https://www.lvguowei.me/post/clojure-tail-recursion/</link>
+      <pubDate>Mon, 27 Feb 2017 20:15:18 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/clojure-tail-recursion/</guid>
+      <description>What this recur and tail calls optimization is all about in Clojure? This blog post is trying to give a short yet easy to remember explanation.
+Before explaining anything, let&amp;rsquo;s look at how we can implement + using recursion.
+This is actually an interesting task, implement our +, since most of the time + is a built-in function. So to make things a bit more clear, let&amp;rsquo;s assume that our computer is drunk and forgets about how to do +, but it still remembers how to increment and decrement by 1.</description>
+    </item>
+    
+    <item>
+      <title>programming kata day 12</title>
+      <link>https://www.lvguowei.me/post/programming-kata-day-12/</link>
+      <pubDate>Sun, 26 Feb 2017 16:38:38 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/programming-kata-day-12/</guid>
+      <description> Problem Implement a unit converter that uses the given the following metric
+(def metric {:meter 1 :km 1000 :cm 1/100 :mm [1/10 :cm]})  The converter should anwser questions like:
+How many meters are there in 10 km and 20 cm?
+Solution (defn convert [context descriptor] (reduce (fn [result [mag unit]] (let [val (metric unit)] (if (vector? val) (+ result (* mag (convert context val))) (+ result (* mag val))))) 0 (partition 2 descriptor))) (convert metric [1 :meter]) (convert metric [3 :km 10 :meter]) </description>
+    </item>
+    
+    <item>
+      <title>programming kata day 11</title>
+      <link>https://www.lvguowei.me/post/programming-kata-day-11/</link>
+      <pubDate>Sat, 25 Feb 2017 21:30:56 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/programming-kata-day-11/</guid>
+      <description>Problem This coding adventure comes from Advend Of Code Day 2
+Solution Github</description>
+    </item>
+    
+    <item>
+      <title>Named Arguments In Clojure</title>
+      <link>https://www.lvguowei.me/post/named-arguments-in-clojure/</link>
+      <pubDate>Fri, 24 Feb 2017 22:24:05 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/named-arguments-in-clojure/</guid>
+      <description>Sometimes I miss the named arguments feature in Python, for example:
+def slope(p1=(0,0), p2=(1,1)) return (float(p2[1] - p1[1])) / (p2[0] - p1[0]) =&amp;gt; slope((1,2), (4,5)) =&amp;gt; slope(p2=(2, 1)) The equivalent in clojure can be done using destructuring:
+(defn slope [&amp;amp; {:keys [p1 p2] :or {p1 [0 0] p2 [1 1]}}] (float (/ (- p2 1) (p1 1)) (- p2 0) (p1 0))) =&amp;gt; (slope :p1 [1 2] :p2 [3 4]) =&amp;gt; (slope :p2 [3 4]) =&amp;gt; (slope)</description>
+    </item>
+    
+    <item>
+      <title>programming kata day 10</title>
+      <link>https://www.lvguowei.me/post/programming-kata-day-10/</link>
+      <pubDate>Thu, 23 Feb 2017 20:36:33 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/programming-kata-day-10/</guid>
+      <description>Problem Here is a list of students&amp;rsquo; exam scores. Write a function to sort them based on given criteria. Like Math first, then Physics and then chemistry and then English.
+(def exam-scores [{:math 78 :physics 80 :english 97 :chemistry 65} {:math 78 :physics 80 :english 66 :chemistry 65} {:math 78 :physics 54 :english 97 :chemistry 65} {:math 78 :physics 80 :english 97 :chemistry 61} {:math 100 :physics 89 :english 47 :chemistry 85} {:math 98 :physics 80 :english 79 :chemistry 65}])  Solution (defn rank [scores &amp;amp; criteria] (reverse  (sort-by  (fn [score] (mapv score criteria)) scores))) Note The sort-by in Clojure is very powerful, the idea is to reduce each row into one value that we know how to sort, like numbers, strings or lists.</description>
+    </item>
+    
+    <item>
+      <title>Programming Kata Day 9</title>
+      <link>https://www.lvguowei.me/post/programming-kata-day-9/</link>
+      <pubDate>Mon, 20 Feb 2017 20:05:17 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/programming-kata-day-9/</guid>
+      <description>Problem This coding adventure comes from Advend Of Code Day 1
+Solution Github</description>
+    </item>
+    
+    <item>
+      <title>Programming Kata Day 8</title>
+      <link>https://www.lvguowei.me/post/programming-kata-day-8/</link>
+      <pubDate>Sat, 18 Feb 2017 13:54:42 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/programming-kata-day-8/</guid>
+      <description>Problem Write a function steps, that takes a sequence and makes a deeply nested structure from it:
+(steps [1 2 3 4]) ;=&amp;gt; [1 [2 [3 [4 []]]]]  Solution 1 (defn steps [s] (if (seq s) [(first s) (steps (rest s))] []))  Solution 2 Lazy version:
+(defn lz-steps [s] (lazy-seq (if (seq s) [(first s) (lz-steps (rest s))] []))) 
+Note To see the difference, call the function like this:</description>
+    </item>
+    
+    <item>
+      <title>Programming Kata Day 7</title>
+      <link>https://www.lvguowei.me/post/programming-kata-day-7/</link>
+      <pubDate>Fri, 17 Feb 2017 20:32:20 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/programming-kata-day-7/</guid>
+      <description>Problem Suppose a binary tree structure looks like this:
+{:val value :L &amp;lt;left-node&amp;gt; :R &amp;lt;right-node&amp;gt;}  Write a function to balance insert node into the tree.
+Solution (defn insert [tree x] (cond (nil? tree) {:val x :L nil :R nil} (&amp;lt; x (:val tree)) (assoc tree :L (insert (:L tree) x)) :else (assoc tree :R (insert (:R tree) x)))) Note Here is the function to traverse the tree:
+(defn traverse [tree] (when tree (concat (traverse (:L tree)) [(:val tree)] (traverse (:R tree)))))</description>
+    </item>
+    
+    <item>
+      <title>Programming Kata Day 6</title>
+      <link>https://www.lvguowei.me/post/programming-kata-day-6/</link>
+      <pubDate>Wed, 15 Feb 2017 20:16:33 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/programming-kata-day-6/</guid>
+      <description>Problem Write a function to determine if a vector contains a set of items.
+Solution (defn containsv [v &amp;amp; items] (some (set items) v)) Note Using a set as the predicate supplied to some allows you to check whether any of the truthy values in the set are contained within the given sequence. This is a frequently used Clojure idiom for searching for containment within a sequence.</description>
+    </item>
+    
+    <item>
+      <title>programming kata day 5</title>
+      <link>https://www.lvguowei.me/post/programming-kata-day-5/</link>
+      <pubDate>Mon, 13 Feb 2017 21:34:13 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/programming-kata-day-5/</guid>
+      <description>Problem Write a function to determine if a number is a triangular number.
+Solutions Solution 1 (defn nth-triangle [n] (apply + (range (inc n)))) (defn is-triangle-number [n] (loop [i 0] (cond (&amp;gt; n (nth-triangle i)) (recur (inc i)) (= n (nth-triangle i)) true :else false))) Solution 2 (defn is-triangle-number [n] (loop [tri 0 i 1] (cond (&amp;gt; n tri) (recur (+ tri i) (inc i)) (= n tri) true :else false)))</description>
+    </item>
+    
+    <item>
+      <title>Perfume Shop Puzzle</title>
+      <link>https://www.lvguowei.me/post/perfume-shop-puzzle/</link>
+      <pubDate>Sun, 12 Feb 2017 16:06:17 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/perfume-shop-puzzle/</guid>
+      <description>Solving hard puzzle programming challenges with logic programming is real fun. I solved one puzzle called &amp;ldquo;Perfume Shop Puzzle&amp;rdquo; by using the core.logic in Clojure. Check it out here: github.</description>
+    </item>
+    
+    <item>
+      <title>Programming Kata Day 4</title>
+      <link>https://www.lvguowei.me/post/programming-kata-day-4/</link>
+      <pubDate>Sun, 12 Feb 2017 11:08:14 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/programming-kata-day-4/</guid>
+      <description>Problem Implement take-nth.
+Solutions Solution 1 (defn my-take-nth [n col] (loop [i 0 result []] (if (= i (count col)) result (if (= 0 (mod i n)) (recur (inc i) (conj result (nth col i))) (recur (inc i) result))))) solution 2 (defn my-take-nth2 [n col] (-&amp;gt;&amp;gt; col (map-indexed (fn [i x] [i x])) (filter (fn [[i x]] (= 0 (mod i 2)))) (mapv (fn [[i x]] x))))</description>
+    </item>
+    
+    <item>
+      <title>programming kata day 3</title>
+      <link>https://www.lvguowei.me/post/programming-kata-day-3/</link>
+      <pubDate>Fri, 10 Feb 2017 20:31:01 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/programming-kata-day-3/</guid>
+      <description>Problem Trolls are attacking your comment section!
+A common way to deal with this situation is to remove all of the vowels from the trolls&amp;rsquo; comments, neutralizing the threat.
+Your task is to write a function that takes a string and return a new string with all vowels removed.
+For example, the string &amp;ldquo;This website is for losers LOL!&amp;rdquo; would become &amp;ldquo;Ths wbst s fr lsrs LL!&amp;rdquo;.
+Solution Solution 1 (defn disemvowel [string] (reduce (fn [result next] (if (#{\A \E \I \O \U \a \e \i \o \u} next) result (str result next))) &amp;#34;&amp;#34; string)) Solution 2 (defn disemvowel [string] (apply str (remove (set &amp;#34;AEIOUaeiou&amp;#34;) string)))</description>
+    </item>
+    
+    <item>
+      <title>Programming Kata Day 2</title>
+      <link>https://www.lvguowei.me/post/programming-kata-day-2/</link>
+      <pubDate>Tue, 07 Feb 2017 19:34:17 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/programming-kata-day-2/</guid>
+      <description>Problem: Write a function to calculate fibonacci number in constant space complexity.
+(defn fib [n] (loop [a 0 b 1 i n] (if (= 0 i) a (recur b (+ a b) (dec i)))))  </description>
+    </item>
+    
+    <item>
+      <title>Programming Kata Day 1</title>
+      <link>https://www.lvguowei.me/post/programming-kata-day-1/</link>
+      <pubDate>Mon, 06 Feb 2017 20:42:29 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/programming-kata-day-1/</guid>
+      <description>From today, I will practice one programming kata per day and post the content here.
+Here goes the first one:
+ My friend John likes to go to the cinema. He can choose between system A and system B.
+System A : buy a ticket (15 dollars) every time
+System B : buy a card (500 dollars) and every time buy a ticket the price of which is 0.90 times the price he paid for the previous one.</description>
+    </item>
+    
+    <item>
+      <title>Nested For Loops in Clojure</title>
+      <link>https://www.lvguowei.me/post/nested-for-loops-in-clojure/</link>
+      <pubDate>Fri, 03 Feb 2017 20:36:18 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/nested-for-loops-in-clojure/</guid>
+      <description>One awkwardness I haven&amp;rsquo;t really get rid of when using Clojure is for loops. Especially nested for loops that modifies some global variables. I find some solutions online where people use nested recursion or atoms, but can we just use one level of recursion? Let&amp;rsquo;s try out with a coding kata.
+Problem: Given an array of numbers, find the biggest sum of any two numbers. The same item in array cannot be used twice.</description>
+    </item>
+    
+    <item>
+      <title>Why component dependency cycle is bad</title>
+      <link>https://www.lvguowei.me/post/why-component-dependency-cycle-is-bad/</link>
+      <pubDate>Sun, 01 Jan 2017 13:51:26 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/why-component-dependency-cycle-is-bad/</guid>
+      <description>I have been working on some Clojure project at work for several months now, one little thing bothers me now and then is that it doesn&amp;rsquo;t allow dependency cycle in project. For example if a.clj requires b.clj, b.clj requires c.clj, then c.clj cannot require a.clj, in other words, c.clj cannot use anything inside a.clj.
+At first, I thought this is a bit odd, java doesn&amp;rsquo;t have that. And once in a while we have to solve such problems by creating a new namespace and move the common function into it.</description>
+    </item>
+    
+    <item>
+      <title>My Second Android Library</title>
+      <link>https://www.lvguowei.me/post/second-android-lib/</link>
+      <pubDate>Mon, 26 Dec 2016 10:23:15 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/second-android-lib/</guid>
+      <description>I published my second android library project, a date and time picker dialog that mimic the one in Google Map app.
+Go check it out here!
+ </description>
+    </item>
+    
+    <item>
+      <title>Custom ProgresBar that spins anything</title>
+      <link>https://www.lvguowei.me/post/first-android-lib/</link>
+      <pubDate>Fri, 23 Dec 2016 12:25:51 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/first-android-lib/</guid>
+      <description>I published my first android library for creating customized progressbar.
+Basically it spins any image you give it.
+Happy spinning!
+Github!
+ </description>
+    </item>
+    
+    <item>
+      <title>Are Stubs and Mocks Harmful?</title>
+      <link>https://www.lvguowei.me/post/stub-and-mock-harmful/</link>
+      <pubDate>Sun, 18 Dec 2016 19:53:45 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/stub-and-mock-harmful/</guid>
+      <description>I stumbled upon this video, and boy it is so amazing! (if you ignore the annoying audience asking non-stop some annoying questions). This is clearly one of the most inspiring videos I have ever watched. So I must take some notes down and spread the idea as well.
+I deeply believe that it is actually easy to make things complicated, on the contrary, it is hard to make things simple and elegant.</description>
+    </item>
+    
+    <item>
+      <title>Coffee Maker - An OOD case study</title>
+      <link>https://www.lvguowei.me/post/coffee-maker/</link>
+      <pubDate>Sun, 18 Dec 2016 09:54:57 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/coffee-maker/</guid>
+      <description>One of uncle bob&amp;rsquo;s videos talks about how to design a coffee maker, I think he nailed it.
+The problem is to implement a software component that controls a coffee maker.
+Requirement  The Mark IV Special makes up to 12 cups of coffee at a time. The user places a filter in the filter holder, fills the filter with coffee grounds, and slides the filter holder into its receptacle.</description>
+    </item>
+    
+    <item>
+      <title>Use Interface Segregation Principle to Implement an Android Logger</title>
+      <link>https://www.lvguowei.me/post/interface-segregation-principle-android-logger/</link>
+      <pubDate>Thu, 08 Dec 2016 21:34:15 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/interface-segregation-principle-android-logger/</guid>
+      <description>Recently at work we has been talking about implementing some kind of Analytic interface for all the analytic libraries we are using, like Localytics and Firebase and so on. Basically it is just a fat interface with a long list of event logging functions, like logSignIn(), logSignOut(), logSellProduct(), logOpenMap() and so on. There are about 40 such methods in that interface. So this is how we implemented it in the first place.</description>
+    </item>
+    
+    <item>
+      <title>Expense Report Case Study</title>
+      <link>https://www.lvguowei.me/post/expense-report-case-study/</link>
+      <pubDate>Tue, 06 Dec 2016 12:16:53 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/expense-report-case-study/</guid>
+      <description>One day, I was watching another Uncle Bob&amp;rsquo;s video (yes, they are addictive), when I see one example he gave when talking about open closed principle, it ringed a bell in my head. This looked familiar! The type in some data classes, some switchs or ifs, some &amp;amp;&amp;amp;s and ||s all dancing around in the class. I can almost hear them teasing: &amp;ldquo;Come and catch me! Come and catch me!&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Moomin</title>
+      <link>https://www.lvguowei.me/post/painting-mumin/</link>
+      <pubDate>Mon, 05 Dec 2016 18:50:50 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/painting-mumin/</guid>
+      <description>Moomin ~
+ </description>
+    </item>
+    
+    <item>
+      <title>Xpp</title>
+      <link>https://www.lvguowei.me/post/painting-xpp/</link>
+      <pubDate>Mon, 05 Dec 2016 18:40:50 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/painting-xpp/</guid>
+      <description>My wife ~
+ </description>
+    </item>
+    
+    <item>
+      <title>Ayumi Hamasaki Portrait</title>
+      <link>https://www.lvguowei.me/post/painting-ayumi/</link>
+      <pubDate>Mon, 05 Dec 2016 18:30:50 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/painting-ayumi/</guid>
+      <description>Ayumi Hamasaki, painted by Krita ~
+ </description>
+    </item>
+    
+    <item>
+      <title>Master Mind in TDD</title>
+      <link>https://www.lvguowei.me/post/master-mind-tdd/</link>
+      <pubDate>Mon, 21 Nov 2016 21:29:52 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/master-mind-tdd/</guid>
+      <description>In one of Uncle Bob&amp;rsquo;s video, he talked about this game called &amp;ldquo;Master Mind&amp;rdquo; when he was teaching Single Responsibility Principle(SRP). After googled the game, turns out that it is actually a quite famous board game. For more information about the game, please look here -&amp;gt; wiki.
+The game can be played by two people. One comes up with a code, the other one tries to guess. The one who comes up with the code has to score the guesser&amp;rsquo;s guess based on some rules.</description>
+    </item>
+    
+    <item>
+      <title>Payroll Case Study</title>
+      <link>https://www.lvguowei.me/post/payroll-case-study/</link>
+      <pubDate>Sun, 20 Nov 2016 14:51:39 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/payroll-case-study/</guid>
+      <description>I was watching some Uncle Bob video some day which talked about how to design the architecture of a system. In that video, he gave a case study of a payroll system, I found the souce code and it is actually implemented in C++, so I ported a Java version.
+This is a very good example because it feels more realistic than most dummy demos out there. It also shows how to use POJO classes to layout the foundation without going too much into peripheral details like database.</description>
+    </item>
+    
+    <item>
+      <title>Finnish learning diary 10</title>
+      <link>https://www.lvguowei.me/post/finnish-learning-diary-10/</link>
+      <pubDate>Sun, 16 Oct 2016 14:11:16 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/finnish-learning-diary-10/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Finnish learning diary 9</title>
+      <link>https://www.lvguowei.me/post/finnish-learning-diary-9/</link>
+      <pubDate>Sun, 16 Oct 2016 09:34:04 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/finnish-learning-diary-9/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Replace Nested Conditional With Guard Clauses</title>
+      <link>https://www.lvguowei.me/post/replace-nested-conditional-with-guard-clauses/</link>
+      <pubDate>Sat, 15 Oct 2016 19:38:57 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/replace-nested-conditional-with-guard-clauses/</guid>
+      <description>I couldn&amp;rsquo;t remember who said that one of his favorite refactoring techniques is Replace Nested Conditional with Guard Clauses. When I looked into it, it did put a smile on my face despite its simplicity.
+This is NOT about coding aesthetics, this is all about clarity.
+ A method has conditional behavior that does not make clear the normal path of execution.
+Use guard clauses for all the special cases.</description>
+    </item>
+    
+    <item>
+      <title>Unidirectional to Bidirectional</title>
+      <link>https://www.lvguowei.me/post/unidirectional-to-bidirectional/</link>
+      <pubDate>Sat, 15 Oct 2016 09:40:46 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/unidirectional-to-bidirectional/</guid>
+      <description>It is very common in relational database that we have the following structure: A customer table has columns: customer-id, name. And an order table has columns: order-id, customer-id, order-date.
+See that there is a customer-id in the order table, so that we can use it to get orders belongs to a certain customer. But there is no knowledge about the orders in customer table.
+This is fine with database, but if we try to map this directly to java classes, we may end up with something like this:</description>
+    </item>
+    
+    <item>
+      <title>Duplicate Observed Data</title>
+      <link>https://www.lvguowei.me/post/duplicate-observed-data/</link>
+      <pubDate>Sat, 15 Oct 2016 05:35:31 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/duplicate-observed-data/</guid>
+      <description>This is from the famous Refactoring book by Martin Fowler. When I was reading it, it feels very similar to the very popular MVP or MVVM.
+The key idea is that in system that has user interface, the business logic should be separated from the user interface.
+One example I can think of is the registration form, where there are input fields like username, email, phone number and password. We can have some logic that disable the Register button until all fields are filled and the phone number and email valid.</description>
+    </item>
+    
+    <item>
+      <title>Choco Musk by Al Rehab</title>
+      <link>https://www.lvguowei.me/post/choco-musk-review/</link>
+      <pubDate>Sun, 09 Oct 2016 21:23:38 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/choco-musk-review/</guid>
+      <description>This is my first perfume oil/attar, I have to say I am quite impressed by it.
+I adore oriental culture. I prefer sophiscation over simplicity.
+I like dark, dense, rich scent, which shows marks of history. And I am very bored with the western happy and fresh mall scents, yet not satisfied by the so call &amp;ldquo;oriental accord&amp;rdquo; interpreted by western perfumery. So I went online and searched &amp;ldquo;middle east perfume&amp;rdquo;, and what I found truely suprised me.</description>
+    </item>
+    
+    <item>
+      <title>Finnish learning diary 8</title>
+      <link>https://www.lvguowei.me/post/finnish-learning-diary-8/</link>
+      <pubDate>Sun, 09 Oct 2016 20:55:47 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/finnish-learning-diary-8/</guid>
+      <description>    </description>
+    </item>
+    
+    <item>
+      <title>Finnish learning diary 7</title>
+      <link>https://www.lvguowei.me/post/finnish-learning-diary-7/</link>
+      <pubDate>Sat, 08 Oct 2016 20:10:44 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/finnish-learning-diary-7/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Finnish learning diary 6</title>
+      <link>https://www.lvguowei.me/post/finnish-learning-diary-6/</link>
+      <pubDate>Sat, 08 Oct 2016 20:09:44 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/finnish-learning-diary-6/</guid>
+      <description>I am into improving my handwriting recently and have been practicing on cursive style quite a bit.
+So I think maybe I can combine it with Finnish learning.
+Now instead typing I write things down by hand.
+ </description>
+    </item>
+    
+    <item>
+      <title>Do you have a good taste of what you are doing?</title>
+      <link>https://www.lvguowei.me/post/good-taste/</link>
+      <pubDate>Sat, 08 Oct 2016 14:17:40 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/good-taste/</guid>
+      <description>There is this stereotype impression about technology industry, that it is a cruel game only for energetic and ambitious young men, when you get old, you will be kicked out mercilessly.
+This doesn&amp;rsquo;t bother me so much since I was still young a few years ago, but since now I am getting older it starts to act as a background noise that grabbed me more and more attention.
+Is this the truth?</description>
+    </item>
+    
+    <item>
+      <title>matrix concentric shift</title>
+      <link>https://www.lvguowei.me/post/matrix-concentric-shift/</link>
+      <pubDate>Thu, 06 Oct 2016 19:46:09 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/matrix-concentric-shift/</guid>
+      <description>Table of Contents  1. Problem 2. Analysis 3. Source Code 4. Build script 5. How to run    I suck at algorithms, even though I have a Machine Learning and Algorithms master degree. It makes me frown everytime in coding interviews. So I decided to practice more often, hope that I can get better at it. At least not afraid of it. Now this is the first one.</description>
+    </item>
+    
+    <item>
+      <title>Percy Jackson Series</title>
+      <link>https://www.lvguowei.me/post/percy-jackson/</link>
+      <pubDate>Sat, 09 Jul 2016 19:22:34 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/percy-jackson/</guid>
+      <description>断断续续的看这个 Percy Jackson 系列已经有很长时间了，第一本和第二本都是在电子书上看完的，最近看到书店在打折，正好有全套在卖，就买了，现在正在看第四本。虽然封面是丑了一点，但是半价的话也就忍了先。 典型的少年读物，情节紧凑，到处都是怪物和神啊什么的，小孩看了应该很激动。不过练习英语还不错，生词量不多。这个是9岁+读物啊。。。</description>
+    </item>
+    
+    <item>
+      <title>Time and Space of Recursion</title>
+      <link>https://www.lvguowei.me/post/time-and-space-of-recursion/</link>
+      <pubDate>Sun, 29 May 2016 21:32:14 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/time-and-space-of-recursion/</guid>
+      <description>今天通过一个例子，来谈一谈第归的时间和空间效应。
+例子很简单，计算 a 的 n 次方。
+我们来对比一下两种第归算法的时间和空间的消耗。
+第一个方法很直接。思想就是要计算 a 的 n 次方， 只要计算 a 的 (n - 1) 次方， 然后结果在乘以 a 。如下：
+(define (expt a n) (if (= n 0) 1 (* a (expt a (- n 1))))) 为了更直观的理解这个算法，我们来计算一个例子， 2 的 3 次方。
+(expt 2 3) (* 2 (expt 2 2)) (* 2 (* 2 (expt 2 1))) (* 2 (* 2 (* 2 (expt 2 0)))) (* 2 (* 2 (* 2 1))) (* 2 (* 2 2)) (* 2 4) 8 我们能能明显看到这个算法的“形状”是一个三角形。每一行代表一次计算，也可以理解成时间的消耗。而每一列则代表计算机需要记住的内容，比如说一共要乘以几个2，也可以理解成空间的消耗。我们可以看到，随着 n 的增大， 这个算法的时间和空间消耗也随之增大。而且增大的速度都是线性的。时间的消耗随着 n 的增大而增大很好理解， n 大了， 计算花的时间也相应长了。但是空间消耗可不可以不增大呢？下面我们就来看另一种算法。</description>
+    </item>
+    
+    <item>
+      <title>Simple example of recursion</title>
+      <link>https://www.lvguowei.me/post/recursion-example/</link>
+      <pubDate>Thu, 05 May 2016 15:33:59 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/recursion-example/</guid>
+      <description>今天读到SICP里的一个介绍recursion的例子，用牛顿猜想来计算平方根。
+首先，介绍了计算机程序和数学方程的区别。数学方程大多用的是描述法（declarative）。比如说这个平方根，数学上只需要说：
+如果x的平方等于y，而且x大于0，那么x就是y的平方根。
+这是一种很高层次的描述，通过描述，来限制答案的域。如果能直接用到计算机里，问题就简单了。大概写出来的程序就是这个样子：
+func sqrt(x): @ * @ = x; @ &amp;gt; 0; return @; 让计算机去处理计算细节。这当然是一种理想的情况，如果都能这样写程序，那就完事大吉了。这就叫描述性编程(Declarative Programming)。
+当然现在还做不到这么绝对，所以我们只能自己写如何进行细节的计算来得到我们的结果。这就叫做命令式变成(Imperative Programming)。
+总体来说，描述性编程比命令式编程要容易理解的多，因为不用自己下达命令给计算机，只需要对问题进行描述，计算机自己会找到答案。典型的例子就是xml配置文件，人们把对系统的需求和配置写在一个单独的xml文件里面，然后让计算机自己去执行相应的命令。
+好了，现在进入正题。牛顿猜想的原理如下：
+要计算x的平方根，先猜想一个答案y，然后用
+(y + x / y) / 2
+来得到新的优化过猜想。反复进行，知道得到满意的猜想。
+首先，我们先来定义一些辅助方程。
+(define (abs x) (if (&amp;lt; x 0) (- x) x)) (define (square x) (* x x)) (define (average x y) (/ (+ x y) 2)) 接下来我们来写主程序。
+(define (sqrt-iter guess x) (if (good-enough? guess x) guess (sqrt-iter (improve guess x) x))) 这个程序用第归的方法实现了牛顿猜想。</description>
+    </item>
+    
+    <item>
+      <title>keep it fun</title>
+      <link>https://www.lvguowei.me/post/keep-it-fun/</link>
+      <pubDate>Wed, 04 May 2016 20:13:51 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/keep-it-fun/</guid>
+      <description>最近因为工作的原因在学clojure，其实我一直都想学一个LISP语言，现在终于有人付钱让我学啦，呵呵。
+最早接触到LISP是因为Emacs。当年在研究生时给大学的自然语言研究组帮忙的时候，教授就是Emacs的资深（20年+）用户，我也就开始一点一点的接触了，后来经过一段时间的压迫性的苦练，终于入门了。有一天无意中发现了Emacs Lisp Intro，就开始学习emacs lisp，可惜半途而废了。
+因为clojure还比较新，所以没有什么太多资料。我就买了一些关于LISP的经典书籍，比如这个 《Structure and Interpretation of Computer Programs》。但由于本人的拖延症的病情，所以打算从今天开始读第一章了（第二遍尝试）。。。
+在开篇有一段引言如下：
+ ``I think that it&amp;rsquo;s extraordinarily important that we in computer science keep fun in computing. When it started out, it was an awful lot of fun. Of course, the paying customers got shafted every now and then, and after a while we began to take their complaints seriously. We began to feel as if we really were responsible for the successful, error-free perfect use of these machines.</description>
+    </item>
+    
+    <item>
+      <title>Finnish learning diary 5</title>
+      <link>https://www.lvguowei.me/post/finnish-learning-diary-5/</link>
+      <pubDate>Sat, 30 Apr 2016 18:21:42 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/finnish-learning-diary-5/</guid>
+      <description>Table of Contents  1. Conversation 2. Vocabulary 3. Sample sentences    Conversation E: Tule jo!
+H: Odota vähän, puen vain takin.
+E: Jussi, anna tuo kirja.
+J: Ole hyvä.
+E: Kiitos.
+J: Älä unohda huhelinta.
+Vocabulary     Finnish English     odottaa to wait   vähän a bit   takki jacket, coat   tulla to come   puhelin telephone   jo already   pukea to put on clothes   vain only just   antaa to give   unohtaa to forget    Sample sentences     Finnish English     Odotan sinua puistossa.</description>
+    </item>
+    
+    <item>
+      <title>Finnish learning diary 4</title>
+      <link>https://www.lvguowei.me/post/finnish-learning-diary-4/</link>
+      <pubDate>Sat, 30 Apr 2016 18:20:32 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/finnish-learning-diary-4/</guid>
+      <description>Table of Contents  1. Conversation 2. Vocabulary 3. Sample sentances    Conversation E: Mitä sinä harrastat?
+H: Soitan kitaraa ja uin. Entä sinä?
+E: Minä pelaan sählya. Minä myös luen paljon.
+H: Muuten, vieläkö luet tuota kirjaa?
+E: En, luin sen jo.
+Vocabulary     Finnish English     kitara guitar   uida swim   lukea to read   harrastaa to do as a hobby   kirja book   soittaa to play (instrument)   pelata to play (sports)   sähly floorball   paljon much, many   muuten by the way    Sample sentances     Finnish English     Ostan ensi vuonna uuden kitaran I will buy a new guitar next year   Monet rockmuusikot soittavat kitaraa.</description>
+    </item>
+    
+    <item>
+      <title>Finnish learning diary 3</title>
+      <link>https://www.lvguowei.me/post/finnish-learning-diary-3/</link>
+      <pubDate>Sat, 30 Apr 2016 18:19:04 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/finnish-learning-diary-3/</guid>
+      <description>Table of Contents  1. Conversation 2. Vocabulary 3. Sample sentences    Conversation H: Millainen sää tänään on?
+J: En tiedä. Hetki, katson ennustetta.
+H: Tarvitsenko sateenvarjoa?
+J: Et tarvitse. Tänään ei sada.
+H: Hyvä. En kaipaa sadetta.
+Vocabulary     Finnish English     tänään today   hetki moment   sateenvarjo umbrella   millainen what kind of   sää weather   katsoa look   ennuste forecast   sataa rain   kaivata to need, to miss    Sample sentences     Finnish English     Olen tänään kiireinen I&#39;m busy today   Hetki, tulen pian Just a moment, I&#39;ll come soon   Saisinko tuon sateenvarjon?</description>
+    </item>
+    
+    <item>
+      <title>Finnish learning diary 2</title>
+      <link>https://www.lvguowei.me/post/finnish-learning-diary-2/</link>
+      <pubDate>Sat, 30 Apr 2016 18:15:04 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/finnish-learning-diary-2/</guid>
+      <description>Table of Contents  1. Conversation 2. Vocabulary 3. Sample sentences    Conversation E: Maiju, tässä on Helen.
+M: Hei!
+E: Hei! Minä olen australialainen.
+M: Oletko vaihto-oppilas?
+H: Kyllä. Käyn suomalaista koulua.
+M: Onko suomi vaikeaa?
+H: Se on kovin erilaista kuin englanti.
+Vocabulary     Finnish English Class     käydä to go, to visit v   suomalainen Finnish adj   kovin very adv   australialainen Australian adj   englantia English n   vaihto-oppilas exchange student n   suomi Finnish n   vaikea difficult adj   erilainen different adj   kuin than conj    Sample sentences     Finnish English     Haluan käydä joskus Keniassa.</description>
+    </item>
+    
+    <item>
+      <title>Finnish learning diary 1</title>
+      <link>https://www.lvguowei.me/post/finnish-learning-diary-1/</link>
+      <pubDate>Sat, 30 Apr 2016 09:57:12 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/finnish-learning-diary-1/</guid>
+      <description>Table of Contents  1. Conversation 2. Vocabulary 3. Sample sentences 4. Vocabulary phrase usage  4.1. &amp;#x2026;n vieressä (&#34;next to&amp;#x2026;&#34;) 4.2. isoäiti and other family terms   5. Grammar  5.1. Genitive cases 5.2. k-p-t cases 5.3. -t becomes -d      Conversation H: Kuka tämä on?
+E: Se on isoäiti. Isoäidin vieressä on isän veli.
+H: Kuka tuo on?
+E: Se on isän sisko.</description>
+    </item>
+    
+  </channel>
+</rss>

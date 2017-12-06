@@ -1,0 +1,1100 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        
+            
+                <title>Coffee Maker - An OOD case study</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.31.1" />
+        
+
+
+
+
+
+
+<link rel="apple-touch-icon-precomposed"
+  href='https://www.lvguowei.me/favicon/apple-touch-icon-precomposed.png'>
+<link rel="icon" type="image/png" href="https://www.lvguowei.me/favicon/favicon-32x32.png" sizes="32x32">
+
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage"
+  content='/favicon/mstile.png'>
+
+
+
+        
+        
+            
+                <meta name="description" content="Guowei Lv">
+            
+        
+
+        <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Coffee Maker - An OOD case study"/>
+<meta name="twitter:description" content="One of uncle bob&rsquo;s videos talks about how to design a coffee maker, I think he nailed it.
+The problem is to implement a software component that controls a coffee maker.
+Requirement  The Mark IV Special makes up to 12 cups of coffee at a time. The user places a filter in the filter holder, fills the filter with coffee grounds, and slides the filter holder into its receptacle."/>
+
+        <meta property="og:title" content="Coffee Maker - An OOD case study" />
+<meta property="og:description" content="One of uncle bob&rsquo;s videos talks about how to design a coffee maker, I think he nailed it.
+The problem is to implement a software component that controls a coffee maker.
+Requirement  The Mark IV Special makes up to 12 cups of coffee at a time. The user places a filter in the filter holder, fills the filter with coffee grounds, and slides the filter holder into its receptacle." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.lvguowei.me/post/coffee-maker/" />
+
+
+
+<meta property="article:published_time" content="2016-12-18T09:54:57&#43;02:00"/>
+
+<meta property="article:modified_time" content="2016-12-18T09:54:57&#43;02:00"/>
+
+
+
+
+
+
+
+
+
+
+
+        
+<meta itemprop="name" content="Coffee Maker - An OOD case study">
+<meta itemprop="description" content="One of uncle bob&rsquo;s videos talks about how to design a coffee maker, I think he nailed it.
+The problem is to implement a software component that controls a coffee maker.
+Requirement  The Mark IV Special makes up to 12 cups of coffee at a time. The user places a filter in the filter holder, fills the filter with coffee grounds, and slides the filter holder into its receptacle.">
+
+
+<meta itemprop="datePublished" content="2016-12-18T09:54:57&#43;02:00" />
+<meta itemprop="dateModified" content="2016-12-18T09:54:57&#43;02:00" />
+<meta itemprop="wordCount" content="587">
+
+
+
+<meta itemprop="keywords" content="" />
+
+        
+
+        
+
+        
+        
+            
+        
+
+        
+        
+            <link rel="stylesheet" href="https://www.lvguowei.me/css/google-font.css" />
+            <link rel="stylesheet" href="https://www.lvguowei.me/css/font-awesome.min.css" />
+            <link rel="stylesheet" href="https://www.lvguowei.me/css/main.css" />
+            <link rel="stylesheet" href="https://www.lvguowei.me/css/add-on.css" />
+            <link rel="stylesheet" href="https://www.lvguowei.me/css/monokai-sublime.css">
+        
+
+        
+
+        
+        
+        
+            
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-71831707-2', 'auto');
+ga('send', 'pageview');
+</script>
+
+        
+    </head>
+    <body>
+
+        
+        <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+        <h2><a href="https://www.lvguowei.me/">Guowei Lv</i></a></h2>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="https://www.lvguowei.me/post">
+                        
+                            <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://www.lvguowei.me/categories">
+                        
+                            <i class="fa fa-folder-open-o">&nbsp;</i>Categories
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://www.lvguowei.me/about">
+                        
+                            <i class="fa fa-user">&nbsp;</i>About
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="search">
+                <a class="fa-search" href="#search">Search</a>
+                <form id="search" method="get" action="//google.com/search">
+                  <input type="text" name="q" placeholder="Search" />
+                  <input type="hidden" name="as_sitesearch" value="https://www.lvguowei.me/">
+                </form>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+    
+        <section>
+            <form class="search" method="get" action="//google.com/search">
+                <input type="text" name="q" placeholder="Search" />
+                <input type="hidden" name="q" value="site:https://www.lvguowei.me/">
+            </form>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="https://www.lvguowei.me/post">
+                            <h3>
+                                
+                                    <i class="fa fa-newspaper-o">&nbsp;</i>
+                                
+                                Blog
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://www.lvguowei.me/categories">
+                            <h3>
+                                
+                                    <i class="fa fa-folder-open-o">&nbsp;</i>
+                                
+                                Categories
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://www.lvguowei.me/about">
+                            <h3>
+                                
+                                    <i class="fa fa-user">&nbsp;</i>
+                                
+                                About
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+                    
+                
+
+                
+                    <li>
+                        <a href="https://www.lvguowei.me/post/is_college_education_required_for_game/"><p>Is a College Education Required for a Career in Game Design?</p></a>
+                    </li>
+                
+                    <li>
+                        <a href="https://www.lvguowei.me/post/sicp-quote/"><p>SICP Quote</p></a>
+                    </li>
+                
+                    <li>
+                        <a href="https://www.lvguowei.me/post/maintainable-recyclerview/"><p>How to write maintainable RecyclerView</p></a>
+                    </li>
+                
+                    <li>
+                        <a href="https://www.lvguowei.me/post/enumset-replace-bit-flag/"><p>Use Enumset to Replace Bit Flag</p></a>
+                    </li>
+                
+                    <li>
+                        <a href="https://www.lvguowei.me/post/the-new-programmer-sterotype/"><p>The New Stereotype of Programmers</p></a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+<li><a href="//twitter.com/share?url=https%3a%2f%2fwww.lvguowei.me%2fpost%2fcoffee-maker%2f&text=Coffee%20Maker%20-%20An%20OOD%20case%20study&via=" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+</a></li>
+
+
+<li><a href="//plus.google.com/share?url=https%3a%2f%2fwww.lvguowei.me%2fpost%2fcoffee-maker%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+</a></li>
+
+
+<li><a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.lvguowei.me%2fpost%2fcoffee-maker%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+</a></li>
+
+
+<li><a href="//reddit.com/submit?url=https%3a%2f%2fwww.lvguowei.me%2fpost%2fcoffee-maker%2f&title=Coffee%20Maker%20-%20An%20OOD%20case%20study" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+</a></li>
+
+
+<li><a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fwww.lvguowei.me%2fpost%2fcoffee-maker%2f&title=Coffee%20Maker%20-%20An%20OOD%20case%20study" target="_blank" class="share-btn linkedin">
+    <i class="fa fa-linkedin"></i>
+    <p>LinkedIn</p>
+</a></li>
+
+
+<li><a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fwww.lvguowei.me%2fpost%2fcoffee-maker%2f&title=Coffee%20Maker%20-%20An%20OOD%20case%20study" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+</a></li>
+
+
+<li><a href="mailto:?subject=Check out this post by &body=https%3a%2f%2fwww.lvguowei.me%2fpost%2fcoffee-maker%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+</a></li>
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+    <header>
+    <div class="title">
+        
+            <h1><a href="https://www.lvguowei.me/post/coffee-maker/">Coffee Maker - An OOD case study</a></h1>
+            
+        
+        
+    </div>
+    <div class="meta">
+        
+            
+        
+
+        <time class="published"
+            datetime='2016-12-18'>
+            December 18, 2016</time>
+        <span class="author"></span>
+        
+            <p>3 minute read</p>
+        
+        
+    </div>
+</header>
+
+
+    <section id="social-share">
+        <ul class="icons">
+            
+
+
+<li><a href="//twitter.com/share?url=https%3a%2f%2fwww.lvguowei.me%2fpost%2fcoffee-maker%2f&text=Coffee%20Maker%20-%20An%20OOD%20case%20study&via=" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+</a></li>
+
+
+<li><a href="//plus.google.com/share?url=https%3a%2f%2fwww.lvguowei.me%2fpost%2fcoffee-maker%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+</a></li>
+
+
+<li><a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.lvguowei.me%2fpost%2fcoffee-maker%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+</a></li>
+
+
+<li><a href="//reddit.com/submit?url=https%3a%2f%2fwww.lvguowei.me%2fpost%2fcoffee-maker%2f&title=Coffee%20Maker%20-%20An%20OOD%20case%20study" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+</a></li>
+
+
+<li><a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fwww.lvguowei.me%2fpost%2fcoffee-maker%2f&title=Coffee%20Maker%20-%20An%20OOD%20case%20study" target="_blank" class="share-btn linkedin">
+    <i class="fa fa-linkedin"></i>
+    <p>LinkedIn</p>
+</a></li>
+
+
+<li><a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fwww.lvguowei.me%2fpost%2fcoffee-maker%2f&title=Coffee%20Maker%20-%20An%20OOD%20case%20study" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+</a></li>
+
+
+<li><a href="mailto:?subject=Check out this post by &body=https%3a%2f%2fwww.lvguowei.me%2fpost%2fcoffee-maker%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+</a></li>
+
+        </ul>
+    </section>
+    
+    
+
+    
+        
+        
+
+
+
+
+    
+
+
+        
+
+        <a href="https://www.lvguowei.me/post/coffee-maker/" class="image featured">
+            <img src="https://www.lvguowei.me/img/featured-coffee.png" alt="" />
+        </a>
+    
+
+
+    <div id="content">
+        
+
+<p>One of uncle bob&rsquo;s videos talks about how to design a coffee maker, I think he nailed it.</p>
+
+<p>The problem is to implement a software component that controls a coffee maker.</p>
+
+<h1 id="requirement">Requirement</h1>
+
+<blockquote>
+<p>The Mark IV Special makes up to 12 cups of coffee at a time. The user places a filter
+in the filter holder, fills the filter with coffee grounds, and slides the filter holder into its receptacle. The user then pours up to 12 cups of water into the water strainer and presses
+the Brew button. The water is heated until boiling. The pressure of the evolving steam
+forces the water to be sprayed over the coffee grounds, and coffee drips through the filter
+into the pot. The pot is kept warm for extended periods by a warmer plate, which only
+turns on if there is coffee in the pot. If the pot is removed from the warmer plate while
+water is being sprayed over the grounds, the flow of water is stopped so that brewed coffee
+does not spill on the warmer plate. The following hardware needs to be monitored or controlled:</p>
+
+<ul>
+<li>The heating element for the boiler. It can be turned on or off.</li>
+<li>The heating element for the warmer plate. It can be turned on or off.</li>
+<li>The sensor for the warmer plate. It has three states: warmerEmpty, potEmpty, potNotEmpty .</li>
+<li>A sensor for the boiler, which determines whether there is water present. It has two states: boilerEmpty or boilerNotEmpty .</li>
+<li>The Brew button. This is a momentary button that starts the brewing cycle. It has an indicator that lights up when the brewing cycle is over and the coffee is ready.</li>
+<li>A pressure-relief valve that opens to reduce the pressure in the boiler. The drop in pressure stops the flow of water to the filter. It can be opened or closed.</li>
+</ul>
+</blockquote>
+
+<h1 id="a-bad-design">A Bad Design</h1>
+
+<p>The most common mistake is to design the objects as a direct map to the Mark IV Offee Maker as following.</p>
+
+
+<figure >
+    
+        <img src="https://www.lvguowei.me/img/coffee-maker-bad.jpg" />
+    
+    
+</figure>
+
+
+<p>There are several problems about this design:</p>
+
+<h2 id="missing-methods">Missing methods</h2>
+
+<p>In the diagram there is no methods. When there is no methods shown in the diagrams, the system is not partitioned based on behaviour, which can leads to big mistakes.</p>
+
+<h2 id="vapor-classes">Vapor classes</h2>
+
+<p>Take a closer look at class <code>Light</code>, it might look something like this:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Light</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">on</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">CoffeeMakerAPI</span><span class="o">.</span><span class="na">api</span><span class="o">.</span>
+        <span class="nf">setIndicatorState</span><span class="o">(</span><span class="n">CoffeeMakerAPI</span><span class="o">.</span><span class="na">INDICATOR_ON</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">off</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">CoffeeMakerAPI</span><span class="o">.</span><span class="na">api</span><span class="o">.</span>
+        <span class="nf">setIndicatorState</span><span class="o">(</span><span class="n">CoffeeMakerAPI</span><span class="o">.</span><span class="na">INDICATOR_OFF</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></div>
+
+<p>This class simply forwards the API calls and there are no variables.
+The same applies to other classes as well, they don&rsquo;t have much value to exist. The <code>CoffeeMaker</code> class can call the api methods directly anyway.</p>
+
+<h2 id="imaginary-abstractions">Imaginary Abstractions</h2>
+
+<p>It is quite obvious that the interfaces in this design are pretty useless and poor.
+First of all, no other classes use these interfaces, they only use the implementations of these interfaces.</p>
+
+<p>Then, there are no common code in those interfaces.</p>
+
+<h2 id="god-class">God class</h2>
+
+<p>If there are a lot of vapor classes and useless interfaces, then the true logit must be all in the <code>CoffeeMaker</code> class, which makes it a God class.</p>
+
+<p>The reason that leads to this bad design is to simply find some verbs and nouns in the description and map them to classes without analyzing and abstracting the behaviour of the system.</p>
+
+<h1 id="a-better-design">A Better Design</h1>
+
+<p>First we have to forget about Mark IV Coffee Maker and thinking only about high level coffee making.</p>
+
+<p>We will have 3 classes: <code>UserInterface</code>, <code>HotWaterSource</code> and <code>ContainmentVessel</code>.</p>
+
+
+<figure >
+    
+        <img src="https://www.lvguowei.me/img/coffee-maker-good.jpg" />
+    
+    
+</figure>
+
+
+<p>For the complete implementation please check <a href="https://github.com/lvguowei/coffee-maker-case-study">source code with tests</a>.</p>
+
+    </div>
+
+    <footer>
+        <ul class="stats">
+    
+        
+
+        
+        
+  <li>
+    
+    
+    
+
+    
+
+    
+                        
+                        
+                            
+                        
+
+                    
+                        <i class="fa fa-folder-open-o">&nbsp;</i>
+                    
+
+                    
+                        Category
+                    
+                
+            </li>
+        
+    
+
+    
+    
+        <li><a href='https://www.lvguowei.me/categories/object-oriented-design'>Object Oriented Design</a></li>
+    
+</ul>
+
+    </footer>
+</article>
+<ul class="actions pagination">
+    
+        <li><a href="https://www.lvguowei.me/post/interface-segregation-principle-android-logger/"
+                class="button big previous">Use Interface Segregation Principle to Implement an Android Logger</a></li>
+    
+
+    
+        <li><a href="https://www.lvguowei.me/post/stub-and-mock-harmful/"
+                class="button big next">Are Stubs and Mocks Harmful?</a></li>
+    
+</ul>
+
+
+
+    
+        <article class="post">
+            <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "lvguoweime" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </article>
+    
+
+
+    </div>
+    
+<section id="sidebar">
+
+    
+        <section id="intro">
+            
+            
+                
+                    <a href="https://www.lvguowei.me/" class="logo"><img src="https://www.lvguowei.me/img/logo.jpg" alt="Guowei Lv" /></a>
+                
+            
+            
+                <header>
+                    <h2>Guowei Lv</h2>
+                    <p>Thinker · Writer · Coder · Painter</p>
+                </header>
+            
+            <ul class="icons">
+                
+                
+                    
+<li><a href="//github.com/lvguowei" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//lvguowei.deviantart.com/" target="_blank" title="DeviantArt" class="fa fa-deviantart"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/lvguowei" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="mailto:lvguowei1002@gmail.com" title="Email" class="fa fa-envelope"></a></li>
+
+
+                
+            </ul>
+        </section>
+
+    
+        <section id="recent-posts">
+            <ul class="posts">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+                    
+                
+
+                
+                    
+                
+
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="https://www.lvguowei.me/post/is_college_education_required_for_game/">Is a College Education Required for a Career in Game Design?</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2017-12-06'>
+                                    December 6, 2017</time>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="https://www.lvguowei.me/post/sicp-quote/">SICP Quote</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2017-10-06'>
+                                    October 6, 2017</time>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="https://www.lvguowei.me/post/maintainable-recyclerview/">How to write maintainable RecyclerView</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2017-09-17'>
+                                    September 17, 2017</time>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="https://www.lvguowei.me/post/enumset-replace-bit-flag/">Use Enumset to Replace Bit Flag</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2017-09-10'>
+                                    September 10, 2017</time>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="https://www.lvguowei.me/post/the-new-programmer-sterotype/">The New Stereotype of Programmers</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2017-09-06'>
+                                    September 6, 2017</time>
+                            </header>
+                        </article>
+                    </li>
+                
+
+                
+                    <li>
+                        <ul class="actions">
+                            <li><a href=
+                            
+                                "/post/"
+                            
+                            class="button">View more posts</a></li>
+                        </ul>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+    
+    
+    
+        <section id="categories">
+            <ul class="posts">
+                <header>
+                    <h3><a href="https://www.lvguowei.me/categories/">Categories</a></h3>
+                </header>
+
+                
+                    
+                
+
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/android-development/">Android Development</a>
+                                <span style="float:right;">15</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/programming-kata/">programming kata</a>
+                                <span style="float:right;">15</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/finnish-learning/">Finnish Learning</a>
+                                <span style="float:right;">10</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/object-oriented-design/">Object Oriented Design</a>
+                                <span style="float:right;">7</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/functional-programming/">Functional Programming</a>
+                                <span style="float:right;">6</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/design-and-architecture/">Design and Architecture</a>
+                                <span style="float:right;">4</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/thoughts/">Thoughts</a>
+                                <span style="float:right;">4</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/android-library/">Android Library</a>
+                                <span style="float:right;">3</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/emacs/">Emacs</a>
+                                <span style="float:right;">3</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/painting/">Painting</a>
+                                <span style="float:right;">3</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/refactoring/">Refactoring</a>
+                                <span style="float:right;">3</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/sicp/">SICP</a>
+                                <span style="float:right;">3</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/hand-made-hero/">Hand Made Hero</a>
+                                <span style="float:right;">2</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/test-driven-development/">Test Driven Development</a>
+                                <span style="float:right;">2</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/books/">Books</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/concurrent-programming/">Concurrent Programming</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/game/">Game</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/java/">Java</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/mech-keyboard/">Mech Keyboard</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/other/">Other</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="https://www.lvguowei.me/categories/perfume/">Perfume</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+            </ul>
+        </section>
+    
+
+    
+        
+        <section class="blurb">
+            <h2>About</h2>
+            <p>Welcome to my personal website. In here, I talk about programming in general and other cool stuff. Stay tuned!</p>
+
+            <ul class="actions">
+                <li><a href="https://www.lvguowei.me/about/" class="button">Learn More</a></li>
+            </ul>
+        </section>
+        
+
+    
+        <section id="footer">
+            <ul class="icons">
+                
+                
+                    
+<li><a href="//github.com/lvguowei" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//lvguowei.deviantart.com/" target="_blank" title="DeviantArt" class="fa fa-deviantart"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/lvguowei" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="mailto:lvguowei1002@gmail.com" title="Email" class="fa fa-envelope"></a></li>
+
+
+                
+            </ul>
+
+            <p class="copyright">&copy; Guowei Lv. </p>
+        </section>
+
+</section>
+
+            </div>
+        <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+        
+
+        
+        
+            
+        
+
+        
+        
+            <script src="https://www.lvguowei.me/js/jquery.min.js"></script>
+            <script src="https://www.lvguowei.me/js/skel.min.js"></script>
+            <script src="https://www.lvguowei.me/js/util.js"></script>
+            <script src="https://www.lvguowei.me/js/main.js"></script>
+            <script src="https://www.lvguowei.me/js/backToTop.js"></script>
+            <script src="https://www.lvguowei.me/js/highlight.pack.js"></script>
+        
+
+        
+
+            
+            <script>hljs.initHighlightingOnLoad();</script>
+            
+    </body>
+</html>
+

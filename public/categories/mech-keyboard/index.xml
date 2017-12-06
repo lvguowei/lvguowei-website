@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mech Keyboard on Guowei Lv</title>
+    <link>https://www.lvguowei.me/categories/mech-keyboard/</link>
+    <description>Recent content in Mech Keyboard on Guowei Lv</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 21 Aug 2017 21:10:38 +0300</lastBuildDate>
+    
+	<atom:link href="https://www.lvguowei.me/categories/mech-keyboard/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>My Keyboard Collection</title>
+      <link>https://www.lvguowei.me/post/keyboard-collection/</link>
+      <pubDate>Mon, 21 Aug 2017 21:10:38 +0300</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/keyboard-collection/</guid>
+      <description>I have been collecting various keyboard over the years. Now I&amp;rsquo;m quite proud of my small collection, so I think I will share it here.
+The One And Only True Keyboard  Yes, this is the famous IBM Model M. Typing on it is like playing piano, the sound and feel is so crisp.
+The IBM Model M2  I got this from a Finnish second hand website, it is much like a modern keyboard, except that the switches are still the same as original Model M.</description>
+    </item>
+    
+  </channel>
+</rss>

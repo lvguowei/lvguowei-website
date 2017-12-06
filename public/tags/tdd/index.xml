@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TDD on Guowei Lv</title>
+    <link>https://www.lvguowei.me/tags/tdd/</link>
+    <description>Recent content in TDD on Guowei Lv</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 20 Mar 2017 20:27:39 +0200</lastBuildDate>
+    
+	<atom:link href="https://www.lvguowei.me/tags/tdd/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mock Objects Demystified</title>
+      <link>https://www.lvguowei.me/post/mock-objects-dimistified/</link>
+      <pubDate>Mon, 20 Mar 2017 20:27:39 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/mock-objects-dimistified/</guid>
+      <description>If you have ever tried writing any non trivial tests, mocks should not be a stranger to you. But what about some other &amp;ldquo;mock&amp;rdquo; like objects like stubs, spies and such? How are they different from each other? In this blog post, I will explain it as simple and easy to remember as possible.
+Everything is a test double. Test double is just a general name for all mock like objects.</description>
+    </item>
+    
+    <item>
+      <title>Are Stubs and Mocks Harmful?</title>
+      <link>https://www.lvguowei.me/post/stub-and-mock-harmful/</link>
+      <pubDate>Sun, 18 Dec 2016 19:53:45 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/stub-and-mock-harmful/</guid>
+      <description>I stumbled upon this video, and boy it is so amazing! (if you ignore the annoying audience asking non-stop some annoying questions). This is clearly one of the most inspiring videos I have ever watched. So I must take some notes down and spread the idea as well.
+I deeply believe that it is actually easy to make things complicated, on the contrary, it is hard to make things simple and elegant.</description>
+    </item>
+    
+    <item>
+      <title>Master Mind in TDD</title>
+      <link>https://www.lvguowei.me/post/master-mind-tdd/</link>
+      <pubDate>Mon, 21 Nov 2016 21:29:52 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/master-mind-tdd/</guid>
+      <description>In one of Uncle Bob&amp;rsquo;s video, he talked about this game called &amp;ldquo;Master Mind&amp;rdquo; when he was teaching Single Responsibility Principle(SRP). After googled the game, turns out that it is actually a quite famous board game. For more information about the game, please look here -&amp;gt; wiki.
+The game can be played by two people. One comes up with a code, the other one tries to guess. The one who comes up with the code has to score the guesser&amp;rsquo;s guess based on some rules.</description>
+    </item>
+    
+  </channel>
+</rss>

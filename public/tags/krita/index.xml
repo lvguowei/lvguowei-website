@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Krita on Guowei Lv</title>
+    <link>https://www.lvguowei.me/tags/krita/</link>
+    <description>Recent content in Krita on Guowei Lv</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 05 Dec 2016 18:50:50 +0200</lastBuildDate>
+    
+	<atom:link href="https://www.lvguowei.me/tags/krita/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Moomin</title>
+      <link>https://www.lvguowei.me/post/painting-mumin/</link>
+      <pubDate>Mon, 05 Dec 2016 18:50:50 +0200</pubDate>
+      
+      <guid>https://www.lvguowei.me/post/painting-mumin/</guid>
+      <description>Moomin ~
+ </description>
+    </item>
+    
+  </channel>
+</rss>
