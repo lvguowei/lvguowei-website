@@ -108,3 +108,5 @@ The most common usecase is a special case of it, that is to map the item in the 
 {{< /highlight >}}
 
 This is where people got it confused with `map`, because from the outside look it seems that we map the `<1, 2, 3, end>` to `<a, b, c, end>`, but they are totally different processes.
+
+One thing to be careful is the ordering of the items in the flattened stream, since streams emits items asynchronously, when *flattened out*, the ordering is not garanteed if we use `flatmap` in RxJava. So to be techniquely correct, in the above example we should use `concatmap`.
