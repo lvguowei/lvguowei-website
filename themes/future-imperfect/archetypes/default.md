@@ -6,6 +6,6 @@ linktitle = ""
 featured = ""
 featuredpath = ""
 featuredalt = ""
-title: "{{ replace .TranslationBaseName "-" " " | title }}"
-date: {{ .Date }}
+title = "{{ replace .TranslationBaseName "-" " " | title }}"
+date = {{ .Date }}
 +++
