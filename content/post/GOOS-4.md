@@ -1,5 +1,6 @@
 +++
 categories = ["Object Oriented Design"]
+keywords = ["Growing Object Oriented Software Guided by Tests", "TDD"]
 description = "A follow through of the great book Growing Object-Oriented Software, Guided by Tests with code"
 featured = "featured-goos.jpg"
 featuredpath = "/img"

@@ -5,6 +5,7 @@ featured = "featured-goos.jpg"
 featuredpath = "/img"
 title = "GOOS Book Distilled Part 2"
 date = 2018-02-07T21:05:34+02:00
+keywords = ["Growing Object Oriented Software Guided by Tests", "TDD"]
 +++
 
 The goal in this post is to make the first acceptance test pass.

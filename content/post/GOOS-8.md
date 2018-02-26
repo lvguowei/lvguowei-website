@@ -3,6 +3,7 @@ categories = ["Object Oriented Design"]
 description = "A follow through of the great book Growing Object-Oriented Software, Guided by Tests with code"
 featured = "featured-goos.jpg"
 featuredpath = "/img"
+keywords = ["Growing Object Oriented Software Guided by Tests", "TDD"]
 title = "GOOS Book Distilled Part 7"
 date = 2018-02-19T21:16:50+02:00
 +++

@@ -4,6 +4,7 @@ description = "A follow through of the great book Growing Object-Oriented Softwa
 featured = "featured-goos.jpg"
 featuredpath = "/img"
 title = "GOOS Book Distilled Part 6"
+keywords = ["Growing Object Oriented Software Guided by Tests", "TDD"]
 date = 2018-02-17T21:40:22+02:00
 +++
 
