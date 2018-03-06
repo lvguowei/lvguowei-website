@@ -26,3 +26,11 @@ Recap: `AuctionSniper` is a listener in `AuctionMessageTranslator`. When there i
 So the `lastPrice` can be taken directly from `price`, the `lastBid` can be calculated by `price + increment`, what about the `itemId`? We decided to put it in the `AuctionSniper`'s constructor, since `Main` knows which item we are bidding, we can pass it to create the `AuctionSniper`. Also we change the tests.
 
 [Source code](https://github.com/lvguowei/GOOS/commit/4ec304248df6691c521fddbc5a8b9fe31d2e06d7)
+
+## Showing a Bidding Sniper
+
+In order to show the `SniperState` on UI, we pass it to the `SnipersTableModel` and use it to show in the table. Nothing really interesting here.
+
+[Source code](https://github.com/lvguowei/GOOS/commit/fe390e8a73c576f4c2340452bc9caae4a7d0f634)
+
+
