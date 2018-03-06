@@ -32,5 +32,3 @@ So the `lastPrice` can be taken directly from `price`, the `lastBid` can be calc
 In order to show the `SniperState` on UI, we pass it to the `SnipersTableModel` and use it to show in the table. Nothing really interesting here.
 
 [Source code](https://github.com/lvguowei/GOOS/commit/fe390e8a73c576f4c2340452bc9caae4a7d0f634)
-
-
