@@ -52,3 +52,12 @@ controller.execute(new NextCommand());
 {{< /highlight >}}
 
 One big benefit of doing this, is that now the `Controller` interface is decoupled from the concrete command, and becomes easier to maintain and extend.
+
+Having this general goal in mind, the next three parts are just steps to fulfill this goal.
+
+[Repurposing sniperBidding()](https://github.com/lvguowei/GOOS/commit/e4880dc2339fc31ad018f47b7af60f56938c467d)
+
+[Filling in the Numbers](https://github.com/lvguowei/GOOS/commit/b44f3bf388205956cb3b3e1d596aa24f9193ade2)
+
+[Converting Won and Lost](https://github.com/lvguowei/GOOS/commit/8a47e537edc6750a4e0000a811bd7b89edb25210)
+
