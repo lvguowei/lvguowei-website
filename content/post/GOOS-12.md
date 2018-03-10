@@ -67,5 +67,11 @@ The strings for sniper states, `Joining`, `Bidding`, `Winning`, `Lost`, `Won`, a
 
 [Source code](https://github.com/lvguowei/GOOS/commit/8452b1e37c4195b836164de0ac83b5611575b4c0)
 
+## Object-Oriented Column
+
+This is a very classic refactoring of OO design. Replace `switch` by polymorphism. We apply this to the `Column`, study the code if you are unfamiliar with this trick.
+
+[Source code](https://github.com/lvguowei/GOOS/commit/dec0872bb7c11bd58a1a3b707aa32d5c68b1b456)
+
 
 
