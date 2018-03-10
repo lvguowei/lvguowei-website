@@ -78,3 +78,11 @@ This is a very classic refactoring of OO design. Replace `switch` by polymorphis
 Since the `SnipersTableModel` is inside the `MainWindow` class, `MainWindow` has to foreward the calls to update `SnipersTableModel`. We can acually simplify this by just let the `SnipersTableModel` implement `SniperListener` directly and pull it out into the `Main` class. And when the `MainWindow` is created, we pass it in.
 
 [Source code](https://github.com/lvguowei/GOOS/commit/0f426afb8aa950658f7ca341e052a6d34729d71f)
+
+## Final Polish - Add the Column Titles
+
+Now we add titles for columns, which is pretty straight foreward, so no more explanation here.
+
+[Source code](https://github.com/lvguowei/GOOS/commit/e65b2fa123a38af0a00ab0b091be6da189e51274)
+
+This finishes Chapter 15.
