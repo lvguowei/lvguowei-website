@@ -73,5 +73,8 @@ This is a very classic refactoring of OO design. Replace `switch` by polymorphis
 
 [Source code](https://github.com/lvguowei/GOOS/commit/dec0872bb7c11bd58a1a3b707aa32d5c68b1b456)
 
+## Shortening the Event Path
 
+Since the `SnipersTableModel` is inside the `MainWindow` class, `MainWindow` has to foreward the calls to update `SnipersTableModel`. We can acually simplify this by just let the `SnipersTableModel` implement `SniperListener` directly and pull it out into the `Main` class. And when the `MainWindow` is created, we pass it in.
 
+[Source code](https://github.com/lvguowei/GOOS/commit/0f426afb8aa950658f7ca341e052a6d34729d71f)
