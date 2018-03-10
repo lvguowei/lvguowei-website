@@ -61,3 +61,11 @@ Having this general goal in mind, the next three parts are just steps to fulfill
 
 [Converting Won and Lost](https://github.com/lvguowei/GOOS/commit/8a47e537edc6750a4e0000a811bd7b89edb25210)
 
+## Trimming the Table Model
+
+The strings for sniper states, `Joining`, `Bidding`, `Winning`, `Lost`, `Won`, are in the `MainWindow` class. They fit better in the `SnipersTableModel`, so we moved them there.
+
+[Source code](https://github.com/lvguowei/GOOS/commit/8452b1e37c4195b836164de0ac83b5611575b4c0)
+
+
+
