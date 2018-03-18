@@ -34,6 +34,8 @@ The test is very similar to one auction item.
 
 9. Asserts that both auction has won in the application
 
+[Source code](https://github.com/lvguowei/GOOS/commit/fc10773c916be8fa1248b1ceffa9d2d26be2dfef)
+
 ## The ApplicationRunner
 
 Now we need to pass the following to the `main()`:
@@ -66,9 +68,13 @@ assertThat(message, hasProperty("body", messageMatcher));
   }
 {{< /highlight >}}
 
+[Source code](https://github.com/lvguowei/GOOS/commit/cab5713345194d2d1f38774c99cc77c94f5d5c2b)
+
 ## Restructuring the Main
 
 Change the `Main` so that it extracts the auction servers and joins all of them.
+
+[Source code](https://github.com/lvguowei/GOOS/commit/ac6cbd8e6eea5958ea6d786fa647f821a27b2abb)
 
 ## Extending the TableModel
 
@@ -77,3 +83,5 @@ Now the `SnipersTableModel` needs to hold a list of `SnaperSnapshot`s. And a met
 Add 2 unit tests: 1. notifiesListenersWhenAddingASniper 2. holdsSnipersInAdditionOrder
 
 Now the acceptance test should pass.
+
+[Source code](https://github.com/lvguowei/GOOS/commit/238d70cc490cf6bed7ccf8bc667062a4c15ef430)
