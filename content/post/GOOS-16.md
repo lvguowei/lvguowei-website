@@ -208,4 +208,10 @@ public class SniperPortfolio implements SniperCollector {
 
 This class is simple and has only one clear responsibility.
 
+Now we have seen some of the key players of this application, we can sort of understand that the `XMPPAuctionHouse` will be creating `Auction` and then somehow using it to create `AuctionSniper`, and `SniperPortfolio` will be collecting the created `AuctionSniper`s. Now let's move on.
 
+Once the new `AuctionSniper` is add to the `SniperPortfolio`, it notifies outside, so who is listening to this? The `SnipersTableModel` is. We make it so that when the application starts, the `SnipersTableModel` is hooked up with `SniperPortfolio` to listen to this new sniper added notification. Remember in the beginning of this post we discussed that the `SniperTableModel` needs to respond to 2 events, one is the new auction added, the other one is that the existing auction updates. By listening to `SniperPortfolio` it fulfills the first responsibility. Then what about the second one? That is also easy to solve. When the `SniperTableModel` gets the new sniper added notification, it adds the new sniper's snapshot into the existing table, and also registers itself as a listener into the newly created `AuctionSniper` to receive the snapshot updates. So that's why the `SniperTableModel` ends up implements two listeners, one for new sniper added and one for existing sniper snapshot changes.
+
+By now, you should get a better view how this complex system works. If not reread the book or this post until you everything sinks in.
+
+This is the end of Chapter 17.
