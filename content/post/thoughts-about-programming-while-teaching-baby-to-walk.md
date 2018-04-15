@@ -19,7 +19,7 @@ I'm also looking into Kotlin recently, the feeling is totally different. It to m
 
 And if you think about it, everything in the world is business. How many people can do C# means a lot to Microsoft. How many people can do Kotlin means a lot to Google. If google can make Kotlin more easy to use on the surface then it means that more people can adopt it more quickly, which means in some sense an advantage over Microsoft.
 
-So the verdict is: **SCREW ALL THESE**. Do what makes you feel good and life goes on :)
+So the verdict is: **SCREW THEM ALL!**. Do what makes you feel good and life goes on :)
 
 {{< img-post "/img" "juzixiao.jpg" "GO GO GO" "center" >}}
 
