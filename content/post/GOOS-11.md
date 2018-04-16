@@ -8,6 +8,8 @@ title = "GOOS Book Distilled Part 10"
 date = 2018-02-26T20:14:34+02:00
 +++
 
+>This is a series of blog posts going through the great book [**Growing Object Oriented Software Guided By Tests**](https://www.amazon.com/Growing-Object-Oriented-Software-Guided-Tests/dp/0321503627), typing in code chapter by chapter, trying to add some of my own understanding where things may not be easy to grasp in the book. I highly recommand you get a copy of the book and follow along with me. Happy coding.
+
 This post is the beginning of *Chapter 15 Towards a Real User Interface*.
 
 ## Replacing JLabel
