@@ -3,7 +3,7 @@ categories = ["JavaScript"]
 description = "What happened when I tried to follow the first lesson in JavaScript30"
 featured = "js30-bg.jpg"
 featuredpath = "/img"
-title = "My Experience with First Lession of JavaScript30"
+title = "My Experience with First Day of JavaScript30"
 date = 2018-04-17T15:51:02+03:00
 +++
 
