@@ -8,6 +8,8 @@ canonifyurls = true
 disqusShortname = "lvguoweime"
 googleAnalytics = "UA-71831707-2"
 paginate = 5
+enableRobotsTXT = true
+canonifyURLs = true
 
 [params]
     # Sets the meta tag description, usually reserved for the main page
