@@ -8,19 +8,28 @@
      },
      "articleSection" : "{{ .Section }}",
      "name" : "{{ .Title }}",
+     "image": "https://www.lvguowei.me/img/profile.jpg",
      "headline" : "{{ .Title }}",
      "description" : "{{ if .Description }}{{ .Description }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ end }}{{ end }}",
      "inLanguage" : "en-US",
-     "author" : "{{ range .Site.Author }}{{ . }}{{ end }}",
+     "publisher": {
+         "@type": "Organization",
+         "name": "Guowei Lv",
+         "logo": {
+             "@type": "ImageObject",
+             "url": "https://www.lvguowei.me/img/profile.jpg"
+         }
+     },
+     "author": {
+         "@type": "Person",
+         "name": "Guowei Lv"
+     },
      "creator" : "{{ range .Site.Author }}{{ . }}{{ end }}",
-     "publisher": "{{ range .Site.Author }}{{ . }}{{ end }}",
      "accountablePerson" : "{{ range .Site.Author }}{{ . }}{{ end }}",
      "copyrightHolder" : "{{ range .Site.Author }}{{ . }}{{ end }}",
-     "copyrightYear" : "{{ .Date.Format "2006" }}",
-     "datePublished": "{{ .Date }}",
-     "dateModified" : "{{ .Date }}",
+     "copyrightYear" : "{{ .Date.Format "2018" }}",
+     "datePublished": "{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}",
      "url" : "{{ .Permalink }}",
-     "wordCount" : "{{ .WordCount }}",
      "keywords" : [ {{ if isset .Params "tags" }}{{ range .Params.tags }}"{{ . }}",{{ end }}{{ end }}"Blog" ]
  }
 </script>
