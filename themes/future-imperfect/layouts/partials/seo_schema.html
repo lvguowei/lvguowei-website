@@ -20,7 +20,6 @@
      "datePublished": "{{ .Date }}",
      "dateModified" : "{{ .Date }}",
      "url" : "{{ .Permalink }}",
-     "wordCount" : "{{ .WordCount }}",
      "keywords" : [ {{ if isset .Params "tags" }}{{ range .Params.tags }}"{{ . }}",{{ end }}{{ end }}"Blog" ]
  }
 </script>
