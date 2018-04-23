@@ -1,7 +1,6 @@
 +++
 date = "2016-10-15T05:35:31+03:00"
 title = "Duplicate Observed Data"
-tags = ["refactoring", "Android"]
 categories = ["Refactoring"]
 +++
 

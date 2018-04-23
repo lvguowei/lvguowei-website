@@ -1,7 +1,6 @@
 ---
 title: "Android Emulator Problem In Arch Linux"
 date: 2017-07-12T14:13:07+03:00
-tags: ["Android", "AndroidStudio", "Android Emulator", "Arch Linux"]
 categories: ["Android Development"]
 ---
 

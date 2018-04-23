@@ -1,7 +1,6 @@
 ---
 title: "Why Synchronize?"
 date: 2017-07-01T14:16:31+03:00
-tags: ["concurrent programming", "java"]
 categories: ["Concurrent Programming"]
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "All You Need To Know About Android Espresso Testing (Part I)"
 date: 2017-07-13T13:03:12+03:00
-tags: ["Android", "Espresso", "Testing"]
 categories: ["Android Development"]
 keywords:
   - Android

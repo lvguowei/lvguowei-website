@@ -1,7 +1,6 @@
 +++
 date = "2016-12-23T12:25:51+02:00"
 title = "Custom ProgresBar that spins anything"
-tags = ["Android", "library", "open source"]
 categories = ["Android Library"]
 keywords = ["Android", "open source", "Android library"]
 description = "An open source Android library"

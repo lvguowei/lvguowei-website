@@ -1,7 +1,6 @@
 +++
 date = "2017-01-01T13:51:26+02:00"
 title = "Why component dependency cycle is bad"
-tags = ["component", "clojure"]
 categories = ["Object Oriented Design"]
 keywords = ["software", "OO design", "dependency cycle"]
 featured = "featured-dependency-cycle.png"

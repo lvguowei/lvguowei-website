@@ -1,7 +1,6 @@
 ---
 title: "Android Custom Views 101 (Part II)"
 date: 2017-07-08T09:55:03+03:00
-tags: ["Android"]
 categories: ["Android Development"]
 keywords:
   - Android

@@ -1,7 +1,6 @@
 ---
 title: "How To Follow Hand Made Hero On Linux"
 date: 2017-07-20T09:06:31+03:00
-tags: ["Hand Made Hero", "Linux"]
 categories: ["Hand Made Hero"]
 ---
 

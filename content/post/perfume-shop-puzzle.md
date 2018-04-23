@@ -1,7 +1,6 @@
 +++
 date = "2017-02-12T16:06:17+02:00"
 title = "Perfume Shop Puzzle"
-tags = ["clojure", "logic programming"]
 categories = ["programming kata"]
 featured= "featured-code-kata.jpg"
 featuredalt= "Code kata"

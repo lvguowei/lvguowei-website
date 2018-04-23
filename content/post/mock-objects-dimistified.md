@@ -1,7 +1,6 @@
 +++
 date = "2017-03-20T20:27:39+02:00"
 title = "Mock Objects Demystified"
-tags = ["TDD"]
 categories = ["Test Driven Development"]
 +++
 

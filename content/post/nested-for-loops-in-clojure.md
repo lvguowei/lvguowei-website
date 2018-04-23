@@ -1,7 +1,6 @@
 +++
 date = "2017-02-03T20:36:18+02:00"
 title = "Nested For Loops in Clojure"
-tags = ["clojure"]
 keywords = ["functional programming", "clojure", "tail recursion"]
 categories = ["Functional Programming"]
 +++

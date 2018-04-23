@@ -1,7 +1,6 @@
 ---
 title: "Strategy Pattern And Lambda"
 date: 2017-07-03T12:01:35+03:00
-tags: ["design pattern", "lambda", "functional programming"]
 categories: ["Object Oriented Design"]
 ---
 

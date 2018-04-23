@@ -2,7 +2,6 @@
 title: "Why we stopped using dagger"
 description: "And some thoughts"
 date: 2017-06-27T20:40:41+03:00
-tags: ["Android", "Dagger2", "Dagger"]
 categories: ["Android Development"]
 keywords: ["Android", "Dagger2", "Dagger"]
 featured: "featured-ranting.png"

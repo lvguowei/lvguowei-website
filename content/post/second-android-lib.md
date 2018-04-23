@@ -1,7 +1,6 @@
 +++
 date = "2016-12-26T10:23:15+02:00"
 title = "My Second Android Library"
-tags = ["Android", "library", "open source"]
 categories = ["Android Library"]
 keywords = ["Android", "open source", "Android library"]
 description = "An open source Android library"

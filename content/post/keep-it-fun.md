@@ -1,7 +1,6 @@
 +++
 date = "2016-05-04T20:13:51+03:00"
 title = "keep it fun"
-tags = ["emacs", "lisp"]
 categories = ["Thoughts"]
 +++
 

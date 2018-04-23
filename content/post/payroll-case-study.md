@@ -1,7 +1,6 @@
 +++
 title = "Payroll Case Study"
 date = "2016-11-20T14:51:39+02:00"
-tags = [ "uncle bob", "architecture", "java", "payroll", "agile"]
 categories = ["Object Oriented Design"]
 +++
 

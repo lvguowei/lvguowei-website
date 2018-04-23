@@ -1,7 +1,6 @@
 +++
 date = "2016-04-30T18:15:04+03:00"
 title = "Finnish learning diary 2"
-tags = [ "Finnishpod101" ]
 categories = ["Finnish Learning"]
 +++
 

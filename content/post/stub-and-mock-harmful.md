@@ -1,7 +1,6 @@
 +++
 title = "Are Stubs and Mocks Harmful?"
 date = "2016-12-18T19:53:45+02:00"
-tags = [ "TDD", "mocks", "stubs" ]
 categories = ["Test Driven Development"]
 +++
 

@@ -1,7 +1,6 @@
 ---
 date: "2016-05-05T15:33:59+03:00"
 title: "Simple example of recursion"
-tags: ["recursion", "scheme", "SICP", "functional programming"]
 categories: ["SICP"]
 keywords:
   - sicp

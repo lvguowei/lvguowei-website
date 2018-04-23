@@ -1,7 +1,6 @@
 +++
 title = "Use Interface Segregation Principle to Implement an Android Logger"
 date = "2016-12-08T21:34:15+02:00"
-tags = [ "Design Pattern", "SOLID Principle", "uncle bob", "refactoring", "Android" ]
 categories = ["Object Oriented Design"]
 +++
 

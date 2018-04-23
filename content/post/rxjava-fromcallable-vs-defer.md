@@ -1,7 +1,6 @@
 ---
 title: "Rxjava fromCallable() Vs defer()"
 date: 2017-07-11T17:13:32+03:00
-tags: ["Android", "RxJava"]
 keywords:
   - Android
   - RxJava

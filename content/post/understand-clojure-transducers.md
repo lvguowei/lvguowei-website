@@ -1,7 +1,6 @@
 +++
 title = "Understand Clojure Transducers 1"
 date = "2017-04-02T08:35:01+03:00"
-tags = ["clojure", "transducer"]
 keywords = ["functional programming", "clojure", "transducer"]
 categories = ["Functional Programming"]
 +++

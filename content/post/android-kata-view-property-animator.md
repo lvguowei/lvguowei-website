@@ -1,7 +1,6 @@
 +++
 title = "Android Kata View Property Animator"
 date = "2017-03-28T20:49:08+03:00"
-tags = ["programming kata", "android"]
 categories = ["Android Development"]
 keywords = ["Android", "kata"]
 description= "Android coding kata"

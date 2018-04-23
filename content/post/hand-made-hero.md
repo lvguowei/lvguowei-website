@@ -1,7 +1,6 @@
 +++
 date = "2017-06-18T18:02:02+03:00"
 title = "Hand Made Hero is AWESOME!"
-tags = ["game dev", "handmadehero"]
 categories = ["Hand Made Hero"]
 +++
 

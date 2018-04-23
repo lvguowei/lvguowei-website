@@ -1,7 +1,6 @@
 +++
 date = "2016-10-15T19:38:57+03:00"
 title = "Replace Nested Conditional With Guard Clauses"
-tags = ["refactoring"]
 categories = ["Refactoring"]
 +++
 

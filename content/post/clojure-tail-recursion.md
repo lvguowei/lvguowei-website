@@ -1,7 +1,6 @@
 +++
 date = "2017-02-27T20:15:18+02:00"
 title = "Clojure Tail Recursion By Example"
-tags = ["clojure", "recursion"]
 keywords = ["functional programming", "clojure", "tail recursion"]
 categories = ["Functional Programming"]
 description = ["Understand tail recursion"]

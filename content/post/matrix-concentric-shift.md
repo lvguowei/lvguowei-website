@@ -1,7 +1,6 @@
 +++
 date = "2016-10-06T19:46:09+03:00"
 title = "matrix concentric shift"
-tags = [ "algorithms", "coding challenge"]
 categories = ["programming kata"]
 +++
 

@@ -1,7 +1,6 @@
 ---
 date: "2016-05-29T21:32:14+03:00"
 title: "Time and Space of Recursion"
-tags: ["recursion", "scheme", "SICP", "functional programming"]
 categories: ["SICP"]
 keywords:
   - sicp

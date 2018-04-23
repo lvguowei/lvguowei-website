@@ -1,7 +1,6 @@
 +++
 date = "2016-12-06T12:16:53+02:00"
 title = "Expense Report Case Study"
-tags = [ "Design Pattern", "SOLID Principle", "uncle bob", "refactoring" ]
 categories = ["Object Oriented Design"]
 +++
 
