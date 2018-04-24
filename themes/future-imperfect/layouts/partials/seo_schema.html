@@ -28,7 +28,8 @@
      "accountablePerson" : "{{ range .Site.Author }}{{ . }}{{ end }}",
      "copyrightHolder" : "{{ range .Site.Author }}{{ . }}{{ end }}",
      "copyrightYear" : "{{ .Date.Format "2018" }}",
-     "datePublished": "{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}",
+     "datePublished": "{{ .Date.Format "2006-01-02T15:04:05" | safeHTML }}",
+     "dateModified": "{{ .Date.Format "2006-01-02T15:04:05" | safeHTML }}",
      "url" : "{{ .Permalink }}",
      "keywords" : [ {{ if isset .Params "tags" }}{{ range .Params.tags }}"{{ . }}",{{ end }}{{ end }}"Blog" ]
  }
