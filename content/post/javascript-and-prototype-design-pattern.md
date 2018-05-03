@@ -1,6 +1,7 @@
 +++
 author = "Guowei Lv"
 categories = ["Javascript"]
+keywords = ["javascript", "prototype pattern", "design pattern", "prototypal inheritance"]
 description = "Is Javascript's prototypal inheritance borrowed from prototype design pattern?"
 featured = "js.jpg"
 featuredpath = "/img"
@@ -37,4 +38,4 @@ I find that it is easier to understand the JS's prototype inheritance when compa
 
 This also shows a powerful learning technique: whenever you can relate something that you don't know with something that you know, it become much easier to grasp the new thing.
 
-The similarity is uncanny, does JS borrowed this pattern's idea?
+The similarity is uncanny, did JS borrowed this pattern's idea?
