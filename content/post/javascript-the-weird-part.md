@@ -1,8 +1,8 @@
 +++
 author = "Guowei Lv"
 categories = ["Javascript"]
-description = "Learn Javascript the Weird Part"
-keywords = ["javascript", "javascript the weird parts", "ES6"]
+description = "Learn Javascript the Weird Parts"
+keywords = ["javascript", "javascript the weird parts", "ES6", "jQuery"]
 featured = "js.jpg"
 featuredpath = "/img"
 title = "Javascript the Weird Parts Distilled"
