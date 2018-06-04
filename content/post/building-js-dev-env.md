@@ -169,6 +169,8 @@ Start your app.
 
 We choose [npm script](https://docs.npmjs.com/misc/scripts) here. Let's try it out.
 
+## npm scripts
+
 First, write the script to start the dev server, in `package.json`:
 
 {{< highlight javascript>}}
@@ -185,3 +187,61 @@ First, write the script to start the dev server, in `package.json`:
 
 Now we can start the server by just `npm start`
 
+## Pre/Post Hooks
+
+Create `buildScript/startMessage.js`:
+
+{{< highlight javascript>}}
+
+var chalk = require('chalk');
+console.log(chalk.green('Starting app in dev mode...'));
+
+{{< /highlight >}}
+
+Then add `prestart` to the scripts:
+
+{{< highlight javascript>}}
+
+...
+
+"scripts": {
+    "prestart": "node buildScript/startMessage.js", 
+    "start": "node buildScript/srcServer.js"
+  },
+  
+...  
+
+{{< /highlight >}}
+
+Now if we run `npm start`, the prestart script will be ran before the start script.
+
+## Add Security Check and Share
+
+We now create a script to run security check and share:
+
+{{< highlight javascript>}}
+
+...
+
+"scripts": {
+    "prestart": "node buildScript/startMessage.js", 
+    "start": "node buildScript/srcServer.js",
+    "security-check": "nsp check",
+    "share": "lt --port 3000"
+  },
+  
+...  
+
+{{< /highlight >}}
+
+Notice that in this way, `nsp` doesn't need to be installed globally.
+
+## Concurrent Tasks
+
+Run mutiple tasks in parallel:
+{{< highlight javascript>}}
+...
+"start": "npm-run-all --parallel security-check open:src",
+"open:src": "node buildScripts/srcServer.js",
+...
+{{< /highlight >}}
