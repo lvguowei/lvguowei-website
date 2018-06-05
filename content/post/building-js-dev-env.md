@@ -226,7 +226,7 @@ We now create a script to run security check and share:
 "scripts": {
     "prestart": "node buildScript/startMessage.js", 
     "start": "node buildScript/srcServer.js",
-    "security-check": "nsp check",
+    "security-check": "nsp check;exit 0",
     "share": "lt --port 3000"
   },
   
@@ -235,6 +235,8 @@ We now create a script to run security check and share:
 {{< /highlight >}}
 
 Notice that in this way, `nsp` doesn't need to be installed globally.
+
+One thing that is not mentioned in the video is that if `nsp check` finds some vulnerabilities, it will fail npm. To fix this, we can just force it to always return 0.
 
 ## Concurrent Tasks
 
@@ -245,3 +247,5 @@ Run mutiple tasks in parallel:
 "open:src": "node buildScripts/srcServer.js",
 ...
 {{< /highlight >}}
+
+
