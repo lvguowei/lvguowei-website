@@ -241,11 +241,219 @@ One thing that is not mentioned in the video is that if `nsp check` finds some v
 ## Concurrent Tasks
 
 Run mutiple tasks in parallel:
+
 {{< highlight javascript>}}
+
 ...
 "start": "npm-run-all --parallel security-check open:src",
 "open:src": "node buildScripts/srcServer.js",
 ...
 {{< /highlight >}}
 
+
+# Transpiling
+
+We choose [Babel](https://babeljs.io/) to *compile* newer javascript code to older one.
+
+Let's first add the `.babelrc` to the root of our project:
+
+{{< highlight javascript>}}
+
+{
+  "presets": [
+    "latest"
+  ]
+}
+
+{{< /highlight >}}
+
+This basically says use the latest JS.
+
+Let's try to use the module feature from ES6 in `startMessage.js`:
+
+{{< highlight javascript>}}
+
+import chalk from 'chalk';
+
+{{< /highlight >}}
+
+Now in `package.json` we use `babel-node` instead of ´node´.
+
+{{< highlight javascript>}}
+...
+  "prestart": "babel-node buildScripts/startMessage.js",
+...
+{{< /highlight >}}
+
+# Bundling
+
+We choose ES6 Modules to be the module format and [webpack](https://webpack.js.org/) as the bundler.
+
+## Configure Webpack with Express
+
+Now create a `webpack.config.dev.js` in the root:
+
+{{< highlight javascript>}}
+
+import path from 'path';
+
+export default {
+  debug: true,
+  devtool: 'inline-source-map',
+  noInfo: false,
+  entry: [
+    path.resolve(__dirname, 'src/index')
+  ],
+  target: 'web',
+  output: {
+    path: path.resolve(__dirname, 'src'),
+    publicPath: '/',
+    filename: 'bundle.js'
+  },
+  plugins: [],
+  module: {
+    loaders: [
+      {test: /\.js$/, exclude: /node_modules/, loaders: ['babel']},
+      {test: /\.css$/, loaders: ['style','css']}
+    ]
+  }
+}
+
+{{< /highlight >}}
+
+Then we need to configure Express to use it.
+
+In `/buildScripts/srcServer.js`:
+
+{{< highlight javascript>}}
+
+...
+
+import webpack from 'webpack'
+import config from '../webpack.config.dev'
+
+const port = 3000
+const app = express()
+const compiler = webpack(config)
+
+app.use(require('webpack-dev-middleware')(compiler, {
+  noInfo: true,
+  publicPath: config.output.publicPath
+}))
+
+...
+
+{{< /highlight >}}
+
+
+## Create an App Entry Point
+
+First create `/src/index.js`:
+
+{{< highlight javascript>}}
+
+import numeral from 'numeral'
+
+const courseValue = numeral(1000).format('$0,0.00')
+console.log(`I would pay ${courseValue} for this course!`)
+
+{{< /highlight >}}
+
+Now start the app, you should see that `bundle.js` from the browser, it is not really a physical file but in memory.
+
+## Handling CSS with Webpack
+
+First let's create `/src/index.css`:
+
+{{< highlight css>}}
+body {
+  font-family: sans-serif;
+}
+
+table th {
+  padding: 5px
+}
+{{< /highlight >}}
+
+
+Now we can *import* this css into our `index.html` through `index.js`.
+
+In `index.js` add one line:
+
+{{< highlight javascript>}}
+import './index.js'
+{{< /highlight >}}
+
+# Sourcemap
+
+Sourcemap allows us to see the original code in the browser console. We have already configured it in our webpack config
+
+`devtool: 'inline-source-map'`.
+
+Now if you try to set a `debugger` break point in the `index.js`, you can see the original code in the browser console.
+
+The cool thing is that this sourcemap will only be downloaded when the console is open, neat.
+
+# Linting
+
+We choose [ESLint](https://eslint.org/).
+
+Create `/.eslintrc.json`:
+
+{{< highlight javascript>}}
+{
+  "root": true,
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 7,
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true
+  },
+  "rules": {
+    "no-console": 1
+  }
+}
+{{< /highlight >}}
+
+Next, create a *lint* script in the `package.json`:
+{{< highlight javascript>}}
+...
+"scripts": {
+    "lint": "esw webpack.config.* src buildScripts --color; exit 0"
+  },
+...
+{{< /highlight >}}
+
+## Watch files
+
+To watch for file changes and run eslint, we create another script, and add it to the `start` script.
+
+{{< highlight javascript>}}
+...
+"scripts": {
+     ...
+     "start": "npm-run-all --parallel security-check open:src lint:watch",
+     "lint:watch": "npm run lint -- --watch",
+     ...
+  },
+...
+{{< /highlight >}}
+
+
+# Testing and Continuous Integration
+
+First of all, let's frame the scope here, we are talking about unit testing, not UI testing.
+
+OK, now we have to make 6 decisions:
+
+1. Testing Framework: [Mocha](https://mochajs.org/)
+2. Assertion Library: [Chai](http://www.chaijs.com/)
 
