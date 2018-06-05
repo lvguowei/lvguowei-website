@@ -456,4 +456,9 @@ OK, now we have to make 6 decisions:
 
 1. Testing Framework: [Mocha](https://mochajs.org/)
 2. Assertion Library: [Chai](http://www.chaijs.com/)
+3. Helper Library: [JSDOM](https://github.com/jsdom/jsdom), [Cheerio](https://cheerio.js.org/)
+4. Where to Run Tests: Here we choose JSDOM again.
+5. Where do Test Files Belong? Alongside the file being tested.
+6. When should tests run? Unit Tests Should Run When You Hit Save.
+
 
