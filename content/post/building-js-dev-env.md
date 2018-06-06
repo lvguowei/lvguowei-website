@@ -708,6 +708,12 @@ import jsf from 'json-schema-faker';
 import {schema} from './mockDataSchema';
 import fs from 'fs';
 import chalk from 'chalk';
+import faker from "faker"
+
+// This is a fix from github which is not in the video
+jsf.extend("faker", function() {
+  return faker
+})
 
 const json = JSON.stringify(jsf(schema));
 
@@ -759,4 +765,51 @@ function get(url) {
 }
 
 {{< /highlight >}}
+
+Now we have the get users api, let's also add delete users api. 
+First add the delete user api in `/src/api/userApi.js`:
+
+{{< highlight javascript>}}
+
+export function deleteUser(id){
+  return del(`users/${id}`)
+}
+
+function del(url) {
+  const request = new Request(baseUrl + url, {
+    method: 'DELETE'
+  });
+  return fetch(request).then(onSuccess, onError);
+}
+
+{{< /highlight >}}
+
+Then in `/src/index.js` add the following code:
+
+{{< highlight javascript>}}
+
+
+// Populate table of users via API call
+getUsers().then(result => {
+  ...
+  
+  const deleteLinks = window.document.getElementsByClassName('deleteUser');
+
+  // Must use array.from to create a real array from a DOM collection
+  // getElementsByClassName only returns an "array like" object
+  Array.from(deleteLinks, link => {
+    link.onclick = function(event) {
+      const element = event.target;
+      event.preventDefault();
+      deleteUser(element.attributes["data-id"].value);
+      const row = element.parentNode.parentNode;
+      row.parentNode.removeChild(row);
+    };
+  });
+});
+
+{{< /highlight >}}
+
+Now if you click the delete button, that user will be removed from the screen, and also from the fake json data db!
+
 
