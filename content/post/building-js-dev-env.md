@@ -541,12 +541,11 @@ Go to [Travis](https://travis-ci.org) and login with github account, go to profi
 
 Now create `/.travis.yml`:
 
-{{< highlight md>}}
+{{< highlight javascript>}}
 
 language: node_js
 node_js:
   - "6"
-
 
 {{< /highlight >}}
 
