@@ -5,7 +5,6 @@ featured = ""
 featuredpath = "/img"
 title = "Building a Javascript Development Environment"
 date = 2018-06-04T14:44:51+03:00
-draft = true
 +++
 
 This blog post is a summary of the excellent [Pluralsight Course](https://app.pluralsight.com/library/courses/javascript-development-environment/table-of-contents) by [Cory House](https://twitter.com/housecor).
@@ -460,5 +459,96 @@ OK, now we have to make 6 decisions:
 4. Where to Run Tests: Here we choose JSDOM again.
 5. Where do Test Files Belong? Alongside the file being tested.
 6. When should tests run? Unit Tests Should Run When You Hit Save.
+
+Now we have made the decisions, let's it all setup.
+
+First let's add a script to configure the tests `/buildScripts/testSetup.js`:
+
+
+{{< highlight javascript>}}
+// This file is't transpiled, so must use CommonJS and ES5
+
+// Register babel to transpile before our tests run.
+require('babel-register')();
+
+// Disable webpack features that Mocha doesn't understand
+require.extensions['.css'] = function() {};
+
+{{< /highlight >}}
+
+Now create a task to run tests:
+
+
+{{< highlight javascript>}}
+"scripts": {
+     ...
+     "test": "mocha --reporter progress buildScripts/testSetup.js \"src/**/*.test.js\"",
+     ...
+  },
+...
+{{< /highlight >}}
+
+
+Now let's write some simple tests to try it out.
+
+Create `/src/index.test.js`:
+
+{{< highlight javascript>}}
+
+import {expect} from 'chai';
+import jsdom from 'jsdom';
+import fs from 'fs';
+
+describe('Our first test', () => {
+  it('should pass', () => {
+    expect(true).to.equal(true);
+  });
+});
+
+describe('index.html', () => {
+  it('should say hello', (done) => {
+    const index = fs.readFileSync("./src/index.html", "utf-8");
+    jsdom.env(index, function(err, window) {
+      const h1 = window.document.getElementsByTagName('h1')[0];
+      expect(h1.innerHTML).to.equal("Hello World!");
+      done();
+      window.close();
+    });
+  })
+})
+
+{{< /highlight >}}
+
+Now if you run `npm test`, you will see 2 tests pass.
+
+OK, let's next configure the tests to be ran on every save.
+
+Add the following task in `package.json` and add it in `start`:
+
+
+{{< highlight javascript>}}
+"scripts": {
+     ...
+     "start": "npm-run-all --parallel security-check open:src lint:watch test:watch",
+     "test:watch": "npm run test -- --watch"
+     ...
+  },
+{{< /highlight >}}
+
+## Setup Travis CI
+
+Go to [Travis](https://travis-ci.org) and login with github account, go to profile and enable the js-dev-env project.
+
+Now create `/.travis.yml`:
+
+{{< highlight yaml>}}
+
+language: node_js
+node_js:
+  - "6"
+
+{{< /highlight >}}
+
+That's all you need to setup Travis, now just wait and see the result.
 
 
