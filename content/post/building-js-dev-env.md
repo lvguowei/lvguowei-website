@@ -1,5 +1,6 @@
 +++
 categories = ["javascript"]
+keywords = ["javascript", "javascript development", "javascript starter kit", "Cory House", "Pluralsight", "VS Code"]
 description = "How to setup a JS development environment in 2018"
 featured = ""
 featuredpath = "/img"
@@ -541,14 +542,101 @@ Go to [Travis](https://travis-ci.org) and login with github account, go to profi
 
 Now create `/.travis.yml`:
 
-{{< highlight yaml>}}
+{{< highlight md>}}
 
 language: node_js
 node_js:
   - "6"
 
+
 {{< /highlight >}}
 
 That's all you need to setup Travis, now just wait and see the result.
 
+# HTTP Calls
+
+Let's first create a dummy api endpoint `localhost:3000/users` which just returns a list of user objects.
+
+In `/buildScripts/srcServer.js`, add the following code:
+
+{{< highlight js>}}
+
+app.get('/users', function(req, res) {
+  res.json([
+    {"id": 1, "firstname": "Bob", "lastname": "Smith", "email": "bob@gmail.com"},
+    {"id": 2, "firstname": "Tammy", "lastname": "Norton", "email": "tammy@gmail.com"},
+    {"id": 3, "firstname": "Tinna", "lastname": "Lee", "email": "tina@yahoo.com"}
+  ]);
+});
+
+{{< /highlight >}}
+
+
+Next, let's create `/src/api/userApi.js`:
+
+{{< highlight js>}}
+
+import 'whatwg-fetch';
+
+export function getUsers() {
+  return get('users');
+}
+
+function get(url) {
+  return fetch(url).then(onSuccess, onError);
+}
+
+function onSuccess(response) {
+  return response.json();
+}
+
+function onError(error) {
+  console.log(error); // eslint-disable-line no-console
+}
+
+{{< /highlight >}}
+
+Then, put a table in the `/src/index.html`:
+
+{{< highlight html >}}
+
+<h1>Users</h1>
+<table>
+  <thead>
+    <th>&nbsp;</th>
+    <th>Id</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+  </thead>
+  <tbody id="users"></tbody>
+</table>
+    
+{{< /highlight >}}
+    
+And in `/src/index.js` add:
+
+{{< highlight html >}}
+
+import {getUsers} from './api/userApi';
+
+// Populate table of users via API call
+getUsers().then(result => {
+  let usersBody = "";
+
+  result.forEach(user => {
+    usersBody += `<tr>
+    <td><a href="#" data-id="${user.id}" class="deleteUser">Delete</a></td>
+    <td>${user.id}</td>
+    <td>${user.firstname}</td>
+    <td>${user.lastname}</td>
+    <td>${user.email}</td>
+    </tr>`
+  });
+  window.document.getElementById('users').innerHTML = usersBody;
+});
+
+{{< /highlight >}}
+
+Now we can see a list of users displayed in the table, great.
 
