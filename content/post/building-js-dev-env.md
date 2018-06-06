@@ -4,7 +4,7 @@ keywords = ["javascript", "javascript development", "javascript starter kit", "C
 description = "How to setup a JS development environment in 2018"
 featured = ""
 featuredpath = "/img"
-title = "Building a Javascript Development Environment"
+title = "Building a JavaScript Development Environment"
 date = 2018-06-04T14:44:51+03:00
 +++
 
@@ -526,7 +526,6 @@ OK, let's next configure the tests to be ran on every save.
 
 Add the following task in `package.json` and add it in `start`:
 
-
 {{< highlight javascript>}}
 "scripts": {
      ...
@@ -563,9 +562,9 @@ In `/buildScripts/srcServer.js`, add the following code:
 
 app.get('/users', function(req, res) {
   res.json([
-    {"id": 1, "firstname": "Bob", "lastname": "Smith", "email": "bob@gmail.com"},
-    {"id": 2, "firstname": "Tammy", "lastname": "Norton", "email": "tammy@gmail.com"},
-    {"id": 3, "firstname": "Tinna", "lastname": "Lee", "email": "tina@yahoo.com"}
+    {"id": 1, "firstName": "Bob", "lastName": "Smith", "email": "bob@gmail.com"},
+    {"id": 2, "firstName": "Tammy", "lastName": "Norton", "email": "tammy@gmail.com"},
+    {"id": 3, "firstName": "Tinna", "lastName": "Lee", "email": "tina@yahoo.com"}
   ]);
 });
 
@@ -628,8 +627,8 @@ getUsers().then(result => {
     usersBody += `<tr>
     <td><a href="#" data-id="${user.id}" class="deleteUser">Delete</a></td>
     <td>${user.id}</td>
-    <td>${user.firstname}</td>
-    <td>${user.lastname}</td>
+    <td>${user.firstName}</td>
+    <td>${user.lastName}</td>
     <td>${user.email}</td>
     </tr>`
   });
@@ -639,4 +638,125 @@ getUsers().then(result => {
 {{< /highlight >}}
 
 Now we can see a list of users displayed in the table, great.
+
+## Our Plan for Mocking HTTP
+
+1. Declare our schema:
+  - [JSON Schema Faker](http://json-schema-faker.js.org/)
+  
+2. Generate Random Data:
+  - [faker.js](https://github.com/marak/Faker.js/)
+  - [chance.js](https://chancejs.com/)
+  - [randexp.js](http://fent.github.io/randexp.js/)
+
+3. Serve Data via API
+  - [JSON Server](https://github.com/typicode/json-server)
+
+Now let's glue them together to generate some fake data!
+
+First create `/buildScripts/mockDataSchema.js`:
+
+{{< highlight javascript >}}
+
+export const schema = {
+  "type": "object",
+  "properties": {
+    "users": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "unique": true,
+            "minimum": 1
+          },
+          "firstName": {
+            "type": "string",
+            "faker": "name.firstName"
+          },
+          "lastName": {
+            "type": "string",
+            "faker": "name.lastName"
+          },
+          "email": {
+            "type": "string",
+            "faker": "internet.email"
+          }
+        },
+        "required": ["id", "firstName", "lastName", "email"]
+      }
+    }
+  },
+  "required": ["users"]
+};
+
+{{< /highlight >}}
+
+Next, write a script `/buildScripts/generateMockData.js` to generate fake data:
+
+
+{{< highlight javascript >}}
+
+/* This script generate mock data for local development. */
+
+/* eslint-disable no-console */
+
+import jsf from 'json-schema-faker';
+import {schema} from './mockDataSchema';
+import fs from 'fs';
+import chalk from 'chalk';
+
+const json = JSON.stringify(jsf(schema));
+
+fs.writeFile("./src/api/db.json", json, function (err) {
+  if (err) {
+    return console.log(chalk.red(err));
+  } else {
+    console.log(chalk.green("Mock data generated."));
+  }
+});
+
+{{< /highlight >}}
+
+
+Finally, configure `package.json` to include it and also use *json server* serve the data.
+
+{{< highlight javascript>}}
+"scripts": {
+     ...
+     "start": "npm-run-all --parallel security-check open:src lint:watch test:watch start-mockapi",
+     "generate-mock-data": "babel-node buildScripts/generateMockData",
+     "prestart-mockapi": "npm run generate-mock-data",
+     "start-mockapi": "json-server --watch src/api/db.json --port 3001"
+     ...
+  },
+{{< /highlight >}}
+
+We would like to use the fake api for development. How to do that?
+
+Well first let's create `/src/api/baseUrl.js`:
+
+{{< highlight javascript>}}
+
+export default function getBaseUrl() {
+  const inDevelopment = window.location.hostname === 'localhost';
+  return inDevelopment ? 'http://localhost:3001' : '/';
+}
+
+{{< /highlight >}}
+
+Now in `/api/userApi.js` make the following changes:
+
+{{< highlight javascript>}}
+
+import getBaseUrl from './baseUrl';
+
+function get(url) {
+  return fetch(baseUrl + url).then(onSuccess, onError);
+}
+
+{{< /highlight >}}
 
