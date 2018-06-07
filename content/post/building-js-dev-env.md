@@ -811,4 +811,313 @@ getUsers().then(result => {
 
 Now if you click the delete button, that user will be removed from the screen, and also from the fake json data db!
 
+# Project Structure
 
+Some useful tips on structuring JS projects:
+
+1. JS Belongs in a `.js` File
+2. Organize by Feature instead of File Type
+3. Extract logic into *POJO*s.
+
+
+# Production Build
+
+## Minification and Sourcemaps
+
+First create a `webpack.config.prod.js` for production:
+
+{{< highlight javascript>}}
+
+
+import path from 'path';
+import webpack from 'webpack';
+
+export default {
+  debug: true,
+  devtool: 'source-map',
+  noInfo: false,
+  entry: [
+    path.resolve(__dirname, 'src/index')
+  ],
+  target: 'web',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
+    filename: 'bundle.js'
+  },
+  plugins: [
+    // Eliminate duplicate packages when generating bundle
+    new webpack.optimize.DedupePlugin(),
+    // Minify JS
+    new webpack.optimize.UglifyJsPlugin()
+  ],
+  module: {
+    loaders: [
+      {test: /\.js$/, exclude: /node_modules/, loaders: ['babel']},
+      {test: /\.css$/, loaders: ['style','css']}
+    ]
+  }
+}
+
+{{< /highlight >}}
+
+Note that we changed the output to `dist` and also added some plugins for minifications.
+
+Next, let's create a `/buildScripts/distServer.js` to serve the files in `dist`:
+
+{{< highlight javascript>}}
+
+
+import express from 'express';
+import path from 'path';
+import open from 'open';
+import compression from 'compression';
+
+/* eslint-disable no-console */
+
+const port = 3000;
+const app = express();
+
+app.use(compression());
+
+app.use(express.static('dist'));
+
+app.get('/', function(req, res) {
+  res.sendFile(path.join(__dirname, '../dist/index.html'));
+});
+
+app.get('/users', function(req, res) {
+  res.json([
+    {"id": 1, "firstName": "Bob", "lastName": "Smith", "email": "bob@gmail.com"},
+    {"id": 2, "firstName": "Tammy", "lastName": "Norton", "email": "tammy@gmail.com"},
+    {"id": 3, "firstName": "Tinna", "lastName": "Lee", "email": "tina@yahoo.com"}
+  ]);
+});
+
+app.listen(port, function(err) {
+  if (err) {
+    console.log(err);
+  } else{
+    open('http://localhost:' + port);
+  }
+});
+
+{{< /highlight >}}
+
+## Toggle Mock Api
+
+Then, let's put in a better way to toggle between real data and mock data, modify `/src/api/baseUrl.js`:
+
+{{< highlight javascript>}}
+
+export default function getBaseUrl() {
+  return getQueryStringParameterByName('useMockApi') ? 'http://localhost:3001/' : '/';
+}
+
+function getQueryStringParameterByName(name, url) {
+  if (!url) url = window.location.href;
+  name = name.replace(/[\[\]]/g, "\\$&");
+  var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+      results = regex.exec(url);
+  if (!results) return null;
+  if (!results[2]) return '';
+  return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+{{< /highlight >}}
+
+Now to use mock data, we just append `?useMockApi=true` to the url in the browser.
+
+Now it's time to write some npm script to build all of these.
+
+Add these new tasks:
+
+{{< highlight javascript>}}
+
+"clean-dist": "rimraf ./dist && mkdir dist",
+"prebuild": "npm-run-all clean-dist test lint",
+"build": "babel-node buildScripts/build.js",
+"postbuild": "babel-node buildScripts/distServer.js"
+    
+{{< /highlight >}}
+    
+Now if you run `npm run build -s`, it will show that no index.html found, which is what we are going to tackle next.
+
+## Dynamic HTML Generation
+
+Our solution to this is to use webpack to dynamically generate html files.
+
+Add the following code to `/webpack.config.prod.js`:
+
+{{< highlight javascript>}}
+
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+
+plugins: [
+    // Create HTML file that includes reference to bundled JS.
+    new HtmlWebpackPlugin({
+      template: 'src/index.html',
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeRedundantAttributes: true,
+        useShortDoctype: true,
+        removeEmptyAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        keepClosingSlash: true,
+        minifyJS: true,
+        minifyCSS: true,
+        minifyURLs: true
+      },
+      inject: true
+    }),
+  ],
+
+{{< /highlight >}}
+
+Now we can remove the <script> tag from `index.html` since it will be injected by webpack. Also copy the same to `/webpack.config.dev.js`.
+
+## Bundle Splitting
+
+We are going to put all the vendor JS libraries in a separate bundle so that the client won't have to donwload those libraries everytime when our application code changes.
+
+First create a `/src/vendor.js`:
+
+{{< highlight javascript>}}
+
+
+/* This file contains references to the vendor libraries
+ we're using in this project. This is used by webpack
+ in the production build only*. A separate bundle for vendor
+ code is useful since it's unlikely to change as often
+ as the application's code. So all the libraries we reference
+ here will be written to vendor.js so they can be
+ cached until one of them change. So basically, this avoids
+ customers having to download a huge JS file anytime a line
+ of code changes. They only have to download vendor.js when
+ a vendor library changes which should be less frequent.
+ Any files that aren't referenced here will be bundled into
+ main.js for the production build.
+ */
+
+/* eslint-disable no-unused-vars */
+
+import fetch from 'whatwg-fetch';
+
+{{< /highlight >}}
+
+Then modify the `webpack.config.prod.js` as follows:
+
+{{< highlight javascript>}}
+
+entry: {
+    vendor: path.resolve(__dirname, 'src/vendor'),
+    main: path.resolve(__dirname, 'src/index')
+  },
+  output: {
+    ...
+    filename: '[name].js'
+  },
+  plugins: [
+    // Use CommonsChunkPlugin to create a separate bundle
+    // of vendor libraries so that they're cached separatetly.
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor'
+    }),
+    ...
+  ],
+
+{{< /highlight >}}
+
+
+## Cache Busting
+
+If we attach a hash number at the end of every files, then the client can cache the files forever until we make a new release.
+
+Let's do it.
+
+In `webpack.config.prod.js`:
+
+{{< highlight javascript>}}
+
+import WebpackMd5Hash from 'webpack-md5-hash';
+
+output: {
+    ...
+    filename: '[name].[chunkhash].js'
+  },
+
+plugins: [
+    // Hash the files using MD5 so that their names change when the content changes.
+    new WebpackMd5Hash(),
+    ...
+]
+
+{{< /highlight >}}
+
+
+## Extract and Minify CSS
+
+The goal is to extract out the css file and put a hash number in its name.
+
+So in `webpack.config.prod.js`:
+
+{{< highlight javascript>}}
+
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
+
+plugins: [
+    // Generate an external css file with a hash in the filename
+    new ExtractTextPlugin('[name].[contenthash].css'),
+    ...
+]
+
+module: {
+    loaders: [
+      ...
+      {test: /\.css$/, loader: ExtractTextPlugin.extract('css?sourceMap')}
+    ]
+{{< /highlight >}}
+
+## Error Logging
+
+The author uses TrackJS, since it is not free, I will omit this part all together.
+
+# Production Deploy
+
+We will deploy the api backend to Heroku and the frontend to Surge.
+
+First, take a look at the [guide](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction) on how to deploy nodejs app on Heroku.
+
+OK, now let's try to split up our project.
+
+First separate out the api part. The author created a [repo](https://github.com/lvguowei/js-dev-env-demo-api) here already so we can just use that. Remember to run `npm install` after clone it.
+
+Then follow the steps:
+
+1. Login to Heroku.
+
+`heroku login`
+
+2. Deploy the app.
+
+`heroku create`
+
+`git push heroku master`
+
+`heroku ps:scale web=1`
+
+`heroku open`
+
+
+OK, now the api site is deployed!
+
+Now we go back to our project, open `/src/api/baseUrl.js` and update the following code:
+
+{{< highlight javascript>}}
+
+export default function getBaseUrl() {
+  return getQueryStringParameterByName('useMockApi') ? 'http://localhost:3001/' : 'https://sheltered-wildwood-50048.herokuapp.com/';
+}
+
+{{< /highlight >}}
