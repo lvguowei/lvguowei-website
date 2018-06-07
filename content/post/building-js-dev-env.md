@@ -2,7 +2,7 @@
 categories = ["javascript"]
 keywords = ["javascript", "javascript development", "javascript starter kit", "Cory House", "Pluralsight", "VS Code"]
 description = "How to setup a JS development environment in 2018"
-featured = ""
+featured = "js.jpg"
 featuredpath = "/img"
 title = "Building a JavaScript Development Environment"
 date = 2018-06-04T14:44:51+03:00
@@ -1085,7 +1085,9 @@ The author uses TrackJS, since it is not free, I will omit this part all togethe
 
 # Production Deploy
 
-We will deploy the api backend to Heroku and the frontend to Surge.
+We will deploy the api backend to [Heroku](https://www.heroku.com/) and the frontend to [Surge](https://surge.sh/).
+
+## Deploy API to Heroku
 
 First, take a look at the [guide](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction) on how to deploy nodejs app on Heroku.
 
@@ -1121,3 +1123,17 @@ export default function getBaseUrl() {
 }
 
 {{< /highlight >}}
+
+## Deploy UI to Surge
+
+Add one line to `scripts` in `package.json`:
+
+`"deploy": "surge ./dist"`
+
+Then run `npm run build` to build once.
+
+Now we can deploy to surge `npm run deploy`.
+
+The complete source code can be found [here](https://github.com/lvguowei/javascript-development-environment)
+
+~THE END~
