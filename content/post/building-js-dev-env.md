@@ -975,7 +975,7 @@ plugins: [
 
 {{< /highlight >}}
 
-Now we can remove the <script> tag from `index.html` since it will be injected by webpack. Also copy the same to `/webpack.config.dev.js`.
+Now we can remove the javascript tag from `index.html` since it will be injected by webpack. Also copy the same to `/webpack.config.dev.js`.
 
 ## Bundle Splitting
 
