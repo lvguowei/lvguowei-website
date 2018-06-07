@@ -1,11 +1,11 @@
 +++
 author = "Guowei Lv"
-categories = ["Javascript"]
+categories = ["JavaScript"]
 description = "Learn Javascript the Weird Parts"
 keywords = ["javascript", "javascript the weird parts", "ES6", "jQuery"]
 featured = "js.jpg"
 featuredpath = "/img"
-title = "Javascript the Weird Parts Distilled"
+title = "JavaScript the Weird Parts Distilled"
 date = 2018-05-03T16:19:13+03:00
 +++
 

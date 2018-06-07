@@ -1,11 +1,11 @@
 +++
 author = "Guowei Lv"
-categories = ["Javascript"]
+categories = ["JavaScript"]
 keywords = ["javascript", "prototype pattern", "design pattern", "prototypal inheritance"]
 description = "Is Javascript's prototypal inheritance borrowed from prototype design pattern?"
 featured = "js.jpg"
 featuredpath = "/img"
-title = "Javascript and Prototype Design Pattern"
+title = "JavaScript and Prototype Design Pattern"
 date = 2018-05-03T21:32:16+03:00
 +++
 
