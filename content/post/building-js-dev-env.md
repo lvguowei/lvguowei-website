@@ -1136,4 +1136,6 @@ Now we can deploy to surge `npm run deploy`.
 
 The complete source code can be found [here](https://github.com/lvguowei/javascript-development-environment)
 
+P.S. Now we are at the end of this course, I have to say this is totally INSANE! I have to now take a 6 hour course to setup my development environment?!?!?!?!? What kind of obsurdity is this! And what is worse? This is only the beginning. What if I want to use Angular? React? Remember this is only the "starter kit". I really hope this blog post will become obsolete soon.
+
 ~THE END~
