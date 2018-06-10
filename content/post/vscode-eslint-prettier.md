@@ -1,6 +1,7 @@
 +++
 categories = ["JavaScript"]
 description = "How to setup ESLint with Prettier in VSCode for React Project"
+keywords = ["prettier", "ESLint", "VSCode", "JavaScript", "Create React App", "React"]
 featured = "js.jpg"
 featuredpath = "/img"
 title = "How to Setup ESLint and Prettier in VSCode For React Project"
