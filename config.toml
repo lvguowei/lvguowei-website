@@ -3,7 +3,6 @@ languageCode = "en-us"
 title = "Guowei Lv"
 theme = "future-imperfect"
 preserveTaxonomyNames = true
-pygmentsuseclasses = true
 canonifyurls = true
 disqusShortname = "lvguoweime"
 googleAnalytics = "UA-71831707-2"
