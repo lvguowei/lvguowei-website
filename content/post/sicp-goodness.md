@@ -43,8 +43,6 @@ Now, let's evaluate the expression `(f 5)` using the two models.
 
 The process of this approach can be summarized as **evaluate the function and arguments and then apply**.
 
-1. Since 5 is already a number, so just apply it to `f`, we have
-
 {{< highlight scheme >}}
 
 (f 5)
@@ -96,6 +94,7 @@ Exercise 1.5 gives a way to test wether the language uses applicative order or n
 The test is as follows:
 
 {{< highlight scheme >}}
+
 (define (p) (p))
 
 (define (test x y)
