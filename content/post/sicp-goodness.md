@@ -23,9 +23,10 @@ Today's topic is about two ways to perform evaluation of the program: **Applicat
 
 Let's put here the example from the book.
 
-First, let's define some functions to calculate sum of squares of two numbers.
+First, define some functions to calculate the sum of squares of two numbers.
 
 {{< highlight scheme >}}
+
 (define (square x) (* x x))
 
 (define (sum-of-squares x y)
@@ -33,4 +34,44 @@ First, let's define some functions to calculate sum of squares of two numbers.
   
 (define (f a)
   (sum-of-squares (+ a 1) (* a 2)))
+
 {{< /highlight >}}
+
+Now, let's evaluate the expression `(f 5)` using the two models.
+
+# Applicative Order Evalutation
+
+The process of this approach can be summarized as **evaluate the function and arguments and then apply**.
+
+1. Since 5 is already a number, so just apply it to `f`, we have
+
+{{< highlight scheme >}}
+
+(sum-of-squares (+ 5 1) (* 5 2))
+
+{{< /highlight >}}
+
+2. Evaluate the arguments which are `(+ 5 1)` and `(* 5 2)`:
+
+{{< highlight scheme >}}
+
+(sum-of-squares 6 10)
+
+{{< /highlight >}}
+
+3. Apply function `sum-of-squares`:
+
+{{< highlight scheme >}}
+
+(+ (square 6) (square 10))
+  
+{{< /highlight >}}
+
+4. Evaluate arguments `(square 6)` and `(square 10)`:
+
+{{< highlight scheme >}}
+
+(+ (* 6 6) (* 10 10))
+  
+{{< /highlight >}}
+
