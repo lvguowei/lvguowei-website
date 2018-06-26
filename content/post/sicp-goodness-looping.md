@@ -17,7 +17,7 @@ date = 2018-06-16T21:07:45+03:00
 
 >If yes, **read SICP!!!**
 
-I was quite shocked at reading the following text from the book the first time:
+I was quite shocked when I first read the following text from the book:
 
 >... As a consequence, these languages(Ada, Pascal and C) can describe iterative processes only by resorting to special-purpose "looping constructs", such as **do**, **repeat**, **until**, **for**, and **while**. The implementation of Scheme ... does not share this defect. ...
 
