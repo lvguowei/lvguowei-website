@@ -96,7 +96,7 @@ Translate this into code we get:
     product
     (fact-iter (* counter product)
                (+ counter 1)
-               max-counter)))
+               max-count)))
 {{< /highlight >}}
 
 Let's again try to examine the shape of this process:
