@@ -1,11 +1,11 @@
 +++
 categories = ["SICP"]
+keywords = ["SICP", "Structure and Interpretation of Computer Programs", "sqrt", "average damping", "newton's method", "fixed point", "Scheme"]
 description = "Put together the sqrt related stuff from SICP"
 featured = "featured-sicp.jpg"
 featuredpath = "/img"
-title = "Sicp Goodness - A deep dive into square root"
+title = "Sicp Goodness - A deep dive into square root procedure"
 date = 2018-06-29T20:52:11+03:00
-draft = true
 +++
 
 >Do you think Computer Science **equals** building websites and mobile apps? 
@@ -162,8 +162,102 @@ Notice that the original function and the damped one has the same fixed point 2,
 
 # Newton's Method
 
+Actually in the beginning of post, the **iterative guessing** is a special case of **Newton's method**. Let's first give the definition of Newton's method and then explain why iterative guessing is a special case of it.
+
+>If `x -> g(x)` is a differentiable function, then a solution of the equation `g(x) = 0` is a fixed point of the function `x -> f(x)` where
+
+>`f(x) = x - g(x) / Dg(x)`
+
+>and `Dg(x)` is the derivative of `g` evaluated at `x`.
+
+Let's say we want to calculate the sqrt of **a**, that is `g(x) = x^2 - a = 0`. According to Newton's method, the solution is the fixed point of 
+
+{{< highlight scheme >}}
+f(x) = x - g(x) / Dg(x)
+      
+     = x - (x^2 - a) / 2x
+     
+     = x - x/2 + a/2x
+     
+     = x/2 + a/2x
+     
+     = (x + a/x) / 2
+     
+{{< /highlight >}}
+
+which is exact the same as previous methods.
+
+We get this result because we calculated the derivative by hand, let's now find a way to let the computer do that for us.
+
+Let `dx` be a very small number, `Dg(x)` can be calculated as 
+
+`Dg(x) = (g(x + dx) - g(x)) / dx`
+
+We can express the idea of derivative as a procedure:
+
+{{< highlight scheme >}}
+(define (deriv g)
+  (lambda (x)
+    (/ (- (g (+ x dx)) (g x)) dx)))
+{{< /highlight >}}
+
+Notice that `deriv`is a higher order procedure, it takes a procedure `g` and return a new procedure, which fits the math definition of derivative perfectly.
+
+With the aid of `deriv`, we can express Newton's method as a fixed point process.
+
+{{< highlight scheme >}}
+
+;; transform g -> f
+(define (newton-transform g)
+  (lambda (x)
+    (- x (/ g(x) ((deriv g) x)))))
+    
+(define (newton-method g guess)
+  (fixed-point (newton-transform g) guess))
+
+{{< /highlight >}}
 
 
+Now we can define **sqrt** in terms of `newton-method`:
+
+{{< highlight scheme >}}
+(define (sqrt x)
+  (newton-method (lambda (y) (- (square y) x)) 1.0 ))
+{{< /highlight >}}
 
 
+# Summary
 
+Phew, we have come to the end of this long journey, let's look back what just happened.
+
+We introduced 3 ways to implement function **sqrt**:
+
+1. Iterative Guessing (this is the same as 2, and essentially the same as 3)
+
+2. Fixed point + average damping
+
+3. Fixed point + newton's method
+
+
+See that method 2 and 3 share the *fixed point* part, indicating that we can further abstract things out.
+
+{{< highlight scheme >}}
+(define (fixed-point-of-transform g transform guess)
+  (fixed-point (transform g) guess))
+  
+;; 2
+(define (sqrt x)
+  (fixed-point-of-transform 
+    (lambda (y) (/ x y)) 
+    average-damp 
+    1.0))
+
+;; 3
+(define (sqrt x)
+  (fixed-point-of-transform 
+    (lambda (y) (- (square y) x)) 
+    newton-transform 
+    1.0))
+{{< /highlight >}}
+
+This is stunningly beautiful and satisfactory. Don't you agree?
