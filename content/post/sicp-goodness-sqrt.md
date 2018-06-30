@@ -148,7 +148,7 @@ I was scratch my head trying to get better understanding of this average damping
 
 > Progressively reduce the amplitude of (an oscillation or vibration).
 
-For example, we can damp the function f(x) = sin(x) by f(x) = x, the result looks like this:
+For example, we can multiply `f(x) = sin(x)` and `f(x) = x` together to form `f(x) = xsin(x)`, the result looks like this:
 
 {{< figure src="/img/damp-sin.png" >}}
 
