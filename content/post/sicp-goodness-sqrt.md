@@ -26,6 +26,8 @@ Computer isn't God, it needs step by step instructions to work, no exception for
 
 # Square Roots by Iterative Guessing
 
+This method is derived from Neton's method that we will discuss later.
+
 We can describe this method simply as follows:
 
 Suppose we want to find the sqrt of **a**.
@@ -104,7 +106,7 @@ Not hard to translate this into code:
   (try first-guess))
 {{< /highlight >}}
 
-Let's now trying to find out how this fix point thing is related to calculating sqrt.
+Let's now trying to find out how this fixed point thing is related to calculating sqrt.
 
 Say we want to find the sqrt of **a**. This means we are finding a **x** such that `x^2 = a`, we can also write it as `x = a/x`. Now this fits the form `f(x) = x`, and here `f(x) = a/x`. So we are actually finding a fixed point of function `f(x) = a/x`.
 
@@ -140,11 +142,16 @@ Now we can rewrite our sqrt function in terms of fixed point and average damp.
   (fixed-point (average-damp (lambda (y) (/ x y))) 1.0))
 {{< /highlight >}}
 
+
+Ha! If you pay attention this process has become exactly the same as the iterative guessing. But now we give everything a better name so that we can talk about them.
+
+**I think we should emphasize more about the power of names. In Greek mythology, you can not say a God's name casually because the name itself is too powerful. In programming, being able to give names to things is also very powerful, because then we can talk about, improve and change them.**
+
 I suggest that you stop for a second and appreciate how much expressive power we have at this point, and how we achieve all these by just combining functions.
 
 # More on average damping
 
-I was scratch my head trying to get better understanding of this average damping. I googled it, no result. But turns out that damping has some meaning in Physics.
+I was scratching my head trying to get better understanding of this average damping. I googled it, no result. But turns out that damping has some meaning in Physics.
 
 > Progressively reduce the amplitude of (an oscillation or vibration).
 
@@ -173,6 +180,7 @@ Actually in the beginning of post, the **iterative guessing** is a special case 
 Let's say we want to calculate the sqrt of **a**, that is `g(x) = x^2 - a = 0`. According to Newton's method, the solution is the fixed point of 
 
 {{< highlight scheme >}}
+
 f(x) = x - g(x) / Dg(x)
       
      = x - (x^2 - a) / 2x
