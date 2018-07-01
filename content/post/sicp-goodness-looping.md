@@ -3,7 +3,7 @@ categories = ["SICP"]
 description = "About different types of recursion"
 featured = "featured-sicp.jpg"
 featuredpath = "/img"
-title = "Sicp Goodness - Why you don't need looping constructs"
+title = "SICP Goodness - Why you don't need looping constructs"
 date = 2018-06-16T21:07:45+03:00
 +++
 

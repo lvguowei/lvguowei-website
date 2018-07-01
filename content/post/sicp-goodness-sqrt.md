@@ -4,7 +4,7 @@ keywords = ["SICP", "Structure and Interpretation of Computer Programs", "sqrt",
 description = "Put together the sqrt related stuff from SICP"
 featured = "featured-sicp.jpg"
 featuredpath = "/img"
-title = "Sicp Goodness - A deep dive into square root procedure"
+title = "SICP Goodness - A deep dive into square root procedure"
 date = 2018-06-29T20:52:11+03:00
 +++
 
