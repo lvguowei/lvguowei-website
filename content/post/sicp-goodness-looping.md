@@ -131,6 +131,44 @@ We can see that here the number of steps required grows linearly with *n*, such 
 
 In short, the execution of a **recursive procedure** can be a **linear recursive process** or a **linear iterative process** (or something else like **tree recursive process**).
 
+# Iterative V.S recursive process illustrated
+
+Sometimes the key to deep understanding is to see more examples. So now let's examine another similar example. This time is to calculate the sum of two numbers.
+
+**The iterative process:**
+
+{{< highlight scheme >}}
+(define (sum a b)
+  (if (= a 0)
+    b
+    (sum (- a 1) (+ b 1))))
+{{< /highlight >}}
+
+{{< figure src="/img/iteration.png" >}}
+
+
+Let's use this screenshot to explain how the process looks like. The author of the book **GJS** wants to calculate the sum of 3 and 4 using the above `sum` procedure. But he is too lazy to do the work, so he deligates the work to someone else. He writes the numbers 3 and 4 and his name **GJS** on a paper note (He writes his name to let people know who to report to if he gets the final anwser). Now he passes the note to the next person **A**. **A** is also lazy, he does *a minus 1* and *b plus 1* and change the numbers on the paper to be 2 and 5 and passes it to the next person **B**. Well **B** changes the number to 1 and 6 and passes to **C**. **C** changes the numbers to 0 and 7 and passes to **D**. Finally D knows the anwser (because now a is 0), and return the answer 7 to *GJS*.
+
+Note two things here.
+
+1. Ther is only one note through the whole process.
+2. Once the person finishes his work, he can pass the note to next person (or give the final answer) and go home. There is no need to stick around.
+
+**The recursive process:**
+
+{{< highlight scheme >}}
+(define (sum a b)
+  (if (= a 0)
+    b
+    (+ 1 (sum (- a 1) b))))
+{{< /highlight >}}
+
+{{< figure src="/img/recursion.png" >}}
+
+The same story, now we follow the recursive procedure. First the author **GJS** writes a note with (3, 4, GJS) and passes it to **Joe**. **Joe** will write a new note with (2, 4, Joe) and passes it to Harry, but he cannot go home yet, he has to stay and wait for Harry to tell him an answer, and he has to add 1 to that answer and pass it back to **GJS**.
+
+Note that now that every person has to write a new note with his name on it. And has to wait for the next person's answer so that he can add 1 to it and pass it to the previous person.
+
 Now that we understand the two types of recursive procedure. We can go back to answer the question about looping constructs.
 
 We can now easily see that the iterative process is actually equivalent to the looping constructs.
@@ -140,4 +178,3 @@ We can now easily see that the iterative process is actually equivalent to the l
 Now I hope that you have gained a deeper understanding about looping and recursive and the relation between the two.
 
 ~THE END~
-
