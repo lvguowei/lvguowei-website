@@ -149,7 +149,7 @@ To test your understanding, solve this exercise in SICP:
         ((= n 1) b)
         ((= n 2) a)
         (else
-         (f-iter (+ a (* b 2) (* c 3)) a b (- n 1)))))
+         (iter (+ a (* b 2) (* c 3)) a b (- n 1)))))
 
 (define (f-iter n) (iter 2 1 0 n))
 {{< /highlight >}}
