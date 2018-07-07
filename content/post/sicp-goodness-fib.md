@@ -18,7 +18,7 @@ date = 2018-07-06T20:35:43+03:00
 
 >If yes, **read SICP!!!**
 
-Every programmer at some point has studied fibonacci numbers, mostly likely as an interview question. Just in case you forgot it, let's give the definition here:
+Every programmer at some point has studied fibonacci numbers, mostly likely as an interview question. Just in case you forget it, let's give the definition here:
 
 >fib(0) = 0
 
