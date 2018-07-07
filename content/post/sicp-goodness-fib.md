@@ -1,9 +1,10 @@
 +++
 categories = ["SICP"]
-description = "About fibonacci numbers and more."
+keywords = ["SICP", "Fibonacci"]
+description = "About fibonacci numbers and more"
 featured = "featured-sicp.jpg"
 featuredpath = "/img"
-title = "Sicp Goodness - Fibonacci numbers and more"
+title = "Sicp Goodness - Fibonacci numbers"
 date = 2018-07-06T20:35:43+03:00
 +++
 
