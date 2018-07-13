@@ -5,7 +5,7 @@ featured = "featured-sicp.jpg"
 featuredpath = "/img"
 title = "SICP Goodness - What is Meant by Data?"
 date = 2018-07-10T21:36:11+03:00
-draft = True
+draft = true
 +++
 
 >Do you think Computer Science **equals** building websites and mobile apps? 
@@ -160,7 +160,8 @@ The first one is idiot bird or *I* for short. As its name says, it is not that s
 Let's implement it in Scheme.
 
 {{< highlight scheme >}}
-(define (I a) a)
+(define I
+  (lambda (a) a))
 {{< /highlight >}}
 
 ## Mocking Bird
@@ -169,7 +170,8 @@ Let's implement it in Scheme.
 This one is pretty interesting. It takes a function, and calls it on itself.
 
 {{< highlight scheme >}}
-(define (M f) (f f))
+(define M
+  (lambda (f) (f f)))
 {{< /highlight >}}
 
 What is `M(I)`?
@@ -185,3 +187,52 @@ Uh-oh, it is (M M) which is (M M) which is (M M) ... so it never ends.
 
 {{< figure src="/img/kestrel.jpg" >}}
 
+The *kestrel* takes *a* and *b* then returns *a*.
+
+{{< highlight scheme >}}
+(define K
+  (lambda (a) (lambda (b) a)))
+{{< /highlight >}}
+
+This is the built-in function in Haskel, called `const`. Why `const`? Let's say if we call `K` with 5. This will return a new function, that no matter what you call it with, it will always return 5. Hence the name `const`.
+
+Now the fun part.
+
+`K I x = I`
+
+Each side of the equation is a function, so we can do the following:
+
+`K I x y = I y`
+
+We add `y` to both sides. Since `I y` always returns y, we will then get
+
+`K I x y = y`.
+
+If we see `K I` as one function, then what `K I` does is that it takes `x` and `y` then returns `y`.
+
+So `K I` is opposite to `K`.
+
+<iframe src="https://giphy.com/embed/ZHkVpDiI3vIiY" width="480" height="384" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/what-surprised-shock-ZHkVpDiI3vIiY"></a></p>
+
+This is actually not hard to understand.
+
+As we already know, if you call `K` with only one parameter `x`, it returns a *constant x function*. So `K I` will return a function that will always return `I`. So `K I a = I`, then call it with `b` will get `K I a b = I b = b`.
+
+So we just derived `Kite`.
+
+## Kite
+
+{{< figure src="/img/kite.jpg" >}}
+
+{{< highlight scheme >}}
+(define KI
+  (lambda (a) (lambda (b) b)))
+{{< /highlight >}}
+
+This is the opposite of Kestrel.
+
+Now let's look at a new bird: *Cardinal*.
+
+## Cardinal
+
+{{< figure src="/img/cardinal.jpg" >}}
