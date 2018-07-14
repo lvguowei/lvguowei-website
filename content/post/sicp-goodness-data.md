@@ -1,5 +1,6 @@
 +++
 categories = ["SICP"]
+keywords = ["SICP", "lambda calculus", "structure and interpretation of computer programs"]
 description = "Just a little bit of lambda calculus"
 featured = "featured-sicp.jpg"
 featuredpath = "/img"

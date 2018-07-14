@@ -1,6 +1,6 @@
 +++
 categories = ["SICP"]
-keywords = ["SICP", "Fibonacci"]
+keywords = ["SICP", "Fibonacci", "structure and interpretation of computer programs"]
 description = "About fibonacci numbers and more"
 featured = "featured-sicp.jpg"
 featuredpath = "/img"
