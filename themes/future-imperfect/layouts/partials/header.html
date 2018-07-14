@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="/css/font-awesome.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/add-on.css" />
-    <link rel="stylesheet" href="/css/vs2015.css"> {{ end }} {{ if ne ($.Scratch.Get "cssFiles") false }} {{ range $.Scratch.Get "cssFiles" }} {{ if ne . "default" }}
+    <link rel="stylesheet" href="/css/atom.css"> {{ end }} {{ if ne ($.Scratch.Get "cssFiles") false }} {{ range $.Scratch.Get "cssFiles" }} {{ if ne . "default" }}
     <link rel="stylesheet" href="{{ . }}" /> {{ end }} {{ end }} {{ end }}
 
     <!--[if lte IE 9]><link rel="stylesheet" href="/css/ie9.css" /><![endif]-->
