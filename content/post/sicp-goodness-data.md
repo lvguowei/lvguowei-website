@@ -4,9 +4,9 @@ keywords = ["SICP", "lambda calculus", "structure and interpretation of computer
 description = "Just a little bit of lambda calculus"
 featured = "featured-sicp.jpg"
 featuredpath = "/img"
-title = "SICP Goodness - What is Meant by Data?"
+title = "SICP Goodness - What is Meant by Data? (I)"
 date = 2018-07-10T21:36:11+03:00
-draft = true
+draft = false
 +++
 
 >Do you think Computer Science **equals** building websites and mobile apps? 
@@ -237,3 +237,25 @@ Now let's look at a new bird: *Cardinal*.
 ## Cardinal
 
 {{< figure src="/img/cardinal.jpg" >}}
+
+`Cardinal` takes a function and two parameters, but calling them in different order.
+
+{{< highlight scheme >}}
+(define C
+  (lambda (f)
+    (lambda (a)
+      (lambda (b) ((f b) a)))))
+{{< /highlight >}}
+
+Let's see an example. What is `C K I M`?
+
+`C` takes in a function `K` and two parameters `I` and `M` and calles them in different order which is `K M I` = `M`.
+
+Emm, so `C K I M` = `M`, if we see `C K` as a new function. Then `C K` is `KI`! You can type in the scheme code and prove this yourself.
+
+<iframe src="https://giphy.com/embed/qVVVfmHDMBZug" width="480" height="207" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/qVVVfmHDMBZug"></a></p>
+
+OK, I think we have introduced enough birds, and this post is getting too long so I will stop here. In part II, we will continue and talk about what is Church Encoding. And then get back to our SICP exercise.
+
+Stay tuned!
+
