@@ -213,8 +213,6 @@ If we see `K I` as one function, then what `K I` does is that it takes `x` and `
 
 So `K I` is opposite to `K`.
 
-<iframe src="https://giphy.com/embed/ZHkVpDiI3vIiY" width="480" height="384" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/what-surprised-shock-ZHkVpDiI3vIiY"></a></p>
-
 This is actually not hard to understand.
 
 As we already know, if you call `K` with only one parameter `x`, it returns a *constant x function*. So `K I` will return a function that will always return `I`. So `K I a = I`, then call it with `b` will get `K I a b = I b = b`.
@@ -252,8 +250,6 @@ Let's see an example. What is `C K I M`?
 `C` takes in a function `K` and two parameters `I` and `M` and calles them in different order which is `K M I` = `M`.
 
 Emm, so `C K I M` = `M`, if we see `C K` as a new function. Then `C K` is `KI`! You can type in the scheme code and prove this yourself.
-
-<iframe src="https://giphy.com/embed/qVVVfmHDMBZug" width="480" height="207" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/qVVVfmHDMBZug"></a></p>
 
 OK, I think we have introduced enough birds, and this post is getting too long so I will stop here. In part II, we will continue and talk about what is Church Encoding. And then get back to our SICP exercise.
 
