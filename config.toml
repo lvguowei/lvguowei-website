@@ -11,6 +11,7 @@ paginate = 5
 enableRobotsTXT = true
 canonifyURLs = true
 
+
 [params]
     # Sets the meta tag description, usually reserved for the main page
     description          = "Guowei Lv"
@@ -109,11 +110,11 @@ canonifyURLs = true
     linkedin        = "lvguowei"
     slideshare      = ""
     stackoverflow   = ""
-    reddit          = ""
+    reddit          = "lvguowei"
     pinterest       = ""
     googleplus      = ""
-    facebook        = ""
+    facebook        = "lvguowei"
     facebook_admin  = ""
     twitter_domain  = ""
-#    twitter         = ""
+    twitter         = "lvguowei1002"
     email           = "lvguowei1002@gmail.com"
