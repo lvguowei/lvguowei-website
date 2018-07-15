@@ -1,5 +1,6 @@
 +++
 categories = ["SICP"]
+keywords = ["SICP", "recursion", "structure and interpretation of computer programs"]
 description = "About different types of recursion"
 featured = "featured-sicp.jpg"
 featuredpath = "/img"

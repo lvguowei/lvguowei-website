@@ -1,6 +1,6 @@
 +++
 categories = ["SICP"]
-keywords = ["SICP music", "Scheme"]
+keywords = ["SICP music", "Scheme", "structure and interpretation of computer programs"]
 description = "And the music in the beginning of the SICP online courses"
 featured = "featured-sicp.jpg"
 featuredpath = "/img"

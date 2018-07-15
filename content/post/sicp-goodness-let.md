@@ -1,7 +1,7 @@
 +++
 categories = ["SICP"]
 description = "A guess about the origin of the new let keywork in javascript"
-keywords = ["SICP", "JavaScript", "ES6 let", "ES6"]
+keywords = ["SICP", "JavaScript", "ES6 let", "ES6", "structure and interpretation of computer programs"]
 featured = "featured-sicp.jpg"
 featuredpath = "/img"
 title = "SICP Goodness - A guess of why was the name 'let' chosen for block-scoped variable declarations in JavaScript"

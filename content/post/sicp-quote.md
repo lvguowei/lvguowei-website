@@ -1,5 +1,6 @@
 +++
 categories = ["SICP"]
+keywords = ["SICP", "structure and interpretation of computer programs"]
 description = "Find the right level of abstraction"
 featured =  "featured-sicp.jpg"
 featuredpath =  "/img"
