@@ -52,6 +52,8 @@ var deleteAll = function() {
           if (err) {
             console.log(err);
             next(err);
+          } else {
+            next();
           }
         });
       });
