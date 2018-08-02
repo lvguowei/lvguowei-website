@@ -68,6 +68,10 @@ These are probably the most contraversial from this list.
 
 <hr />
 
+{{< youtube V6VP-2aIcSc >}}
+
+<hr />
+
 # Suckless
 
 [Suckless](https://suckless.org/) promote simple and elegant software. Implemented in C.
@@ -76,3 +80,6 @@ These are probably the most contraversial from this list.
 
 https://jonathanwhiting.com/writing/blog/games_in_c/
 
+# Harmful stuff
+
+http://harmful.cat-v.org/software/OO_programming/
