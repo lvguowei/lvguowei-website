@@ -83,3 +83,5 @@ These are probably the most contraversial from this list.
 # Harmful stuff
 
 [link](http://harmful.cat-v.org/software/OO_programming/)
+
+{{< img-post "/img" "jesus-long.png" "" "center" >}}
