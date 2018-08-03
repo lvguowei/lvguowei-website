@@ -78,8 +78,8 @@ These are probably the most contraversial from this list.
 
 # Why I Write Games in C
 
-https://jonathanwhiting.com/writing/blog/games_in_c/
+[link](https://jonathanwhiting.com/writing/blog/games_in_c/)
 
 # Harmful stuff
 
-http://harmful.cat-v.org/software/OO_programming/
+[link](http://harmful.cat-v.org/software/OO_programming/)
