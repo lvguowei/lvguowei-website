@@ -74,7 +74,7 @@ These are probably the most contraversial from this list.
 
 # Advice for Writing Small Programs in C
 
-Sean Barrett is the guy behind the famous stb library.
+Sean Barrett is the guy behind the famous [stb](https://github.com/nothings/stb) library.
 
 {{< youtube eAhWIO1Ra6M >}}
 
