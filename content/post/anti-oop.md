@@ -98,4 +98,7 @@ Sean Barrett is the guy behind the famous [stb](https://github.com/nothings/stb)
 
 [link](http://harmful.cat-v.org/software/OO_programming/)
 
+<hr />
+
+
 {{< img-post "/img" "jesus-long.png" "" "center" >}}
