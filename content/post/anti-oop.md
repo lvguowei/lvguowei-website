@@ -72,6 +72,20 @@ These are probably the most contraversial from this list.
 
 <hr />
 
+# Advice for Writing Small Programs in C
+
+Sean Barrett is the guy behind the famous stb library.
+
+{{< youtube eAhWIO1Ra6M >}}
+
+<hr />
+
+# What Programming is Never About
+
+{{< youtube Lzc3HcIgXis >}}
+
+<hr />
+
 # Suckless
 
 [Suckless](https://suckless.org/) promote simple and elegant software. Implemented in C.
