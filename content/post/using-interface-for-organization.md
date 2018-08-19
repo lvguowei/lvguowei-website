@@ -5,8 +5,7 @@ description = "Use Interface to better organize your code"
 keywords = ["Java", "Thinking in Java", "Interface"]
 featured = "featured-java.png"
 featuredpath = "/img"
-featuredalt = ""
-title = "Using Interface for Organization"
+title = "Using Interface for Code Organization"
 date = 2018-08-19T22:13:05+03:00
 +++
 
