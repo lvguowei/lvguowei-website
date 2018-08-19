@@ -3,7 +3,7 @@ author = "Guowei Lv"
 categories = ["Android Development"]
 keywords = ["Android Development", "Image Cache", "Jake Wharton", "DiskLruCache", "Solid Principles"]
 description = "Develop a image loader guided by design patterns"
-featured = ""
+featured = "android-source-design-patterns.jpg"
 featuredpath = "/img"
 title = "Android Design Pattern - Build a SOLID Image Loader"
 date = 2018-08-16T12:29:18+03:00
@@ -13,9 +13,6 @@ draft = false
 [SOLID Principles](https://en.wikipedia.org/wiki/SOLID) and **Design Patterns** play an important role in Android development.
 
 Lets take a look at how to design and implement an image loader step by step. This example comes from the book *Android Source Code Design Patterns - Analysis and Practice*. I also rewrote all the code from Java to Kotlin and made some bug fixes.
-
-{{< figure src="/img/android-source-design-patterns.jpg" >}}
-
 
 # Step 1: Make it work
 
