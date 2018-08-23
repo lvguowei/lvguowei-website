@@ -5,7 +5,7 @@ keywords = ["singleton pattern", "design pattern", "GoF", "enum singleton"]
 description = "A Brief Summary on Different Flavors of Singleton Pattern"
 featured = "singleton.jpg"
 featuredpath = "/img"
-title = "Singleton Pattern Inside Out"
+title = "Singleton Pattern Inside and Out"
 date = 2018-08-20T21:38:04+03:00
 +++
 
