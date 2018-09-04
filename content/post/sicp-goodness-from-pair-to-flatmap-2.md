@@ -215,10 +215,8 @@ We can use the `accumulate` function to achieve this:
 Turns out this *map and then flatten the result* is a common pattern. We can abstract it out into a `flat-map` function.
 
 {{< highlight scheme >}}
-
-(define (flat-map data)
-  (accumulate append '() data))
-
+(define (flat-map proc data)
+  (accumulate append '() (map proc data)))
 {{< /highlight >}}
 
 Then we can rewrite `nested` using `flat-map`:
@@ -226,10 +224,9 @@ Then we can rewrite `nested` using `flat-map`:
 {{< highlight scheme >}}
 (define (nested n)
   (flat-map
-    (map (lambda (x)
-           (map (lambda (y) (list y x)) (enumerate-interval 0 x)))
-      (enumerate-interval 0 n))))
-
+    (lambda (x)
+       (map (lambda (y) (list y x)) (enumerate-interval 0 x)))
+    (enumerate-interval 0 n)))
 {{< /highlight >}}
 
 We have come to the end of this journey. We started with just a simple data structure `pair`, and all the way to quite advanced `flat-map`. We have hand crafted **everything** in between. Hope you enjoyed it as much as I do.
