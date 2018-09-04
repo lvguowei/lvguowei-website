@@ -1,7 +1,7 @@
 +++
 author = "Guowei Lv"
 categories = ["SICP"]
-description = "How to implement everything using pairs"
+description = "Explore the power of list"
 featured = "featured-sicp.jpg"
 featuredpath = "/img"
 title = "SICP Goodness - From Pair to Flatmap (II)"
