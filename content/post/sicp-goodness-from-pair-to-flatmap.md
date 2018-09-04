@@ -162,3 +162,6 @@ This is implemented by *cons up* a result list while *cdring* down a list.
         ((null? (cdr items)) items)
         (else (last-pair (cdr items)))))
 {{< /highlight >}}
+
+
+Part II of this series can be found [here](https://www.lvguowei.me/post/sicp-goodness-from-pair-to-flatmap-2/).
