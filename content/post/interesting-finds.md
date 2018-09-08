@@ -18,3 +18,7 @@ A book recently published that seems to be much better than clean code [A Philos
 MIT Course [Computational Science and Engineering](https://www.youtube.com/watch?v=CgfkEUOFAj0)
 
 A book by Niklaus Wirth [Algorithms + Data Structures = Programms](https://www.amazon.com/Algorithms-Structures-Prentice-Hall-Automatic-Computation/dp/0130224189/ref=sr_1_1?s=books&ie=UTF8&qid=1535783313&sr=1-1&keywords=algorithms+%2B+data+structures), and one that has similar content but without compiler implementation and uses Modular-2 [Algorithms&Data Structures](https://www.amazon.com/gp/product/0130220051/ref=dbs_a_def_rwt_bibl_vppi_i1)
+
+Good materials to learn classical mechanics [theoreticalminimum](theoreticalminimum.com).
+
+A book about coding classic mechanics in Scheme: structure and interpretation of classical mechanics.
