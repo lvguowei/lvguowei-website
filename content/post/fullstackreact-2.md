@@ -11,7 +11,7 @@ date = 2018-10-05T19:09:09+03:00
 
 # Component properties
 
-It would be quite boring if we have only static component. We need to be able to pass data to component to render dynamically. We can achieve this by using *properties*.
+>Component takes **properties**, and spits out views on screen.
 
 Let's create the `Product` component to show how to use properties.
 
