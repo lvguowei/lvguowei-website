@@ -90,3 +90,40 @@ Let's see an example here.
 **Step 3** Evaluate the body of the function `(* x x)` within E1. Which results in 25.
 
 {{< figure src="/img/environment_model_2.png" >}}
+
+Let's test out our knowledge by doing some exercises from the book.
+
+# Exercise 3.9
+
+In section 1.21 we used the substitution model to analyze two procedures for computing factorials, a recursive version
+
+{{< highlight scheme >}}
+(define (factorial n)
+  (if (= n 1)
+      1
+      (* n (factorial (- n 1)))))
+{{< /highlight >}}
+
+and an iterative version
+
+{{< highlight scheme >}}
+(define (factorial n)
+  (fact-iter 1 1 n))
+(define (fact-iter product counter max-count)
+  (if (> counter max-count)
+      product
+      (fact-iter (* counter product) (+ counter 1) max-counter)))
+{{< /highlight >}}
+
+Show the environment structures created by evaluating `(factorial 6)` using each version of the `factorial` procedure.
+
+<hr />
+
+The recursive version
+
+{{< figure src="/img/ex3.9-1.png" >}}
+
+The iterative version
+
+{{< figure src="/img/ex3.9-2.png" >}}
+
