@@ -5,7 +5,6 @@ featured = "featured-sicp.jpg"
 featuredpath = "/img"
 title = "SICP Goodness - The Environment Model"
 date = 2018-10-08T19:53:20+03:00
-draft = false
 +++
 
 >Do you think Computer Science **equals** building websites and mobile apps? 
