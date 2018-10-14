@@ -5,7 +5,7 @@ featured = "featured-sicp.jpg"
 featuredpath = "/img"
 title = "SICP Goodness - The Environment Model"
 date = 2018-10-08T19:53:20+03:00
-draft = true
+draft = false
 +++
 
 >Do you think Computer Science **equals** building websites and mobile apps? 
@@ -127,3 +127,75 @@ The iterative version
 
 {{< figure src="/img/ex3.9-2.png" >}}
 
+# Exercise 3.10
+
+In the `make-withdraw` procedure, the local variable `balance` is created as a parameter of `make-withdraw`.
+
+{{< highlight scheme >}}
+(define (make-withdraw balance)
+  (lambda (amount)
+    (if (>= balance amount)
+        (begin (set! balance (- balance amount))
+               balance)
+        "Insufficient funds")))
+{{< /highlight >}}
+
+We could also create the local state variable explicitly, using `let`, as follows.
+
+{{< highlight scheme >}}
+(define (make-withdraw initial-amount)
+  (let ((balance initial-amount))
+    (lambda (amount)
+      (if (>= balance amount)
+          (begin (set! balance (- balance amount))
+                 balance)
+          "Insufficient funds"))))
+{{< /highlight >}}
+
+Recall from section 1.3.2 that `let` is simply syntactic sugar for a procedure call:
+
+{{< highlight abc >}}
+(let ((<var> <exp>)) <body>)
+{{< /highlight >}}
+
+is interpreted as an alternate syntax for
+
+{{< highlight abc >}}
+((lambda (<var>) (body)) <exp>)
+{{< /highlight >}}
+
+Use the environment model to analyze this alternate version of `make-withdraw`, drawing figures like the ones above to illustrate the interactions
+
+
+{{< highlight scheme >}}
+(define W1 (make-withdraw 100))
+(W1 50)
+(define W2 (make-withdraw 100))
+{{< /highlight >}}
+
+Show that the two versions of `make-withdraw` create objects with the same behavior. How do the environment structures difffer for the two versions?
+
+<hr />
+
+Environment structure for the first version:
+
+{{< figure src="/img/ex3.10-1.png" >}}
+
+As for the second version, we have to do some preprocessing on the procedure. Basically convert the `let` to an extra function call:
+
+{{< highlight scheme >}}
+(define (make-withdraw initial-amount)
+  ((lambda (balance)
+     (lambda (amount)
+       (if (>= balance amount)
+           (begin (set! balance (- balance amount))
+                  balance)
+           "Insufficient fund")))
+   initial-amount))
+{{< /highlight >}}
+
+Environment structure for the seconde version:
+
+{{< figure src="/img/ex3.10-2.png" >}}
+
+P.S. It comes as a hindsight that the environment model is crucial to understanding the upcoming *eval* and *apply* cycle in Section 4.1.
