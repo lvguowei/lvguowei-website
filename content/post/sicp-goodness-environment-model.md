@@ -153,13 +153,13 @@ We could also create the local state variable explicitly, using `let`, as follow
 
 Recall from section 1.3.2 that `let` is simply syntactic sugar for a procedure call:
 
-{{< highlight abc >}}
+{{< highlight scheme >}}
 (let ((<var> <exp>)) <body>)
 {{< /highlight >}}
 
 is interpreted as an alternate syntax for
 
-{{< highlight abc >}}
+{{< highlight scheme >}}
 ((lambda (<var>) (body)) <exp>)
 {{< /highlight >}}
 
