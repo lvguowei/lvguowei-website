@@ -93,4 +93,40 @@ Now the list has one item which looks like
 
 By using properties, components can be easily reused.
 
-[Source Code](https://github.com/lvguowei/fullstackreact/commit/178cb8c5498b1931a1619f25ec978bd29311644a)
+# A List of Products
+
+Next, let's show a list of products instead of one.
+
+It is very simple to do in React.
+
+First, we sort the products based on the number of votes.
+
+Second, we map the products to a list of `Product` components.
+
+Last, return the list of `Product` components in the render function.
+
+{{< highlight js >}}
+
+class ProductList extends Component {
+  render() {
+    const sorted = products.sort((a, b) => b.votes - a.votes);
+    const productComponents = sorted.map(product => (
+      <Product
+        key={"product-" + product.id}
+        id={product.id}
+        title={product.title}
+        description={product.description}
+        url={product.url}
+        votes={product.votes}
+        submitterAvatarUrl={product.submitterAvatarUrl}
+        productImageUrl={product.productImageUrl}
+      />
+    ));
+
+    return <div className="ui unstackable items">{productComponents}</div>;
+  }
+}
+
+{{< /highlight >}}
+
+[Source code](https://github.com/lvguowei/fullstackreact/tree/3861b008fa4878c0da877ca5bfbc055ede34d583)
