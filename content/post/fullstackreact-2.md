@@ -59,11 +59,6 @@ Notice how we use `this.props` all over the place. These properties are passed i
 
 {{< highlight js >}}
 
-import React, { Component } from "react";
-import "./App.css";
-import Product from "./Product";
-import products from "./Seed";
-
 class ProductList extends Component {
   render() {
     const product = products[0];
@@ -128,5 +123,8 @@ class ProductList extends Component {
 }
 
 {{< /highlight >}}
+
+{{< figure src="/img/fullstackreact-screenshot-3.png" >}}
+
 
 [Source code](https://github.com/lvguowei/fullstackreact/tree/3861b008fa4878c0da877ca5bfbc055ede34d583)
