@@ -9,10 +9,11 @@ My name is Guowei Lv. I'm a polyglot programmer. I mostly speak Java and Kotlin 
 
 Programming is hard enough to often make people lose their minds. Calm down and think, be practical and sane.
 
+Feel free to drop me a message about anything!
 
 <form name="contact" method="POST" netlify>
   <p>
-    <label>Your Name: <input type="text" name="name" /></label>   
+    <label>Your Name: <input type="text" name="name" /></label>
   </p>
   <p>
     <label>Your Email: <input type="email" name="email" /></label>
