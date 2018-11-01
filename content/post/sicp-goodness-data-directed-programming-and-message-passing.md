@@ -142,8 +142,9 @@ For the polar form, the selectors and constructors can be implemented as:
 
 {{< /highlight >}}
 
-
 As we can see, as to the 4 selectors, some are easy to implement in polar form and some are easy to implement in rectangular form.
+
+> Can we think of this as two implementation of some interface or super abstract class?
 
 So far so good. Or is it?
 
