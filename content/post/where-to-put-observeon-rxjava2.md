@@ -37,7 +37,7 @@ date = 2018-11-08T20:56:01+02:00
     }
 {{< /highlight >}}
 
-**Rx Master**: ... Read the Doc:
+**Rx Master**: ... Read the Doc of `observeOn`:
 
 >Modifies an ObservableSource to perform its emissions and notifications on a specified {@link Scheduler}
 
