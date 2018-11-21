@@ -4,7 +4,7 @@ categories = ["SICP"]
 description = "Is this polymorphism?"
 featured = "featured-sicp.jpg"
 featuredpath = "/img"
-title = "SICP Goodness - Data Directed Programming and Message Passing (II)"
+title = "SICP Goodness - Data Directed Programming (II)"
 date = 2018-11-02T20:33:51+02:00
 +++
 
@@ -29,9 +29,6 @@ One straight forward solution would be just to tag the complex number with its o
 ;; Attach a tag
 (define (attach-tag type-tag contents)
   (cons type-tag contents))
-
-;; Get the tag
-(define (type-tag datum)
   (if (pair? datum)
       (car datum)
       (error "Bad tagged datum -- TYPE-TAG" datum)))

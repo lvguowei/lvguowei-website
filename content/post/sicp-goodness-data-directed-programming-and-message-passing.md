@@ -4,7 +4,7 @@ categories = ["SICP"]
 description = "Is this polymorphism?"
 featured = "featured-sicp.jpg"
 featuredpath = "/img"
-title = "SICP Goodness - Data Directed Programming and Message Passing (I)"
+title = "SICP Goodness - Data Directed Programming (I)"
 date = 2018-10-28T20:17:15+02:00
 +++
 
