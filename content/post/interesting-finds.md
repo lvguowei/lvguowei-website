@@ -22,3 +22,6 @@ A book by Niklaus Wirth [Algorithms + Data Structures = Programms](https://www.a
 Good materials to learn classical mechanics [theoreticalminimum](theoreticalminimum.com).
 
 A book about coding classic mechanics in Scheme: structure and interpretation of classical mechanics.
+
+An assembly coding game that you never asked for. http://www.zachtronics.com/tis-100/
+
