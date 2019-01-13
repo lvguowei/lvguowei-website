@@ -8,7 +8,6 @@ title = "SICP Goodness - From Pair to Flatmap (II)"
 date = 2018-09-01T10:12:11+03:00
 +++
 
-
 >Do you think Computer Science **equals** building websites and mobile apps? 
 
 >Are you feeling that you are doing **repetitive** and **not so intelligent** work?
