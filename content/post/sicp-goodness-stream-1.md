@@ -1,7 +1,7 @@
 +++
 categories = ["SICP"]
 keywords = ["SICP", "lambda calculus", "structure and interpretation of computer programs"]
-description = "Just a little bit of lambda calculus"
+description = "Stream is just delayed list"
 featured = "featured-sicp.jpg"
 featuredpath = "/img"
 title = "SICP Goodness - Stream (I)"
