@@ -9,6 +9,11 @@ My name is Guowei Lv. I'm a polyglot programmer. I mostly speak Java and Kotlin 
 
 Programming is hard enough to often make people lose their minds. Calm down and think, be practical and sane.
 
+<audio controls>
+  <source src="/file/aboutme.mp3" type="audio/mpeg" />
+  Your browser does not support the audio element.
+</audio>
+
 Feel free to drop me a message about anything!
 
 <form name="contact" method="POST" netlify>
