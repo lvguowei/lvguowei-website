@@ -81,3 +81,17 @@ Now launch the VisualStudio by calling
 
 Right click on the solution, and change the working directory to the new data directory.
 
+Now let's add a dialog.
+{{< highlight c >}}
+#include <stdint.h>
+#include <windows.h>
+int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
+                     LPSTR lpCmdLine, int nCmdShow) {
+  MessageBox(0, "This is Handmade Hero", "Handmade Hero", MB_OK|MB_ICONINFORMATION);
+  return 0;
+}
+{{< /highlight >}}
+
+We have to also modify the build script to `cl -Zi ..\handmadehero\code\win32_handmade.cpp user32.lib`.
+
+~The End~
