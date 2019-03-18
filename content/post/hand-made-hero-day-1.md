@@ -77,7 +77,7 @@ Make a `data` directory in `handmadehero` to put all the things needed for the g
 
 Now launch the VisualStudio by calling
 
-`devenv w:\build\handmadehero.exe`
+`devenv w:\build\win32_handmade.exe`
 
 Right click on the solution, and change the working directory to the new data directory.
 
