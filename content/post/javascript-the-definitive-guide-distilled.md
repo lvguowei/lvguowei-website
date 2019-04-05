@@ -114,6 +114,15 @@ All objects created by object literals have the same prototype object `Object.pr
 
 Objects created using the `new` keyword and a constructor invocation use the value of the **property** property of the constructor function as their prototype. For example, the object created by `new Array()` uses `Array.prototype` as its prototype.
 
+# Object.create()
+
+ECMAScript 5 defines a method, `Object.create()` that creates a new object, using its first argument as the prototype of that object.
+
+{{< highlight javascript>}}
+var o1 = Object.create({x:1, y:2});        // o1 inherits properties x and y
+var o2 = Object.create(null);              // o2 inherits no props or methods
+var o3 = Object.create(Object.prototype);  // o3 is like {} or new Object
+{{< /highlight >}}
 
 {{< highlight javascript>}}
 {{< /highlight >}}

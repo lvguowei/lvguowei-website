@@ -46,7 +46,7 @@ canonifyURLs = true
 # parms.intro will appear on the sidebar
 # This is optional, but it's suggested to use
 [params.intro]
-    header    = "Guowei Lv"
+    header    = "Guowei Lv 吕国威"
 
     paragraph = "Thinker · Writer · Coder · Painter"
 
