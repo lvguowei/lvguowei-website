@@ -106,5 +106,14 @@ var d = new Date();        // Create a Date object representing the current time
 var r = new RegExp("js");  // Create a RegExp object for pattern matching
 {{< /highlight >}}
 
+# prototypes
+
+Every JavaScript object has a second JavaScript object associated with it. This second object is known as a prototype, and the first object inherits properties from the prototype.
+
+All objects created by object literals have the same prototype object `Object.prototype`.
+
+Objects created using the `new` keyword and a constructor invocation use the value of the **property** property of the constructor function as their prototype. For example, the object created by `new Array()` uses `Array.prototype` as its prototype.
+
+
 {{< highlight javascript>}}
 {{< /highlight >}}
