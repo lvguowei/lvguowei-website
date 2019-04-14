@@ -116,12 +116,104 @@ Objects created using the `new` keyword and a constructor invocation use the val
 
 # Object.create()
 
-ECMAScript 5 defines a method, `Object.create()` that creates a new object, using its first argument as the prototype of that object.
+ECMAScript 5 defines a method, `Object.create()` that creates a new object, *using its first argument as the prototype of that object*.
 
 {{< highlight javascript>}}
 var o1 = Object.create({x:1, y:2});        // o1 inherits properties x and y
 var o2 = Object.create(null);              // o2 inherits no props or methods
 var o3 = Object.create(Object.prototype);  // o3 is like {} or new Object
+{{< /highlight >}}
+
+# testing properties
+
+1. Use the `in` operator. 
+
+Returns true if the object has an own property or an inherited property by that name.
+{{< highlight javascript>}}
+var o = {x: 1};
+"x" in o;        // true
+"toString" in o; // true
+"y" in o;        // false
+{{< /highlight >}}
+2. Use method `hasOwnProperty()`
+
+Returns true only if the property is the object's own property. It returns false for inherited properties.
+{{< highlight javascript>}}
+var o = {x: 1};
+o.hasOwnProperty("x");       // true
+o.hasOwnProperty("toString") // false
+{{< /highlight >}}
+3. Use method `propertyIsEnumerable()`
+
+Returns true only if the property is the object's own property and is enumerable.
+
+
+# enumerating properties
+
+1. **for in** loop
+
+Loops through the object's enumerable properties (own and inherited).
+
+To loop only own properties:
+
+{{< highlight javascript>}}
+for (p in o) {
+  if (!o.hasOwnProperty(p)) continue;
+  ...
+}
+{{< /highlight >}}
+
+To loop only data properties:
+
+{{< highlight javascript>}}
+for (p in o) {
+  if (typeof p === "function") continue;
+  ...
+}
+{{< /highlight >}}
+2. `Object.keys()` in ES5
+
+`Object.keys()` returns an array of the names of the enumerable own properties of an object.
+
+# property getters and setters
+
+Properties defined by getters and setters are known as *accessor properties*.
+
+{{< highlight javascript>}}
+var o = {
+  // An ordinary data property
+  data_prop: value,
+  
+  // An accessor property defined as a pair of functions
+  get accessor_prop() {},
+  set accessor_prop(value) {}
+}
+{{< /highlight >}}
+
+One example use of accessor properties:
+
+{{< highlight javascript>}}
+var p = {
+  // x and y are regular read-write data properties
+  x: 1.0,
+  y: 1.0,
+  
+  // r is a read-write accessor property with getter and setter
+  get r() {
+    return Math.sqrt(this.x*this.x + this.y*this.y);
+  },
+  set r(newValue) {
+    var oldValue = Math.sqrt(this.x*this.x + this.y*this.y);
+    var ratio = newValue / oldValue;
+    this.x *= ratio;
+    this.y *= ratio;
+  },
+  
+  // theta is a read only accessor property with getter only
+  get theta() {
+    return Math.atan2(this.y, this.x);
+  }
+};
 {{< /highlight >}}
 
 {{< highlight javascript>}}
