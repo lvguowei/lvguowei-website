@@ -216,5 +216,60 @@ var p = {
 };
 {{< /highlight >}}
 
+# property attributes
+Object's property has attributes.
+
+Data property has 4 attributes: **value**, **writable**, **enumerable** and **configurable**.
+
+Accessor property has 4 attributes: **get**, **set**, **enumerable** and **configurable**.
+
+Get property's attributes:
+
+
+{{< highlight javascript>}}
+// Get attributes of data property
+js> Object.getOwnPropertyDescriptor({x: 1}, "x")
+{"value":1,"writable":true,"enumerable":true,"configurable":true}
+
+// Get attributes of accessor property
+js> Object.getOwnPropertyDescriptor(p, "r")
+{"get":get r() {
+    return Math.sqrt(this.x*this.x + this.y*this.y);
+  },"set":set r(newValue) {
+    var oldValue = Math.sqrt(this.x*this.x + this.y*this.y);
+    var ratio = newValue / oldValue;
+    this.x *= ratio;
+    this.y *= ratio;
+  },"enumerable":true,"configurable":true}
+{{< /highlight >}}
+
+
+Set property's attributes:
+
+{{< highlight javascript>}}
+// Start with an empty object
+js> var o = {};
+
+// Create a non-enumerable property x
+js> Object.defineProperty(o, "x", {value: 1, writable: true, enumerable: false, configurable: true})
+js> o.x
+1
+// Verify that x is not enumerable
+js> Object.keys(o)
+[]
+
+// Set x to be non-writable
+js> Object.defineProperty(o, "x", {writable: false})
+// Verify that x cannot be written to
+js> o.x = 2
+js> o.x
+1
+
+// Since x is still configurable, we can change its value by this trick
+js> Object.defineProperty(o, "x", {value: 2})
+js> o.x
+2
+{{< /highlight >}}
+
 {{< highlight javascript>}}
 {{< /highlight >}}
