@@ -271,5 +271,40 @@ js> o.x
 2
 {{< /highlight >}}
 
+
+# object attributes
+
+Every object has **prototype**, **class**, and **extensible** attributes.
+
+# prototype attribute
+
+An object's *prototype* attribute specifies the object from which it inherits properties.
+
+To get an object's prototype, use `Object.getPrototypeOf()`.
+
+{{< highlight javascript>}}
+js> var o = Object.create({x: 1})
+js> o
+{}
+js> Object.getPrototypeOf(o)
+{"x":1}
+{{< /highlight >}}
+
+# class attribute
+
+Useless.
+
+# extensible attribute
+
+The *extensible* attribute of an object specifies whether new properties can be added to the object or not.
+
+
+
+
+
+
+
+
 {{< highlight javascript>}}
 {{< /highlight >}}
+
