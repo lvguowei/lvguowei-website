@@ -298,6 +298,35 @@ Useless.
 
 The *extensible* attribute of an object specifies whether new properties can be added to the object or not.
 
+# array
+
+Remember that arrays are a specialized kind of object. The square brackets used to access array elements work just like the square brackets used to access object properties.
+JavaScript converts the numeric array index you specify to a string.
+
+What is special about arrays is that when you use property names that are non-negative integers less than 2^32, the array automatically maintains the value of the **length** property for you.
+
+# sparse array
+{{< highlight javascript>}}
+js> var a = [];
+undefined
+js> a
+[]
+js> a[1000] = 0;
+0
+js> a.length
+1001
+{{< /highlight >}}
+
+# array length
+
+If you set the **length** property to a non-negative integer **n** smaller than its current value, any array elements whose index is greater than or equal to **n** are deleted from the array:
+
+{{< highlight javascript>}}
+js> a = [1,2,3,4,5]
+js> a.length = 3
+js> a
+[1, 2, 3]
+{{< /highlight >}}
 
 
 
@@ -307,4 +336,5 @@ The *extensible* attribute of an object specifies whether new properties can be 
 
 {{< highlight javascript>}}
 {{< /highlight >}}
+
 
