@@ -328,11 +328,124 @@ js> a
 [1, 2, 3]
 {{< /highlight >}}
 
+# array methods
 
 
+{{< highlight javascript>}}
+// Array.join()
 
+js> var a = [1, 2, 3];
+js> a.join();
+"1,2,3"
+js> a.join(" ");
+"1 2 3"
+js> a.join("");
+"123"
 
+// Array.reverse()
 
+js> var a = [1, 2, 3];
+js> a.reverse()
+js> a
+[3, 2, 1]
+
+// Array.sort()
+js> var a = ["banana", "cherry", "apple"];
+js> a.sort()
+js> a
+["apple", "banana", "cherry"] // alphabetic order
+js> var a = [33, 4, 1111, 222];
+js> a.sort()
+js> a
+[1111, 222, 33, 4] // alphabetic order
+js> a.sort(function(a, b) {return a - b;});
+[4, 33, 222, 1111] // numerical order
+
+// Array.concat()
+
+js> var a = [1, 2, 3];
+js> a.concat(4, 5);
+[1, 2, 3, 4, 5]
+js> a
+[1, 2, 3]
+js> a.concat([4, 5]);
+[1, 2, 3, 4, 5]
+js> a.concat([4, 5], [6, 7]);
+[1, 2, 3, 4, 5, 6, 7]
+js> a.concat(4, [5, [6, 7]])
+[1, 2, 3, 4, 5, [6, 7]] // does not recursively flatten array of array
+
+// Array.slice()
+
+js> var a = [1, 2, 3, 4, 5];
+js> a.slice(0, 3);
+[1, 2, 3]
+js> a.slice(3);
+[4, 5]
+js> a.slice(1, -1);
+[2, 3, 4]
+js> a.slice(-3, -2);
+[3]
+
+// Array.splice()
+// The first argument specifies the array position at which the insertion / deletion is to begin.
+// The second argument specifies the number of elements that should be deleted from the array.
+
+js> var a = [1,2,3,4,5,6,7,8]
+js> a.splice(4)
+[5, 6, 7, 8]
+js> a
+[1, 2, 3, 4]
+js> a.splice(1, 2)
+[2, 3]
+js> a
+[1, 4]
+js> a.splice(1, 1)
+[4]
+js> a
+[1]
+
+// These arguments may be followed by any number of additional arguments 
+// that specify elements to be inserted into the array, 
+// starting at the position specified by the first argument
+js> var a = [1,2,3,4,5]
+js> a.splice(2, 0, 'a', 'b')
+[]
+js> a
+[1, 2, "a", "b", 3, 4, 5]
+js> a.splice(2, 2, [1, 2], 3)
+["a", "b"]
+js> a
+[1, 2, [1, 2], 3, 3, 4, 5]
+
+// push() and pop()
+// push addes elements at the end of the array and returns the new length
+// pop removes elements at the end of the array and returns the value removed
+js> var stack = []
+undefined
+js> stack.push(1, 2)
+2
+js> stack
+[1, 2]
+js> stack.pop()
+2
+js> stack
+[1]
+js> stack.push([4, 5])
+2
+js> stack
+[1, [4, 5]]
+
+// unshift() and shift()
+// like push() and pop(), except that they insert / remove items from the beginning of the array.
+
+var a = [];           // []
+a.unshift(1);         // [1]
+a.unshift(22);        // [22, 1]
+a.shift();            // [1]
+a.unshift(3, [4, 5]); // [3, [4, 5], 1]
+
+{{< /highlight >}}
 
 {{< highlight javascript>}}
 {{< /highlight >}}
