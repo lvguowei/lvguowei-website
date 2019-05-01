@@ -6,11 +6,11 @@ linktitle = ""
 featured = ""
 featuredpath = ""
 featuredalt = ""
-title = "I discovered James Coplien"
+title = "I found out about James Coplien"
 date = 2019-05-01T20:52:19+03:00
 +++
 
-I do not remember how I discovered this guy on Youtube but BOY, my world is not the same.
+I do not remember how I find this guy on Youtube but BOY, my world is not the same.
 
 I just link two of his talks here from Youtube. You can certainly find more.
 
