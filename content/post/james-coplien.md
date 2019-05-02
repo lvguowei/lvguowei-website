@@ -6,7 +6,7 @@ linktitle = ""
 featured = ""
 featuredpath = ""
 featuredalt = ""
-title = "I found out about James Coplien"
+title = "I discovered James Coplien"
 date = 2019-05-01T20:52:19+03:00
 +++
 
