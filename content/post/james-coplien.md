@@ -1,6 +1,7 @@
 +++
 author = "Guowei Lv"
 categories = ["Thoughts"]
+keywords = ["Jim Coplien", "OOP"]
 description = "Some ideas worth knowing"
 linktitle = ""
 featured = ""
