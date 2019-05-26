@@ -447,7 +447,83 @@ a.unshift(3, [4, 5]); // [3, [4, 5], 1]
 
 {{< /highlight >}}
 
+# forEach()
+
 {{< highlight javascript>}}
+js> var data = [1,2,3,4,5];
+js> var sum = 0;
+js> data.forEach(function(value) { sum += value;});
+js> sum
+15
+
+js> data.forEach(function(v, i, a) {a[i] = v + 1;});
+js> data
+[2, 3, 4, 5, 6]
+{{< /highlight >}}
+
+# map()
+
+{{< highlight javascript>}}
+js> var a = [1, 2, 3];
+js> var b = a.map(function(x) { return x * x;});
+js> b
+[1, 4, 9]
+js> a
+[1, 2, 3] // map() returns a new array
+{{< /highlight >}}
+
+# filter()
+
+{{< highlight javascript>}}
+js> var a = [1, 2, 3];
+js> var smallValues = a.filter(function(x) { return x < 3; });
+js> smallValues
+[1, 2]
+js> a
+[1, 2, 3] // filter() returns a new array
+{{< /highlight >}}
+
+# every() and some()
+
+{{< highlight javascript>}}
+js> var a = [1, 2, 3, 4, 5];
+js> a.every(function(x) { return x < 10; });
+true
+js> a.some(function(x) { return x % 2 === 0; });
+true
 {{< /highlight >}}
 
 
+# reduce() and reduceRight()
+
+{{< highlight javascript>}}
+js> var a = [1, 2, 3, 4, 5];
+js> var sum = a.reduce(function(accumulator, value) { return accumulator + value; }, 0);
+js> sum
+15
+{{< /highlight >}}
+
+{{< highlight javascript>}}
+js> var a = [2, 3, 4];
+js> var big = a.reduceRight(function(accumulator, value) { return Math.pow(value, accumulator); });
+js> big // calculate 2 ^ (3 ^ 4)
+2.4178516392292583e+24
+{{< /highlight >}}
+
+
+# indexOf() and lastIndexOf()
+{{< highlight javascript>}}
+js> var a = [0, 1, 2, 1, 0];
+js> a.indexOf(1); // search from the beginning
+1
+js> a.lastIndexOf(1); // search from the end
+3
+js> a.indexOf(3); // not found returns -1
+-1
+{{< /highlight >}}
+
+
+
+
+{{< highlight javascript>}}
+{{< /highlight >}}
