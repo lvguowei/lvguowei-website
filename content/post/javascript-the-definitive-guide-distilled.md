@@ -522,8 +522,35 @@ js> a.indexOf(3); // not found returns -1
 -1
 {{< /highlight >}}
 
-
-
+# function defination express V.S. function declaration statement
 
 {{< highlight javascript>}}
+function add(a, b) {
+  return a + b;
+}
+
+var x = add(1, 2);
+
+function add(a, b) {
+  return -1;
+}
+
+console.log(x); // this will print -1
+
+// all the function declarations are hoisted to the top level
+{{< /highlight >}}
+
+But function defination expression behaves more logical in this case:
+{{< highlight javascript>}}
+var add = function(a, b) {
+  return a + b;
+}
+
+console.log(add(1, 2)); // 3
+
+add = function(a, b) {
+  return -1;
+}
+
+console.log(add(1, 2)); // -1
 {{< /highlight >}}
