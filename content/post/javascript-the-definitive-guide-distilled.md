@@ -541,6 +541,7 @@ console.log(x); // this will print -1
 {{< /highlight >}}
 
 But function defination expression behaves more logical in this case:
+
 {{< highlight javascript>}}
 var add = function(a, b) {
   return a + b;
@@ -553,4 +554,54 @@ add = function(a, b) {
 }
 
 console.log(add(1, 2)); // -1
+{{< /highlight >}}
+
+# this and that
+
+It is a common mistake to assume that a nested function invoked as a function can use *this* to obtain the invocation context of the outer function. But a trick to solve that is:
+
+{{< highlight javascript>}}
+var o = {
+  m: function () {
+    var that = this;
+    console.log(this === o);
+    f();
+
+    function f() {
+      console.log(this === o);
+      console.log(that === o);
+    }
+  }
+};
+
+o.m();
+
+{{< /highlight >}}
+
+
+
+
+
+{{< highlight javascript>}}
+{{< /highlight >}}
+
+{{< highlight javascript>}}
+{{< /highlight >}}{{< highlight javascript>}}
+
+{{< /highlight >}}{{< highlight javascript>}}
+{{< /highlight >}}{{< highlight javascript>}}
+{{< /highlight >}}{{< highlight javascript>}}
+{{< /highlight >}}{{< highlight javascript>}}
+{{< /highlight >}}{{< highlight javascript>}}
+{{< /highlight >}}{{< highlight javascript>}}
+{{< /highlight >}}{{< highlight javascript>}}
+{{< /highlight >}}{{< highlight javascript>}}
+{{< /highlight >}}{{< highlight javascript>}}
+{{< /highlight >}}{{< highlight javascript>}}
+{{< /highlight >}}{{< highlight javascript>}}
+{{< /highlight >}}{{< highlight javascript>}}
+{{< /highlight >}}{{< highlight javascript>}}
+{{< /highlight >}}{{< highlight javascript>}}
+{{< /highlight >}}{{< highlight javascript>}}
+{{< /highlight >}}{{< highlight javascript>}}
 {{< /highlight >}}

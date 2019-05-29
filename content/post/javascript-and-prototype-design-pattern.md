@@ -1,6 +1,6 @@
 +++
 author = "Guowei Lv"
-categories = ["JavaScript"]
+categories = ["Javascript"]
 keywords = ["javascript", "prototype pattern", "design pattern", "prototypal inheritance"]
 description = "Is Javascript's prototypal inheritance borrowed from prototype design pattern?"
 featured = "js.jpg"

@@ -1,5 +1,5 @@
 +++
-categories = ["JavaScript"]
+categories = ["Javascript"]
 keywords = ["javascript", "javascript development", "javascript starter kit", "Cory House", "Pluralsight", "VS Code"]
 description = "How to setup a JS development environment in 2018"
 featured = "js.jpg"

@@ -1,5 +1,5 @@
 +++
-categories = ["JavaScript"]
+categories = ["Javascript"]
 description = "What happened when I tried to follow the first lesson in JavaScript30"
 featured = "js30-bg.jpg"
 featuredpath = "/img"
