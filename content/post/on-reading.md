@@ -1,6 +1,6 @@
 +++
 author = "Guowei Lv"
-categories = ["Reading""]
+categories = ["Reading"]
 description = "Talks showing the importance of reading in chidren education"
 featured = ""
 featuredpath = ""
