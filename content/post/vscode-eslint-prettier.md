@@ -1,5 +1,5 @@
 +++
-categories = ["JavaScript"]
+categories = ["Javascript"]
 description = "How to setup ESLint with Prettier in VSCode for React Project"
 keywords = ["prettier", "ESLint", "VSCode", "JavaScript", "Create React App", "React"]
 featured = "js.jpg"

@@ -1,6 +1,6 @@
 +++
 author = "Guowei Lv"
-categories = ["JavaScript"]
+categories = ["Javascript"]
 description = "Learn Javascript the Weird Parts"
 keywords = ["javascript", "javascript the weird parts", "ES6", "jQuery"]
 featured = "js.jpg"
