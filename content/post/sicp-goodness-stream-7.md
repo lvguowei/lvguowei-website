@@ -8,7 +8,6 @@ title = "SICP Goodness - Stream (VII)"
 date = 2019-04-13T20:39:53+03:00
 +++
 
-
 >Do you think Computer Science **equals** building websites and mobile apps? 
 
 >Are you feeling that you are doing **repetitive** and **not so intelligent** work?
