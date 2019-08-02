@@ -1,6 +1,6 @@
 +++
 author = "Guowei"
-categories = ["JavaScript"]
+categories = ["React"]
 keywords = ["React", "render props", "frontend", "javascript"]
 description = "React's render props is easy if you understand FP"
 featured = "react.png"
