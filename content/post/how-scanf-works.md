@@ -1,7 +1,7 @@
 +++
 author = "Guowei Lv"
 categories = ["C Programming"]
-keywords = ["scanf" "c programming"]
+keywords = ["scanf", "c programming"]
 description = "Shows in detail how scanf works and its gotchas"
 featured = "featured-c-programming.jpg"
 featuredpath = "/img"
