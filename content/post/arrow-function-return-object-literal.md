@@ -1,6 +1,6 @@
 +++
 author = "Guowei Lv"
-categories = ["JavaScript"]
+categories = ["Javascript"]
 keywords = ["JavaScript", "ReactJS"]
 description = "A dialog"
 featured = "js.jpg"
