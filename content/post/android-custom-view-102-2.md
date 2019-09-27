@@ -438,6 +438,130 @@ This looks better. Let's see what happens.
 5. Draw the Rectangle on the new layer.
 6. Merge the new layer back to the default layer.
 
+# Effects
+
+## AntiAlias
+
+Let's see the following example.
+
+{{< figure src="/img/antialias.png" >}}
+
+With AntiAlias turned on, it looks much smoother. And most of the time I do recommend to turn on anti alias.
+
+Two ways to turn on the AntiAlias:
+
+{{< highlight java>}}
+Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+paint.setAntiAlias(true);
+{{< /highlight >}}
+
+## Style
+
+There are three `Paint.Style`: `FILL`, `STROKE` and `FILL_AND_STROKE`.
+
+This is very simple, I do not give examples here.
+
+## Stroke Style
+
+There are 4 methods to set the style of the stroke: `setStrokeWidth(float width)`,
+`setStrokeCap(Paint.Cap cap)`,  `setStrokeJoin(Paint.Join join)`, `setStrokeMiter(float miter)`.
+
+## setStrokeWidth
+
+`setStrokeWidth(float width)` sets the width of the stroke line in pixel, default value is **0**.
+
+Let's see an example of stroke width 0px, 10px, 20px.
+
+{{< figure src="/img/setstrokewidth.png" >}}
+
+As you can see, the default 0px stroke width still draws a fine line, and the actual width is 1px. You may ask what is the difference between 0 and 1?
+
+This has something to do with canvas transformation. For example, the canvas can be zoomed in 2 times. In this case, the line with 1px width will be shown as 2px. But if the width is set to 0px, it will not be affected by such transformations. So the default 0px width is also called "hairline mode".
+
+## setStrokeCap
+
+`setStrokeCap(Paint.Cap cap)` accepts 3 types of `Cap`s: **BUTT**, **ROUND** and **SQUARE**.
+
+The difference can be shown easily through a picture.
+
+{{< figure src="/img/strokecap.png" >}}
+
+## setStrokeJoin
+`setStrokeJoin(Paint.Join join)` takes 3 values: `MITER`, `BEVEL` and `ROUND`. The default value is `MITER`.
+
+{{< figure src="/img/strokejoin.png" >}}
+
+## setStrokeMiter
+
+`setStrokeMiter(float miter)`.
+
+>Set the paint's stroke miter value. This is used to control the behavior of miter joins when the joins angle is sharp.
+
+In order to understand this, we have to understand how miter works. Again, see this picture:
+
+{{< figure src="/img/miters.png" >}}
+
+But there is a problem, if the angle of the two lines is too sharp, the joint becomes very long.
+
+{{< figure src="/img/longmiter.png" >}}
+
+So if the `miter` is over certain value, it will automatically use `BEVEL`.
+
+Let's now see how this `miter` value is calculated:
+
+{{< figure src="/img/calcmiter.png" >}}
+
+The default value is 4, which is about 29 degree.
+
+## Color Optimization
+
+There are two methods in `Paint` for color optimization: `setDither(boolean dither)` and `setFilterBitmap(boolean filter)`.
+
+### setDither(boolean dither)
+
+>Dithering is used in computer graphics to create the illusion of "color depth" in images with a limited color palette.
+
+Let's see what this means in practice.
+
+{{< figure src="/img/dither1.png" >}}
+{{< figure src="/img/dither2.png" >}}
+{{< figure src="/img/dither3.png" >}}
+
+To enable dithering in Android is simple, just `setDither(true)`.
+
+But this is not so useful nowadays as the Android default color depth is 32 bit ARGB_8888, which is already pretty good.
+
+### setFilterBitmap(boolean filter)
+
+This method can turn on [Bilinear Filtering](https://en.wikipedia.org/wiki/Bilinear_filtering).
+
+We can see the effect of applying this filter by paint a small part of an image to an bigger area on the screen.
+
+Without filtering:
+{{< figure src="/img/filtermap1.png" >}}
+
+With the filting:
+{{< figure src="/img/filtermap2.png" >}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 {{< highlight java>}}
