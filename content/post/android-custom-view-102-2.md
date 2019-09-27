@@ -535,7 +535,7 @@ But this is not so useful nowadays as the Android default color depth is 32 bit 
 
 This method can turn on [Bilinear Filtering](https://en.wikipedia.org/wiki/Bilinear_filtering).
 
-We can see the effect of applying this filter by paint a small part of an image to an bigger area on the screen.
+We can see the effect of applying this filter by painting a small part of an image to an bigger area on the screen.
 
 Without filtering:
 {{< figure src="/img/filtermap1.png" >}}
@@ -544,6 +544,70 @@ With the filting:
 {{< figure src="/img/filtermap2.png" >}}
 
 
+## setPathEffect(PathEffect effect)
+
+Use `PathEffect` to style the contour of the shape. It can be used to any shape drawing methods: `drawCircle()`, `drawLine()` and `drawPath()` etc.
+
+There are 6 `PathEffect`, divided into two categories: single effect and combined effect. Single effects are: `CornerPathEffect` `DiscretePathEffect` `DashPathEffect`
+`PathDashPathEffect`, and combined effects are: `SumPathEffect` and `ComposePathEffect`.
+
+### CornerPathEffect
+
+Make every corner round.
+
+Let's draw a simple path:
+
+{{< figure src="/img/patheffect1.png" >}}
+
+Now set a `CornerPathEffect` to the `paint`:
+
+{{< highlight java>}}
+pathEffect = new CornerPathEffect(50);
+paint.setPathEffect(pathEffect);
+{{< /highlight >}}
+
+{{< figure src="/img/patheffect2.png" >}}
+
+## DiscretePathEffect
+
+>Chop the path into lines of segmentLength, randomly deviating from the original path by deviation.
+
+Let's see the previous example with this effect.
+
+{{< highlight java>}}
+pathEffect = new DiscretePathEffect(10, 5);
+paint.setPathEffect(pathEffect);
+{{< /highlight >}}
+
+{{< figure src="/img/patheffect3.png" >}}
+
+## DashPathEffect
+
+
+`DashPathEffect(float[] intervals, float phase)`.
+
+Let's see an example first:
+
+{{< highlight java>}}
+pathEffect = new DashPathEffect(new float[]{50, 10, 20, 10}, 0);
+paint.setPathEffect(pathEffect);
+{{< /highlight >}}
+
+{{< figure src="/img/patheffect4.png" >}}
+
+Now let's explain the 2 params.
+
+`new float[]{50, 10, 20, 10}` means first draw 50px solid line, then 10px space, then 20px solid line, finally 10px space. No matter how long the array is, it follows this pattern.(of course the array must be of even length).
+
+The `phase` is a bit confusing, first let's see the official doc:
+
+>phase is an offset into the intervals  array (mod the sum of all of the intervals).
+
+Basically we can use this to control the where the beginning of the path begins. For example, if we want to start with the first 10px space, we can set the `phase` to 50 (bypass the first 50px then start drawing).
+
+{{< figure src="/img/patheffect5.png" >}}
+
+As you can see from the picture, the beginning of the path is a 10px space.
 
 
 
