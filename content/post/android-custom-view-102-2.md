@@ -609,8 +609,49 @@ Basically we can use this to control the where the beginning of the path begins.
 
 As you can see from the picture, the beginning of the path is a 10px space.
 
+## PathDashPathEffect
 
 
+
+`PathDashPathEffect(Path shape, float advance, float phase, Style style)` uses a `path` as *dash*.
+
+For example we can use a triangle path as *dash*.
+
+This is the orignial path:
+
+{{< figure src="/img/patheffect6.png" >}}
+
+Now we can add triangle dash to it.
+
+{{< highlight java>}}
+paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+paint.setStyle(Paint.Style.STROKE);
+        
+// triangle dash
+path = new Path();
+path.moveTo(10, 0);
+path.lineTo(20, 20);
+path.lineTo(0, 20);
+        
+dashPath = new Path();
+dashPath.addRoundRect(50, 50, 250, 350, 50, 50, Path.Direction.CW);
+
+pathEffect = new PathDashPathEffect(path, 20, 0, PathDashPathEffect.Style.TRANSLATE);
+paint.setPathEffect(pathEffect);
+
+{{< /highlight >}}
+
+{{< figure src="/img/patheffect7.png" >}}
+
+Let's play with the `Style`.
+
+**ROTATE**
+
+{{< figure src="/img/patheffect8.png" >}}
+
+**MORPH**
+
+{{< figure src="/img/patheffect9.png" >}}
 
 
 
