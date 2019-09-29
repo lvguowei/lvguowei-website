@@ -611,8 +611,6 @@ As you can see from the picture, the beginning of the path is a 10px space.
 
 ## PathDashPathEffect
 
-
-
 `PathDashPathEffect(Path shape, float advance, float phase, Style style)` uses a `path` as *dash*.
 
 For example we can use a triangle path as *dash*.
@@ -653,13 +651,91 @@ Let's play with the `Style`.
 
 {{< figure src="/img/patheffect9.png" >}}
 
+## SumPathEffect
 
+`SumPathEffect` paints two paths together.
 
+This is the original path:
 
+{{< figure src="/img/sumpath1.png" >}}
 
+The `SumPathEffect` has 2 `PathEffect`: a `DashPathEffect` and a `DiscretePathEffect`.
 
+{{< highlight java>}}
+PathEffect dashEffect = new DashPathEffect(new float[]{20, 10}, 0);
+PathEffect discreteEffect = new DiscretePathEffect(20, 5);
+pathEffect = new SumPathEffect(dashEffect, discreteEffect);
+paint.setPathEffect(pathEffect);
+{{< /highlight >}}
 
+This is how it looks like after setting the `SumPathEffect`:
 
+{{< figure src="/img/sumpath2.png" >}}
+
+## ComposePathEffect
+
+This is also a composed `PathEffect`. But it applies `PathEffect` one after the other.
+
+Let's change the above example to use `ComposePathEffect`:
+
+{{< highlight java>}}
+PathEffect dashEffect = new DashPathEffect(new float[]{20, 10}, 0);
+PathEffect discreteEffect = new DiscretePathEffect(20, 5);
+pathEffect = new ComposePathEffect(dashEffect, discreteEffect);
+paint.setPathEffect(pathEffect);
+{{< /highlight >}}
+
+{{< figure src="/img/composepatheffect.png" >}}
+
+## setShadowLayer
+
+`setShadowLayer(foat radius, foat dx, foat dy, int shadowColor)`
+
+This is very simple, checkout the example.
+
+{{< highlight java>}}
+paint.setShadowLayer(20, 0, 0, Color.GREEN);
+
+...
+
+@Override
+protected void onDraw(Canvas canvas) {
+    super.onDraw(canvas);
+    canvas.drawCircle(100, 100, 80, paint);
+}
+{{< /highlight >}}
+
+{{< figure src="/img/shadowlayer.png" >}}
+
+## setMaskFilter(MaskFilter mask lter)
+
+`MaskFilter` filters the entire image. The previous `ColorFilter` only filters the color.
+
+### BlurMaskFilter
+
+There are 4 types of `BlurMaskFilter.Blur`: **NORMAL**, **SOLID**, **INNER** and **OUTER**.
+
+Let's see what they all look like.
+
+**Original Image**
+
+{{< figure src="/img/maskfilter0.png" >}}
+
+**NORMAL**
+
+{{< figure src="/img/maskfilter1.png" >}}
+
+**INNER**
+
+{{< figure src="/img/maskfilter2.png" >}}
+
+**OUTER**
+
+{{< figure src="/img/maskfilter3.png" >}}
+
+**SOLID**
+
+{{< figure src="/img/maskfilter4.png" >}}
 
 
 
