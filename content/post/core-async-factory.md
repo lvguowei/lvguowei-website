@@ -8,7 +8,7 @@ title = "Toy Factory Simulation Using core.async (1)"
 date = 2019-12-01T22:48:10+02:00
 +++
 
-After learned the `core.async` library in Clojure, I was craving for an real-world example. Now I found one from [purelyfunctional.tv](https://purelyfunctional.tv/courses/clojure-core-async/).
+After learned the `core.async` library in Clojure, I was craving for a real-world example. Now I found one from [purelyfunctional.tv](https://purelyfunctional.tv/courses/clojure-core-async/).
 
 The original code can be found [here](https://github.com/ericnormand/lispcast-clojure-core-async).
 
