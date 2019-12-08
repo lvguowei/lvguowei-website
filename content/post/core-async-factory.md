@@ -1,6 +1,6 @@
 +++
 author = "Guowei Lv"
-categories = ["Clojure", "core.async"]
+categories = ["Clojure"]
 description = "A core.async example"
 featured = "car-factory.jpg"
 featuredpath = "/img"
