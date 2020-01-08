@@ -351,4 +351,88 @@ protected void onDraw(Canvas canvas) {
 
 Note that the unit of camera position is inch. And 1 inch = 72 pixels.(this is hard coded btw, yes I know ...)
 
+# Exercise
+
+Implement the folded card effect:
+
+{{< figure src="/img/folded-card.png" >}}
+
+
+Answer:
+
+{{< highlight java>}}
+
+public class CustomView extends View {
+
+    private Paint paint;
+    private Bitmap image;
+    private Camera camera;
+    private int degree;
+
+    private void init() {
+        paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        camera = new Camera();
+        image = BitmapFactory.decodeResource(getResources(), R.drawable.wanglu);
+        degree = 45;
+
+    }
+
+    public CustomView(Context context) {
+        super(context);
+        init();
+    }
+
+    public CustomView(Context context, @Nullable AttributeSet attrs) {
+        super(context, attrs);
+        init();
+    }
+
+    public CustomView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        init();
+    }
+
+
+    @Override
+    protected void onDraw(Canvas canvas) {
+        super.onDraw(canvas);
+
+
+        int imageWidth = image.getWidth();
+        int imageHeight = image.getHeight();
+        int centerX = getWidth() / 2;
+        int centerY = getHeight() / 2;
+        int x = centerX - imageWidth / 2;
+        int y = centerY - imageHeight / 2;
+
+        // top part
+        canvas.save();
+        canvas.clipRect(0, 0, getWidth(), centerY);
+        canvas.drawBitmap(image, x, y, paint);
+        canvas.restore();
+
+        // bottom part
+        canvas.save();
+
+        if (degree < 90) {
+            canvas.clipRect(0, centerY, getWidth(), getHeight());
+        } else {
+            canvas.clipRect(0, 0, getWidth(), centerY);
+        }
+
+        camera.save();
+        camera.rotateX(degree);
+        canvas.translate(centerX, centerY);
+        camera.applyToCanvas(canvas);
+        canvas.translate(-centerX, -centerY);
+        camera.restore();
+
+        canvas.drawBitmap(image, x, y, paint);
+        canvas.restore();
+    }
+}
+{{< /highlight >}}
+
+
+
 ~THE END~
