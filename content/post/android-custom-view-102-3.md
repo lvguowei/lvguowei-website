@@ -2,9 +2,8 @@
 author = "Guowei Lv"
 categories = ["Android Development"]
 keywords = ["Android", "custom view"]
-description = "More about Paint"
+description = "Geometric Transformations"
 featured= "android-custom-view-102.png"
-featuredalt= "Android custom view"
 featuredpath= "/img"
 title = "Android Custom View 102 (Part III)"
 date = 2020-01-07T12:13:36+02:00
