@@ -26,3 +26,5 @@ A book about coding classic mechanics in Scheme: structure and interpretation of
 An assembly coding game that you never asked for. http://www.zachtronics.com/tis-100/
 
 What Every Programmer Should Know About Memory https://people.freebsd.org/~lstewart/articles/cpumemory.pdf
+
+Japanese Game Developer book: [The Untold History of Japanese Game Developers](https://www.amazon.com/Untold-History-Japanese-Game-Developers-ebook/dp/B00Q93N29I)
