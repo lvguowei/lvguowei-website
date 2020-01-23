@@ -28,3 +28,5 @@ An assembly coding game that you never asked for. http://www.zachtronics.com/tis
 What Every Programmer Should Know About Memory https://people.freebsd.org/~lstewart/articles/cpumemory.pdf
 
 Japanese Game Developer book: [The Untold History of Japanese Game Developers](https://www.amazon.com/Untold-History-Japanese-Game-Developers-ebook/dp/B00Q93N29I)
+
+[The New C Standard: An Economic and Cultural Commentary](http://www.knosof.co.uk/cbook/)
