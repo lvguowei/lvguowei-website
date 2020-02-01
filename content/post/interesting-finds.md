@@ -30,3 +30,7 @@ What Every Programmer Should Know About Memory https://people.freebsd.org/~lstew
 Japanese Game Developer book: [The Untold History of Japanese Game Developers](https://www.amazon.com/Untold-History-Japanese-Game-Developers-ebook/dp/B00Q93N29I)
 
 [The New C Standard: An Economic and Cultural Commentary](http://www.knosof.co.uk/cbook/)
+
+[The Art of the Metaobject Protocol](https://www.amazon.com/Art-Metaobject-Protocol-Gregor-Kiczales/dp/0262610744%3FSubscriptionId%3DAKIAJ7VEQ66ABQKNZ5MQ%26tag%3Dleandot-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0262610744)
+
+And the [course](https://www.edx.org/course/how-to-code-simple-data) by the author
