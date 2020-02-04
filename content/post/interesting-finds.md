@@ -36,3 +36,5 @@ Japanese Game Developer book: [The Untold History of Japanese Game Developers](h
 And the [course](https://www.edx.org/course/how-to-code-simple-data) by the author
 
 A [3 hour interview](https://oxide.computer/blog/on-the-metal-9-jonathan-blow/) with Jon Blow
+
+Richard P.Gabriel's [blog](http://dreamsongs.com/)
