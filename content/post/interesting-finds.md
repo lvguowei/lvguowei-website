@@ -34,3 +34,5 @@ Japanese Game Developer book: [The Untold History of Japanese Game Developers](h
 [The Art of the Metaobject Protocol](https://www.amazon.com/Art-Metaobject-Protocol-Gregor-Kiczales/dp/0262610744%3FSubscriptionId%3DAKIAJ7VEQ66ABQKNZ5MQ%26tag%3Dleandot-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0262610744)
 
 And the [course](https://www.edx.org/course/how-to-code-simple-data) by the author
+
+A [3 hour interview](https://oxide.computer/blog/on-the-metal-9-jonathan-blow/) with Jon Blow
