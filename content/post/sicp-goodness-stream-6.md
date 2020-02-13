@@ -4,7 +4,7 @@ keywords = ["SICP", "functional programming", "structure and interpretation of c
 description = "Infinite Streams"
 featured = "featured-sicp.jpg"
 featuredpath = "/img"
-title = "SICP Goodness - Stream (VI)"
+title = "SICP Goodness - Stream (6)"
 date = 2019-04-06T20:31:46+03:00
 +++
 

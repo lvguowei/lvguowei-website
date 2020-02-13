@@ -4,7 +4,7 @@ keywords = ["SICP", "lambda calculus", "structure and interpretation of computer
 description = "Some util functions on stream"
 featured = "featured-sicp.jpg"
 featuredpath = "/img"
-title = "SICP Goodness - Stream (II)"
+title = "SICP Goodness - Stream (2)"
 date = 2019-03-10T13:37:47+02:00
 +++
 
