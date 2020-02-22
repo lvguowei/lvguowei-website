@@ -17,7 +17,6 @@ I have a master degree in Machine Learning from Helsinki University. Unfortunate
 
 [[Book] Linear Algebra and its Applications](https://www.amazon.co.uk/Linear-Algebra-Its-Applications-Strang/dp/0030105676)
 
-
 * Statistics
 
 [[Book] An Introduction to Statistical Learning: With Applications in R](http://faculty.marshall.usc.edu/gareth-james/ISL/)
@@ -28,3 +27,6 @@ I have a master degree in Machine Learning from Helsinki University. Unfortunate
 
 [[Course] Machine Learning](https://www.coursera.org/learn/machine-learning)
 
+* General Math
+
+[[Videos] 3Blue1Brown](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw)
