@@ -6,7 +6,7 @@ featured = "featured-sicp.jpg"
 featuredpath = "/img"
 title = "SICP Goodness - Stream (10)"
 date = 2020-02-26T13:14:23+02:00
-draft = true
+draft = false
 +++
 
 >Do you think Computer Science **equals** building websites and mobile apps? 
@@ -59,59 +59,89 @@ If you have difficulty understanding this, please watch this excellent video:
 
 {{< youtube id="rfG8ce4nNh0" autoplay="false" >}}
 
-Let's now take a closer look and the formula in the book.
+# Example 1
 
-{{< figure src="/img/integral-formula.gif" >}}
+Let's now play with the `integral` procedure a little bit and see if we can actually use it to do something.
 
-This is correct in the context of the book. But a bit misleading if you try to look at it from a math point of view. Allow me to rewrite it:
+The simplest function that we can test is the function `f(t) = 1`.
+
+{{< figure src="/img/integral-func1.png" >}}
+
+We already know its integral is function `f(t) = t`.
+
+{{< figure src="/img/integral-func2.png" >}}
+
+Now let's verify this using the `integral` procedure.
+
+We need to figure out what are the arguments `integrand`, `initial-value` and `dt`.
+
+`integrand` is simple, it is just the stream `ones` we have define previously.
+
+`initial-value` should be 0.
+
+`dt` let's set it to 0.001.
+
+Let's say we want to calculate the integral of the function between 0 and 1. Since `dt` is 0.001, that means we need 1000 values to reach t = 1.
+
+{{< highlight scheme >}}
+(stream-ref (integral ones 0 0.001) 1000)
+;Value: 1.0000000000000007
+{{< /highlight >}}
+
+To calculate the integral of the function between 0 and 2. We need 2000 items from the input stream.
+
+{{< highlight scheme >}}
+(stream-ref (integral ones 0 0.001) 2000)
+;Value: 1.9999999999998905
+{{< /highlight >}}
+
+Let's try more,
+
+{{< highlight scheme >}}
+(stream-ref (integral ones 0 0.001) 3000)
+;Value: 2.9999999999997806
+
+(stream-ref (integral ones 0 0.001) 4000)
+;Value: 3.9999999999996705
+{{< /highlight >}}
+
+These values do fit the function `f(t) = t` nicely.
+
+# Example 2
+
+Now let's try to integral the function `f(t) = t`.
+
+{{< figure src="/img/integral-func2.png" >}}
+
+We know that the integral is `f(t) = 0.5t^2`.
+
+{{< figure src="/img/integral-func3.png" >}}
 
 
+Let's try the `integral` procedure.
 
+Most important thing is to figure out what is the `integrand`.
 
+The `integrand` is a stream of values `f(t)`, where `t` is a stream of values that determined by `dt`.
 
+Say if we use `dt = 0.001`, then `t` will be a stream of values of `0, 0.001, 0.002, 0.003 ...` and `f(t)` will be a stream of values of `0, 0.001, 0.002, 0.003 ...`.
 
+Now we know that the input stream will be the `integers` stream scaled by 0.001.
 
-
-
-{{< highlight scheme >}}
-{{< /highlight >}}
-
+Let's now see if the integrals are like the function `f(t) = 0.5t^2`.
 
 {{< highlight scheme >}}
+(stream-ref (integral (scale-stream integers 0.001) 0 0.001) 1000)
+;Value: .5005000000000002
+
+(stream-ref (integral (scale-stream integers 0.001) 0 0.001) 2000)
+;Value: 2.001
+
+(stream-ref (integral (scale-stream integers 0.001) 0 0.001) 3000)
+;Value: 4.5015
+
 {{< /highlight >}}
-{{< highlight scheme >}}
-{{< /highlight >}}
-{{< highlight scheme >}}
-{{< /highlight >}}
-{{< highlight scheme >}}
-{{< /highlight >}}
-{{< highlight scheme >}}
-{{< /highlight >}}
-{{< highlight scheme >}}
-{{< /highlight >}}
-{{< highlight scheme >}}
-{{< /highlight >}}
-{{< highlight scheme >}}
-{{< /highlight >}}
-{{< highlight scheme >}}
-{{< /highlight >}}
-{{< highlight scheme >}}
-{{< /highlight >}}
-{{< highlight scheme >}}
-{{< /highlight >}}
-{{< highlight scheme >}}
-{{< /highlight >}}
-{{< highlight scheme >}}
-{{< /highlight >}}
-{{< highlight scheme >}}
-{{< /highlight >}}
-{{< highlight scheme >}}
-{{< /highlight >}}
-{{< highlight scheme >}}
-{{< /highlight >}}
-{{< highlight scheme >}}
-{{< /highlight >}}
-{{< highlight scheme >}}
-{{< /highlight >}}
-{{< highlight scheme >}}
-{{< /highlight >}}
+
+And indeed they are.
+
+I hope now you have a better understanding of the `integral` procedure.
