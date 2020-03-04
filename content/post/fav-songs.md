@@ -1,6 +1,6 @@
 +++
 author = "Guowei"
-categories = [Music]
+categories = ["Music"]
 description = "Mar 2020"
 linktitle = ""
 featured = ""
