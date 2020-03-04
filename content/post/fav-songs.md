@@ -6,7 +6,7 @@ linktitle = ""
 featured = ""
 featuredpath = ""
 featuredalt = ""
-title = "My Favourite Songs"
+title = "Monthly Favourite Songs"
 date = 2020-03-04T21:14:57+02:00
 +++
 
