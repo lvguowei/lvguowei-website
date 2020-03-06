@@ -11,7 +11,7 @@ title = "BetterWorldBooks Book Haul"
 date = 2020-03-06T15:31:57+02:00
 +++
 
-I've been browsing [BetterWorldBooks](www.betterworldbooks.com) a lot recently, and here are what I got.
+I've been browsing [BetterWorldBooks](http://www.betterworldbooks.com) a lot recently, and here are what I got.
 
 # Linear Algebra and Its Applications
 
