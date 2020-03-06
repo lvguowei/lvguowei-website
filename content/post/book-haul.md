@@ -63,13 +63,6 @@ I've been browsing [BetterWorldBooks](betterworldbooks.com) a lot recently, and 
 <br />
 <br />
 
-
-# The Riddle of Scheherazade
-
-{{< figure src="/img/the-riddle-of-scheherazade.jpg" >}}
-<br />
-<br />
-
 # What Is the Name of This Book
 
 {{< figure src="/img/what-is-the-name-of-the-book.jpg" >}}
