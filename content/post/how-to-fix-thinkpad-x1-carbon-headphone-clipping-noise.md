@@ -26,7 +26,7 @@ hda-verb /dev/snd/hwC0D0 0x20 SET_PROC_COEF 0x3000
 
 {{< highlight sh >}}
 [Unit]
-Description=Script
+Description=Scriptssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 
 [Service]
 ExecStart=/usr/bin/script

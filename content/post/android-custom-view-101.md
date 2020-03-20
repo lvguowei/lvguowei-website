@@ -62,7 +62,7 @@ numberPaint.setColor(ContextCompat.getColor(getContext(), android.R.color.white)
 Important things to keep in mind: **Drawing operations are in pixels, but you should think in Density Independent Pixels (DP) or Scaled Pixels (SP)**, that means whenever you pass in the pixel value, you need to multiply that by **display density**, `DPs/SPs * display density`.
 
 So if we want the text to *64sp*, we can do like this:
-
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 {{< highlight java >}}
 numberPaint.setTextSize(64f * getResources().getDisplayMetrics().scaledDensity);
 {{< /highlight >}}
