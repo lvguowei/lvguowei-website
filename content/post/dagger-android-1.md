@@ -2,6 +2,7 @@
 author = "Guowei Lv"
 categories = ["Android Development"]
 description = "How to do dagger-android"
+keywords = ["Dagger 2", "Dagger", "dagger-android", "Android"]
 linktitle = ""
 featured = ""
 featuredpath = ""
