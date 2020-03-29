@@ -3,10 +3,8 @@ author = "Guowei Lv"
 categories = ["Android Development"]
 description = "How to do dagger-android"
 keywords = ["Dagger 2", "Dagger", "dagger-android", "Android"]
-linktitle = ""
-featured = ""
-featuredpath = ""
-featuredalt = ""
+featured = "dagger.jpg"
+featuredpath = "/img"
 title = "Dagger Android Tutorial 3"
 date = 2020-03-29T09:58:23+03:00
 +++
