@@ -173,3 +173,5 @@ public class AuthActivity extends DaggerAppCompatActivity {
 }
 
 {{< /highlight >}}
+
+The code for this article can be found [here](https://github.com/lvguowei/DaggerExampleFollowAlong/commit/c25c456ad1b2fb73a64b5eb4707e9305ddfbef5c)
