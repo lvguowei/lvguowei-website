@@ -11,7 +11,7 @@ date = 2020-04-12T14:02:16+03:00
 
 In this article we talk about animation, specifically property animation.
 
-# ViewPropertyAnimator
+## ViewPropertyAnimator
 
 View has many properties, like position on screen, color and size. Property animation is the type of animation that animate on those properties.
 
@@ -158,12 +158,67 @@ public class ProgressView extends View {
 
 Now we can use the `objectAnimtor` to animate the property `progress` in the view.
 
-
-
-
 {{< highlight java>}}
 ObjectAnimator animator = ObjectAnimator.ofFloat(view, "progress", 0, 65);
     animator.setDuration(1000);
     animator.setInterpolator(new FastOutSlowInInterpolator());
     animator.start();
 {{< /highlight >}}
+
+The object animator here will automatically call `setProgress()` to set the progress, and `getProgress()` to get its initial value. So if your property is XXX, then in your custom view, you have to define `setXXX()` and `getXXX()` methods. Also be careful that in `setXXX()` you have to manually update the view by calling `invalidate()`.
+
+## Interpolator
+
+> An interpolator defines the rate of change of an animation. This allows the basic animation effects (alpha, scale, translate, rotate) to be accelerated, decelerated, repeated, etc.
+
+Let's explore different types of interpolator that Android provides.
+
+# AccelerateDecelerateInterpolator
+
+> An interpolator where the rate of change starts and ends slowly but accelerates through the middle.
+
+This is the default interpolator, and also probably the most natural in the physical world. This should work for you most of the time.
+
+{{< img-post "/img" "acdcinterpolator.gif" "" "center" >}}
+
+# LinearInterpolator
+
+> An interpolator where the rate of change is constant
+
+# AccelerateInterpolator
+
+> An interpolator where the rate of change starts out slowly and then accelerates.
+
+This is a perfect choice if you want to simulate the effect of a rocket taking off.
+
+{{< img-post "/img" "acinterpolator.gif" "" "center" >}}
+
+# DecelerateInterpolator
+
+> An interpolator where the rate of change starts out quickly and then decelerates.
+
+This is the opposite of `AccelerateInterpolator`, it is useful when you want to show something flies into the screen.
+
+# AnticipateInterpolator
+
+> An interpolator where the change starts backward then flings forward.
+
+{{< img-post "/img" "antiinterpolator.gif" "" "center" >}}
+
+# OvershootInterpolator
+
+> An interpolator where the change flings forward and overshoots the last value then comes back.
+
+{{< img-post "/img" "overinterpolator.gif" "" "center" >}}
+
+# AnticipateOvershootInterpolator
+
+> An interpolator where the change starts backward then flings forward and overshoots the target value and finally goes back to the final value.
+
+This is the combination of `AnticipateInterpolator` and `OvershootInterpolator`.
+
+# BounceInterpolator
+
+> An interpolator where the change bounces at the end.
+
+{{< img-post "/img" "bounceinterpolator.gif" "" "center" >}}
