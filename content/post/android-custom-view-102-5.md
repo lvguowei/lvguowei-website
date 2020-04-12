@@ -222,3 +222,26 @@ This is the combination of `AnticipateInterpolator` and `OvershootInterpolator`.
 > An interpolator where the change bounces at the end.
 
 {{< img-post "/img" "bounceinterpolator.gif" "" "center" >}}
+
+# CycleInterpolator
+
+> Repeats the animation for a specified number of cycles. The rate of change follows a sinusoidal pattern.
+
+Let's try to understand the cycle. When we specify the 0.5 cycle:
+
+{{< highlight java>}}
+new CycleInterpolator(0.5f);
+{{< /highlight >}}
+
+{{< img-post "/img" "cycleinterpolator1.gif" "" "center" >}}
+
+Then 1.0f cycle:
+
+{{< highlight java>}}
+new CycleInterpolator(1f);
+{{< /highlight >}}
+
+{{< img-post "/img" "cycleinterpolator2.gif" "" "center" >}}
+
+This looks pretty useful for certain type of loading animation.
+
