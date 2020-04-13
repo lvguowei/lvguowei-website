@@ -245,3 +245,42 @@ new CycleInterpolator(1f);
 
 This looks pretty useful for certain type of loading animation.
 
+# FastOutLinearInInterpolator
+
+> Uses a lookup table for the Bezier curve from (0,0) to (1,1) with control points:
+> P0 (0, 0)
+> P1 (0.4, 0)
+> P2 (1.0, 1.0)
+> P3 (1.0, 1.0)
+
+The defination makes not much sense from the doc. But basically this is just like `AccelerateInterpolator`, the difference is that `AccelerateInterpolator` uses Logarithm function, and `FastOutLinearInInterpolator` uses Bezier function.
+
+{{< img-post "/img" "accvsfoli.png" "" "center" >}}
+
+The red line is `FastOutSlowInInterpolator` and the green line is `AccelerateInterpolator`, see the difference? Not much right?
+
+# FastOutSlowInInterpolator
+
+>Interpolator corresponding to {@link android.R.interpolator#fast_out_slow_in}.
+
+> Uses a lookup table for the Bezier curve from (0,0) to (1,1) with control points:
+> P0 (0, 0)
+> P1 (0.4, 0)
+> P2 (0.2, 1.0)
+> P3 (1.0, 1.0)
+
+OK, basically this is similar to `AccelerateDecelerateInterpolator`. Let's compare them:
+
+{{< img-post "/img" "losii.png" "" "center" >}}
+
+The green line is `AccelerateDecelerateInterpolator` and the red line is `FastOutLinearInInterpolator`.
+
+# LinearOutSlowInInterpolator
+
+This is basically similar to `DecelerateInterpolator`.
+
+Let's do the comparison here:
+
+{{< img-post "/img" "losiint.png" "" "center" >}}
+
+The green line is `DecelerateInterpolator` and the red line is `LinearOutSlowInInterpolator`.
