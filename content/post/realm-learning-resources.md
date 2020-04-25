@@ -10,8 +10,6 @@ title = "Realm Guide: From Zero to Give Up"
 date = 2020-04-25T17:23:40+03:00
 +++
 
-The *from zero to give up* guide.
-
 You know nothing about realm, then watch this video first ->
 
 {{< youtube id="QT7XD1hifkU" autoplay="false" >}}
