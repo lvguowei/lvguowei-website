@@ -1,6 +1,7 @@
 +++
 author = "Guowei Lv"
 categories = ["java"]
+keywords = ["PECS", "JAVA"]
 description = "PECS explained"
 linktitle = ""
 featured = "zen.jpg"
