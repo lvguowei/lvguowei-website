@@ -27,7 +27,7 @@ Since the `canvas.drawText()` will use the baseline to draw. That means we need 
 
 This is how to do it:
 
-{{< highlight java>}}
+{{< highlight kotlin>}}
 val fontMetrics = textPaint.fontMetricsInt
 val dy = (fontMetrics.bottom - fontMetrics.top) / 2 - fontMetrics.bottom
 {{< /highlight >}}
