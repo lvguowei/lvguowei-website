@@ -1,0 +1,28 @@
+#+HUGO_SECTION: post
+#+HUGO_BASE_DIR: ~/Documents/lvguowei-website
+#+HUGO_AUTO_SET_LASTMOD: t
+#+AUTHOR: Guowei Lv
+
+* Emacs :@emacs:
+** Writing Hugo Blog in Org                                    :hugo:orgmode:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: writing-blog-in-org
+   :DESCRIPTION: This is just a test post
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :keywords '(hugo orgmode) :featured android-custom-view-102.png :featuredpath /img
+   :END:
+*** Hello World
+    - First item
+    - Second item
+      =this is some code=
+**** This is a subheading
+     [[/img/lineargradient.png]]
+
+     #+BEGIN_SRC java
+       private static void main() {}
+     #+END_SRC
+     LaTeX formatted equation: \( E = -J \sum_{i=1}^N s_i s_{i+1} \)
+
+     \begin{equation}
+     \label{eq:1}
+     C = W\log_{2} (1+\mathrm{SNR})
+     \end{equation}
