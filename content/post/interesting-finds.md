@@ -38,3 +38,5 @@ And the [course](https://www.edx.org/course/how-to-code-simple-data) by the auth
 A [3 hour interview](https://oxide.computer/blog/on-the-metal-9-jonathan-blow/) with Jon Blow
 
 Richard P.Gabriel's [blog](http://dreamsongs.com/)
+
+[Adventures in Advanced Symbolic Programming](https://archive.org/details/adventures-in-advanced-symbolic-programming)
