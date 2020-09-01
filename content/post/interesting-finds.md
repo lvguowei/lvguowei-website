@@ -40,3 +40,5 @@ A [3 hour interview](https://oxide.computer/blog/on-the-metal-9-jonathan-blow/) 
 Richard P.Gabriel's [blog](http://dreamsongs.com/)
 
 [Adventures in Advanced Symbolic Programming](https://archive.org/details/adventures-in-advanced-symbolic-programming)
+
+[Advanced Programming in Unix Environment](https://stevens.netmeister.org/631/)
