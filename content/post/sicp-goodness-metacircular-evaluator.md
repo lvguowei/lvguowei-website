@@ -1,7 +1,7 @@
 +++
 author = "Guowei Lv"
 categories = ["SICP"]
-description = "as a literate program"
+description = "a literate programming approach"
 featured = "featured-sicp.jpg"
 featuredpath = "/img"
 title = "SICP Goodness - Metacircular Evaluator"
