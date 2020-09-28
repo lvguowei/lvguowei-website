@@ -25,7 +25,7 @@ After skimming through 4.1, I was thinking is the code from book able to run at 
 
 Then I made another decision to go one step further: typing the entire chapter 4.1 into an orgmode file as a literate program. And it worked out like a charm!
 
-Here is the [org file](/file/metacircularevaluator.org)
+Here is the [org file](/file/metacircularevaluator.txt)
 
 And the exported beautiful [pdf file](/file/metacircular.pdf)
 
