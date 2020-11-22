@@ -147,6 +147,10 @@ Let's try to evaluate something.
 
 ;Value: 4
 
+1 ]=> (eval '(((lambda (x) (lambda (y) (+ x y))) 3) 4) env0)
+
+;Value: 7
+
 {{< /highlight >}}
 
 Tada! All is working!
