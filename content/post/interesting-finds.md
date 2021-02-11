@@ -42,3 +42,5 @@ Richard P.Gabriel's [blog](http://dreamsongs.com/)
 [Adventures in Advanced Symbolic Programming](https://archive.org/details/adventures-in-advanced-symbolic-programming)
 
 [Advanced Programming in Unix Environment](https://stevens.netmeister.org/631/)
+
+[Category theory for programmers](https://www.youtube.com/playlist?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM_)
