@@ -1,6 +1,6 @@
 +++
 author = "Guowei Lv"
-categories = ["Android"]
+categories = ["Android Development"]
 description = "Understanding dependency injection in Android one step at a time"
 linktitle = ""
 featured = ""
