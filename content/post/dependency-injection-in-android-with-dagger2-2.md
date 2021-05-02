@@ -6,7 +6,7 @@ linktitle = ""
 featured = ""
 featuredpath = ""
 featuredalt = ""
-title = "Dependency Injection in Android With Dagger2 (1)"
+title = "Dependency Injection in Android With Dagger2 (2)"
 date = 2021-05-02T09:00:51+03:00
 +++
 
