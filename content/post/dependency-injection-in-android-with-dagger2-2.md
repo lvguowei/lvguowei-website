@@ -14,7 +14,6 @@ Previous post we set up the so called Pure Dependency Injection. Now let's repla
 
 Convert the composition roots into dagger's `@Module`s.
 
-
 Create `@Component` to hold each `@Module`.
 
 Create `@Scope`s and use it to scope the objects we want only 1 instance in the component.
