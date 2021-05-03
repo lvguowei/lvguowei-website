@@ -21,6 +21,3 @@ Create `@Scope`s and use it to scope the objects we want only 1 instance in the 
 Now it looks like this:
 
 {{< figure src="/img/pure-di-to-dagger2.png" >}}
-
-
-
