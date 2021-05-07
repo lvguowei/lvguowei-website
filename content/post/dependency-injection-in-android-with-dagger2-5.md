@@ -81,7 +81,3 @@ interface PresentationComponent {
 
 
 {{< figure src="/img/subcomponent.png" >}}
-
-
-
-
