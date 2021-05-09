@@ -14,9 +14,6 @@ One fact: it is more performant to make the all provider methods inside Modules 
 
 But for Modules that have bootstrap dependencies, this is impossible. Let's take `ActivityModule` as example.
 
-
-
-
 {{< highlight kotlin >}}
 @Module
 class ActivityModule(private val activity: AppCompatActivity) {
@@ -43,9 +40,6 @@ This means we cannot pass anything into Module's constructor. But then where can
 And in order to do this, we need some extra stuff.
 
 First, let's recap how `ActivityComponent` is created.
-
-
-
 
 
 {{< highlight kotlin >}}
