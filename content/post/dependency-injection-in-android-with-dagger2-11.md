@@ -50,13 +50,6 @@ class Factory @Inject constructor(private val myViewModelProvider: Provider<MyVi
 Finally:
 
 {{< highlight kotlin >}}
-override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    myViewModel = ViewModelProvider(this, ).get(MyViewModel::class.java)
-}
-{{< /highlight >}}
-
-{{< highlight kotlin >}}
 
 class ViewModelActivity : BaseActivity() {
 
