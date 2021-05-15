@@ -10,7 +10,7 @@ title = "Dependency Injection in Android With Dagger2 (12)"
 date = 2021-05-15T18:45:09+03:00
 +++
 
-It is a bit cumbersome to create a `Factory` for each `ViewModel` we have. Actually, we can just create on `Factory` that can create all `ViewModel`s in the app.
+It is a bit cumbersome to create a `Factory` for each `ViewModel` we have. Actually, we can just create one `Factory` that is responsible for creating all `ViewModel`s in the app.
 
 The Factory is very straightforward:
 
