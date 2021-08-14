@@ -43,7 +43,14 @@ class TransformView @JvmOverloads constructor(
 
 This seems straightforward, first we translate the canvas and then rotate it and lastly draw image on it. But do we fully understand it really? Let's try something else to test our understanding.
 
-My friend Eva Luator argues that mathmatically, it doesn't matter if we first translate and then rotate or first rotate and then translate. I said we can try it and here is the result:
+My friend Eva Luator argues that mathmatically, it doesn't matter if we first translate and then rotate or first rotate and then translate. He even drawed some pictures to show me:
+
+
+{{< img-post "/img" "canvastransform4.jpg" "canvas transformations" "center" >}}
+{{< img-post "/img" "canvastransform5.jpg" "canvas transformations" "center" >}}
+
+
+I said we can try it and here is the result:
 
 {{< highlight kotlin>}}
     override fun onDraw(canvas: Canvas) {
@@ -60,7 +67,7 @@ My friend Eva Luator argues that mathmatically, it doesn't matter if we first tr
 
 {{< img-post "/img" "canvastransform2.png" "Avatar Circled" "center" >}}
 
-Ughhhh ... not what we expected. But why?
+Uh-oh... not what we expected. But why?
 
 The reason is that canvas transformations are **continuous**, meaning the latter transformation is done on the basis of the previous one.
 
