@@ -5,6 +5,7 @@ featured = ""
 featuredpath = ""
 title = "Thoughts About Programming While Teaching My Baby to Walk"
 date = 2018-04-15T13:13:21+03:00
+draft = true
 +++
 
 My daughter is 11 months old, recently she started to stand up and walk baby steps by her own. Most of the time she has to use sofa to help her, and she falls down in all different ways all the time. So we have this idea that to protect her, we can buy some kind of special helmet to ease the pain when she falls down. But after some considering we decided not to. Firstly, the baby doesn't like wearing anything on her head. Secondly, if she wears it, yes she won't feel the pain when she falls down, but she also won't learn that hitting the ground with her head will hurt.
