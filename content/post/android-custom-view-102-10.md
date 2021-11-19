@@ -14,4 +14,3 @@ Just finished writing a custom layout to display tags and alike views. Not super
 {{< figure src="/img/tagLayout.png" >}}
 
 [Source Code](https://github.com/lvguowei/TagLayout)
-
