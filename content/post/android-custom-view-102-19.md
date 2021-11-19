@@ -1,6 +1,6 @@
 +++
 author = "Guowei Lv"
-categories = ["Android Development"]
+categories = ["Android Custom View 102"]
 keywords = ["Android", "custom view", "Animation"]
 description = "More Advanced ObjectAnimator examples"
 featured= "android-custom-view-102.png"
