@@ -1,6 +1,6 @@
 +++
 author = "Guowei Lv"
-categories = ["Android Development"]
+categories = ["Android + Dagger2"]
 description = "Multi-Module Components"
 linktitle = ""
 featured = ""

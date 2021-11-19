@@ -1,6 +1,6 @@
 +++
 author = "Guowei Lv"
-categories = ["Android Development"]
+categories = ["Android + Dagger2"]
 description = "Static Provider Methods and Component Builder"
 linktitle = ""
 featured = ""
