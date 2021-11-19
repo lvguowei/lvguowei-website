@@ -1,6 +1,6 @@
 +++
 author = "Guowei Lv"
-categories = ["Android Development"]
+categories = ["Android Custom View 102"]
 keywords = ["Android", "custom view"]
 description = "A Tag Layout"
 featured= "android-custom-view-102.png"
