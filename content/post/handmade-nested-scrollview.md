@@ -8,6 +8,7 @@ featuredpath = ""
 featuredalt = ""
 title = "Handmade NestedScrollView"
 date = 2022-04-12T20:57:33+03:00
+draft = true
 +++
 
 I'm learning how the nested scrolling machanism works on Android, but couldn't really find any in-depth material. So I turned into the Chinese community,
