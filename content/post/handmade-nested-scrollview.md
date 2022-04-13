@@ -3,12 +3,11 @@ author = "Guowei Lv"
 categories = ["Android Development"]
 description = "Understand how nested scrolling works in Android"
 linktitle = ""
-featured = ""
-featuredpath = ""
+featured = "scroll.jpeg"
+featuredpath = "/img"
 featuredalt = ""
 title = "Handmade NestedScrollView"
 date = 2022-04-12T20:57:33+03:00
-draft = true
 +++
 
 I'm learning how the nested scrolling machanism works on Android, but couldn't really find any in-depth material. So I turned into the Chinese community,
@@ -124,25 +123,55 @@ To understand this, we need to understand the touch event dispatching and interc
 
 You can read my [previous article](https://www.lvguowei.me/post/understand-touch-event-android/) for fundamentals in detail, but I will explain what happens here also:
 
+1. The touch events will first reach the parent `ScrollView`. The parent `ScrollView` then checks if it wants to intercept the event. (for `ScrollView`, the intercepting criteria is whether the events match the scrolling pattern). If not, it will pass the events to its child (inner `ScrollView`) to handle. If yes, it will intercept the upcoming events and not pass them to the inner `ScrollView`.
+2. The child `ScrollView` also will call `requestDisallowInterceptTouchEvent(true)` to try to prevent the parent from intercepting the events when it detects the scrolling pattern, but it will never get the chance, because the parent will always detects the scroll pattern first and intercept the events.
+
+What to do then? 
+
+One hacky way is that when the child `ScrollView` receives `DOWN`, it tells parent to NOT intercept. And when it cannot scroll any more, it tells the parent you can now intercept.
+
+{{< highlight kotlin>}}
+class SimpleNestedScrollView(context: Context, attrs: AttributeSet) : ScrollView(context, attrs) {
+
+    override fun dispatchTouchEvent(ev: MotionEvent): Boolean {
+        if (ev.actionMasked == MotionEvent.ACTION_DOWN) parent.requestDisallowInterceptTouchEvent(
+            true
+        )
+
+        if (ev.actionMasked == MotionEvent.ACTION_MOVE) {
+            val offsetY = ev.y.toInt() - getInt("mLastMotionY")
+            if (abs(offsetY) > 3) {
+                if ((offsetY > 0 && isScrollToTop()) || (offsetY < 0 && isScrollToBottom())) {
+                    parent.requestDisallowInterceptTouchEvent(false)
+                }
+            }
+        }
+
+        return super.dispatchTouchEvent(ev)
+    }
+
+    private fun isScrollToTop() = scrollY == 0
+
+    private fun isScrollToBottom(): Boolean {
+        return scrollY + height - paddingTop - paddingBottom == getChildAt(0).height
+    }
 
 
+    /**
+     * Reflection
+     */
+    private fun getInt(field: String): Int {
+        val f = ScrollView::class.java.getDeclaredField("mLastMotionY")
+        f.isAccessible = true
+        return f.get(this as ScrollView) as Int
+    }
 
-
-
-
-
-
-{{< highlight xml>}}
+}
 {{< /highlight >}}
 
-{{< highlight xml>}}
-{{< /highlight >}}
+**Holla, it works!**
 
-{{< highlight xml>}}
-{{< /highlight >}}
+{{< figure src="/img/simplenestedscrollview2.gif" >}}
 
-{{< highlight xml>}}
-{{< /highlight >}}
 
-{{< highlight xml>}}
-{{< /highlight >}}
+*Note! This article is for educational purpose only, do not use this in production. Thank you.*
