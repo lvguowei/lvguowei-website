@@ -25,6 +25,8 @@ So, I decided to write a program to help me. And that program turned into a mobi
 
 You can find it on [Play Store](https://play.google.com/store/apps/details?id=com.guowei.twentyfourgame). It's free.
 
+And the code is [here](https://github.com/lvguowei/24game)
+
 Enjoy!
 
 
