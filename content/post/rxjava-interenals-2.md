@@ -241,4 +241,4 @@ What if we dispose immediately in onSubscribe()?
       })
 {{< /highlight >}}
 
-Try to trace down the code and see what is happening.
+Well, the anwser is of course the onNext will never get called. Trace down the code and see how is this done.
