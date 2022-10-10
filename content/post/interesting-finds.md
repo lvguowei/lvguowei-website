@@ -46,3 +46,5 @@ Richard P.Gabriel's [blog](http://dreamsongs.com/)
 [Category theory for programmers](https://www.youtube.com/playlist?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM_)
 
 https://craftinginterpreters.com/
+
+https://www.parens-of-the-dead.com/
