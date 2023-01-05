@@ -46,7 +46,7 @@ canonifyURLs = true
 # parms.intro will appear on the sidebar
 # This is optional, but it's suggested to use
 [params.intro]
-    header    = "Guowei Lv 吕国威"
+    header    = "吕国威的博客"
 
     paragraph = "Thinker · Writer · Coder · Painter"
 
@@ -59,9 +59,9 @@ canonifyURLs = true
     src       = "/img/logo.jpg"
     # modify your picture in the shape of a circle or
     # future imperfect's hexagonal shape
-    circle    = false
-    imperfect = true
-    width     = ""
+    circle    = true
+    imperfect = false
+    width     = "260px"
     alt       = "Guowei Lv"
 
 # Adjust the amount of recent posts on the sidebar.
