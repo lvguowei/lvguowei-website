@@ -16,7 +16,7 @@
     {{ end }} {{ end }}
 
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" /> {{ .Hugo.Generator }} {{ partial "favicon" . }} {{ with .Params.author }}
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> {{ hugo.Generator }} {{ partial "favicon" . }} {{ with .Params.author }}
     <meta name="author" content="{{ . }}"> {{ end }} {{ with .Description }}
     <meta name="description" content="{{ . }}"> {{ else }} {{ with .Site.Params.description }}
     <meta name="description" content="{{ . }}"> {{ end }} {{ end }} {{ template "_internal/twitter_cards.html" . }} {{ template "_internal/opengraph.html" . }} {{ template "_internal/schema.html" . }} {{ template "_internal/google_news.html" . }}
