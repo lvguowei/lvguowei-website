@@ -70,24 +70,25 @@ Will the `UserPage` composable get recomposed after the button is clicked?
 
 {{< highlight kotlin >}}
 
-data class User(val name: String)
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
 
-@Composable
-fun Situation3() {
-    var flag by remember {
-        mutableStateOf(true)
-    }
+        val user = User("Guowei Lv")
 
-    val user = User("Guowei Lv")
-
-    Column {
-        Text(text = "Flag is $flag")
-        UserPage(user = user)
-        Button(onClick = { flag = !flag }) {
-            Text("Click me!")
+        setContent {
+            var flag by remember {
+                mutableStateOf(true)
+            }
+            Column {
+                Text(text = "Flag is $flag")
+                UserPage(user = user)
+                Button(onClick = { flag = !flag }) {
+                    Text("Click me!")
+                }
+            }
         }
     }
-
 }
 
 @Composable
@@ -110,30 +111,30 @@ fun UserPage(user: User) {
 Please pay attention to what is changed, and will `UserPage` recompose this time after clicking the button?
 
 {{< highlight kotlin >}}
-@Composable
-fun Situation4() {
-    var flag by remember {
-        mutableStateOf(true)
-    }
 
-    var user = User("Guowei Lv")
 
-    Column {
-        Text(text = "Flag is $flag")
-        UserPage(user = user)
-        Button(onClick = {
-            flag = !flag
-            user = User("Guowei Lv") // assign a new User object with the same name
-        }) {
-            Text("Click me!")
+ class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        val user = User("Guowei Lv")
+
+        setContent {
+            var flag by remember {
+                mutableStateOf(true)
+            }
+            Column {
+                Text(text = "Flag is $flag")
+                UserPage(user = user)
+                Button(onClick = {
+                  flag = !flag
+                  user = User("Guowei Lv") // assign a new User object with the same name
+                }) {
+                    Text("Click me!")
+                }
+            }
         }
     }
-}
-
-@Composable
-fun UserPage(user: User) {
-    println("User page recomposed!")
-    Text("${user.name}'s page")
 }
 {{< /highlight >}}
 
@@ -175,22 +176,28 @@ I abstract away some implementation details of previous example and now it becom
 
 data class User(var name: String)
 
-@Composable
-fun Situation5() {
-    val user1 = User("Guowei Lv")
-    val user2 = User("Guowei Lv")
-    var user = user1
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
 
-    // ...
-    UserPage(user = user)
-    // ...
+        val user1 = User("Guowei Lv")
+        val user2 = User("Guowei Lv")
+        var user = user1
 
-    // ... Event A
-    user = user2
-    // ...
+        setContent {
+
+            // ...
+            UserPage(user = user)
+            // ...
+
+            // ... Event A
+            user = user2
+            // ...
     
-    // ... Event B
-    // user2.name = "Hello Kitty"
+            // ... Event B
+            // user2.name = "Hello Kitty"        
+        }
+    }
 }
 
 @Composable
