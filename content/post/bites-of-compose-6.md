@@ -50,11 +50,11 @@ fun main(args: Array<String>) {
     println("All less than 5? $allLessThanFive")
     println("------------------------")
 
-    val anyBiggerThanTwo = mod.any { e ->
+    val anyBiggerThanFour = mod.any { e ->
         val n = (e as MyModifier).n
         n > 4
     }
-    println("Any bigger than 4? $anyBiggerThanTwo")
+    println("Any bigger than 4? $anyBiggerThanFour")
     println("------------------------")
 
     val sum = mod.foldIn(0) { acc, e ->
