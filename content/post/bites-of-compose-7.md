@@ -205,6 +205,7 @@ fun Test() {
 When the app first launched:
 
 > enter screen: from DisposableEffect
+
 > enter screen: from SideEffect
 
 After clicking the button:
