@@ -56,3 +56,10 @@ fun AnimationDemo() {
 {{< /highlight >}}
 
 We change the `target` in `onClick`, but use the `animatedTarget` to set the size of the `Box`.
+
+
+What's happening under the hood is that every time we change the value of `target` , a coroutine will get started to change the value of the `State` produced by calling `animateDpAsState()`.
+
+
+It's all very simple and easy. But there is one limitation, you cannot set the animation's start value. I mean if the `Box` is 48.dp now, and I want to start the animation from 96.dp to 100.dp, there is no way to do it with `animateXXXAsState()` set of functions. We need something else, stay tuned for next post!
+
