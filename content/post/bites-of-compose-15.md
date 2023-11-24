@@ -62,4 +62,3 @@ What's happening under the hood is that every time we change the value of `targe
 
 
 It's all very simple and easy. But there is one limitation, you cannot set the animation's start value. I mean if the `Box` is 48.dp now, and I want to start the animation from 96.dp to 100.dp, there is no way to do it with `animateXXXAsState()` set of functions. We need something else, stay tuned for next post!
-
