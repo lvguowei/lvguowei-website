@@ -50,3 +50,7 @@ https://craftinginterpreters.com/
 https://www.parens-of-the-dead.com/
 
 https://interpreterbook.com/
+
+New book by Chris Bishop
+https://www.bishopbook.com
+ 
