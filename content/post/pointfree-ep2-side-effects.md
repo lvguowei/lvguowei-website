@@ -87,18 +87,37 @@ func >=> <A, B, C>(
 So I would say the fish operator `>=>` can be used whenever the functions cannot be directly composed together because of their return types. It has not really much to do with Side-effects per se, but more of a tool to solve function composition problems.
 
 
+Introducing `<>`
+
+Two versions:
 
 {{< highlight swift >}}
+func <> <A>(
+  f: @escaping (A) -> A,
+  g: @escaping (A) -> A
+) -> ((A) -> A) {
+
+  return f >>> g
+}
 {{< /highlight >}}
 
-{{< highlight swift >}}
-{{< /highlight >}}
+
 
 {{< highlight swift >}}
+func <> <A>(
+  f: @escaping (inout A) -> Void,
+  g: @escaping (inout A) -> Void
+) -> ((inout A) -> Void) {
+
+  return { a in
+    f(&a)
+    g(&a)
+  }
+}
 {{< /highlight >}}
 
-{{< highlight swift >}}
-{{< /highlight >}}
+So now we can do:
 
 {{< highlight swift >}}
+config |> inoutDecimalStyle <> inoutCurrencyStyle
 {{< /highlight >}}
