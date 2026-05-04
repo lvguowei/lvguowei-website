@@ -7,7 +7,7 @@ featured = ""
 featuredpath = ""
 featuredalt = ""
 title = "Flow exception handling (Part 1)"
-date = 2025-06-17T11:53:34+03:00
+date = 2026-05-04T11:53:34+03:00
 +++
 
 You may have heard that "No try/catch inside Flow" or "Only use catch() operator". But why?
